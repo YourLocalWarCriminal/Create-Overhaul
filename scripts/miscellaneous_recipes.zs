@@ -1,0 +1,76 @@
+import mods.farmersdelight.CuttingBoard;
+
+<item:alloyed:bronze_ingot>.addTooltip("Now made with Amethyst!");
+<item:farmersdelight:safety_net>.addTooltip("Can be used for Sifting Purposes");
+
+//smithing recipes(name,output,inputA,inputB)
+
+val copper_tools = [
+    <item:create_sa:copper_axe>,
+    <item:create_sa:copper_sword>,
+    <item:create_sa:copper_shovel>,
+    <item:create_sa:copper_hoe>,
+    <item:create_sa:copper_pickaxe>,
+];
+
+val iron_tools = [
+    <item:minecraft:iron_axe>,
+    <item:minecraft:iron_sword>,
+    <item:minecraft:iron_shovel>,
+    <item:minecraft:iron_hoe>,
+    <item:minecraft:iron_pickaxe>,
+];
+
+for i,item in copper_tools {
+    <recipetype:minecraft:smithing>.addRecipe("copper_to_iron" + i, iron_tools[i], copper_tools[i], <item:immersiveengineering:component_iron>);
+}
+
+val steel_tools = [
+<item:alloyed:steel_axe>,
+<item:alloyed:steel_sword>,
+<item:alloyed:steel_shovel>,
+<item:alloyed:steel_hoe>,
+<item:alloyed:steel_pickaxe>,
+];
+
+val netherite_tools = [
+<item:minecraft:netherite_axe>,
+<item:minecraft:netherite_sword>,
+<item:minecraft:netherite_shovel>,
+<item:minecraft:netherite_hoe>,
+<item:minecraft:netherite_pickaxe>,
+];
+
+for i,item in steel_tools {
+    <recipetype:minecraft:smithing>.addRecipe("steel_to_netherite" + i, netherite_tools[i], steel_tools[i], <item:minecraft:netherite_ingot>);
+}
+
+val netherite_armour = [
+<item:minecraft:netherite_helmet>,
+<item:minecraft:netherite_chestplate>,
+<item:minecraft:netherite_leggings>,
+<item:minecraft:netherite_boots>,
+];
+
+val steel_armour = [
+<item:alloyed:steel_helmet>,
+<item:alloyed:steel_chestplate>,
+<item:alloyed:steel_leggings>,
+<item:alloyed:steel_boots>,
+];
+
+for i,item in steel_armour {
+    <recipetype:minecraft:smithing>.addRecipe("steel_to_netherite_armour" + i, netherite_armour[i], steel_armour[i], <item:minecraft:netherite_ingot>);
+}
+
+<recipetype:minecraft:smithing>.addRecipe("qualitytoolhandle", <item:create_sa:zinc_handle>, <item:immersiveengineering:stick_treated>, <item:create:zinc_ingot>);
+
+//blasting recipes(name,output,input,xp,time)
+<recipetype:minecraft:blasting>.addRecipe("ironsmelt", <item:minecraft:iron_ingot>, <item:minecraft:raw_iron>, 0.7, 140);
+<recipetype:minecraft:blasting>.addRecipe("ironsmeltcrushed", <item:minecraft:iron_ingot>, <item:create:crushed_raw_iron>, 0.7, 140);
+<recipetype:minecraft:blasting>.addRecipe("ironsmeltgrit", <item:minecraft:iron_ingot>, <item:immersiveengineering:dust_iron>, 0.7, 140);
+<recipetype:minecraft:blasting>.addRecipe("zincsmelt", <item:create:zinc_ingot>, <item:create:raw_zinc>, 0.6, 140);
+<recipetype:minecraft:blasting>.addRecipe("zincsmeltcrushed", <item:create:zinc_ingot>, <item:create:crushed_raw_zinc>, 0.6, 140);
+<recipetype:minecraft:blasting>.addRecipe("castiron", <item:createdeco:cast_iron_ingot>, <item:minecraft:iron_ingot>, 0.0, 200);
+//furnace recipes(name, output, input, xp, time)
+<recipetype:minecraft:smelting>.addRecipe("burninglime", <item:kubejs:lime_dust>, <item:create:limestone>, 0.3, 300);
