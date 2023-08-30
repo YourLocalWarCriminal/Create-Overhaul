@@ -23,6 +23,9 @@ onEvent('item.registry', event => {
 	event.create('leverage_components').displayName('Leverage Components')
 	event.create('leverage_mechanism').displayName('Leverage Mechanism')
 	event.create('clockwork_mechanism').displayName('Clockwork Mechanism')
+	event.create('induction_mechanism').displayName("Induction Mechanism")
+	event.create('arithmetic_mechanism').displayName('Arithmetic Mechanism')
+	event.create('iron_bloom').displayName('Iron Bloom')
 })
 
 onEvent('block.registry', event => {
