@@ -64,13 +64,13 @@ for i,item in steel_armour {
 }
 
 <recipetype:minecraft:smithing>.addRecipe("qualitytoolhandle", <item:create_sa:zinc_handle>, <item:immersiveengineering:stick_treated>, <item:create:zinc_ingot>);
-
+<recipetype:minecraft:smithing>.addRecipe("leverage_mechanism", <item:kubejs:leverage_mechanism>, <item:kubejs:mechanical_engine>, <item:kubejs:leverage_components>);
 //blasting recipes(name,output,input,xp,time)
-<recipetype:minecraft:blasting>.addRecipe("ironsmelt", <item:minecraft:iron_ingot>, <item:minecraft:raw_iron>, 0.7, 140);
-<recipetype:minecraft:blasting>.addRecipe("ironsmeltcrushed", <item:minecraft:iron_ingot>, <item:create:crushed_raw_iron>, 0.7, 140);
-<recipetype:minecraft:blasting>.addRecipe("ironsmeltgrit", <item:minecraft:iron_ingot>, <item:immersiveengineering:dust_iron>, 0.7, 140);
+<recipetype:minecraft:blasting>.addRecipe("ironsmelt", <item:createdeco:cast_iron_ingot>, <item:minecraft:raw_iron>, 0.7, 140);
+<recipetype:minecraft:blasting>.addRecipe("ironsmeltcrushed", <item:createdeco:cast_iron_ingot>, <item:create:crushed_raw_iron>, 0.7, 140);
+<recipetype:minecraft:blasting>.addRecipe("ironsmeltgrit", <item:createdeco:cast_iron_ingot>, <item:immersiveengineering:dust_iron>, 0.7, 140);
 <recipetype:minecraft:blasting>.addRecipe("zincsmelt", <item:create:zinc_ingot>, <item:create:raw_zinc>, 0.6, 140);
 <recipetype:minecraft:blasting>.addRecipe("zincsmeltcrushed", <item:create:zinc_ingot>, <item:create:crushed_raw_zinc>, 0.6, 140);
-<recipetype:minecraft:blasting>.addRecipe("castiron", <item:createdeco:cast_iron_ingot>, <item:minecraft:iron_ingot>, 0.0, 200);
+<recipetype:minecraft:blasting>.addRecipe("castiron", <item:minecraft:iron_ingot>, <item:createdeco:cast_iron_ingot>, 0.0, 200);
 //furnace recipes(name, output, input, xp, time)
 <recipetype:minecraft:smelting>.addRecipe("burninglime", <item:kubejs:lime_dust>, <item:create:limestone>, 0.3, 300);
