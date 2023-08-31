@@ -3351,7 +3351,119 @@
           "totalComments": 0
         }
       ],
-      "resourcePacks": [],
+      "resourcePacks": [
+        {
+          "stateGameElement": "active",
+          "id": -975327041675700,
+          "name": "Updated_Engineering_v1.7",
+          "favorite": false,
+          "version": {
+            "id": -975327043639900,
+            "name": "1.0",
+            "metadata": {
+              "sha1": "cc84bf8e9926d1c6cfcc76e1d1526345ff3e9a2f",
+              "size": 253340,
+              "path": "resourcepacks/Updated_Engineering_v1.7.zip",
+              "url": "resourcepacks/Updated_Engineering_v1.7.zip"
+            },
+            "available": false
+          },
+          "userInstall": true,
+          "populateStatus": false,
+          "available": false,
+          "parser": false,
+          "totalComments": 0
+        },
+        {
+          "stateGameElement": "active",
+          "id": 714371,
+          "name": "Engineers GUIs",
+          "author": "schaeferd_cz",
+          "linkProject": "https://www.curseforge.com/minecraft/texture-packs/engineers-guis",
+          "favorite": false,
+          "categories": [
+            {
+              "id": 49,
+              "name": "mod_support",
+              "shortName": "mod",
+              "nesting": 0
+            },
+            {
+              "id": 41,
+              "name": "sixteen_x",
+              "shortName": "16x",
+              "nesting": 0
+            },
+            {
+              "id": 53,
+              "name": "traditional",
+              "shortName": "traditional",
+              "nesting": 0
+            },
+            {
+              "id": 52,
+              "name": "steampunk",
+              "shortName": "steampunk",
+              "nesting": 0
+            }
+          ],
+          "picture": 379866,
+          "pictures": [
+            379902,
+            379893,
+            379896,
+            379901,
+            379906,
+            379907,
+            379894,
+            379900,
+            379903,
+            379909,
+            379895,
+            379899,
+            379905,
+            379897,
+            379908,
+            379898,
+            379904
+          ],
+          "lanName": "engineers-guis",
+          "version": {
+            "id": 4126222,
+            "name": "Engineers_GUIs_1.18.2_v.01.0",
+            "updateDate": 1669865100000,
+            "type": "release",
+            "gameVersionsDTO": [
+              {
+                "id": 35,
+                "name": "1.18.2"
+              }
+            ],
+            "metadata": {
+              "sha1": "f6d4267a13f7ae98683d3f7272f9e52b300dbc74",
+              "size": 1207727,
+              "path": "resourcepacks/Engineers_GUIs_1.18.2_v.01.0.zip",
+              "url": "/resourcepacks/714371/4126222/Engineers_GUIs_1.18.2_v.01.0.zip"
+            },
+            "available": false,
+            "minecraftVersionTypes": []
+          },
+          "downloadMonth": 0,
+          "userInstall": false,
+          "populateStatus": false,
+          "dependencies": [],
+          "lastGameVersion": {
+            "id": 35,
+            "name": "1.18.2"
+          },
+          "updated": 1669865100000,
+          "update": 1669865100000,
+          "downloadALL": 163,
+          "available": true,
+          "parser": true,
+          "totalComments": 0
+        }
+      ],
       "maps": [],
       "shaderpacks": [],
       "gameVersionDTO": {
