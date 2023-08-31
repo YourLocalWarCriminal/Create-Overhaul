@@ -8,7 +8,12 @@ import mods.create.CompactingManager;
 
 //deleting items entirely
 
-var delete = [<item:immersiveengineering:watermill>,
+var delete = [
+<item:create:andesite_bars>,
+<item:create:brass_bars>,
+<item:create:copper_bars>,
+<item:immersiveengineering:storage_steel>,
+<item:immersiveengineering:watermill>,
 <item:immersiveengineering:windmill>,
 <item:immersiveengineering:dynamo>,
 <item:createaddition:connector>,
@@ -88,7 +93,11 @@ for item in delete {
 
 
 //RECIPE REMOVAL
-var recipesd = [<item:immersiveengineering:ingot_lead>,
+var recipesd = [
+<item:create:item_drain>,
+<item:create:copper_casing>,
+<item:alloyed:steel_casing>,
+<item:immersiveengineering:ingot_lead>,
 <item:create:empty_blaze_burner>,
 <item:create:steam_engine>,
 <item:createaddition:rolling_mill>,

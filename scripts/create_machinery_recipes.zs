@@ -74,6 +74,7 @@ for i, item in ingots_press {
 <recipetype:create:item_application>.addRecipe("steelcasing", [<item:alloyed:steel_casing> % 100], <tag:items:forge:treated_wood>, <item:alloyed:steel_sheet>, false);
 <recipetype:create:item_application>.addRecipe("siftinggravel", [<item:create:copper_nugget> % 25, <item:minecraft:flint> % 25], <item:minecraft:gravel>, <item:farmersdelight:safety_net>, true);
 <recipetype:create:item_application>.addRecipe("sandsifting", [<item:create:copper_nugget> % 10, <item:byg:mud_ball> % 25, <item:minecraft:clay_ball> % 15], <tag:items:forge:sand>, <item:farmersdelight:safety_net>, true);
+<recipetype:create:item_application>.addRecipe("item_drain", [<item:create:item_drain>], <item:create:copper_casing>, <tag:items:forge:bars>, false);
 //deplyoer application(name,deployed onto item, the held item, output, keep held item as bool)
 
 //mixer(name,heat,[output], [input], [fluid], time)
@@ -143,6 +144,15 @@ for i, item in ingots {
                                                       .addOutput(<item:kubejs:mithril_ingot>, 32)
                                                       .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:minecraft:water> * 100))
                                                       .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:createaddition:seed_oil> * 100))
+                                                      );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("steel_casing")
+                                                      .transitionTo(<item:alloyed:steel_casing>)
+                                                      .require(<tag:items:forge:treated_wood>)
+                                                      .loops(12)
+                                                      .addOutput(<item:alloyed:steel_casing>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:stick_steel>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:bolt>))
                                                       );
 
 

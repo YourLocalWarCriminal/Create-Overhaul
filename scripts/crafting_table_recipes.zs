@@ -307,3 +307,9 @@ craftingTable.addShaped("diamond_boots", <item:minecraft:diamond_boots>, [
 craftingTable.addShapeless("flint_and_mithril", <item:minecraft:flint_and_steel>, [
     <item:minecraft:flint>, <item:kubejs:mithril_ingot>
 ]);
+
+craftingTable.addShaped("copper_casing", <item:create:copper_casing>, [
+    [<item:create:copper_sheet>, nope, <item:create:copper_sheet>],
+    [<item:create:copper_sheet>, <item:create:industrial_iron_block>, <item:create:copper_sheet>],
+    [<item:create:copper_sheet>, nope, <item:create:copper_sheet>]
+]);
