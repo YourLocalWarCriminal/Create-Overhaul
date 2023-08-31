@@ -233,6 +233,7 @@ var recipesd = [<item:immersiveengineering:ingot_lead>,
 <item:minecraft:glass>,
 <item:farmersdelight:diamond_knife>,
 <item:minecraft:flint_and_steel>,
+<item:immersiveengineering:wirecutter>,
 ];
 
 for item in recipesd {

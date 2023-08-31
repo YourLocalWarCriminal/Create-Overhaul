@@ -86,6 +86,9 @@ for i, item in ingots {
     <recipetype:create:cutting>.addRecipe("ingots_to_rods" + i, rods[i]*2, ingots[i], 800);
 }
 
+<recipetype:create:cutting>.addRecipe("bolt", <item:kubejs:bolt>*2, <item:createaddition:iron_rod>, 400);
+<recipetype:create:cutting>.addRecipe("nail", <item:kubejs:nail>*2, <item:create:iron_sheet>, 400);
+
 //sequenced ASSembly(trust me this was ass to figure out)(name,output(transitionTo), input(require), loops, Outher Outputs(addOutput), addStep)
 /*A blank crafting recipe
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("precisionmechanism")
@@ -98,6 +101,7 @@ for i, item in ingots {
                                                       .addOutput(<item:create:cogwheel>, 1)
                                                       .addOutput(<item:minecraft:stick>, 1)
                                                       .addOutput(<item:minecraft:iron_nugget>, 1)
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(50))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:minecraft:planks>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:minecraft:wooden_buttons>))
                                                       .addStep<mods.createtweaker.CuttingRecipe>((rb) => rb.duration(50))
@@ -117,12 +121,13 @@ for i, item in ingots {
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("mechanical_engine")
                                                       .transitionTo(<item:kubejs:incomplete_mechanical_engine>)
-                                                      .require(<item:minecraft:bowl>)
+                                                      .require(<item:kubejs:mechanism_casing>)
                                                       .loops(1)
                                                       .addOutput(<item:kubejs:mechanical_engine>, 32)
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:cogwheel>))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_iron>))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:andesite_alloy>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:large_gear>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:large_gear>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:medium_gear>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(50))
                                                       );
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("hydraulic_engine")

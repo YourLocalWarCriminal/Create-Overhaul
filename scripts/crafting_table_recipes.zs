@@ -6,6 +6,7 @@ val nope = <item:minecraft:air>;
 val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 val hammer = <item:immersiveengineering:hammer>.reuse();
 val wrench = <item:create:wrench>.reuse();
+val wc = <item:immersiveengineering:wirecutter>.reuse();
 
 val helmets = [
     <item:minecraft:iron_helmet>,
@@ -258,12 +259,6 @@ craftingTable.addShaped("mithrilknife", <item:farmersdelight:diamond_knife>, [
     [<item:create_sa:zinc_handle>]
 ]);
 
-craftingTable.addShapedMirrored("mechanicalenginecrafter", MirrorAxis.HORIZONTAL, <item:kubejs:mechanical_engine>, [
-    [nope, screwdriver, nope],
-    [<item:create:cogwheel>, <item:create:cogwheel>, <item:immersiveengineering:component_iron>],
-    [nope, <item:minecraft:bowl>, nope]
-]);
-
 craftingTable.addShaped("sawblade", <item:immersiveengineering:sawblade>, [
     [<item:minecraft:iron_nugget>, <item:minecraft:iron_ingot>, <item:minecraft:iron_nugget>],
     [<item:minecraft:iron_ingot>, hammer, <item:minecraft:iron_ingot>],
@@ -271,7 +266,7 @@ craftingTable.addShaped("sawblade", <item:immersiveengineering:sawblade>, [
 ]);
 
 craftingTable.addShapedMirrored("mechanicalsaw", MirrorAxis.HORIZONTAL, <item:create:mechanical_saw>, [
-    [nope, <item:create:shaft>],
+    [<item:kubejs:mechanical_engine>, <item:create:shaft>, <item:kubejs:mechanical_engine>],
     [hammer, <item:create:andesite_casing>],
     [nope, <item:immersiveengineering:sawblade>],
 ]);
@@ -306,4 +301,54 @@ craftingTable.addShaped("diamond_boots", <item:minecraft:diamond_boots>, [
 
 craftingTable.addShapeless("flint_and_mithril", <item:minecraft:flint_and_steel>, [
     <item:minecraft:flint>, <item:kubejs:mithril_ingot>
+]);
+
+craftingTable.addShaped("wirecutters", <item:immersiveengineering:wirecutter>, [
+    [<item:immersiveengineering:stick_treated>, <item:minecraft:iron_ingot>, <item:minecraft:shears>],
+    [nope, <item:immersiveengineering:treated_wood_horizontal>, <item:minecraft:iron_ingot>],
+    [nope, nope, <item:immersiveengineering:stick_treated>],
+]);
+
+craftingTable.addShaped("large_gear", <item:kubejs:large_gear>, [
+    [<item:minecraft:iron_ingot>, <item:createdeco:cast_iron_ingot>, <item:minecraft:iron_ingot>],
+    [<item:minecraft:iron_nugget>, wc, <item:minecraft:iron_nugget>],
+    [<item:minecraft:iron_ingot>, <item:createdeco:cast_iron_ingot>, <item:minecraft:iron_ingot>],
+]);
+
+craftingTable.addShaped("medium_gear", <item:kubejs:medium_gear>, [
+    [<item:createdeco:cast_iron_nugget>, <item:minecraft:iron_ingot>, <item:createdeco:cast_iron_nugget>],
+    [<item:createdeco:cast_iron_ingot>, wc, <item:createdeco:cast_iron_ingot>],
+    [<item:createdeco:cast_iron_nugget>, <item:minecraft:iron_ingot>, <item:createdeco:cast_iron_nugget>],
+]);
+
+craftingTable.addShaped("small_gear", <item:kubejs:small_gear>, [
+    [nope, <item:minecraft:iron_ingot>, nope],
+    [<item:createdeco:cast_iron_nugget>, wc, <item:createdeco:cast_iron_nugget>],
+    [nope, <item:minecraft:iron_ingot>, nope],
+]);
+
+craftingTable.addShaped("mechanism_casing", <item:kubejs:mechanism_casing>, [
+    [<item:immersiveengineering:treated_wood_horizontal>, <item:immersiveengineering:treated_wood_horizontal>, <item:immersiveengineering:treated_wood_horizontal>],
+    [<item:immersiveengineering:treated_wood_horizontal>, nope, <item:immersiveengineering:treated_wood_horizontal>],
+    [<item:immersiveengineering:treated_wood_horizontal>, <item:immersiveengineering:treated_wood_horizontal>, <item:minecraft:stone_button>]
+]);
+
+craftingTable.addShaped("kinetic_engine", <item:kubejs:mechanical_engine>, [
+    [<item:kubejs:large_gear>, <item:kubejs:medium_gear>, <item:kubejs:large_gear>],
+    [<item:kubejs:small_gear>, <item:kubejs:medium_gear>, <item:kubejs:small_gear>],
+    [hammer, <item:kubejs:mechanism_casing>, screwdriver]
+]);
+
+craftingTable.addShapeless("leverage_components", <item:kubejs:leverage_components>, [<item:kubejs:large_gear>, <item:kubejs:medium_gear>, <item:kubejs:large_gear>,<item:kubejs:small_gear>,<item:kubejs:mechanical_elbow>]);
+
+craftingTable.addShaped("press", <item:create:mechanical_press>, [
+    [<item:kubejs:mechanical_engine>, <item:create:shaft>, <item:kubejs:mechanical_engine>],
+    [<item:kubejs:leverage_mechanism>, <item:create:andesite_casing>, <item:kubejs:leverage_mechanism>],
+    [screwdriver, <item:minecraft:iron_block>, hammer]
+]);
+
+craftingTable.addShapedMirrored("mechanical_elbow", MirrorAxis.HORIZONTAL, <item:kubejs:mechanical_elbow>,[
+    [<item:createaddition:iron_rod>, <item:createaddition:iron_rod>, <item:kubejs:large_gear>],
+    [nope, <item:kubejs:bolt>, <item:createaddition:iron_rod>],
+    [nope, nope, <item:createaddition:iron_rod>]
 ]);
