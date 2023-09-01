@@ -1,14 +1,19 @@
-#priority 1
+#priority 100
 
 //github test
 
 import mods.jei.JEI;
 import mods.create.MechanicalCrafterManager;
 import mods.create.CompactingManager;
+import mods.create.DeployerApplicationManager;
+import mods.create.ItemApplicationManager;
 
 //deleting items entirely
 
 var delete = [
+<item:immersiveengineering:fluid_pipe>,
+<item:immersiveengineering:fluid_placer>,
+<item:immersiveengineering:fluid_sorter>,
 <item:create:andesite_bars>,
 <item:create:brass_bars>,
 <item:create:copper_bars>,
@@ -94,6 +99,11 @@ for item in delete {
 
 //RECIPE REMOVAL
 var recipesd = [
+<item:create:smart_fluid_pipe>,
+<item:create:fluid_valve>,
+<item:create:fluid_tank>,
+<item:create:portable_fluid_interface>,
+<item:create:fluid_pipe>,
 <item:create:item_drain>,
 <item:create:copper_casing>,
 <item:alloyed:steel_casing>,
@@ -250,7 +260,8 @@ for item in recipesd {
 }
 
 
-
+<recipetype:create:deploying>.remove(<item:create:copper_casing>);
+<recipetype:create:item_application>.remove(<item:create:copper_casing>);
 craftingTable.remove(<item:create:rose_quartz>);
 <recipetype:create:mechanical_crafting>.remove(<item:alloyed:steel_helmet>);
 <recipetype:create:mechanical_crafting>.remove(<item:alloyed:steel_chestplate>);

@@ -358,3 +358,36 @@ craftingTable.addShaped("copper_casing", <item:create:copper_casing>, [
     [<item:create:copper_sheet>, <item:create:industrial_iron_block>, <item:create:copper_sheet>],
     [<item:create:copper_sheet>, nope, <item:create:copper_sheet>]
 ]);
+
+craftingTable.addShaped("pipe", <item:create:fluid_pipe>, [
+    [nope, <tag:items:immersiveengineering:tools/hammers>, nope],
+    [<item:kubejs:nail>, <item:create:copper_sheet>, <item:kubejs:nail>],
+    [nope, wc, nope]
+]);
+
+craftingTable.addShaped("smart_pipe", <item:create:smart_fluid_pipe>, [
+    [<item:kubejs:nail>, <item:create:attribute_filter>, <item:kubejs:nail>],
+    [<item:create:brass_sheet>, <item:create:fluid_pipe>, <item:create:brass_sheet>],
+    [nope, <tag:items:immersiveengineering:tools/hammers>, nope]
+]);
+
+craftingTable.addShaped("hose_pulley3", <item:create:hose_pulley>, [
+    [nope, <item:create:copper_casing>, nope],
+    [nope, <item:immersiveengineering:cushion>, nope],
+    [nope, <item:create:copper_sheet>, nope]
+]);
+
+craftingTable.addShaped("fluid_tank2", <item:create:fluid_tank>, [
+    [<item:kubejs:bolt>, <tag:items:forge:glass_panes>, <item:kubejs:bolt>],
+    [<tag:items:forge:glass_panes>, <item:create:copper_casing>, <tag:items:forge:glass_panes>],
+    [<tag:items:immersiveengineering:tools/hammers>, <tag:items:forge:glass_panes>, <item:immersiveengineering:screwdriver>]
+]);
+
+craftingTable.addShapeless("portable_interface1", <item:create:portable_storage_interface>, [<item:create:portable_fluid_interface>]);
+craftingTable.addShapeless("portable_interface2", <item:create:portable_fluid_interface>, [<item:create:portable_storage_interface>]);
+craftingTable.addShapeless("portable_fluid_interface", <item:create:portable_fluid_interface>, [<item:create:copper_casing>, <item:create:fluid_pipe>]);
+
+craftingTable.addShapeless("pully", <item:create:hose_pulley>, [<item:create:elevator_pulley>]);
+craftingTable.addShapeless("pully2", <item:create:rope_pulley>, [<item:create:hose_pulley>]);
+craftingTable.addShapeless("pully3", <item:create:elevator_pulley>, [<item:create:rope_pulley>]);
+
