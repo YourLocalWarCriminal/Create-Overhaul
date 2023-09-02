@@ -98,7 +98,6 @@ for i, item in ingots_press {
 <recipetype:create:item_application>.addRecipe("rope_pulley2", [<item:create:hose_pulley>], <item:create:rope_pulley>, <item:create:copper_casing>, true);
 <recipetype:create:item_application>.addRecipe("elevator_pulley", [<item:create:hose_pulley>], <item:create:elevator_pulley>, <item:create:copper_casing>, true);
 <recipetype:create:item_application>.addRecipe("elevator_pulley2", [<item:create:rope_pulley>], <item:create:elevator_pulley>, <item:create:andesite_casing>, true);
-<recipetype:create:item_application>.addRecipe("spout", [<item:create:spout>], <item:create:fluid_tank>, <item:create:chute>, false);
 //deplyoer application(name,deployed onto item, the held item, output, keep held item as bool)
 
 
