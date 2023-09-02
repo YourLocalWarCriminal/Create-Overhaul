@@ -42,6 +42,6 @@ for i, item in ingots {
     <recipetype:immersiveengineering:metal_press>.addRecipe("ingots_to_sheets" + i, ingots[i], <item:immersiveengineering:mold_plate>, 2400, plates[i]);
 }
 
-<recipetype:immersiveengineering:metal_press>.addRecipe("small_gear", <item:minecraft:iron_nugget>, <item:immersiveengineering:mold_gear>, 600, <item:kubejs:small_gear>);
-<recipetype:immersiveengineering:metal_press>.addRecipe("medium_gear", <item:minecraft:iron_ingot>, <item:immersiveengineering:mold_gear>, 1200, <item:kubejs:medium_gear>);
-<recipetype:immersiveengineering:metal_press>.addRecipe("large_gear", <item:create:iron_sheet>, <item:immersiveengineering:mold_gear>, 2400, <item:kubejs:large_gear>);
+<recipetype:immersiveengineering:metal_press>.addRecipe("small_gear_press", <item:minecraft:iron_nugget>, <item:immersiveengineering:mold_gear>, 600, <item:kubejs:small_gear>);
+<recipetype:immersiveengineering:metal_press>.addRecipe("medium_gear_press", <item:minecraft:iron_ingot>, <item:immersiveengineering:mold_gear>, 1200, <item:kubejs:medium_gear>);
+<recipetype:immersiveengineering:metal_press>.addRecipe("large_gear_press", <item:create:iron_sheet>, <item:immersiveengineering:mold_gear>, 2400, <item:kubejs:large_gear>);

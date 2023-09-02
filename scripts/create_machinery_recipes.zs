@@ -65,17 +65,28 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 for i, item in ingots_press {
     <recipetype:create:pressing>.addRecipe("ingots_to_plates" + i, [plates_press[i]%100], ingots_press[i]*2, 200);
 }
-//millstone recipes(name,[outputs,input],time)
+//millstone recipes(name,[outputs],input,time)
 <recipetype:create:milling>.addRecipe("cinderflour", [<item:create:cinder_flour> % 100], <item:minecraft:netherrack>, 160);
 //item application(name,output, block, held item, keep item? as bool)
 <recipetype:create:item_application>.addRecipe("andesitecasing", [<item:create:andesite_casing> % 100], <tag:items:forge:treated_wood>, <item:create:andesite_alloy>, false);
-<recipetype:create:item_application>.addRecipe("coppercasing", [<item:create:copper_casing> % 100], <tag:items:forge:treated_wood>, <item:create:copper_sheet>, false);
 <recipetype:create:item_application>.addRecipe("brasscasing", [<item:create:brass_casing> % 100], <tag:items:forge:treated_wood>, <item:create:brass_sheet>, false);
-<recipetype:create:item_application>.addRecipe("steelcasing", [<item:alloyed:steel_casing> % 100], <tag:items:forge:treated_wood>, <item:alloyed:steel_sheet>, false);
 <recipetype:create:item_application>.addRecipe("siftinggravel", [<item:create:copper_nugget> % 25, <item:minecraft:flint> % 25], <item:minecraft:gravel>, <item:farmersdelight:safety_net>, true);
 <recipetype:create:item_application>.addRecipe("sandsifting", [<item:create:copper_nugget> % 10, <item:byg:mud_ball> % 25, <item:minecraft:clay_ball> % 15], <tag:items:forge:sand>, <item:farmersdelight:safety_net>, true);
 <recipetype:create:item_application>.addRecipe("item_drain", [<item:create:item_drain>], <item:create:copper_casing>, <tag:items:forge:bars>, false);
+<recipetype:create:item_application>.addRecipe("portable_interface3", [<item:create:portable_fluid_interface>], <item:create:portable_storage_interface>, <item:create:copper_casing>, true);
+<recipetype:create:item_application>.addRecipe("portable_interface4", [<item:create:portable_storage_interface>], <item:create:portable_fluid_interface>, <item:create:andesite_casing>, true);
+<recipetype:create:item_application>.addRecipe("valve", [<item:create:fluid_valve>], <item:create:fluid_pipe>, <item:create:shaft>, false);
+<recipetype:create:item_application>.addRecipe("mechanical_pump", [<item:create:mechanical_pump>], <item:create:fluid_pipe>, <item:create_sa:hydraulic_engine>, false);
+<recipetype:create:item_application>.addRecipe("spout", [<item:create:spout>], <item:create:fluid_tank>, <item:create:chute>, false);
+
+<recipetype:create:item_application>.addRecipe("hose_pulley", [<item:create:hose_pulley>], <item:create:elevator_pulley>, <item:create:brass_casing>, true);
+<recipetype:create:item_application>.addRecipe("hose_pulley2", [<item:create:hose_pulley>], <item:create:rope_pulley>, <item:create:andesite_casing>, true);
+<recipetype:create:item_application>.addRecipe("rope_pulley", [<item:create:rope_pulley>], <item:create:elevator_pulley>, <item:create:brass_casing>, true);
+<recipetype:create:item_application>.addRecipe("rope_pulley2", [<item:create:rope_pulley>], <item:create:hose_pulley>, <item:create:copper_casing>, true);
+<recipetype:create:item_application>.addRecipe("elevator_pulley", [<item:create:elevator_pulley>], <item:create:hose_pulley>, <item:create:copper_casing>, true);
+<recipetype:create:item_application>.addRecipe("elevator_pulley2", [<item:create:elevator_pulley>], <item:create:rope_pulley>, <item:create:andesite_casing>, true);
 //deplyoer application(name,deployed onto item, the held item, output, keep held item as bool)
+
 
 //mixer(name,heat,[output], [input], [fluid], time)
 <recipetype:create:mixing>.addRecipe("rosequartz", <constant:create:heat_condition:none>, [<item:create:rose_quartz> % 100], [<item:minecraft:quartz>, <item:minecraft:redstone> * 8], [], 300);
@@ -160,4 +171,43 @@ for i, item in ingots {
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:bolt>))
                                                       );
 
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("fluid_tank")
+                                                      .transitionTo(<item:create:fluid_tank>)
+                                                      .require(<item:create:copper_casing>)
+                                                      .loops(4)
+                                                      .addOutput(<item:create:fluid_tank>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:glass_panes>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(500))
+                                                      );
 
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("pipe2")
+                                                      .transitionTo(<item:create:fluid_pipe>)
+                                                      .require(<tag:items:forge:plates/copper>)
+                                                      .loops(4)
+                                                      .addOutput(<item:create:fluid_pipe>, 1)
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("smart_pipe2")
+                                                      .transitionTo(<item:create:smart_fluid_pipe>)
+                                                      .require(<item:create:fluid_pipe>)
+                                                      .loops(1)
+                                                      .addOutput(<item:create:smart_fluid_pipe>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:brass_sheet>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:attribute_filter>))
+                                                      );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("steam_engine")
+                                                      .transitionTo(<item:create:steam_engine>)
+                                                      .require(<item:create:copper_casing>)
+                                                      .loops(1)
+                                                      .addOutput(<item:create:steam_engine>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:fluid_pipe>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create_sa:steam_engine>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>))
+                                                      );
