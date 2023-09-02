@@ -65,14 +65,14 @@ craftingTable.addShaped("bfurnace", <item:minecraft:blast_furnace>,[
 ]);
 
 craftingTable.addShaped("alloybricks", <item:immersiveengineering:alloybrick> * 4, [
-    [<item:minecraft:clay_ball>, <item:minecraft:stone>, <item:minecraft:clay_ball>],
-    [<item:minecraft:sandstone>, <item:immersiveengineering:component_iron>, <item:minecraft:sandstone>],
-    [<item:minecraft:clay_ball>, <item:minecraft:stone>, <item:minecraft:clay_ball>]
+    [<item:minecraft:terracotta>, <item:minecraft:stone>, <item:minecraft:terracotta>],
+    [<item:minecraft:sandstone>, <item:minecraft:copper_ingot>, <item:minecraft:sandstone>],
+    [<item:minecraft:terracotta>, <item:minecraft:stone>, <item:minecraft:terracotta>]
 ]);
 
 craftingTable.addShaped("cokebricks", <item:immersiveengineering:cokebrick> * 3, [
     [<item:minecraft:sandstone>, <item:create:andesite_alloy>, <item:minecraft:sandstone>],
-    [<item:create:andesite_alloy>, <item:immersiveengineering:component_iron>, <item:create:andesite_alloy>],
+    [<item:create:andesite_alloy>, <item:minecraft:charcoal>, <item:create:andesite_alloy>],
     [<item:minecraft:sandstone>, <item:create:andesite_alloy>, <item:minecraft:sandstone>]
 ]);
 
@@ -399,12 +399,62 @@ craftingTable.addShapeless("portable_interface1", <item:create:portable_storage_
 craftingTable.addShapeless("portable_interface2", <item:create:portable_fluid_interface>, [<item:create:portable_storage_interface>]);
 craftingTable.addShapeless("portable_fluid_interface", <item:create:portable_fluid_interface>, [<item:create:copper_casing>, <item:create:fluid_pipe>]);
 
-craftingTable.addShapeless("pully", <item:create:hose_pulley>, [<item:create:elevator_pulley>]);
-craftingTable.addShapeless("pully2", <item:create:rope_pulley>, [<item:create:hose_pulley>]);
-craftingTable.addShapeless("pully3", <item:create:elevator_pulley>, [<item:create:rope_pulley>]);
+craftingTable.addShaped("steel_block", <item:immersiveengineering:storage_steel>, [
+    [<item:alloyed:steel_ingot>, <item:alloyed:steel_ingot>, <item:alloyed:steel_ingot>],
+    [<item:alloyed:steel_ingot>, <item:alloyed:steel_ingot>, <item:alloyed:steel_ingot>],
+    [<item:alloyed:steel_ingot>, <item:alloyed:steel_ingot>, <item:alloyed:steel_ingot>]
+]);
 
-craftingTable.addShapeless("copper_rod2", <item:createaddition:copper_rod>, [<tag:items:forge:ingots/copper>, <tag:items:forge:ingots/copper>, <item:rechiseled:chisel>]);
-craftingTable.addShapeless("windmill_bearing", <item:create:windmill_bearing>, [<item:create:shaft>]);
+craftingTable.addShaped("bayonet", <item:immersiveengineering:toolupgrade_revolver_bayonet>, [
+    [<item:createaddition:copper_wire>, <item:alloyed:steel_sword>],
+    [<item:alloyed:steel_ingot>, <item:createaddition:copper_wire>]
+]);
 
+craftingTable.addShaped("ie_crafting_table", <item:immersiveengineering:craftingtable>, [
+    [<tag:items:forge:treated_wood_slab>, <item:minecraft:crafting_table>, <tag:items:forge:treated_wood_slab>],
+    [<item:create:shaft>, <item:kubejs:nail>, <item:create:shaft>],
+    [<item:create:shaft>, <item:createdeco:cast_iron_ingot>, <item:create:shaft>] 
+]);
+
+craftingTable.addShaped("ie_table", <item:immersiveengineering:workbench>, [
+    [<item:kubejs:bolt>, <item:immersiveengineering:component_iron>, nope],
+    [<item:immersiveengineering:craftingtable>, <tag:items:forge:treated_wood_slab>, <tag:items:forge:treated_wood_slab>],
+    [<item:immersiveengineering:treated_fence>, <item:kubejs:nail>, <item:immersiveengineering:treated_fence>]
+]);
+
+craftingTable.addShaped("iron_sword", <item:minecraft:iron_sword>, [
+    [<item:minecraft:iron_ingot>],
+    [<item:create:iron_sheet>],
+    [<item:immersiveengineering:stick_treated>]
+]);
+
+craftingTable.addShaped("iron_shovel", <item:minecraft:iron_shovel>, [
+    [<item:create:iron_sheet>],
+    [<item:immersiveengineering:stick_treated>],
+    [<item:immersiveengineering:stick_treated>]
+]);
+
+craftingTable.addShaped("iron_pickaxe", <item:minecraft:iron_pickaxe>, [
+    [<item:minecraft:iron_ingot>, <item:create:iron_sheet>, <item:minecraft:iron_ingot>],
+    [nope, <item:immersiveengineering:stick_treated>, nope],
+    [nope, <item:immersiveengineering:stick_treated>, nope]
+]);
+
+craftingTable.addShapedMirrored("iron_axe", MirrorAxis.HORIZONTAL, <item:minecraft:iron_axe>, [
+    [<item:minecraft:iron_ingot>, <item:create:iron_sheet>],
+    [<item:minecraft:iron_ingot>, <item:immersiveengineering:stick_treated>],
+    [nope, <item:immersiveengineering:stick_treated>]
+]);
+
+craftingTable.addShapedMirrored("iron_hoe", MirrorAxis.HORIZONTAL, <item:minecraft:iron_hoe>, [
+    [<item:minecraft:iron_ingot>, <item:create:iron_sheet>],
+    [nope, <item:immersiveengineering:stick_treated>],
+    [nope, <item:immersiveengineering:stick_treated>],
+]);
+
+craftingTable.addShaped("iron_knife", <item:farmersdelight:iron_knife>, [
+    [<item:create:iron_sheet>],
+    [<item:immersiveengineering:stick_treated>]
+]);
 craftingTable.addShapeless("gearbox2", <item:create:gearbox>, [<item:create:vertical_gearbox>]);
 craftingTable.addShapeless("clockwork_bearing", <item:create:clockwork_bearing>, [<item:create:mechanical_bearing>, <item:kubejs:clockwork_mechanism>]);

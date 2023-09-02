@@ -5,26 +5,6 @@ import mods.farmersdelight.CuttingBoard;
 
 //smithing recipes(name,output,inputA,inputB)
 
-val copper_tools = [
-    <item:create_sa:copper_axe>,
-    <item:create_sa:copper_sword>,
-    <item:create_sa:copper_shovel>,
-    <item:create_sa:copper_hoe>,
-    <item:create_sa:copper_pickaxe>,
-];
-
-val iron_tools = [
-    <item:minecraft:iron_axe>,
-    <item:minecraft:iron_sword>,
-    <item:minecraft:iron_shovel>,
-    <item:minecraft:iron_hoe>,
-    <item:minecraft:iron_pickaxe>,
-];
-
-for i,item in copper_tools {
-    <recipetype:minecraft:smithing>.addRecipe("copper_to_iron" + i, iron_tools[i], copper_tools[i], <item:immersiveengineering:component_iron>);
-}
-
 val steel_tools = [
 <item:alloyed:steel_axe>,
 <item:alloyed:steel_sword>,

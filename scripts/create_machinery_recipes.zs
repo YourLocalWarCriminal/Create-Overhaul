@@ -98,6 +98,7 @@ for i, item in ingots_press {
 <recipetype:create:item_application>.addRecipe("rope_pulley2", [<item:create:hose_pulley>], <item:create:rope_pulley>, <item:create:copper_casing>, true);
 <recipetype:create:item_application>.addRecipe("elevator_pulley", [<item:create:hose_pulley>], <item:create:elevator_pulley>, <item:create:copper_casing>, true);
 <recipetype:create:item_application>.addRecipe("elevator_pulley2", [<item:create:rope_pulley>], <item:create:elevator_pulley>, <item:create:andesite_casing>, true);
+<recipetype:create:item_application>.addRecipe("spout", [<item:create:spout>], <item:create:fluid_tank>, <item:create:chute>, false);
 //deplyoer application(name,deployed onto item, the held item, output, keep held item as bool)
 
 
@@ -105,13 +106,14 @@ for i, item in ingots_press {
 <recipetype:create:mixing>.addRecipe("rosequartz", <constant:create:heat_condition:none>, [<item:create:rose_quartz> % 100], [<item:minecraft:quartz>, <item:minecraft:redstone> * 8], [], 300);
 <recipetype:create:mixing>.addRecipe("glass_mixer",<constant:create:heat_condition:heated>, [<item:minecraft:glass> * 2 % 100], [<item:minecraft:sand>, <item:minecraft:quartz>, <item:kubejs:lime_dust>], [], 600);
 <recipetype:create:mixing>.addRecipe("glass_white_sand_mixing", <constant:create:heat_condition:heated>, [<item:minecraft:glass> % 100], [<item:byg:white_sand>, <item:kubejs:lime_dust>], [], 600);
+<recipetype:create:mixing>.addRecipe("redstone_acid", <constant:create:heat_condition:none>, [<fluid:immersiveengineering:redstone_acid> * 500], [<item:minecraft:redstone>*4], [<fluid:minecraft:water> * 500]);
 //saw recipes(name,output,input,time)
 <recipetype:create:cutting>.addRecipe("treatedsticks",<item:immersiveengineering:stick_treated> * 2 % 100 , <tag:items:forge:treated_wood>, 220);
 for i, item in ingots {
     <recipetype:create:cutting>.addRecipe("ingots_to_rods" + i, rods[i]*2, ingots[i], 800);
 }
 
-<recipetype:create:cutting>.addRecipe("bolt", <item:kubejs:bolt>*2, <item:createaddition:iron_rod>, 400);
+<recipetype:create:cutting>.addRecipe("bolt", <item:kubejs:bolt>*1, <item:createaddition:iron_rod>, 400);
 <recipetype:create:cutting>.addRecipe("nail", <item:kubejs:nail>*2, <item:create:iron_sheet>, 400);
 
 // MechanicalCrafterManager.addRecipe(name, output, ingredients[][]);
@@ -188,7 +190,7 @@ for i, item in ingots {
                                                       );
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("steel_casing")
-                                                      .transitionTo(<item:alloyed:steel_casing>)
+                                                      .transitionTo(<item:immersiveengineering:treated_wood_horizontal>)
                                                       .require(<tag:items:forge:treated_wood>)
                                                       .loops(12)
                                                       .addOutput(<item:alloyed:steel_casing>, 1)
@@ -197,7 +199,7 @@ for i, item in ingots {
                                                       );
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("fluid_tank")
-                                                      .transitionTo(<item:create:fluid_tank>)
+                                                      .transitionTo(<item:create:copper_casing>)
                                                       .require(<item:create:copper_casing>)
                                                       .loops(4)
                                                       .addOutput(<item:create:fluid_tank>, 1)
@@ -206,7 +208,7 @@ for i, item in ingots {
                                                       );
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("pipe2")
-                                                      .transitionTo(<item:create:fluid_pipe>)
+                                                      .transitionTo(<item:create:copper_sheet>)
                                                       .require(<tag:items:forge:plates/copper>)
                                                       .loops(4)
                                                       .addOutput(<item:create:fluid_pipe>, 1)
@@ -214,7 +216,7 @@ for i, item in ingots {
                                                       );
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("smart_pipe2")
-                                                      .transitionTo(<item:create:smart_fluid_pipe>)
+                                                      .transitionTo(<item:create:fluid_pipe>)
                                                       .require(<item:create:fluid_pipe>)
                                                       .loops(1)
                                                       .addOutput(<item:create:smart_fluid_pipe>, 1)
@@ -225,7 +227,7 @@ for i, item in ingots {
                                                       );
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("steam_engine")
-                                                      .transitionTo(<item:create:steam_engine>)
+                                                      .transitionTo(<item:create:copper_casing>)
                                                       .require(<item:create:copper_casing>)
                                                       .loops(1)
                                                       .addOutput(<item:create:steam_engine>, 1)
