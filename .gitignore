@@ -25,3 +25,5 @@ crash-reports
 usercache.json
 
 usernamecache.json
+
+config/darkness.properties
