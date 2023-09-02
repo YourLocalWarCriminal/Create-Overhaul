@@ -17,7 +17,7 @@ var delete = [
 <item:create:andesite_bars>,
 <item:create:brass_bars>,
 <item:create:copper_bars>,
-<item:immersiveengineering:storage_steel>,
+<item:alloyed:steel_block>,
 <item:immersiveengineering:watermill>,
 <item:immersiveengineering:windmill>,
 <item:immersiveengineering:dynamo>,
@@ -88,6 +88,7 @@ var delete = [
 <item:immersiveengineering:nugget_copper>,
 <item:immersiveengineering:nugget_steel>,
 <item:createdeco:zinc_sheet>,
+<item:immersiveengineering:mold_wire>,
 ];
 
 for item in delete {
@@ -253,6 +254,12 @@ var recipesd = [
 <item:farmersdelight:diamond_knife>,
 <item:minecraft:flint_and_steel>,
 <item:immersiveengineering:wirecutter>,
+<item:immersiveengineering:storage_steel>,
+<item:immersiveengineering:toolupgrade_revolver_bayonet>,
+<item:immersiveengineering:craftingtable>,
+<item:immersiveengineering:workbench>,
+<item:farmersdelight:iron_knife>,
+<item:immersiveengineering:redstone_acid_bucket>,
 ];
 
 for item in recipesd {
@@ -288,3 +295,5 @@ craftingTable.remove(<tag:items:forge:plates>);
 <recipetype:create:pressing>.remove(<item:createdeco:netherite_sheet>);
 <recipetype:create:pressing>.remove(<item:alloyed:bronze_sheet>);
 <recipetype:create:compacting>.remove(<fluid:createaddition:seed_oil>);
+<recipetype:immersiveengineering:metal_press>.remove(<item:createaddition:gold_wire>);
+<recipetype:immersiveengineering:metal_press>.remove(<item:createaddition:iron_wire>);
