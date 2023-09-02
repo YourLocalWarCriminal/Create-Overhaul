@@ -64,12 +64,6 @@ craftingTable.addShaped("bfurnace", <item:minecraft:blast_furnace>,[
     [<item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>]
 ]);
 
-craftingTable.addShaped("iron_m_comp", <item:immersiveengineering:component_iron>, [
-    [nope, <item:minecraft:iron_ingot>, nope],
-    [<item:minecraft:iron_ingot>, <item:minecraft:copper_ingot>, <item:minecraft:iron_ingot>],
-    [nope, <item:minecraft:iron_ingot>, nope],
-]);
-
 craftingTable.addShaped("alloybricks", <item:immersiveengineering:alloybrick> * 4, [
     [<item:minecraft:clay_ball>, <item:minecraft:stone>, <item:minecraft:clay_ball>],
     [<item:minecraft:sandstone>, <item:immersiveengineering:component_iron>, <item:minecraft:sandstone>],
@@ -339,7 +333,7 @@ craftingTable.addShaped("kinetic_engine", <item:kubejs:mechanical_engine>, [
     [hammer, <item:kubejs:mechanism_casing>, screwdriver]
 ]);
 
-craftingTable.addShapeless("leverage_components", <item:kubejs:leverage_components>, [<item:kubejs:large_gear>, <item:kubejs:medium_gear>, <item:kubejs:large_gear>,<item:kubejs:small_gear>,<item:kubejs:mechanical_elbow>]);
+craftingTable.addShapeless("leverage_components", <item:kubejs:leverage_components>, [<item:kubejs:large_gear>, <item:kubejs:medium_gear>, <item:kubejs:large_gear>,<item:kubejs:small_gear>, <item:kubejs:mechanical_elbow>]);
 
 craftingTable.addShaped("press", <item:create:mechanical_press>, [
     [<item:kubejs:mechanical_engine>, <item:create:shaft>, <item:kubejs:mechanical_engine>],
@@ -383,6 +377,24 @@ craftingTable.addShaped("fluid_tank2", <item:create:fluid_tank>, [
     [<tag:items:immersiveengineering:tools/hammers>, <tag:items:forge:glass_panes>, <item:immersiveengineering:screwdriver>]
 ]);
 
+craftingTable.addShaped("component_iron", <item:immersiveengineering:component_iron>, [
+    [<item:kubejs:medium_gear>, <tag:items:immersiveengineering:tools/hammers>, <item:kubejs:small_gear>],
+    [<item:kubejs:small_gear>, <tag:items:forge:rods/copper>, <item:kubejs:medium_gear>],
+    [<tag:items:forge:plates/iron>, <tag:items:forge:plates/iron>, <tag:items:forge:plates/iron>]
+]);
+
+craftingTable.addShaped("gearbox", <item:create:gearbox>, [
+    [<item:create:shaft>, <item:kubejs:large_gear>, <item:kubejs:small_gear>],
+    [<item:kubejs:medium_gear>, <item:create:andesite_casing>, <item:create:shaft>],
+    [<item:kubejs:large_gear>, <item:kubejs:small_gear>, <item:kubejs:medium_gear>]
+]);
+
+craftingTable.addShaped("mechanical_bearing", <item:create:mechanical_bearing>, [
+    [<item:kubejs:nail>, <item:immersiveengineering:hammer>, <item:kubejs:nail>],
+    [<item:immersiveengineering:component_iron>, <item:create:andesite_casing>, <item:create:shaft>],
+    [<item:kubejs:large_gear>, <item:kubejs:medium_gear>, <item:kubejs:large_gear>]
+]);
+
 craftingTable.addShapeless("portable_interface1", <item:create:portable_storage_interface>, [<item:create:portable_fluid_interface>]);
 craftingTable.addShapeless("portable_interface2", <item:create:portable_fluid_interface>, [<item:create:portable_storage_interface>]);
 craftingTable.addShapeless("portable_fluid_interface", <item:create:portable_fluid_interface>, [<item:create:copper_casing>, <item:create:fluid_pipe>]);
@@ -391,3 +403,8 @@ craftingTable.addShapeless("pully", <item:create:hose_pulley>, [<item:create:ele
 craftingTable.addShapeless("pully2", <item:create:rope_pulley>, [<item:create:hose_pulley>]);
 craftingTable.addShapeless("pully3", <item:create:elevator_pulley>, [<item:create:rope_pulley>]);
 
+craftingTable.addShapeless("copper_rod2", <item:createaddition:copper_rod>, [<tag:items:forge:ingots/copper>, <tag:items:forge:ingots/copper>, <item:rechiseled:chisel>]);
+craftingTable.addShapeless("windmill_bearing", <item:create:windmill_bearing>, [<item:create:shaft>]);
+
+craftingTable.addShapeless("gearbox2", <item:create:gearbox>, [<item:create:vertical_gearbox>]);
+craftingTable.addShapeless("clockwork_bearing", <item:create:clockwork_bearing>, [<item:create:mechanical_bearing>, <item:kubejs:clockwork_mechanism>]);

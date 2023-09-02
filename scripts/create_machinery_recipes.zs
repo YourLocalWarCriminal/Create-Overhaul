@@ -3,6 +3,9 @@ import mods.create.DeployerApplicationManager;
 import mods.create.MixingManager;
 
 //variables
+
+val nope = <item:minecraft:air>;
+
 val rods = [
     <item:createaddition:brass_rod>,
     <item:immersiveengineering:stick_steel>,
@@ -38,6 +41,8 @@ val ingots_press = [
     <item:minecraft:netherite_ingot>,
     <item:immersiveengineering:ingot_uranium>,
     <item:createdeco:cast_iron_ingot>,
+    <item:create:experience_nugget>,
+    <item:create:polished_rose_quartz>,
 ];
 
 val plates_press = [
@@ -57,6 +62,8 @@ val plates_press = [
     <item:createdeco:netherite_sheet>,
     <item:immersiveengineering:plate_uranium>,
     <item:createdeco:cast_iron_sheet>,
+    <item:create_things_and_misc:experience_sheet>,
+    <item:create_things_and_misc:rose_quartz_sheet>,
 ];
 
 val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
@@ -65,6 +72,11 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 for i, item in ingots_press {
     <recipetype:create:pressing>.addRecipe("ingots_to_plates" + i, [plates_press[i]%100], ingots_press[i]*2, 200);
 }
+
+// FillingManager.addRecipe(name, output, inputContainer, inputFluid, duration);
+<recipetype:create:filling>.addRecipe("blast_brick", <item:immersiveengineering:blastbrick> * 3, <item:minecraft:bricks> * 3, <fluid:create:potion>.withTag({Potion: "minecraft:long_fire_resistance" as string}) * 250, 200);
+<recipetype:create:filling>.addRecipe("blast_brick2", <item:immersiveengineering:blastbrick> * 3, <item:minecraft:bricks> * 3, <fluid:immersiveengineering:potion>.withTag({Potion: "minecraft:long_fire_resistance" as string}) * 250, 200);
+
 //millstone recipes(name,[outputs],input,time)
 <recipetype:create:milling>.addRecipe("cinderflour", [<item:create:cinder_flour> % 100], <item:minecraft:netherrack>, 160);
 //item application(name,output, block, held item, keep item? as bool)
@@ -77,14 +89,15 @@ for i, item in ingots_press {
 <recipetype:create:item_application>.addRecipe("portable_interface4", [<item:create:portable_storage_interface>], <item:create:portable_fluid_interface>, <item:create:andesite_casing>, true);
 <recipetype:create:item_application>.addRecipe("valve", [<item:create:fluid_valve>], <item:create:fluid_pipe>, <item:create:shaft>, false);
 <recipetype:create:item_application>.addRecipe("mechanical_pump", [<item:create:mechanical_pump>], <item:create:fluid_pipe>, <item:create_sa:hydraulic_engine>, false);
-<recipetype:create:item_application>.addRecipe("spout", [<item:create:spout>], <item:create:fluid_tank>, <item:create:chute>, false);
+<recipetype:create:item_application>.addRecipe("spout", [<item:create:spout>], <item:create:fluid_tank>, <item:create_sa:hydraulic_engine>, false);
+<recipetype:create:item_application>.addRecipe("clockwork_bearing2", [<item:create:clockwork_bearing>], <item:create:mechanical_bearing>, <item:kubejs:clockwork_mechanism>, false);
 
-<recipetype:create:item_application>.addRecipe("hose_pulley", [<item:create:hose_pulley>], <item:create:elevator_pulley>, <item:create:brass_casing>, true);
-<recipetype:create:item_application>.addRecipe("hose_pulley2", [<item:create:hose_pulley>], <item:create:rope_pulley>, <item:create:andesite_casing>, true);
-<recipetype:create:item_application>.addRecipe("rope_pulley", [<item:create:rope_pulley>], <item:create:elevator_pulley>, <item:create:brass_casing>, true);
-<recipetype:create:item_application>.addRecipe("rope_pulley2", [<item:create:rope_pulley>], <item:create:hose_pulley>, <item:create:copper_casing>, true);
-<recipetype:create:item_application>.addRecipe("elevator_pulley", [<item:create:elevator_pulley>], <item:create:hose_pulley>, <item:create:copper_casing>, true);
-<recipetype:create:item_application>.addRecipe("elevator_pulley2", [<item:create:elevator_pulley>], <item:create:rope_pulley>, <item:create:andesite_casing>, true);
+<recipetype:create:item_application>.addRecipe("hose_pulley", [<item:create:elevator_pulley>], <item:create:hose_pulley>, <item:create:brass_casing>, true);
+<recipetype:create:item_application>.addRecipe("hose_pulley2", [<item:create:rope_pulley>], <item:create:hose_pulley>, <item:create:andesite_casing>, true);
+<recipetype:create:item_application>.addRecipe("rope_pulley", [<item:create:elevator_pulley>], <item:create:rope_pulley>, <item:create:brass_casing>, true);
+<recipetype:create:item_application>.addRecipe("rope_pulley2", [<item:create:hose_pulley>], <item:create:rope_pulley>, <item:create:copper_casing>, true);
+<recipetype:create:item_application>.addRecipe("elevator_pulley", [<item:create:hose_pulley>], <item:create:elevator_pulley>, <item:create:copper_casing>, true);
+<recipetype:create:item_application>.addRecipe("elevator_pulley2", [<item:create:rope_pulley>], <item:create:elevator_pulley>, <item:create:andesite_casing>, true);
 //deplyoer application(name,deployed onto item, the held item, output, keep held item as bool)
 
 
@@ -100,6 +113,18 @@ for i, item in ingots {
 
 <recipetype:create:cutting>.addRecipe("bolt", <item:kubejs:bolt>*2, <item:createaddition:iron_rod>, 400);
 <recipetype:create:cutting>.addRecipe("nail", <item:kubejs:nail>*2, <item:create:iron_sheet>, 400);
+
+// MechanicalCrafterManager.addRecipe(name, output, ingredients[][]);
+
+<recipetype:create:mechanical_crafting>.addRecipe("crushing_wheel", <item:create:crushing_wheel>, [
+    [nope, nope, <item:kubejs:nail>, nope, <item:kubejs:nail>, nope, nope],
+    [nope, <tag:items:forge:plates/steel>,  <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <tag:items:forge:plates/steel>, nope],
+    [<item:kubejs:nail>, <item:minecraft:smooth_stone>, <item:immersiveengineering:stick_steel>, <item:immersiveengineering:stick_treated>, <item:immersiveengineering:stick_steel>, <item:minecraft:smooth_stone>, <item:kubejs:nail>],
+    [nope, <item:minecraft:smooth_stone>, <item:immersiveengineering:stick_treated>, <item:create:shaft>, <item:immersiveengineering:stick_treated>, <item:minecraft:smooth_stone>, nope],
+    [<item:kubejs:nail>, <item:minecraft:smooth_stone>, <item:immersiveengineering:stick_steel>, <item:immersiveengineering:stick_treated>, <item:immersiveengineering:stick_steel>, <item:minecraft:smooth_stone>, <item:kubejs:nail>],
+    [nope, <tag:items:forge:plates/steel>,  <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <tag:items:forge:plates/steel>, nope],
+    [nope, nope, <item:kubejs:nail>, nope, <item:kubejs:nail>, nope, nope]
+]);
 
 //sequenced ASSembly(trust me this was ass to figure out)(name,output(transitionTo), input(require), loops, Outher Outputs(addOutput), addStep)
 /*A blank crafting recipe
@@ -210,4 +235,50 @@ for i, item in ingots {
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>))
+                                                      );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("leverage_mechanism2")
+                                                      .transitionTo(<item:kubejs:leverage_mechanism>)
+                                                      .require(<item:kubejs:mechanical_engine>)
+                                                      .loops(1)
+                                                      .addOutput(<item:kubejs:leverage_mechanism>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:leverage_components>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      );
+                                                      
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("advanced_mechanism_casing")
+                                                      .transitionTo(<item:kubejs:advanced_mechanism_casing>)
+                                                      .require(<tag:items:forge:plates/cast_iron>)
+                                                      .loops(2)
+                                                      .addOutput(<item:kubejs:advanced_mechanism_casing>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:rods/iron>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(500))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:ingots/brass>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(500))
+                                                      );
+ 
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("clockwork_mechanism")
+                                                      .transitionTo(<item:kubejs:clockwork_mechanism>)
+                                                      .require(<item:kubejs:advanced_mechanism_casing>)
+                                                      .loops(2)
+                                                      .addOutput(<item:kubejs:clockwork_mechanism>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_iron>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:nail>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:large_gear>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:medium_gear>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:chain>))
+                                                      );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("component_iron")
+                                                      .transitionTo(<item:immersiveengineering:component_iron>)
+                                                      .require(<tag:items:forge:rods/copper>)
+                                                      .loops(2)
+                                                      .addOutput(<item:immersiveengineering:component_iron>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:small_gear>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:medium_gear>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:plates/iron>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(350))
                                                       );

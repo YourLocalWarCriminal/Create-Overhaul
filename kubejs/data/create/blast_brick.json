@@ -1,0 +1,23 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:bricks",
+      "amount": 3
+    },
+    {
+      "fluid": "create:potion",
+      "nbt": {
+        "Bottle": "REGULAR",
+        "Potion": "minecraft:long_fire_resistance"
+      },
+      "amount": 250
+    }
+  ],
+  "results": [
+    {
+      "item": "immersiveengineering:blastbrick",
+      "amount": 3
+    }
+  ]
+}

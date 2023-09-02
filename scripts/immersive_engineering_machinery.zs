@@ -9,6 +9,8 @@ val plates = [
     <item:createdeco:cast_iron_sheet>,
     <item:createdeco:netherite_sheet>,
     <item:kubejs:mithril_plate>,
+    <item:create_things_and_misc:experience_sheet>,
+    <item:create_things_and_misc:rose_quartz_sheet>,
 ];
 
 val ingots = [
@@ -18,7 +20,9 @@ val ingots = [
     <item:alloyed:steel_ingot>,
     <item:createdeco:cast_iron_ingot>,
     <item:minecraft:netherite_ingot>,
-    <item:kubejs:mithril_ingot>
+    <item:kubejs:mithril_ingot>,
+    <item:create:experience_nugget>,
+    <item:create:polished_rose_quartz>,
 ];
 
 //alloy kiln recipes (name, inputA,inputB,time,output)
@@ -45,3 +49,10 @@ for i, item in ingots {
 <recipetype:immersiveengineering:metal_press>.addRecipe("small_gear_press", <item:minecraft:iron_nugget>, <item:immersiveengineering:mold_gear>, 600, <item:kubejs:small_gear>);
 <recipetype:immersiveengineering:metal_press>.addRecipe("medium_gear_press", <item:minecraft:iron_ingot>, <item:immersiveengineering:mold_gear>, 1200, <item:kubejs:medium_gear>);
 <recipetype:immersiveengineering:metal_press>.addRecipe("large_gear_press", <item:create:iron_sheet>, <item:immersiveengineering:mold_gear>, 2400, <item:kubejs:large_gear>);
+
+// Blueprint.addRecipe(name, blueprintCategory (string), inputs, output)
+
+<recipetype:immersiveengineering:blueprint>.addRecipe("clockwork_mechanism2", "components", [
+    <item:kubejs:mechanism_casing>, <item:kubejs:nail> * 6, <item:kubejs:large_gear> * 6, <item:minecraft:chain> * 4, 
+    <item:immersiveengineering:component_iron> * 3, <item:immersiveengineering:screwdriver>], 
+    <item:kubejs:clockwork_mechanism>);

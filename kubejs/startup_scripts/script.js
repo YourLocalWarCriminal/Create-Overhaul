@@ -32,18 +32,3 @@ onEvent('block.registry', event => {
 	// Register new blocks here
 	// event.create('example_block').material('wood').hardness(1.0).displayName('Example Block')
 })
-
-// Listen to item tag event
-onEvent('item.tags', event => {
-	// You can create new tags the same way you add to existing, just give it a name
-	event.add('forge:bars', '<item:minecraft:iron_bars>')
-	event.add('forge:bars', '<item:createdeco:gold_bars>')
-	event.add('forge:bars', '<item:createdeco:netherite_bars>')
-	event.add('forge:bars', '<item:createdeco:andesite_bars>')
-	event.add('forge:bars', '<item:createdeco:brass_bars>')
-	event.add('forge:bars', '<item:createdeco:cast_iron_bars>')
-	event.add('forge:bars', '<item:createdeco:polished_iron_bars>')
-	event.add('forge:bars', '<item:createdeco:copper_bars>')
-	event.add('forge:bars', '<item:createdeco:zinc_bars>')
-	event.add('forge:bars', '<item:alloyed:steel_bars>')
-  })

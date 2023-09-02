@@ -99,6 +99,7 @@ for item in delete {
 
 //RECIPE REMOVAL
 var recipesd = [
+<item:create:gearbox>,
 <item:create:smart_fluid_pipe>,
 <item:create:fluid_valve>,
 <item:create:fluid_tank>,
@@ -131,7 +132,6 @@ var recipesd = [
 <item:minecraft:furnace>,
 <item:minecraft:iron_sword>,
 <item:minecraft:iron_ingot>,
-<item:immersiveengineering:component_iron>,
 <item:create:mechanical_saw>,
 <item:alloyed:steel_ingot>,
 <item:create_sa:zinc_handle>,
