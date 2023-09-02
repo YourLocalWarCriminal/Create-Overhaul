@@ -25,3 +25,7 @@ crash-reports
 usercache.json
 
 usernamecache.json
+
+rhino.local.properties
+
+config/darkness.properties
