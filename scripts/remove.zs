@@ -100,6 +100,7 @@ for item in delete {
 
 //RECIPE REMOVAL
 var recipesd = [
+<item:create_sa:steam_engine>,
 <item:minecraft:pumpkin_pie>,
 <item:byg:blueberry_pie>,
 <item:byg:crimson_berry_pie>,

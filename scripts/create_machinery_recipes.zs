@@ -225,19 +225,6 @@ for i, item in ingots {
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:attribute_filter>))
                                                       );
 
-<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("steam_engine")
-                                                      .transitionTo(<item:create:copper_casing>)
-                                                      .require(<item:create:copper_casing>)
-                                                      .loops(1)
-                                                      .addOutput(<item:create:steam_engine>, 1)
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:fluid_pipe>))
-                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create_sa:steam_engine>))
-                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>))
-                                                      );
-
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("leverage_mechanism2")
                                                       .transitionTo(<item:kubejs:leverage_mechanism>)
                                                       .require(<item:kubejs:mechanical_engine>)
@@ -283,3 +270,27 @@ for i, item in ingots {
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:plates/iron>))
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(350))
                                                       );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("steam_engine")
+                                                      .transitionTo(<item:create_sa:steam_engine>)
+                                                      .require(<item:create:fluid_valve>)
+                                                      .loops(4)
+                                                      .addOutput(<item:create_sa:steam_engine>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:small_gear>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:plates/brass>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:medium_gear>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(500))
+                                                      );
+                                                      
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("steam_engine")
+                                                      .transitionTo(<item:create:copper_casing>)
+                                                      .require(<item:create:copper_casing>)
+                                                      .loops(1)
+                                                      .addOutput(<item:create:steam_engine>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:fluid_pipe>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create_sa:steam_engine>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>))
+                                                      );                                                      

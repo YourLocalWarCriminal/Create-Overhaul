@@ -29,6 +29,8 @@ onEvent('recipes', event => {
 
 	event.replaceInput({}, '#forge:plates/steel', 'alloyed:steel_sheet')
 	event.replaceInput({}, '#forge:ingots/steel', 'alloyed:steel_ingot')
+	event.replaceInput({}, '#forge:nuggets/copper', 'create:copper_nugget')
+	event.replaceOutput({}, '#forge:nuggets/copper', 'create:copper_nugget')
 	
 	// In all recipes, replace Stick with Oak Sapling in output items 
 	//event.replaceOutput({}, 'minecraft:stick', 'minecraft:oak_sapling')
