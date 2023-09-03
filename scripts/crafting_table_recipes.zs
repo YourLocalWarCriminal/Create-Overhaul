@@ -458,3 +458,26 @@ craftingTable.addShaped("iron_knife", <item:farmersdelight:iron_knife>, [
 ]);
 craftingTable.addShapeless("gearbox2", <item:create:gearbox>, [<item:create:vertical_gearbox>]);
 craftingTable.addShapeless("clockwork_bearing", <item:create:clockwork_bearing>, [<item:create:mechanical_bearing>, <item:kubejs:clockwork_mechanism>]);
+
+val pies = [
+<item:minecraft:pumpkin_pie>,
+<item:byg:blueberry_pie>,
+<item:byg:crimson_berry_pie>,
+<item:byg:nightshade_berry_pie>
+];
+
+val berries = [
+<item:farmersdelight:pumpkin_slice>,
+<item:byg:blueberries>,
+<item:byg:crimson_berries>,
+<item:byg:nightshade_berries>
+];
+
+for i, pi in pies {
+    craftingTable.addShaped("pie" + i, pies[i], [
+        [<tag:items:forge:eggs>, <tag:items:forge:milk/milk_bottle>, <tag:items:forge:eggs>],
+        [berries[i], berries[i], berries[i]],
+        [<item:minecraft:sugar>, <item:farmersdelight:pie_crust>, <item:minecraft:sugar>]
+]);
+}
+
