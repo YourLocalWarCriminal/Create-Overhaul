@@ -101,6 +101,9 @@ for item in delete {
 //RECIPE REMOVAL
 var recipesd = [
 <item:create_sa:steam_engine>,
+<item:immersiveengineering:component_steel>,
+<item:create:brass_hand>,
+<item:create:deployer>,
 <item:minecraft:pumpkin_pie>,
 <item:byg:blueberry_pie>,
 <item:byg:crimson_berry_pie>,
@@ -288,6 +291,7 @@ craftingTable.remove(<item:create:rose_quartz>);
 <recipetype:create:mechanical_crafting>.remove(<item:alloyed:steel_shears>);
 
 craftingTable.remove(<item:minecraft:bread>);
+craftingTable.removeByInput(<item:minecraft:netherite_scrap>);
 <recipetype:immersiveengineering:alloy>.remove(<item:create:brass_ingot>);
 craftingTable.remove(<item:immersiveengineering:plate_lead>);
 JEI.hideIngredient(<item:kubejs:incomplete_mechanical_engine>);

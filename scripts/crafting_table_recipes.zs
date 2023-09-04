@@ -481,3 +481,14 @@ for i, pi in pies {
 ]);
 }
 
+craftingTable.addShaped("deployer", <item:create:deployer>, [
+    [<item:immersiveengineering:hammer>,<item:create:brass_hand>,<tag:items:forge:tools/wrench>],
+    [<item:create:shaft>,<item:immersiveengineering:component_steel>,<item:minecraft:chain>],
+    [<item:kubejs:clockwork_mechanism>,<item:create:andesite_casing>,<item:kubejs:clockwork_mechanism>]
+]);
+
+craftingTable.addShaped("component_steel", <item:immersiveengineering:component_steel>, [
+    [<item:kubejs:large_gear>, <tag:items:immersiveengineering:tools/hammers>, <item:kubejs:medium_gear>],
+    [<item:kubejs:medium_gear>, <item:immersiveengineering:component_iron>, <item:kubejs:large_gear>],
+    [<tag:items:forge:plates/steel>, <tag:items:forge:plates/steel>, <tag:items:forge:plates/steel>]
+]);

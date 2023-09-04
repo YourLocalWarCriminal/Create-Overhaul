@@ -101,11 +101,13 @@ for i, item in ingots_press {
 //deplyoer application(name,deployed onto item, the held item, output, keep held item as bool)
 
 
-//mixer(name,heat,[output], [input], [fluid], time)
+//mixer(name,heat,[output], [input], [inputFluid], time)
 <recipetype:create:mixing>.addRecipe("rosequartz", <constant:create:heat_condition:none>, [<item:create:rose_quartz> % 100], [<item:minecraft:quartz>, <item:minecraft:redstone> * 8], [], 300);
 <recipetype:create:mixing>.addRecipe("glass_mixer",<constant:create:heat_condition:heated>, [<item:minecraft:glass> * 2 % 100], [<item:minecraft:sand>, <item:minecraft:quartz>, <item:kubejs:lime_dust>], [], 600);
 <recipetype:create:mixing>.addRecipe("glass_white_sand_mixing", <constant:create:heat_condition:heated>, [<item:minecraft:glass> % 100], [<item:byg:white_sand>, <item:kubejs:lime_dust>], [], 600);
 <recipetype:create:mixing>.addRecipe("redstone_acid", <constant:create:heat_condition:none>, [<fluid:immersiveengineering:redstone_acid> * 500], [<item:minecraft:redstone>*4], [<fluid:minecraft:water> * 500]);
+<recipetype:create:mixing>.addRecipe("netherite_ingot", <constant:create:heat_condition:superheated>, [<item:minecraft:netherite_ingot>], [<item:minecraft:netherite_scrap>*4, <tag:items:forge:ingots/gold>*4], []);
+
 //saw recipes(name,output,input,time)
 <recipetype:create:cutting>.addRecipe("treatedsticks",<item:immersiveengineering:stick_treated> * 2 % 100 , <tag:items:forge:treated_wood>, 220);
 for i, item in ingots {
@@ -113,7 +115,7 @@ for i, item in ingots {
 }
 
 <recipetype:create:cutting>.addRecipe("bolt", <item:kubejs:bolt>*1, <item:createaddition:iron_rod>, 400);
-<recipetype:create:cutting>.addRecipe("nail", <item:kubejs:nail>*2, <item:create:iron_sheet>, 400);
+<recipetype:create:cutting>.addRecipe("nail", <item:kubejs:nail>*2, <item:create:iron_sheet>, 400);     
 
 // MechanicalCrafterManager.addRecipe(name, output, ingredients[][]);
 
@@ -282,7 +284,7 @@ for i, item in ingots {
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(500))
                                                       );
                                                       
-<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("steam_engine")
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("steam_engine2")
                                                       .transitionTo(<item:create:copper_casing>)
                                                       .require(<item:create:copper_casing>)
                                                       .loops(1)
@@ -294,3 +296,35 @@ for i, item in ingots {
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>))
                                                       );                                                      
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("component_steel")
+                                                      .transitionTo(<item:immersiveengineering:component_steel>)
+                                                      .require(<item:immersiveengineering:component_iron>)
+                                                      .loops(2)
+                                                      .addOutput(<item:immersiveengineering:component_steel>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:medium_gear>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:large_gear>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:plates/steel>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(700))
+                                                      );
+                
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("brass_hand")
+                                                      .transitionTo(<item:create:brass_hand>)
+                                                      .require(<tag:items:forge:storage_blocks/brass>)
+                                                      .loops(24)
+                                                      .addOutput(<item:create:brass_hand>, 1)
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100000))
+                                                      );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("deployer")
+                                                      .transitionTo(<item:create:deployer>)
+                                                      .require(<item:create:andesite_casing>)
+                                                      .loops(1)
+                                                      .addOutput(<item:create:deployer>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:clockwork_mechanism>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_steel>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:chain>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:shaft>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:shaft>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(500))
+                                                      );

@@ -66,4 +66,6 @@ onEvent('item.tags', event => {
 	event.add('forge:bars', 'createdeco:copper_bars')
 	event.add('forge:bars', 'createdeco:zinc_bars')
 	event.add('forge:bars', 'alloyed:steel_bars')
+	event.add('#immersiveengineering:toolbox/tools', 'create:wrench')
+	event.add('#immersiveengineering:recycling/ignored_components', 'create:wrench')
 })
