@@ -115,7 +115,9 @@ for i, item in ingots {
 }
 
 <recipetype:create:cutting>.addRecipe("bolt", <item:kubejs:bolt>*1, <item:createaddition:iron_rod>, 400);
-<recipetype:create:cutting>.addRecipe("nail", <item:kubejs:nail>*2, <item:create:iron_sheet>, 400);     
+<recipetype:create:cutting>.addRecipe("nail", <item:kubejs:nail>*2, <item:create:iron_sheet>, 400);
+<recipetype:create:cutting>.addRecipe("nailsteel", <item:kubejs:nail>*4, <item:alloyed:steel_sheet>, 400);  
+<recipetype:create:cutting>.addRecipe("boltsteel", <item:kubejs:bolt>*2, <item:immersiveengineering:stick_steel>, 400);       
 
 // MechanicalCrafterManager.addRecipe(name, output, ingredients[][]);
 
@@ -149,14 +151,15 @@ for i, item in ingots {
 */
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("precisionmechanism")
                                                       .transitionTo(<item:create:incomplete_precision_mechanism>)
-                                                      .require(<item:kubejs:mechanical_engine>)
-                                                      .loops(4)
-                                                      .addOutput(<item:create:precision_mechanism>, 32)
-                                                      .addOutput(<item:create:brass_nugget>, 1)
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:cogwheel>))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:alloyed:steel_nugget>))
+                                                      .require(<item:kubejs:clockwork_mechanism>)
+                                                      .loops(1)
+                                                      .addOutput(<item:create:precision_mechanism>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:large_gear>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_steel>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(300))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:electron_tube>))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(screwdriver))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:electron_tube>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(300))
                                                       );
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("mechanical_engine")
@@ -305,13 +308,13 @@ for i, item in ingots {
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:medium_gear>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:large_gear>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:plates/steel>))
-                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(700))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(300))
                                                       );
                 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("brass_hand")
                                                       .transitionTo(<item:create:brass_hand>)
                                                       .require(<tag:items:forge:storage_blocks/brass>)
-                                                      .loops(24)
+                                                      .loops(12)
                                                       .addOutput(<item:create:brass_hand>, 1)
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100000))
                                                       );
@@ -325,6 +328,53 @@ for i, item in ingots {
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_steel>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:chain>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:shaft>))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:shaft>))
-                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(500))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:brass_hand>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(300))
                                                       );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("electron_tube")
+                                                      .transitionTo(<item:create:polished_rose_quartz>)
+                                                      .require(<item:create:polished_rose_quartz>)
+                                                      .loops(1)
+                                                      .addOutput(<item:create:electron_tube>, 1)
+                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:immersiveengineering:redstone_acid> * 100))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:golden_sheet>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:zinc_sheet>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100)));
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("vacuum_tube")
+                                                      .transitionTo(<item:minecraft:glass_pane>)
+                                                      .require(<item:minecraft:glass_pane>)
+                                                      .loops(1)
+                                                      .addOutput(<item:immersiveengineering:electron_tube>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:wirecoil_copper>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:gold_rod>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:copper_rod>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:stick_steel>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100)));
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("arithmetic_mechanism")
+                                                      .transitionTo(<item:kubejs:clockwork_mechanism>)
+                                                      .require(<item:kubejs:clockwork_mechanism>)
+                                                      .loops(1)
+                                                      .addOutput(<item:kubejs:arithmetic_mechanism>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:electron_tube>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:electron_tube>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:copper_wire>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_steel>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:gold_wire>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100)));           
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("induction_component")
+                                                      .transitionTo(<item:immersiveengineering:treated_wood_horizontal>)
+                                                      .require(<tag:items:forge:treated_wood>)
+                                                      .loops(1)
+                                                      .addOutput(<item:kubejs:induction_mechanism>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:coil_lv>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create_sa:copper_magnet>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:large_gear>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_steel>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:belt_connector>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:copper_wire>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:copper_wire>)));
