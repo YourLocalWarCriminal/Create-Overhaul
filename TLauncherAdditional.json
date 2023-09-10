@@ -3349,6 +3349,87 @@
           "available": true,
           "parser": true,
           "totalComments": 0
+        },
+        {
+          "stateGameElement": "active",
+          "id": 457570,
+          "name": "Configured",
+          "author": "mrcrayfish",
+          "linkProject": "https://www.curseforge.com/minecraft/mc-mods/configured",
+          "favorite": false,
+          "categories": [
+            {
+              "id": 15,
+              "name": "server_utility",
+              "shortName": "plugins",
+              "nesting": 0
+            },
+            {
+              "id": 7,
+              "name": "library_api",
+              "shortName": "api",
+              "nesting": 0
+            }
+          ],
+          "picture": 419896,
+          "pictures": [
+            253403,
+            253402,
+            253405,
+            253401,
+            253404,
+            253399,
+            419976,
+            253400
+          ],
+          "lanName": "configured",
+          "version": {
+            "id": 4462832,
+            "name": "configured-2.0.1-1.18.2",
+            "updateDate": 1679979780000,
+            "type": "release",
+            "gameVersionsDTO": [
+              {
+                "id": 35,
+                "name": "1.18.2"
+              }
+            ],
+            "metadata": {
+              "sha1": "825e0e439de2bfabf5d088953eb49c1c04e3e531",
+              "size": 277131,
+              "path": "mods/configured-2.0.1-1.18.2.jar",
+              "url": "/mods/457570/4462832/configured-2.0.1-1.18.2.jar"
+            },
+            "available": false,
+            "minecraftVersionTypes": [
+              {
+                "id": 1,
+                "name": "forge"
+              }
+            ]
+          },
+          "downloadMonth": 0,
+          "userInstall": false,
+          "populateStatus": false,
+          "dependencies": [
+            {
+              "gameType": "mod",
+              "id": 1050,
+              "name": "Catalogue",
+              "gameEntityId": 459701,
+              "dependencyType": "optional"
+            }
+          ],
+          "lastGameVersion": {
+            "id": 44,
+            "name": "1.19.4"
+          },
+          "updated": 1679982060000,
+          "update": 1679982060000,
+          "downloadALL": 3067559,
+          "available": true,
+          "parser": true,
+          "totalComments": 0
         }
       ],
       "resourcePacks": [

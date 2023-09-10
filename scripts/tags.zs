@@ -1,18 +1,6 @@
-import crafttweaker.api.tag.MCTag;
+/*
+<tag:fluids:minecraft:long_fire_resistance>.add();
+<tag:fluids:minecraft:long_fire_resistance>.add();
 
-val bars = [
-<item:minecraft:iron_bars>,
-<item:createdeco:netherite_bars>,
-<item:createdeco:gold_bars>,
-<item:createdeco:andesite_bars>,
-<item:createdeco:brass_bars>,
-<item:createdeco:cast_iron_bars>,
-<item:createdeco:polished_iron_bars>,
-<item:createdeco:copper_bars>,
-<item:createdeco:zinc_bars>,
-<item:alloyed:steel_bars>,
-];
-
-for i in bars{
-    <tag:items:forge:bars>.add(i);
-}
+<tag:fluids:minecraft:fire_resistance>.add(<fluid:create:potion>.withTag({Potion: "minecraft:fire_resistance" as string}));
+<tag:fluids:minecraft:fire_resistance>.add(<fluid:immersiveengineering:potion>.withTag({Potion: "minecraft:fire_resistance" as string}));*/

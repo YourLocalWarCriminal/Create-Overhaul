@@ -64,12 +64,6 @@ craftingTable.addShaped("bfurnace", <item:minecraft:blast_furnace>,[
     [<item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>]
 ]);
 
-craftingTable.addShaped("iron_m_comp", <item:immersiveengineering:component_iron>, [
-    [nope, <item:minecraft:iron_ingot>, nope],
-    [<item:minecraft:iron_ingot>, <item:minecraft:copper_ingot>, <item:minecraft:iron_ingot>],
-    [nope, <item:minecraft:iron_ingot>, nope],
-]);
-
 craftingTable.addShaped("alloybricks", <item:immersiveengineering:alloybrick> * 4, [
     [<item:minecraft:terracotta>, <item:minecraft:stone>, <item:minecraft:terracotta>],
     [<item:minecraft:sandstone>, <item:minecraft:copper_ingot>, <item:minecraft:sandstone>],
@@ -339,7 +333,7 @@ craftingTable.addShaped("kinetic_engine", <item:kubejs:mechanical_engine>, [
     [hammer, <item:kubejs:mechanism_casing>, screwdriver]
 ]);
 
-craftingTable.addShapeless("leverage_components", <item:kubejs:leverage_components>, [<item:kubejs:large_gear>, <item:kubejs:medium_gear>, <item:kubejs:large_gear>,<item:kubejs:small_gear>,<item:kubejs:mechanical_elbow>]);
+craftingTable.addShapeless("leverage_components", <item:kubejs:leverage_components>, [<item:kubejs:large_gear>, <item:kubejs:medium_gear>, <item:kubejs:large_gear>,<item:kubejs:small_gear>, <item:kubejs:mechanical_elbow>]);
 
 craftingTable.addShaped("press", <item:create:mechanical_press>, [
     [<item:kubejs:mechanical_engine>, <item:create:shaft>, <item:kubejs:mechanical_engine>],
@@ -381,6 +375,24 @@ craftingTable.addShaped("fluid_tank2", <item:create:fluid_tank>, [
     [<item:kubejs:bolt>, <tag:items:forge:glass_panes>, <item:kubejs:bolt>],
     [<tag:items:forge:glass_panes>, <item:create:copper_casing>, <tag:items:forge:glass_panes>],
     [<tag:items:immersiveengineering:tools/hammers>, <tag:items:forge:glass_panes>, <item:immersiveengineering:screwdriver>]
+]);
+
+craftingTable.addShaped("component_iron", <item:immersiveengineering:component_iron>, [
+    [<item:kubejs:medium_gear>, <tag:items:immersiveengineering:tools/hammers>, <item:kubejs:small_gear>],
+    [<item:kubejs:small_gear>, <tag:items:forge:rods/copper>, <item:kubejs:medium_gear>],
+    [<tag:items:forge:plates/iron>, <tag:items:forge:plates/iron>, <tag:items:forge:plates/iron>]
+]);
+
+craftingTable.addShaped("gearbox", <item:create:gearbox>, [
+    [<item:create:shaft>, <item:kubejs:large_gear>, <item:kubejs:small_gear>],
+    [<item:kubejs:medium_gear>, <item:create:andesite_casing>, <item:create:shaft>],
+    [<item:kubejs:large_gear>, <item:kubejs:small_gear>, <item:kubejs:medium_gear>]
+]);
+
+craftingTable.addShaped("mechanical_bearing", <item:create:mechanical_bearing>, [
+    [<item:kubejs:nail>, <item:immersiveengineering:hammer>, <item:kubejs:nail>],
+    [<item:immersiveengineering:component_iron>, <item:create:andesite_casing>, <item:create:shaft>],
+    [<item:kubejs:large_gear>, <item:kubejs:medium_gear>, <item:kubejs:large_gear>]
 ]);
 
 craftingTable.addShapeless("portable_interface1", <item:create:portable_storage_interface>, [<item:create:portable_fluid_interface>]);
@@ -443,4 +455,40 @@ craftingTable.addShapedMirrored("iron_hoe", MirrorAxis.HORIZONTAL, <item:minecra
 craftingTable.addShaped("iron_knife", <item:farmersdelight:iron_knife>, [
     [<item:create:iron_sheet>],
     [<item:immersiveengineering:stick_treated>]
+]);
+craftingTable.addShapeless("gearbox2", <item:create:gearbox>, [<item:create:vertical_gearbox>]);
+craftingTable.addShapeless("clockwork_bearing", <item:create:clockwork_bearing>, [<item:create:mechanical_bearing>, <item:kubejs:clockwork_mechanism>]);
+
+val pies = [
+<item:minecraft:pumpkin_pie>,
+<item:byg:blueberry_pie>,
+<item:byg:crimson_berry_pie>,
+<item:byg:nightshade_berry_pie>
+];
+
+val berries = [
+<item:farmersdelight:pumpkin_slice>,
+<item:byg:blueberries>,
+<item:byg:crimson_berries>,
+<item:byg:nightshade_berries>
+];
+
+for i, pi in pies {
+    craftingTable.addShaped("pie" + i, pies[i], [
+        [<tag:items:forge:eggs>, <tag:items:forge:milk/milk_bottle>, <tag:items:forge:eggs>],
+        [berries[i], berries[i], berries[i]],
+        [<item:minecraft:sugar>, <item:farmersdelight:pie_crust>, <item:minecraft:sugar>]
+]);
+}
+
+craftingTable.addShaped("deployer", <item:create:deployer>, [
+    [<item:immersiveengineering:hammer>,<item:create:brass_hand>,<tag:items:forge:tools/wrench>],
+    [<item:create:shaft>,<item:immersiveengineering:component_steel>,<item:minecraft:chain>],
+    [<item:kubejs:clockwork_mechanism>,<item:create:andesite_casing>,<item:kubejs:clockwork_mechanism>]
+]);
+
+craftingTable.addShaped("component_steel", <item:immersiveengineering:component_steel>, [
+    [<item:kubejs:large_gear>, <tag:items:immersiveengineering:tools/hammers>, <item:kubejs:medium_gear>],
+    [<item:kubejs:medium_gear>, <item:immersiveengineering:component_iron>, <item:kubejs:large_gear>],
+    [<tag:items:forge:plates/steel>, <tag:items:forge:plates/steel>, <tag:items:forge:plates/steel>]
 ]);
