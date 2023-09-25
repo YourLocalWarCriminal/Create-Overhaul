@@ -268,6 +268,7 @@ var recipesd = [
 <item:immersiveengineering:workbench>,
 <item:farmersdelight:iron_knife>,
 <item:immersiveengineering:redstone_acid_bucket>,
+<item:immersiveengineering:electron_tube>,
 ];
 
 for item in recipesd {
