@@ -3430,6 +3430,98 @@
           "available": true,
           "parser": true,
           "totalComments": 0
+        },
+        {
+          "stateGameElement": "active",
+          "id": -1812973029544500,
+          "name": "CustomMachinery-forge-1.18.2-0.8.7",
+          "favorite": false,
+          "version": {
+            "id": -1812973057329400,
+            "name": "1.0",
+            "metadata": {
+              "sha1": "2baaed4ed42aa0d10861dd782423f3c8a4f1ca0b",
+              "size": 1363088,
+              "path": "mods/CustomMachinery-forge-1.18.2-0.8.7.jar",
+              "url": "mods/CustomMachinery-forge-1.18.2-0.8.7.jar"
+            },
+            "available": false
+          },
+          "userInstall": true,
+          "populateStatus": false,
+          "available": false,
+          "parser": false,
+          "totalComments": 0
+        },
+        {
+          "stateGameElement": "active",
+          "id": 354339,
+          "name": "Open Loader",
+          "author": "darkhaxdev",
+          "linkProject": "https://www.curseforge.com/minecraft/mc-mods/open-loader",
+          "favorite": false,
+          "categories": [
+            {
+              "id": 15,
+              "name": "server_utility",
+              "shortName": "plugins",
+              "nesting": 0
+            },
+            {
+              "id": 7,
+              "name": "library_api",
+              "shortName": "api",
+              "nesting": 0
+            },
+            {
+              "id": 3,
+              "name": "cosmetic",
+              "shortName": "cosmetic",
+              "nesting": 0
+            }
+          ],
+          "picture": 483657,
+          "pictures": [],
+          "lanName": "open-loader",
+          "version": {
+            "id": 3697234,
+            "name": "Forge-1.18.2-12.0.1",
+            "updateDate": 1647550800000,
+            "type": "release",
+            "gameVersionsDTO": [
+              {
+                "id": 35,
+                "name": "1.18.2"
+              }
+            ],
+            "metadata": {
+              "sha1": "358ac27631553212dbc88dbd67a94247cf9debaf",
+              "size": 21632,
+              "path": "mods/OpenLoader-Forge-1.18.2-12.0.1.jar",
+              "url": "/mods/354339/3697234/OpenLoader-Forge-1.18.2-12.0.1.jar"
+            },
+            "available": false,
+            "minecraftVersionTypes": [
+              {
+                "id": 1,
+                "name": "forge"
+              }
+            ]
+          },
+          "downloadMonth": 4,
+          "userInstall": false,
+          "populateStatus": false,
+          "dependencies": [],
+          "lastGameVersion": {
+            "id": 46,
+            "name": "1.20.1"
+          },
+          "updated": 1696280400000,
+          "update": 1696280400000,
+          "downloadALL": 49277,
+          "available": true,
+          "parser": true,
+          "totalComments": 0
         }
       ],
       "resourcePacks": [

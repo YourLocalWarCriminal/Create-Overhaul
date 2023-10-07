@@ -1,0 +1,111 @@
+{
+    "name":{
+        "text": "Pit Kiln",
+        "color": "white"
+    },
+    "tooltips":[{
+        "text":"For Early Metal Smelting",
+        "color":"gray"
+    }
+    ],
+    "appearance":{
+        "block": "kubejs:pit_kiln_block_off",
+        "running":{
+            "block":"kubejs:pit_kiln_block_on",
+            "light": 7,
+            "ambient_sound": "d75da0e9ae674c403866979d9957988fd8b09b06"
+        }
+    },
+    "components":[
+        {
+            "type": "custommachinery:item",
+            "id": "input",
+            "mode":"input"
+        },
+        {
+            "type":"custommachinery:item",
+            "id":"mold",
+            "mode":"input",
+            "filter": ["minecraft:clay"],
+            "whitelist":true
+        },
+        {
+            "type":"custommachinery:item",
+            "id":"wood",
+            "mode":"input",
+            "filter":["#minecraft:logs"],
+            "whitelist":true
+        },
+        {
+            "type":"custommachinery:item",
+            "id":"straw",
+            "mode":"input",
+            "filter":["farmersdelight:straw"],
+            "whitelist":true
+        },
+        {
+            "type":"custommachinery:item",
+            "id":"output",
+            "mode":"output"
+        }
+        
+    ],
+    "gui":[
+        {
+            "type":"custommachinery:player_inventory",
+            "x":50,
+            "y":85
+        },
+        {
+            "type":"custommachinery:slot",
+            "id":"input",
+            "x":50,
+            "y":50
+        },
+        {
+            "type":"custommachinery:slot",
+            "id":"mold",
+            "x":70,
+            "y":50,
+            "ghost":{
+                "item":"minecraft:clay",
+                "color":[0.0, 0.0, 0.0, 0.6],
+                "always_render":true
+            }
+        },
+        {
+            "type":"custommachinery:slot",
+            "id":"straw",
+            "x":90,
+            "y":50,
+            "ghost":{
+                "item":"farmersdelight:straw",
+                "color":[0.0,0.0,0.0,0.6],
+                "always_render":true
+            }
+        },
+        {
+            "type":"custommachinery:slot",
+            "id":"wood",
+            "x":110,
+            "y":50,
+            "ghost":{
+                "item":"minecraft:oak_log",
+                "color":[0.0,0.0,0.0,0.6],
+                "always_render":true
+            }
+        },
+        {
+            "type":"custommachinery:slot",
+            "id":"output",
+            "x":160,
+            "y":50
+        },
+        {
+            "type":"custommachinery:progress",
+            "x":130,
+            "y":50,
+            "direction":"right"
+        }
+    ]
+}
