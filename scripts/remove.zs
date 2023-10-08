@@ -90,7 +90,9 @@ var delete = [
 <item:createdeco:zinc_sheet>,
 <item:immersiveengineering:mold_wire>,
 <item:kubejs:pit_kiln_block_off>,
-<item:kubejs:pit_kiln_block_on>
+<item:kubejs:pit_kiln_block_on>,
+<item:minecraft:blast_furnace>,
+<item:minecraft:furnace>,
 ];
 
 for item in delete {
@@ -135,12 +137,10 @@ var recipesd = [
 <item:create:copper_casing>,
 <item:alloyed:steel_casing>,
 <item:create:andesite_casing>,
-<item:minecraft:blast_furnace>,
 <item:minecraft:iron_hoe>,
 <item:minecraft:iron_pickaxe>,
 <item:minecraft:iron_axe>,
 <item:minecraft:iron_shovel>,
-<item:minecraft:furnace>,
 <item:minecraft:iron_sword>,
 <item:minecraft:iron_ingot>,
 <item:create:mechanical_saw>,
@@ -309,3 +309,6 @@ craftingTable.remove(<tag:items:forge:plates>);
 <recipetype:create:compacting>.remove(<fluid:createaddition:seed_oil>);
 <recipetype:immersiveengineering:metal_press>.remove(<item:createaddition:gold_wire>);
 <recipetype:immersiveengineering:metal_press>.remove(<item:createaddition:iron_wire>);
+furnace.remove(<item:minecraft:copper_ingot>);
+blastFurnace.remove(<item:minecraft:copper_ingot>);
+

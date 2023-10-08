@@ -26,6 +26,7 @@ onEvent('item.registry', event => {
 	event.create('induction_mechanism').displayName("Induction Component")
 	event.create('arithmetic_mechanism').displayName('Arithmetic Mechanism')
 	event.create('iron_bloom').displayName('Iron Bloom')
+	event.create('ingot_mold').displayName('Ingot Mold')
 })
 
 onEvent('block.registry', event => {

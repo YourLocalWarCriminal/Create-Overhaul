@@ -52,18 +52,6 @@ craftingTable.addShaped("ie_fluid_pipe_recipe", <item:immersiveengineering:fluid
     [nope, <item:create:iron_sheet>, nope],
 ]);
 
-craftingTable.addShaped("furnace", <item:minecraft:furnace>,[
-    [<item:minecraft:clay>, <item:minecraft:cobblestone>, <item:minecraft:clay>],
-    [<item:minecraft:cobblestone>, <item:minecraft:campfire>, <item:minecraft:cobblestone>],
-    [<item:minecraft:clay>, <item:minecraft:cobblestone>, <item:minecraft:clay>],
-]);
-
-craftingTable.addShaped("bfurnace", <item:minecraft:blast_furnace>,[
-    [<item:minecraft:copper_ingot>, <item:minecraft:copper_block>, <item:minecraft:copper_ingot>],
-    [<item:minecraft:copper_ingot>, <item:minecraft:furnace>, <item:minecraft:copper_ingot>],
-    [<item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>]
-]);
-
 craftingTable.addShaped("alloybricks", <item:immersiveengineering:alloybrick> * 4, [
     [<item:minecraft:terracotta>, <item:minecraft:stone>, <item:minecraft:terracotta>],
     [<item:minecraft:sandstone>, <item:minecraft:copper_ingot>, <item:minecraft:sandstone>],

@@ -26,7 +26,7 @@
             "type":"custommachinery:item",
             "id":"mold",
             "mode":"input",
-            "filter": ["minecraft:clay"],
+            "filter": ["kubejs:ingot_mold"],
             "whitelist":true
         },
         {
@@ -55,12 +55,14 @@
             "type":"custommachinery:player_inventory",
             "x":50,
             "y":85
+            
         },
         {
             "type":"custommachinery:slot",
             "id":"input",
             "x":50,
             "y":50
+            
         },
         {
             "type":"custommachinery:slot",
@@ -68,10 +70,11 @@
             "x":70,
             "y":50,
             "ghost":{
-                "item":"minecraft:clay",
+                "item":"kubejs:ingot_mold",
                 "color":[0.0, 0.0, 0.0, 0.6],
                 "always_render":true
             }
+            
         },
         {
             "type":"custommachinery:slot",
@@ -83,6 +86,7 @@
                 "color":[0.0,0.0,0.0,0.6],
                 "always_render":true
             }
+            
         },
         {
             "type":"custommachinery:slot",
@@ -94,18 +98,37 @@
                 "color":[0.0,0.0,0.0,0.6],
                 "always_render":true
             }
+            
         },
         {
             "type":"custommachinery:slot",
             "id":"output",
             "x":160,
             "y":50
+            
         },
         {
             "type":"custommachinery:progress",
             "x":130,
             "y":50,
             "direction":"right"
+            
+        },
+        {
+            "type":"custommachinery:texture",
+            "x":30,
+            "y":29,
+            "texture":"custommachinery:textures/gui/base_background.png",
+            "priority":1,
+            "width":200,
+            "height":140
+        },
+        {
+            "type":"custommachinery:text",
+            "text":"Pit Kiln",
+            "x":110,
+            "y":35,
+            "color":"gray"
         }
     ]
 }
