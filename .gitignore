@@ -12,7 +12,7 @@ logs/
 
 saves/
 
-!saves/**/datapacks
+!saves/**/datapacks/hell.txt
 
 local/
 
