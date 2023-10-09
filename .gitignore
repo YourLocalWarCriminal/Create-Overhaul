@@ -12,6 +12,8 @@ logs/
 
 saves/
 
+!saves/**/datapacks
+
 local/
 
 screenshots/
