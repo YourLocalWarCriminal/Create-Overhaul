@@ -89,8 +89,6 @@ var delete = [
 <item:immersiveengineering:nugget_steel>,
 <item:createdeco:zinc_sheet>,
 <item:immersiveengineering:mold_wire>,
-<item:kubejs:pit_kiln_block_off>,
-<item:kubejs:pit_kiln_block_on>,
 <item:minecraft:blast_furnace>,
 <item:minecraft:furnace>,
 ];

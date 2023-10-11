@@ -29,6 +29,7 @@ onEvent('item.registry', event => {
 	event.create('ingot_mold').displayName('Clay Ingot Mold')
 })
 
+
 onEvent('block.registry', event => {
 	// Register new blocks here
 	// event.create('example_block').material('wood').hardness(1.0).displayName('Example Block')
@@ -42,6 +43,7 @@ onEvent('block.registry', event => {
 	.texture("east", "kubejs:block/pit_kiln_side")
 	.texture("west", "kubejs:block/pit_kiln_side")
 	.texture("south", "kubejs:block/pit_kiln_side")
+	.noItem()
 
 	event.create("pit_kiln_block_on")
 	.material("dirt")
@@ -53,4 +55,37 @@ onEvent('block.registry', event => {
 	.texture("east", "kubejs:block/pit_kiln_side")
 	.texture("west", "kubejs:block/pit_kiln_side")
 	.texture("south", "kubejs:block/pit_kiln_side")
+	.noItem()
+
+	event.create("pyrite_ore")
+	.material("stone")
+	.hardness(1.0)
+	.displayName("Pyrite Ore")
+	.tagItem('forge:iron_ore')
+	.tagItem('forge:sulfuric_ore')
+	.textureAll('kubejs:block/pyrite_ore')
+
+	event.create("deepsleate_pyrite_ore")
+	.material("stone")
+	.hardness(1.0)
+	.displayName("Deepsleate Pyrite Ore")
+	.tagItem('forge:iron_ore')
+	.tagItem('forge:sulfuric_ore')
+	.textureAll('kubejs:block/deepsleate_pyrite_ore')
+
+	event.create("galena_ore")
+	.material("stone")
+	.hardness(1.0)
+	.displayName("Galena Ore")
+	.tagItem('forge:lead_ore')
+	.tagItem('forge:sulfuric_ore')
+	.textureAll('kubejs:block/galena_ore')
+
+	event.create("deepsleate_galena_ore")
+	.material("stone")
+	.hardness(1.0)
+	.displayName("Deepsleate Galena Ore")
+	.tagItem('forge:lead_ore')
+	.tagItem('forge:sulfuric_ore')
+	.textureAll('kubejs:block/deepsleate_galena_ore')
 })
