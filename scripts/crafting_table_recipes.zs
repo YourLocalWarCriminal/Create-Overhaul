@@ -480,3 +480,13 @@ craftingTable.addShaped("component_steel", <item:immersiveengineering:component_
     [<item:kubejs:medium_gear>, <item:immersiveengineering:component_iron>, <item:kubejs:large_gear>],
     [<tag:items:forge:plates/steel>, <tag:items:forge:plates/steel>, <tag:items:forge:plates/steel>]
 ]);
+
+craftingTable.addShapeless("clay_ingot_mold", <item:kubejs:ingot_mold>, [<item:rechiseled:chisel>, <tag:items:forge:clay>, <tag:items:forge:clay>]);
+
+craftingTable.remove(<item:rechiseled:chisel>);
+
+craftingTable.addShaped("chisel_recipe", <item:rechiseled:chisel>, [
+    [nope, <item:farmersdelight:rope>, <item:minecraft:stone_slab>],
+    [nope, <tag:items:forge:rods>, <item:farmersdelight:rope>], 
+    [<tag:items:forge:rods>, nope, nope]
+]);

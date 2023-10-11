@@ -54,3 +54,7 @@ for i,item in steel_armour {
 <recipetype:minecraft:blasting>.addRecipe("castiron", <item:minecraft:iron_ingot>, <item:createdeco:cast_iron_ingot>, 0.0, 200);
 //furnace recipes(name, output, input, xp, time)
 <recipetype:minecraft:smelting>.addRecipe("burninglime", <item:kubejs:lime_dust>, <item:create:limestone>, 0.3, 300);
+
+// campfire.addRecipe(name, output, input, xp, cookTime)
+
+campfire.addRecipe("stone_slab_smelting", <item:minecraft:stone_slab>, <item:minecraft:cobblestone_slab>, 0.8, 90);

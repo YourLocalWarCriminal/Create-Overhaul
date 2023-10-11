@@ -3522,6 +3522,254 @@
           "available": true,
           "parser": true,
           "totalComments": 0
+        },
+        {
+          "stateGameElement": "active",
+          "id": 457017,
+          "name": "Custom Machinery",
+          "author": "frinn38",
+          "linkProject": "https://www.curseforge.com/minecraft/mc-mods/custom-machinery",
+          "favorite": false,
+          "categories": [
+            {
+              "id": 5,
+              "name": "technology",
+              "shortName": "technology",
+              "nesting": 0
+            },
+            {
+              "id": 30,
+              "name": "technology_processing",
+              "shortName": "processing",
+              "nesting": 0
+            },
+            {
+              "id": 12,
+              "name": "technology_energy",
+              "shortName": "energy",
+              "nesting": 0
+            }
+          ],
+          "picture": 477887,
+          "pictures": [],
+          "lanName": "custom-machinery",
+          "version": {
+            "id": 4735348,
+            "name": "forge-1.18.2-0.8.7",
+            "updateDate": 1693752745000,
+            "type": "beta",
+            "gameVersionsDTO": [
+              {
+                "id": 35,
+                "name": "1.18.2"
+              }
+            ],
+            "metadata": {
+              "sha1": "2baaed4ed42aa0d10861dd782423f3c8a4f1ca0b",
+              "size": 1363088,
+              "path": "mods/CustomMachinery-forge-1.18.2-0.8.7.jar",
+              "url": "/mods/457017/4735348/CustomMachinery-forge-1.18.2-0.8.7.jar"
+            },
+            "available": false,
+            "minecraftVersionTypes": [
+              {
+                "id": 1,
+                "name": "forge"
+              }
+            ]
+          },
+          "downloadMonth": 0,
+          "userInstall": false,
+          "populateStatus": false,
+          "dependencies": [
+            {
+              "gameType": "mod",
+              "id": 332,
+              "name": "Cloth Config API (FabricForge)",
+              "gameEntityId": 348521,
+              "dependencyType": "required"
+            },
+            {
+              "gameType": "mod",
+              "id": 859,
+              "name": "Jade 🔍",
+              "gameEntityId": 324717,
+              "dependencyType": "optional"
+            },
+            {
+              "gameType": "mod",
+              "id": 1054,
+              "name": "KubeJS",
+              "gameEntityId": 238086,
+              "dependencyType": "optional"
+            },
+            {
+              "gameType": "mod",
+              "id": 422,
+              "name": "Architectury API (FabricForge)",
+              "gameEntityId": 419699,
+              "dependencyType": "required"
+            },
+            {
+              "gameType": "mod",
+              "id": 4,
+              "name": "Just Enough Items (JEI)",
+              "gameEntityId": 238222,
+              "dependencyType": "optional"
+            },
+            {
+              "gameType": "mod",
+              "id": 38,
+              "name": "The One Probe",
+              "gameEntityId": 245211,
+              "dependencyType": "optional"
+            },
+            {
+              "gameType": "mod",
+              "id": 905,
+              "name": "Building Gadgets",
+              "gameEntityId": 298187,
+              "dependencyType": "optional"
+            },
+            {
+              "gameType": "mod",
+              "id": 95,
+              "name": "CraftTweaker",
+              "gameEntityId": 239197,
+              "dependencyType": "optional"
+            }
+          ],
+          "lastGameVersion": {
+            "id": 38,
+            "name": "1.19.2"
+          },
+          "updated": 1696107600000,
+          "update": 1696107600000,
+          "downloadALL": 1039,
+          "available": true,
+          "parser": true,
+          "totalComments": 0,
+          "adult": false
+        },
+        {
+          "stateGameElement": "active",
+          "id": 860747,
+          "name": "Custom Machinery Create",
+          "author": "frinn38 frinn38",
+          "linkProject": "https://www.curseforge.com/minecraft/mc-mods/custom-machinery-create",
+          "favorite": false,
+          "categories": [
+            {
+              "id": 5,
+              "name": "technology",
+              "shortName": "technology",
+              "nesting": 0
+            },
+            {
+              "id": 30,
+              "name": "technology_processing",
+              "shortName": "processing",
+              "nesting": 0
+            },
+            {
+              "id": 26,
+              "name": "mc_addons",
+              "shortName": "addons",
+              "nesting": 0
+            },
+            {
+              "id": 69,
+              "name": "crafttweaker",
+              "shortName": "crafttweaker",
+              "nesting": 0
+            }
+          ],
+          "picture": 451908,
+          "pictures": [],
+          "lanName": "custom-machinery-create",
+          "version": {
+            "id": 4626804,
+            "name": "forge-1.18.2-1.0.2",
+            "updateDate": 1688582490000,
+            "type": "release",
+            "gameVersionsDTO": [
+              {
+                "id": 35,
+                "name": "1.18.2"
+              }
+            ],
+            "metadata": {
+              "sha1": "ac6b8785808bd1abb2902156b3d70df3d58f21ff",
+              "size": 51308,
+              "path": "mods/CustomMachineryCreate-forge-1.18.2-1.0.2.jar",
+              "url": "/mods/860747/4626804/CustomMachineryCreate-forge-1.18.2-1.0.2.jar"
+            },
+            "available": false,
+            "minecraftVersionTypes": [
+              {
+                "id": 1,
+                "name": "forge"
+              }
+            ]
+          },
+          "downloadMonth": 0,
+          "userInstall": false,
+          "populateStatus": false,
+          "dependencies": [
+            {
+              "gameType": "mod",
+              "id": 332,
+              "name": "Cloth Config API (FabricForge)",
+              "gameEntityId": 348521,
+              "dependencyType": "required"
+            },
+            {
+              "gameType": "mod",
+              "id": 1054,
+              "name": "KubeJS",
+              "gameEntityId": 238086,
+              "dependencyType": "optional"
+            },
+            {
+              "gameType": "mod",
+              "id": 422,
+              "name": "Architectury API (FabricForge)",
+              "gameEntityId": 419699,
+              "dependencyType": "required"
+            },
+            {
+              "gameType": "mod",
+              "id": 769,
+              "name": "Create",
+              "gameEntityId": 328085,
+              "dependencyType": "required"
+            },
+            {
+              "gameType": "mod",
+              "id": 95,
+              "name": "CraftTweaker",
+              "gameEntityId": 239197,
+              "dependencyType": "optional"
+            },
+            {
+              "gameType": "mod",
+              "id": 3068,
+              "name": "Custom Machinery",
+              "gameEntityId": 457017,
+              "dependencyType": "required"
+            }
+          ],
+          "lastGameVersion": {
+            "id": 38,
+            "name": "1.19.2"
+          },
+          "updated": 1696366800000,
+          "update": 1696366800000,
+          "downloadALL": 137,
+          "available": true,
+          "parser": true,
+          "totalComments": 0,
+          "adult": false
         }
       ],
       "resourcePacks": [
