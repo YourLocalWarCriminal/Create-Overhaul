@@ -55,6 +55,7 @@ onEvent('block.registry', event => {
 	.texture("east", "kubejs:block/pit_kiln_side")
 	.texture("west", "kubejs:block/pit_kiln_side")
 	.texture("south", "kubejs:block/pit_kiln_side")
+<<<<<<< Updated upstream
 	.noItem()
 
 	event.create("pyrite_ore")
@@ -104,4 +105,12 @@ onEvent('block.registry', event => {
 	.tagItem('forge:ores/copper')
 	.tagItem('forge:sulfuric_ores/copper')
 	.textureAll('kubejs:block/metal/deepsleate_chalcocite_ore')
+=======
+})
+
+ItemEvents.modification(event => {
+	event.modify("minecraft:iron_pickaxe", item => {
+		item.maxDamage = 550
+	})
+>>>>>>> Stashed changes
 })

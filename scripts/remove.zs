@@ -269,6 +269,8 @@ var recipesd = [
 <item:farmersdelight:iron_knife>,
 <item:immersiveengineering:redstone_acid_bucket>,
 <item:immersiveengineering:electron_tube>,
+<item:minecraft:campfire>,
+<item:minecraft:smoker>
 ];
 
 for item in recipesd {

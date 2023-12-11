@@ -3185,97 +3185,6 @@
         },
         {
           "stateGameElement": "active",
-          "id": 238086,
-          "name": "KubeJS",
-          "author": "LatvianModder",
-          "linkProject": "https://www.curseforge.com/minecraft/mc-mods/kubejs",
-          "favorite": false,
-          "categories": [
-            {
-              "id": 15,
-              "name": "server_utility",
-              "shortName": "plugins",
-              "nesting": 0
-            },
-            {
-              "id": 6,
-              "name": "map_information",
-              "shortName": "maps",
-              "nesting": 0
-            },
-            {
-              "id": 7,
-              "name": "library_api",
-              "shortName": "api",
-              "nesting": 0
-            },
-            {
-              "id": 29,
-              "name": "world_gen",
-              "shortName": "world",
-              "nesting": 0
-            }
-          ],
-          "picture": 118241,
-          "pictures": [],
-          "lanName": "kubejs",
-          "version": {
-            "id": 4377177,
-            "name": "kubejs-forge-1802.5.5-build.569",
-            "updateDate": 1675320660000,
-            "type": "release",
-            "gameVersionsDTO": [
-              {
-                "id": 35,
-                "name": "1.18.2"
-              }
-            ],
-            "metadata": {
-              "sha1": "ee9bf64beb6ccde483b76147399dd4aae64b631a",
-              "size": 1072633,
-              "path": "mods/kubejs-forge-1802.5.5-build.569.jar",
-              "url": "/mods/238086/4377177/kubejs-forge-1802.5.5-build.569.jar"
-            },
-            "available": false,
-            "minecraftVersionTypes": [
-              {
-                "id": 1,
-                "name": "forge"
-              }
-            ]
-          },
-          "downloadMonth": 12,
-          "userInstall": false,
-          "populateStatus": false,
-          "dependencies": [
-            {
-              "gameType": "mod",
-              "id": 422,
-              "name": "Architectury API (FabricForge)",
-              "gameEntityId": 419699,
-              "dependencyType": "required"
-            },
-            {
-              "gameType": "mod",
-              "id": 423,
-              "name": "Rhino",
-              "gameEntityId": 416294,
-              "dependencyType": "required"
-            }
-          ],
-          "lastGameVersion": {
-            "id": 38,
-            "name": "1.19.2"
-          },
-          "updated": 1675320660000,
-          "update": 1675320660000,
-          "downloadALL": 89870,
-          "available": true,
-          "parser": true,
-          "totalComments": 0
-        },
-        {
-          "stateGameElement": "active",
           "id": 328085,
           "name": "Create",
           "author": "simibubi",
@@ -3525,6 +3434,7 @@
         },
         {
           "stateGameElement": "active",
+<<<<<<< Updated upstream
           "id": 457017,
           "name": "Custom Machinery",
           "author": "frinn38",
@@ -3691,6 +3601,46 @@
             "id": 4626804,
             "name": "forge-1.18.2-1.0.2",
             "updateDate": 1688582490000,
+=======
+          "id": 238086,
+          "name": "KubeJS",
+          "author": "LatvianModder",
+          "linkProject": "https://www.curseforge.com/minecraft/mc-mods/kubejs",
+          "favorite": false,
+          "categories": [
+            {
+              "id": 15,
+              "name": "server_utility",
+              "shortName": "plugins",
+              "nesting": 0
+            },
+            {
+              "id": 6,
+              "name": "map_information",
+              "shortName": "maps",
+              "nesting": 0
+            },
+            {
+              "id": 7,
+              "name": "library_api",
+              "shortName": "api",
+              "nesting": 0
+            },
+            {
+              "id": 29,
+              "name": "world_gen",
+              "shortName": "world",
+              "nesting": 0
+            }
+          ],
+          "picture": 501076,
+          "pictures": [],
+          "lanName": "kubejs",
+          "version": {
+            "id": 3888614,
+            "name": "kubejs-forge-1802.5.4-build.524",
+            "updateDate": 1658361600000,
+>>>>>>> Stashed changes
             "type": "release",
             "gameVersionsDTO": [
               {
@@ -3699,10 +3649,17 @@
               }
             ],
             "metadata": {
+<<<<<<< Updated upstream
               "sha1": "ac6b8785808bd1abb2902156b3d70df3d58f21ff",
               "size": 51308,
               "path": "mods/CustomMachineryCreate-forge-1.18.2-1.0.2.jar",
               "url": "/mods/860747/4626804/CustomMachineryCreate-forge-1.18.2-1.0.2.jar"
+=======
+              "sha1": "450e6e56d59c6391f3e0924a2ab38cfccff04803",
+              "size": 1053484,
+              "path": "mods/kubejs-forge-1802.5.4-build.524.jar",
+              "url": "/mods/238086/3888614/kubejs-forge-1802.5.4-build.524.jar"
+>>>>>>> Stashed changes
             },
             "available": false,
             "minecraftVersionTypes": [
@@ -3712,6 +3669,7 @@
               }
             ]
           },
+<<<<<<< Updated upstream
           "downloadMonth": 0,
           "userInstall": false,
           "populateStatus": false,
@@ -3770,6 +3728,22 @@
           "parser": true,
           "totalComments": 0,
           "adult": false
+=======
+          "downloadMonth": 12,
+          "userInstall": false,
+          "populateStatus": false,
+          "dependencies": [],
+          "lastGameVersion": {
+            "id": 46,
+            "name": "1.20.1"
+          },
+          "updated": 1701982800000,
+          "update": 1701982800000,
+          "downloadALL": 97465,
+          "available": true,
+          "parser": true,
+          "totalComments": 0
+>>>>>>> Stashed changes
         }
       ],
       "resourcePacks": [
