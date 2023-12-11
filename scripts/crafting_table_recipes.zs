@@ -481,7 +481,6 @@ craftingTable.addShaped("component_steel", <item:immersiveengineering:component_
     [<tag:items:forge:plates/steel>, <tag:items:forge:plates/steel>, <tag:items:forge:plates/steel>]
 ]);
 
-<<<<<<< Updated upstream
 craftingTable.addShapeless("clay_ingot_mold", <item:kubejs:ingot_mold>, [<item:rechiseled:chisel>, <tag:items:forge:clay>, <tag:items:forge:clay>]);
 
 craftingTable.remove(<item:rechiseled:chisel>);
@@ -490,22 +489,4 @@ craftingTable.addShaped("chisel_recipe", <item:rechiseled:chisel>, [
     [nope, <item:farmersdelight:rope>, <item:minecraft:stone_slab>],
     [nope, <tag:items:forge:rods>, <item:farmersdelight:rope>], 
     [<tag:items:forge:rods>, nope, nope]
-=======
-craftingTable.addShaped("campfire", <item:minecraft:campfire>, [
-    [nope, <item:minecraft:stick>, nope],
-    [<item:minecraft:stick>,<item:farmersdelight:straw>,<item:minecraft:stick>],
-    [<tag:items:minecraft:logs>,<tag:items:minecraft:logs>,<tag:items:minecraft:logs>]
-]);
-
-craftingTable.addShaped("pitkiln", <item:custommachinery:custom_machine_item>.withTag({machine: "earlymachinery:pitkiln" as string}), [
-    [<item:minecraft:gravel>, <tag:items:minecraft:logs>, <item:minecraft:gravel>],
-    [<item:minecraft:clay>, <item:farmersdelight:straw>, <item:minecraft:clay>],
-    [<item:minecraft:dirt>, <item:minecraft:campfire>, <item:minecraft:dirt>]
-]);
-
-craftingTable.addShaped("smoker", <item:minecraft:smoker>, [
-    [<item:minecraft:copper_ingot>, <item:minecraft:copper_ingot>, <item:minecraft:copper_ingot>],
-    [<tag:items:minecraft:logs>, <item:minecraft:cobblestone>, <tag:items:minecraft:logs>],
-    [<item:minecraft:cobblestone>,<item:minecraft:campfire> ,<item:minecraft:cobblestone>]
->>>>>>> Stashed changes
 ]);
