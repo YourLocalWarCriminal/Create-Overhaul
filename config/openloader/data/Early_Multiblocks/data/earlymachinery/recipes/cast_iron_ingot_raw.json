@@ -1,0 +1,59 @@
+{
+    "type":"custommachinery:custom_machine",
+    "machine":"earlymachinery:pitkiln",
+    "time":1200,
+    "requirements":[
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"minecraft:raw_iron",
+            "amount":1
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"farmersdelight:straw",
+            "amount":3
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"#minecraft:logs",
+            "amount":3
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"kubejs:ingot_mold",
+            "amount":0
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"output",
+            "item":"createdeco:cast_iron_ingot",
+            "amount":1
+        },
+        {
+            "type":"custommachinery:structure",
+            
+                "keys": {
+                  "b": "farmersdelight:straw_bale[axis\u003dy]",
+                  "c": "minecraft:coarse_dirt",
+                  "d": "minecraft:clay"
+                },
+                "pattern": [
+                  [
+                    " c ",
+                    "cbc",
+                    "cmc"
+                  ],
+                  [
+                    " c ",
+                    "cdc",
+                    " c "
+                  ]
+                ]
+              
+        }
+    ]
+}

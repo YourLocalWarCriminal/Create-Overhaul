@@ -490,3 +490,9 @@ craftingTable.addShaped("chisel_recipe", <item:rechiseled:chisel>, [
     [nope, <tag:items:forge:rods>, <item:farmersdelight:rope>], 
     [<tag:items:forge:rods>, nope, nope]
 ]);
+
+craftingTable.addShaped("pitkiln", <item:custommachinery:custom_machine_item>.withTag({machine: "earlymachinery:pitkiln" as string}), [
+    [<tag:items:minecraft:logs>, <tag:items:minecraft:logs>, <tag:items:minecraft:logs>],
+    [<item:minecraft:coarse_dirt>, <item:minecraft:clay>, <item:minecraft:coarse_dirt>],
+    [<item:minecraft:coarse_dirt>, <item:farmersdelight:straw_bale>, <item:minecraft:coarse_dirt>]
+]);
