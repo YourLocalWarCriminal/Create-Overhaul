@@ -1,32 +1,7 @@
-*.bak
+*.*
 
-*.txt
+!01_LOGO_AI/*
+!config/*
+!kubejs/*
+!scripts/*
 
-*.dll
-
-mods/
-
-fonts/
-
-logs/
-
-saves/
-
-local/
-
-screenshots/
-
-backups/
-
-examples/
-
-crash-reports
-
-usercache.json
-
-usernamecache.json
-
-rhino.local.properties
-
-config/darkness.properties
-*.properties
