@@ -1,7 +1,7 @@
 *.*
 
-!01_LOGO_AI/*
-!config/*
-!kubejs/*
-!scripts/*
-
+!01_LOGO_AI/**/*
+!config/**/*
+!kubejs/**/*
+!scripts/**/*
+!resourcepacks/**/*

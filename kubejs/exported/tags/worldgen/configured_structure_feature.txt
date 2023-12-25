@@ -1,0 +1,58 @@
+To refresh this file, delete it and run /reload command again! Last updated: Aug 31, 2023, 6:11:41 PM
+
+#minecraft:shipwreck
+- minecraft:shipwreck
+- minecraft:shipwreck_beached
+
+#byg:village
+- byg:village_red_rock
+- byg:village_skyris
+- byg:village_ruins
+- byg:village_tropical
+
+#minecraft:on_ocean_explorer_maps
+- minecraft:monument
+
+#minecraft:ocean_ruin
+- minecraft:ocean_ruin_cold
+- minecraft:ocean_ruin_warm
+
+#minecraft:mineshaft
+- minecraft:mineshaft
+- minecraft:mineshaft_mesa
+
+#minecraft:on_woodland_explorer_maps
+- minecraft:mansion
+
+#minecraft:on_treasure_maps
+- minecraft:buried_treasure
+
+#minecraft:eye_of_ender_located
+- minecraft:stronghold
+
+#minecraft:ruined_portal
+- minecraft:ruined_portal_desert
+- minecraft:ruined_portal_jungle
+- minecraft:ruined_portal_mountain
+- minecraft:ruined_portal_nether
+- minecraft:ruined_portal_ocean
+- minecraft:ruined_portal
+- minecraft:ruined_portal_swamp
+
+#byg:arches
+- byg:red_rock_arch
+- byg:destroyed_red_rock_arch
+- byg:overgrown_stone_arch
+- byg:stone_arch
+
+#minecraft:village
+- minecraft:village_plains
+- minecraft:village_desert
+- minecraft:village_savanna
+- minecraft:village_snowy
+- minecraft:village_taiga
+- #byg:village
+
+#minecraft:dolphin_located
+- #minecraft:ocean_ruin
+- #minecraft:shipwreck
