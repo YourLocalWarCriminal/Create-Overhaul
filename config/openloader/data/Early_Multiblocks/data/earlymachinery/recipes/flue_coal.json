@@ -1,7 +1,7 @@
 {
     "type":"custommachinery:custom_machine",
     "machine":"earlymachinery:flue_furnace",
-    "time":3000,
+    "time":2700,
     "requirements":[
         {
             "type":"custommachinery:item",
