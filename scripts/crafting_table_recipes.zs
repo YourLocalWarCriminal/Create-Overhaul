@@ -496,3 +496,20 @@ craftingTable.addShaped("pitkiln", <item:custommachinery:custom_machine_item>.wi
     [<item:minecraft:coarse_dirt>, <item:minecraft:clay>, <item:minecraft:coarse_dirt>],
     [<item:minecraft:coarse_dirt>, <item:farmersdelight:straw_bale>, <item:minecraft:coarse_dirt>]
 ]);
+
+craftingTable.addShaped("smallgear_cheap", <item:kubejs:small_gear>*2,[
+    [nope, wc, nope],
+    [<item:createdeco:cast_iron_nugget>, <item:create:iron_sheet>, <item:createdeco:cast_iron_nugget>],
+]);
+
+craftingTable.addShaped("mediumgear_cheap", <item:kubejs:medium_gear>*2, [
+    [nope, <item:minecraft:iron_nugget>, wc],
+    [<item:createdeco:cast_iron_nugget>, <item:createdeco:cast_iron_sheet>, <item:createdeco:cast_iron_nugget>],
+    [nope, <item:minecraft:iron_nugget>, nope]
+]);
+
+craftingTable.addShaped("largegear_cheap", <item:kubejs:large_gear>*2, [
+    [nope, <item:create:iron_sheet>, wc],
+    [<item:minecraft:iron_nugget>, <item:createdeco:cast_iron_sheet>, <item:minecraft:iron_nugget>],
+    [nope, <item:create:iron_sheet>, nope]
+]);
