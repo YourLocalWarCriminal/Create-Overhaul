@@ -111,15 +111,15 @@ craftingTable.addShaped("metalbracket", <item:create:metal_bracket>, [
 ]);
 
 craftingTable.addShaped("blazeburner", <item:create:empty_blaze_burner>, [
-    [nope, <item:alloyed:steel_sheet>, nope],
-    [<item:alloyed:steel_sheet>, <item:minecraft:netherrack>, <item:alloyed:steel_sheet>],
-    [nope, <item:alloyed:steel_sheet>, nope]
+    [nope, <item:immersiveengineering:plate_steel>, nope],
+    [<item:immersiveengineering:plate_steel>, <item:minecraft:netherrack>, <item:immersiveengineering:plate_steel>],
+    [nope, <item:immersiveengineering:plate_steel>, nope]
 ]);
 
 craftingTable.addShaped("mechanicaldrill", <item:create:mechanical_drill>, [
-    [nope, <item:alloyed:steel_sheet>, nope],
-    [<item:alloyed:steel_casing>, <item:createdeco:cast_iron_ingot>, <item:alloyed:steel_sheet>],
-    [nope, <item:alloyed:steel_sheet>, nope]
+    [nope, <item:immersiveengineering:plate_steel>, nope],
+    [<item:alloyed:steel_casing>, <item:createdeco:cast_iron_ingot>, <item:immersiveengineering:plate_steel>],
+    [nope, <item:immersiveengineering:plate_steel>, nope]
 ]);
 
 craftingTable.addShaped("whisk", <item:create:whisk>, [
