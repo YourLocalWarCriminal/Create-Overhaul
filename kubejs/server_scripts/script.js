@@ -30,22 +30,6 @@ onEvent('recipes', event => {
 	event.replaceInput({}, '#forge:plates/steel', 'alloyed:steel_sheet')
 	event.replaceInput({}, '#forge:ingots/steel', 'alloyed:steel_ingot')
 	event.replaceInput({}, '#forge:nuggets/copper', 'create:copper_nugget')
-	event.replaceOutput({}, '#forge:nuggets/copper', 'create:copper_nugget')
-	
-	/*let itemPairs = [
-		{ oldItem: '#forge:plates/steel', newItem: 'alloyed:steel_sheet' },
-		{ oldItem: '#forge:ingots/steel', newItem: 'alloyed:steel_ingot' },
-		{ oldItem: '#forge:nuggets/copper', newItem: 'create:copper_nugget' },
-	   ];
-	   
-	   events.listen('recipes', event => {
-		event.recipes.forEach(recipe => {
-		  itemPairs.forEach(pair => {
-			recipe.replaceInput({}, Item.of(pair.oldItem), Item.of(pair.newItem));
-			recipe.replaceOutput({}, Item.of(pair.oldItem), Item.of(pair.newItem));
-		  });
-		});
-	   });*/
 
 	// In all recipes, replace Stick with Oak Sapling in output items 
 	//event.replaceOutput({}, 'minecraft:stick', 'minecraft:oak_sapling')
