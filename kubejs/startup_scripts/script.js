@@ -11,7 +11,7 @@ onEvent('item.registry', event => {
 	event.create('mithril_plate').displayName('Mithril Sheet')
 	event.create('hot_mithril_ingot').displayName('Hot Mithril Ingot')
 	event.create('pig_iron').displayName('Pig Iron')
-	event.create('lime_dust').displayName('Quicklime')
+	event.create('dusts/lime_dust').displayName('Quicklime')
 	event.create('mechanism_casing').displayName('Mechanism Casing')
 	event.create('advanced_mechanism_casing').displayName('Advanced Mechanism Casing')
 	event.create('mechanical_elbow').displayName('Mechanical Elbow')
@@ -33,30 +33,33 @@ onEvent('item.registry', event => {
 onEvent('block.registry', event => {
 	// Register new blocks here
 	// event.create('example_block').material('wood').hardness(1.0).displayName('Example Block')
+
+	//Pit kiln
 	event.create("pit_kiln_block_off")
 	.material("dirt")
 	.hardness(1.0)
 	.displayName("Pit Kiln Dummy off")
-	.texture("north", "kubejs:block/pit_kiln_block_off")
-	.texture("up", "kubejs:block/pit_kiln_side")
-	.texture("down", "kubejs:block/pit_kiln_side")
-	.texture("east", "kubejs:block/pit_kiln_side")
-	.texture("west", "kubejs:block/pit_kiln_side")
-	.texture("south", "kubejs:block/pit_kiln_side")
+	.texture("north", "kubejs:block/pit_kiln/pit_kiln_block_off")
+	.texture("up", "kubejs:block/pit_kiln/pit_kiln_side")
+	.texture("down", "kubejs:block/pit_kiln/pit_kiln_side")
+	.texture("east", "kubejs:block/pit_kiln/pit_kiln_side")
+	.texture("west", "kubejs:block/pit_kiln/pit_kiln_side")
+	.texture("south", "kubejs:block/pit_kiln/pit_kiln_side")
 	.noItem()
 
 	event.create("pit_kiln_block_on")
 	.material("dirt")
 	.hardness(1.0)
 	.displayName("Pit Kiln Dummy on")
-	.texture("north", "kubejs:block/pitkilnon1")
-	.texture("up", "kubejs:block/pit_kiln_side")
-	.texture("down", "kubejs:block/pit_kiln_side")
-	.texture("east", "kubejs:block/pit_kiln_side")
-	.texture("west", "kubejs:block/pit_kiln_side")
-	.texture("south", "kubejs:block/pit_kiln_side")
+	.texture("north", "kubejs:block/pit_kiln/pitkilnon1")
+	.texture("up", "kubejs:block/pit_kiln/pit_kiln_side")
+	.texture("down", "kubejs:block/pit_kiln/pit_kiln_side")
+	.texture("east", "kubejs:block/pit_kiln/pit_kiln_side")
+	.texture("west", "kubejs:block/pit_kiln/pit_kiln_side")
+	.texture("south", "kubejs:block/pit_kiln/pit_kiln_side")
 	.noItem()
 
+	//Ores
 	event.create("pyrite_ore")
 	.material("stone")
 	.hardness(1.0)
@@ -105,6 +108,7 @@ onEvent('block.registry', event => {
 	.tagItem('forge:sulfuric_ores/copper')
 	.textureAll('kubejs:block/metal/deepsleate_chalcocite_ore')
 
+	//Flue Furnace
 	event.create("flue_bricks")
 	.material("stone")
 	.hardness(1.0)
