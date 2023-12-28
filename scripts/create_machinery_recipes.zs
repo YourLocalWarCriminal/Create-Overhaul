@@ -386,3 +386,14 @@ for i, item in ingots {
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:belt_connector>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:copper_wire>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:copper_wire>)));
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("magnet")
+                                                      .transitionTo(<item:create_sa:copper_magnet>)
+                                                      .require(<item:createaddition:brass_rod>)
+                                                      .loops(1)
+                                                      .addOutput(<item:create_sa:copper_magnet>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:netherite_dust>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:netherite_dust>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100)));
