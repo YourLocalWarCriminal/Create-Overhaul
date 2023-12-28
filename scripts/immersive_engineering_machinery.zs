@@ -35,8 +35,8 @@ val ingots = [
 <recipetype:immersiveengineering:alloy>.addRecipe("leadsmeltingdust", <item:immersiveengineering:dust_lead>, <item:create:cinder_flour>, 240, <item:immersiveengineering:ingot_lead>);
 <recipetype:immersiveengineering:alloy>.addRecipe("mithril_alloy_kiln_silver", <item:minecraft:diamond>, <item:immersiveengineering:ingot_silver>, 1200, <item:kubejs:hot_mithril_ingot>);
 <recipetype:immersiveengineering:alloy>.addRecipe("mithril_alloy_kiln_nickel", <item:minecraft:diamond>, <item:immersiveengineering:ingot_nickel>, 1200, <item:kubejs:hot_mithril_ingot>);
-<recipetype:immersiveengineering:alloy>.addRecipe("pig_iron_refining", <item:kubejs:pig_iron>, <item:kubejs:dusts/lime_dust>, 600, <item:alloyed:steel_ingot>);
-<recipetype:immersiveengineering:alloy>.addRecipe("glass", <item:kubejs:dusts/lime_dust>, <item:byg:white_sand>, 900, <item:minecraft:glass>);
+<recipetype:immersiveengineering:alloy>.addRecipe("pig_iron_refining", <item:kubejs:pig_iron>, <item:kubejs:lime_dust>, 600, <item:alloyed:steel_ingot>);
+<recipetype:immersiveengineering:alloy>.addRecipe("glass", <item:kubejs:lime_dust>, <item:byg:white_sand>, 900, <item:minecraft:glass>);
 //blast furnace recipe(name, input, time, output, slag)
 <recipetype:immersiveengineering:blast_furnace>.addRecipe("pig_iron_blasting", <item:minecraft:raw_iron>, 1200, <item:kubejs:pig_iron>, <item:immersiveengineering:slag>);
 <recipetype:immersiveengineering:blast_furnace>.addRecipe("pig_iron_blasting_crushed", <item:create:crushed_raw_iron>, 1200, <item:kubejs:pig_iron>, <item:immersiveengineering:slag>);
