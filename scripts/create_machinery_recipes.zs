@@ -103,8 +103,8 @@ for i, item in ingots_press {
 
 //mixer(name,heat,[output], [input], [inputFluid], time)
 <recipetype:create:mixing>.addRecipe("rosequartz", <constant:create:heat_condition:none>, [<item:create:rose_quartz> % 100], [<item:minecraft:quartz>, <item:minecraft:redstone> * 8], [], 300);
-<recipetype:create:mixing>.addRecipe("glass_mixer",<constant:create:heat_condition:heated>, [<item:minecraft:glass> * 2 % 100], [<item:minecraft:sand>, <item:minecraft:quartz>, <item:kubejs:lime_dust>], [], 600);
-<recipetype:create:mixing>.addRecipe("glass_white_sand_mixing", <constant:create:heat_condition:heated>, [<item:minecraft:glass> % 100], [<item:byg:white_sand>, <item:kubejs:lime_dust>], [], 600);
+<recipetype:create:mixing>.addRecipe("glass_mixer",<constant:create:heat_condition:heated>, [<item:minecraft:glass> * 2 % 100], [<item:minecraft:sand>, <item:minecraft:quartz>, <item:kubejs:dusts/lime_dust>], [], 600);
+<recipetype:create:mixing>.addRecipe("glass_white_sand_mixing", <constant:create:heat_condition:heated>, [<item:minecraft:glass> % 100], [<item:byg:white_sand>, <item:kubejs:dusts/lime_dust>], [], 600);
 <recipetype:create:mixing>.addRecipe("redstone_acid", <constant:create:heat_condition:none>, [<fluid:immersiveengineering:redstone_acid> * 500], [<item:minecraft:redstone>*4], [<fluid:minecraft:water> * 500]);
 <recipetype:create:mixing>.addRecipe("netherite_ingot", <constant:create:heat_condition:superheated>, [<item:minecraft:netherite_ingot>], [<item:minecraft:netherite_scrap>*4, <tag:items:forge:ingots/gold>*4], []);
 

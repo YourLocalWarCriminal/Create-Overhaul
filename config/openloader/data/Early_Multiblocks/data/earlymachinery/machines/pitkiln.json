@@ -60,15 +60,15 @@
         {
             "type":"custommachinery:slot",
             "id":"input",
-            "x":50,
-            "y":50
+            "x":88,
+            "y":65
             
         },
         {
             "type":"custommachinery:slot",
             "id":"mold",
-            "x":70,
-            "y":50,
+            "x":123,
+            "y":65,
             "ghost":{
                 "item":"kubejs:ingot_mold",
                 "color":[0.0, 0.0, 0.0, 0.6],
@@ -79,8 +79,8 @@
         {
             "type":"custommachinery:slot",
             "id":"straw",
-            "x":90,
-            "y":50,
+            "x":88,
+            "y":47,
             "ghost":{
                 "item":"farmersdelight:straw",
                 "color":[0.0,0.0,0.0,0.6],
@@ -91,8 +91,8 @@
         {
             "type":"custommachinery:slot",
             "id":"wood",
-            "x":110,
-            "y":50,
+            "x":88,
+            "y":29,
             "ghost":{
                 "item":"minecraft:oak_log",
                 "color":[0.0,0.0,0.0,0.6],
@@ -104,30 +104,29 @@
             "type":"custommachinery:slot",
             "id":"output",
             "x":160,
-            "y":50
+            "y":47
             
         },
         {
             "type":"custommachinery:progress",
-            "x":130,
-            "y":50,
+            "x":123,
+            "y":47,
             "direction":"right"
-            
         },
         {
             "type":"custommachinery:texture",
-            "x":30,
-            "y":29,
+            "x":46,
+            "y":15,
             "texture":"custommachinery:textures/gui/base_background.png",
             "priority":1,
-            "width":200,
-            "height":140
+            "width":170,
+            "height":150
         },
         {
             "type":"custommachinery:text",
             "text":"Pit Kiln",
             "x":110,
-            "y":35,
+            "y":18,
             "color":"gray"
         }
     ]
