@@ -36,13 +36,13 @@ onEvent('item.registry', event => {
 
 	//Dusts
 	event.create('lime_dust').displayName('Quicklime').texture('kubejs:item/dusts/lime_dust')
-	event.create('brass_dust').displayName('Brass Dust').texture('kubejs:item/dusts/brass_dust')
-	event.create('bronze_dust').displayName('Bronze Dust').texture('kubejs:item/dusts/bronze_dust')
-	event.create('cast_iron_dust').displayName('Cast Iron Dust').texture('kubejs:item/dusts/cast_iron_dust')
-	event.create('mithril_dust').displayName('Mithril Dust').texture('kubejs:item/dusts/mithril_dust')
-	event.create('netherite_dust').displayName('Netherite Dust').texture('kubejs:item/dusts/netherite_dust')
-	event.create('pendorite_dust').displayName('Pendorite Dust').texture('kubejs:item/dusts/pendorite_dust')
-	event.create('zinc_dust').displayName('Zinc Dust').texture('kubejs:item/dusts/zinc_dust')
+	event.create('brass_dust').displayName('Brass Grit').texture('kubejs:item/dusts/brass_dust')
+	event.create('bronze_dust').displayName('Bronze Grit').texture('kubejs:item/dusts/bronze_dust')
+	event.create('cast_iron_dust').displayName('Cast Iron Grit').texture('kubejs:item/dusts/cast_iron_dust')
+	event.create('mithril_dust').displayName('Mithril Grit').texture('kubejs:item/dusts/mithril_dust')
+	event.create('netherite_dust').displayName('Netherite Grit').texture('kubejs:item/dusts/netherite_dust')
+	event.create('pendorite_dust').displayName('Pendorite Grit').texture('kubejs:item/dusts/pendorite_dust')
+	event.create('zinc_dust').displayName('Zinc Grit').texture('kubejs:item/dusts/zinc_dust')
 
 	//MISC
 	event.create('bolt').displayName('Metal Bolt')

@@ -215,7 +215,7 @@ craftingTable.addShaped("ropecoil", <item:immersiveengineering:wirecoil_structur
 
 craftingTable.addShaped("mithrilsword", <item:minecraft:diamond_sword>, [
     [<item:kubejs:mithril_plate>],
-    [<item:kubejs:mithril_plate>],
+    [<item:kubejs:mithril_ingot>],
     [<item:create_sa:zinc_handle>]
 ]);
 
@@ -226,19 +226,19 @@ craftingTable.addShaped("mithrilshovel", <item:minecraft:diamond_shovel>, [
 ]);
 
 craftingTable.addShaped("mithrilpickaxe", <item:minecraft:diamond_pickaxe>, [
-    [<item:kubejs:mithril_plate>, <item:kubejs:mithril_plate>, <item:kubejs:mithril_plate>],
+    [<item:kubejs:mithril_ingot>, <item:kubejs:mithril_plate>, <item:kubejs:mithril_ingot>],
     [nope, <item:create_sa:zinc_handle>, nope],
     [nope, <item:create_sa:zinc_handle>, nope]
 ]);
 
 craftingTable.addShapedMirrored("mithrilaxe", MirrorAxis.HORIZONTAL, <item:minecraft:diamond_axe>, [
-    [<item:kubejs:mithril_plate>, <item:kubejs:mithril_plate>],
+    [<item:kubejs:mithril_ingot>, <item:kubejs:mithril_ingot>],
     [<item:kubejs:mithril_plate>, <item:create_sa:zinc_handle>],
     [nope, <item:create_sa:zinc_handle>]
 ]);
 
 craftingTable.addShapedMirrored("mithrilhoe", MirrorAxis.HORIZONTAL, <item:minecraft:diamond_hoe>, [
-    [<item:kubejs:mithril_plate>, <item:kubejs:mithril_plate>],
+    [<item:kubejs:mithril_plate>, <item:kubejs:mithril_ingot>],
     [nope, <item:create_sa:zinc_handle>],
     [nope, <item:create_sa:zinc_handle>]
 ]);
@@ -525,4 +525,16 @@ craftingTable.addShaped("flue_furnace", <item:custommachinery:custom_machine_ite
     [<item:minecraft:copper_ingot>, <item:minecraft:copper_ingot>, <item:minecraft:copper_ingot>],
     [<item:minecraft:copper_ingot>, <item:kubejs:flue_bottom_bricks>, <item:minecraft:copper_ingot>],
     [chisel, <item:minecraft:copper_ingot>, hammer]
+]);
+
+craftingTable.addShaped("oven", <item:minecraft:furnace>, [
+    [<item:minecraft:cobblestone>, <item:createdeco:cast_iron_block>, <item:minecraft:cobblestone>],
+    [<item:minecraft:cobblestone>, <item:custommachinery:custom_machine_item>.withTag({machine: "earlymachinery:pitkiln" as string}), <item:minecraft:cobblestone>],
+    [<item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_block>, <item:createdeco:cast_iron_ingot>]
+]);
+
+craftingTable.addShaped("mechanical_crafter_recipe", <item:create:mechanical_crafter>*2, [
+    [<item:create:cogwheel>, <item:create:brass_casing>, <item:create:cogwheel>],
+    [<item:create:precision_mechanism>, <item:immersiveengineering:craftingtable>, <item:kubejs:arithmetic_mechanism>],
+    [<item:create:cogwheel>, <item:create:brass_casing>, <item:create:cogwheel>],
 ]);

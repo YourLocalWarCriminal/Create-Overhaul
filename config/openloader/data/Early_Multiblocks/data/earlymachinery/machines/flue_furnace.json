@@ -9,7 +9,11 @@
     }
     ],
     "appearance":{
-        "block": "kubejs:flue_furnace_dummy_off"
+        "block": "kubejs:flue_furnace_dummy_off",
+        "running":{
+            "block":"kubejs:flue_furnace_dummy_on",
+            "light":7
+        }
     },
     "components":[
         {

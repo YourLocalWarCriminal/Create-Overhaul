@@ -90,7 +90,6 @@ var delete = [
 <item:createdeco:zinc_sheet>,
 <item:immersiveengineering:mold_wire>,
 <item:minecraft:blast_furnace>,
-<item:minecraft:furnace>,
 ];
 
 for item in delete {
@@ -269,10 +268,27 @@ var recipesd = [
 <item:farmersdelight:iron_knife>,
 <item:immersiveengineering:redstone_acid_bucket>,
 <item:immersiveengineering:electron_tube>,
+<item:immersiveengineering:hammer>,
+<item:minecraft:furnace>,
 ];
 
 for item in recipesd {
     recipes.remove(item);
+}
+
+val furnace_recipe_remove = [
+    <item:minecraft:iron_ingot>,
+    <item:minecraft:copper_ingot>,
+    <item:minecraft:gold_ingot>,
+    <item:immersiveengineering:ingot_aluminum>,
+    <item:immersiveengineering:ingot_silver>,
+    <item:immersiveengineering:ingot_nickel>,
+    <item:immersiveengineering:ingot_uranium>,
+    <item:create:zinc_ingot>,
+];
+
+for item in furnace_recipe_remove {
+    furnace.remove(item);
 }
 
 
