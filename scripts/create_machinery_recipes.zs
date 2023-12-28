@@ -1,6 +1,7 @@
 import mods.create.MillingManager;
 import mods.create.DeployerApplicationManager;
 import mods.create.MixingManager;
+import crafttweaker.api.recipe.BlastFurnaceRecipeManager;
 
 //variables
 
@@ -77,8 +78,13 @@ for i, item in ingots_press {
 <recipetype:create:filling>.addRecipe("blast_brick", <item:immersiveengineering:blastbrick> * 3, <item:minecraft:bricks> * 3, <fluid:create:potion>.withTag({Potion: "minecraft:long_fire_resistance" as string}) * 250, 200);
 <recipetype:create:filling>.addRecipe("blast_brick2", <item:immersiveengineering:blastbrick> * 3, <item:minecraft:bricks> * 3, <fluid:immersiveengineering:potion>.withTag({Potion: "minecraft:long_fire_resistance" as string}) * 250, 200);
 
+// BlastFurnaceRecipeManager.addRecipe(name as string, output as IItemStack, input as IIngredient, xp as float, cookTime as int);
+
+blastFurnace.addRecipe("flue_brick", <item:kubejs:flue_bricks>, <item:create:cut_deepslate>, 10, 30);
+
 //millstone recipes(name,[outputs],input,time)
 <recipetype:create:milling>.addRecipe("cinderflour", [<item:create:cinder_flour> % 100], <item:minecraft:netherrack>, 160);
+
 //item application(name,output, block, held item, keep item? as bool)
 <recipetype:create:item_application>.addRecipe("andesitecasing", [<item:create:andesite_casing> % 100], <tag:items:forge:treated_wood>, <item:create:andesite_alloy>, false);
 <recipetype:create:item_application>.addRecipe("brasscasing", [<item:create:brass_casing> % 100], <tag:items:forge:treated_wood>, <item:create:brass_sheet>, false);
@@ -98,6 +104,8 @@ for i, item in ingots_press {
 <recipetype:create:item_application>.addRecipe("rope_pulley2", [<item:create:hose_pulley>], <item:create:rope_pulley>, <item:create:copper_casing>, true);
 <recipetype:create:item_application>.addRecipe("elevator_pulley", [<item:create:hose_pulley>], <item:create:elevator_pulley>, <item:create:copper_casing>, true);
 <recipetype:create:item_application>.addRecipe("elevator_pulley2", [<item:create:rope_pulley>], <item:create:elevator_pulley>, <item:create:andesite_casing>, true);
+
+<recipetype:create:item_application>.addRecipe("bottom_flue_brick", [<item:kubejs:flue_bottom_bricks>], <item:minecraft:smooth_stone_slab>, <item:kubejs:flue_bricks>, true);
 //deplyoer application(name,deployed onto item, the held item, output, keep held item as bool)
 
 

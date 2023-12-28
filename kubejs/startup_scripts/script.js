@@ -5,27 +5,48 @@ console.info('Hello, World! (You will only see this line once in console, during
 onEvent('item.registry', event => {
 	// Register new items here
 	// event.create('example_item').displayName('Example Item')
-	event.create('mechanical_engine').displayName('Kinetic Engine')
-	event.create('incomplete_mechanical_engine').displayName('Incomplete Kinetic Engine')
+
+
+	//Metal
 	event.create('mithril_ingot').displayName('Mithril Ingot')
 	event.create('mithril_plate').displayName('Mithril Sheet')
 	event.create('hot_mithril_ingot').displayName('Hot Mithril Ingot')
 	event.create('pig_iron').displayName('Pig Iron')
-	event.create('dusts/lime_dust').displayName('Quicklime')
-	event.create('mechanism_casing').displayName('Mechanism Casing')
-	event.create('advanced_mechanism_casing').displayName('Advanced Mechanism Casing')
-	event.create('mechanical_elbow').displayName('Mechanical Elbow')
-	event.create('large_gear').displayName('Large Gear')
-	event.create('medium_gear').displayName('Medium Gear')
-	event.create('small_gear').displayName('Small Gear')
+	event.create('iron_bloom').displayName('Iron Bloom')
+
+	//Mechanical components
+		//Engines
+	event.create('mechanical_engine').displayName('Kinetic Engine').texture('kubejs:item/mechanical/mechanical_engine')
+	event.create('incomplete_mechanical_engine').displayName('Incomplete Kinetic Engine').texture('kubejs:item/mechanical/incomplete_mechanical_engine')
+		//Mechanisms
+	event.create('leverage_mechanism').displayName('Leverage Mechanism').texture('kubejs:item/mechanical/leverage_mechanism')
+	event.create('clockwork_mechanism').displayName('Clockwork Mechanism').texture('kubejs:item/mechanical/clockwork_mechanism')
+	event.create('induction_mechanism').displayName("Induction Component").texture('kubejs:item/mechanical/induction_mechanism')
+	event.create('arithmetic_mechanism').displayName('Arithmetic Mechanism').texture('kubejs:item/mechanical/arithmetic_mechanism')
+		//Gears
+	event.create('large_gear').displayName('Large Gear').texture('kubejs:item/mechanical/large_gear')
+	event.create('medium_gear').displayName('Medium Gear').texture('kubejs:item/mechanical/medium_gear')
+	event.create('small_gear').displayName('Small Gear').texture('kubejs:item/mechanical/small_gear')
+		//Casings
+	event.create('mechanism_casing').displayName('Mechanism Casing').texture('kubejs:item/mechanical/mechanism_casing')
+	event.create('advanced_mechanism_casing').displayName('Advanced Mechanism Casing').texture('kubejs:item/mechanical/advanced_mechanism_casing')
+		//MISC
+	event.create('leverage_components').displayName('Leverage Components').texture('kubejs:item/mechanical/leverage_components')
+	event.create('mechanical_elbow').displayName('Mechanical Elbow').texture('kubejs:item/mechanical/mechanical_elbow')
+
+	//Dusts
+	event.create('lime_dust').displayName('Quicklime').texture('kubejs:item/dusts/lime_dust')
+	event.create('brass_dust').displayName('Brass Dust').texture('kubejs:item/dusts/brass_dust')
+	event.create('bronze_dust').displayName('Bronze Dust').texture('kubejs:item/dusts/bronze_dust')
+	event.create('cast_iron_dust').displayName('Cast Iron Dust').texture('kubejs:item/dusts/cast_iron_dust')
+	event.create('mithril_dust').displayName('Mithril Dust').texture('kubejs:item/dusts/mithril_dust')
+	event.create('netherite_dust').displayName('Netherite Dust').texture('kubejs:item/dusts/netherite_dust')
+	event.create('pendorite_dust').displayName('Pendorite Dust').texture('kubejs:item/dusts/pendorite_dust')
+	event.create('zinc_dust').displayName('Zinc Dust').texture('kubejs:item/dusts/zinc_dust')
+
+	//MISC
 	event.create('bolt').displayName('Metal Bolt')
 	event.create('nail').displayName('Metal Nail')
-	event.create('leverage_components').displayName('Leverage Components')
-	event.create('leverage_mechanism').displayName('Leverage Mechanism')
-	event.create('clockwork_mechanism').displayName('Clockwork Mechanism')
-	event.create('induction_mechanism').displayName("Induction Component")
-	event.create('arithmetic_mechanism').displayName('Arithmetic Mechanism')
-	event.create('iron_bloom').displayName('Iron Bloom')
 	event.create('ingot_mold').displayName('Clay Ingot Mold')
 })
 

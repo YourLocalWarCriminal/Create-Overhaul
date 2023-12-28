@@ -6,6 +6,7 @@ val nope = <item:minecraft:air>;
 val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 val hammer = <item:immersiveengineering:hammer>.reuse();
 val wrench = <item:create:wrench>.reuse();
+val chisel = <item:rechiseled:chisel>.reuse();
 val wc = <item:immersiveengineering:wirecutter>.reuse();
 
 val helmets = [
@@ -45,6 +46,12 @@ val plates = [
 
 
 //adding crafting table recipes
+
+craftingTable.addShaped("hammer", <item:immersiveengineering:hammer>, [
+    [nope, <item:createdeco:cast_iron_ingot>, <item:farmersdelight:rope>],
+    [nope, <tag:items:forge:rods/wooden>, <item:createdeco:cast_iron_ingot>],
+    [<tag:items:forge:rods/wooden>, nope, nope],
+]);
 
 craftingTable.addShaped("ie_fluid_pipe_recipe", <item:immersiveengineering:fluid_pipe> * 4, [
     [nope, <item:create:iron_sheet>, nope],
@@ -486,8 +493,8 @@ craftingTable.addShapeless("clay_ingot_mold", <item:kubejs:ingot_mold>, [<item:r
 craftingTable.remove(<item:rechiseled:chisel>);
 
 craftingTable.addShaped("chisel_recipe", <item:rechiseled:chisel>, [
-    [nope, <item:farmersdelight:rope>, <item:minecraft:stone_slab>],
-    [nope, <tag:items:forge:rods>, <item:farmersdelight:rope>], 
+    [nope, <item:farmersdelight:rope>, <item:createdeco:cast_iron_ingot>],
+    [nope, <item:createdeco:cast_iron_ingot>, <item:farmersdelight:rope>], 
     [<tag:items:forge:rods>, nope, nope]
 ]);
 
@@ -512,4 +519,10 @@ craftingTable.addShaped("largegear_cheap", <item:kubejs:large_gear>*2, [
     [nope, <item:create:iron_sheet>, wc],
     [<item:minecraft:iron_nugget>, <item:createdeco:cast_iron_sheet>, <item:minecraft:iron_nugget>],
     [nope, <item:create:iron_sheet>, nope]
+]);
+
+craftingTable.addShaped("flue_furnace", <item:custommachinery:custom_machine_item>.withTag({machine: "earlymachinery:flue_furnace" as string}), [
+    [<item:minecraft:copper_ingot>, <item:minecraft:copper_ingot>, <item:minecraft:copper_ingot>],
+    [<item:minecraft:copper_ingot>, <item:kubejs:flue_bottom_bricks>, <item:minecraft:copper_ingot>],
+    [chisel, <item:minecraft:copper_ingot>, hammer]
 ]);
