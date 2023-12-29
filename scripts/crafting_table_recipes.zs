@@ -550,3 +550,9 @@ craftingTable.addShaped("enchanting_table", <item:minecraft:enchanting_table>, [
     [hammer, <item:create:brass_block>, glue],
     [<item:create:polished_rose_quartz>, <item:minecraft:crying_obsidian>, <item:create:polished_rose_quartz>],
 ]);
+
+craftingTable.addShaped("eureka_engine", <item:vs_eureka:engine>, [
+    [<tag:items:forge:plates/lead>, <item:create_sa:steam_engine>, <tag:items:forge:plates/lead>],
+    [<tag:items:forge:plates/lead>, <item:custommachinery:custom_machine_item>.withTag({machine: "earlymachinery:flue_furnace" as string}), <tag:items:forge:plates/lead>],
+    [<tag:items:forge:plates/lead>, <tag:items:forge:plates/lead>, <tag:items:forge:plates/lead>],
+]);

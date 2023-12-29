@@ -106,7 +106,8 @@ blastFurnace.addRecipe("flue_brick", <item:kubejs:flue_bricks>, <item:create:cut
 <recipetype:create:item_application>.addRecipe("elevator_pulley", [<item:create:hose_pulley>], <item:create:elevator_pulley>, <item:create:copper_casing>, true);
 <recipetype:create:item_application>.addRecipe("elevator_pulley2", [<item:create:rope_pulley>], <item:create:elevator_pulley>, <item:create:andesite_casing>, true);
 
-<recipetype:create:item_application>.addRecipe("bottom_flue_brick", [<item:kubejs:flue_bottom_bricks>], <item:minecraft:smooth_stone_slab>, <item:kubejs:flue_bricks>, true);
+<recipetype:create:item_application>.addRecipe("bottom_flue_brick", [<item:kubejs:flue_bottom_bricks>], <item:minecraft:smooth_stone_slab>, <item:kubejs:flue_bricks>, false);
+
 //deplyoer application(name,deployed onto item, the held item, output, keep held item as bool)
 
 
@@ -407,3 +408,11 @@ for i, item in ingots {
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:blaze_powder>))
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200)));                                                      
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("anchor")
+                                                      .transitionTo(<item:vs_eureka:anchor>)
+                                                      .require(<tag:items:forge:storage_blocks/cast_iron>)
+                                                      .loops(25)
+                                                      .addOutput(<item:vs_eureka:anchor>, 1)
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(400))
+                                                      );
