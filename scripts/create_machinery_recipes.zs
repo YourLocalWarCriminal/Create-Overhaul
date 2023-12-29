@@ -80,15 +80,12 @@ for i, item in ingots_press {
 
 // BlastFurnaceRecipeManager.addRecipe(name as string, output as IItemStack, input as IIngredient, xp as float, cookTime as int);
 
-blastFurnace.addRecipe("flue_brick", <item:kubejs:flue_bricks>, <item:create:cut_deepslate>, 10, 30);
-
 //millstone recipes(name,[outputs],input,time)
 <recipetype:create:milling>.addRecipe("cinderflour", [<item:create:cinder_flour> % 100], <item:minecraft:netherrack>, 160);
 <recipetype:create:milling>.addRecipe("blaze_powder", [<item:minecraft:blaze_powder> * 2 % 25,], <tag:items:forge:rods/blaze>, 320);
 
 //item application(name,output, block, held item, keep item? as bool)
 <recipetype:create:item_application>.addRecipe("andesitecasing", [<item:create:andesite_casing> % 100], <tag:items:forge:treated_wood>, <item:create:andesite_alloy>, false);
-<recipetype:create:item_application>.addRecipe("brasscasing", [<item:create:brass_casing> % 100], <tag:items:forge:treated_wood>, <item:create:brass_sheet>, false);
 <recipetype:create:item_application>.addRecipe("siftinggravel", [<item:create:copper_nugget> % 25, <item:minecraft:flint> % 25], <item:minecraft:gravel>, <item:farmersdelight:safety_net>, true);
 <recipetype:create:item_application>.addRecipe("sandsifting", [<item:create:copper_nugget> % 10, <item:byg:mud_ball> % 25, <item:minecraft:clay_ball> % 15], <tag:items:forge:sand>, <item:farmersdelight:safety_net>, true);
 <recipetype:create:item_application>.addRecipe("item_drain", [<item:create:item_drain>], <item:create:copper_casing>, <tag:items:forge:bars>, false);
@@ -409,6 +406,7 @@ for i, item in ingots {
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:blaze_powder>))
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200)));                                                      
 
+
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("anchor")
                                                       .transitionTo(<item:vs_eureka:anchor>)
                                                       .require(<tag:items:forge:storage_blocks/cast_iron>)
@@ -416,3 +414,18 @@ for i, item in ingots {
                                                       .addOutput(<item:vs_eureka:anchor>, 1)
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(400))
                                                       );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("brass_casing")
+                                                      .transitionTo(<item:immersiveengineering:treated_wood_horizontal>)
+                                                      .require(<tag:items:forge:treated_wood>)
+                                                      .loops(4)
+                                                      .addOutput(<item:create:brass_casing>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:brass_rod>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:brass_rod>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:brass_rod>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:brass_rod>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:alloyed:bronze_sheet>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200)));
+
+

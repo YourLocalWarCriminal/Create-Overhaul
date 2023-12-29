@@ -7,6 +7,7 @@ import mods.create.MechanicalCrafterManager;
 import mods.create.CompactingManager;
 import mods.create.DeployerApplicationManager;
 import mods.create.ItemApplicationManager;
+import mods.create.ItemApplicationManager;
 
 //deleting items entirely
 
@@ -267,6 +268,7 @@ var recipesd = [
 <item:immersiveengineering:electron_tube>,
 <item:immersiveengineering:hammer>,
 <item:minecraft:furnace>,
+<item:create:brass_casing>,
 ];
 
 for item in recipesd {

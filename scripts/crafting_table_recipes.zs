@@ -522,7 +522,7 @@ craftingTable.addShaped("largegear_cheap", <item:kubejs:large_gear>*2, [
 ]);
 
 craftingTable.addShaped("flue_furnace", <item:custommachinery:custom_machine_item>.withTag({machine: "earlymachinery:flue_furnace" as string}), [
-    [<item:minecraft:copper_ingot>, <item:minecraft:copper_ingot>, <item:minecraft:copper_ingot>],
+    [<item:minecraft:copper_ingot>, <item:minecraft:copper_block>, <item:minecraft:copper_ingot>],
     [<item:minecraft:copper_ingot>, <item:kubejs:flue_bottom_bricks>, <item:minecraft:copper_ingot>],
     [chisel, <item:minecraft:copper_ingot>, hammer]
 ]);
@@ -555,4 +555,11 @@ craftingTable.addShaped("eureka_engine", <item:vs_eureka:engine>, [
     [<tag:items:forge:plates/lead>, <item:create_sa:steam_engine>, <tag:items:forge:plates/lead>],
     [<tag:items:forge:plates/lead>, <item:custommachinery:custom_machine_item>.withTag({machine: "earlymachinery:flue_furnace" as string}), <tag:items:forge:plates/lead>],
     [<tag:items:forge:plates/lead>, <tag:items:forge:plates/lead>, <tag:items:forge:plates/lead>],
+]);
+
+craftingTable.addShaped("flue_bricks", <item:kubejs:flue_bricks>, [
+    [<item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_ingot>],
+    [<item:createdeco:cast_iron_ingot>, <item:minecraft:polished_deepslate>, <item:createdeco:cast_iron_ingot>],
+    [<item:createdeco:cast_iron_ingot>, hammer, <item:createdeco:cast_iron_ingot>]
+
 ]);
