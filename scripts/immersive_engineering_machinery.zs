@@ -56,3 +56,29 @@ for i, item in ingots {
     <item:kubejs:mechanism_casing>, <item:kubejs:nail> * 6, <item:kubejs:large_gear> * 6, <item:minecraft:chain> * 4, 
     <item:immersiveengineering:component_iron> * 3, <item:immersiveengineering:screwdriver>], 
     <item:kubejs:clockwork_mechanism>);
+
+//<recipetype:immersiveengineering:crusher>.addRecipe("name", input, energy, output, additionalOutput %, additionalOutput %)
+
+val ingots_crusher = [
+    <item:kubejs:mithril_ingot>,
+    <item:create:brass_ingot>,
+    <item:alloyed:bronze_ingot>,
+    <item:createdeco:cast_iron_ingot>,
+    <item:create:zinc_ingot>,
+    <item:byg:pendorite_scraps>,
+    <item:minecraft:netherite_scrap>,
+];
+
+val dusts = [
+<item:kubejs:mithril_dust>,
+<item:kubejs:brass_dust>,
+<item:kubejs:bronze_dust>,
+<item:kubejs:cast_iron_dust>,
+<item:kubejs:zinc_dust>,
+<item:kubejs:pendorite_dust>,
+<item:kubejs:netherite_dust>,
+];
+
+for i, item in ingots_crusher {
+    <recipetype:immersiveengineering:crusher>.addRecipe("ingot_to_grit" + i, ingots_crusher[i], 3000, dusts[i]);
+}

@@ -167,9 +167,6 @@ craftingTable.addShaped("millstone", <item:create:millstone>, [
     [nope, <item:minecraft:stone>, nope]    
 ]);
 
-craftingTable.addShapeless("bandagefabric", <item:firstaid:bandage>, [<item:immersiveengineering:hemp_fabric>]);
-craftingTable.addShapeless("plasterfabric", <item:firstaid:plaster> * 3, [<item:immersiveengineering:hemp_fabric>]);
-
 craftingTable.addShapedMirrored("stoneaxe", MirrorAxis.HORIZONTAL, <item:minecraft:stone_axe>, [
     [<item:minecraft:flint>, <item:minecraft:flint>, nope],
     [<item:minecraft:flint>, <item:minecraft:stick>, <item:farmersdelight:rope>],
@@ -536,7 +533,7 @@ craftingTable.addShaped("oven", <item:minecraft:furnace>, [
     [<item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_block>, <item:createdeco:cast_iron_ingot>]
 ]);
 
-craftingTable.addShaped("mechanical_crafter_recipe", <item:create:mechanical_crafter>*2, [
+craftingTable.addShaped("mechanical_crafter_recipe", <item:create:mechanical_crafter>*3, [
     [<item:create:cogwheel>, <item:create:brass_casing>, <item:create:cogwheel>],
     [<item:create:precision_mechanism>, <item:immersiveengineering:craftingtable>, <item:kubejs:arithmetic_mechanism>],
     [<item:create:cogwheel>, <item:create:brass_casing>, <item:create:cogwheel>],
