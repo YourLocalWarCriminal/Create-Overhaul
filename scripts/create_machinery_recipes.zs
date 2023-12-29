@@ -84,6 +84,7 @@ blastFurnace.addRecipe("flue_brick", <item:kubejs:flue_bricks>, <item:create:cut
 
 //millstone recipes(name,[outputs],input,time)
 <recipetype:create:milling>.addRecipe("cinderflour", [<item:create:cinder_flour> % 100], <item:minecraft:netherrack>, 160);
+<recipetype:create:milling>.addRecipe("blaze_powder", [<item:minecraft:blaze_powder> * 2 % 25,], <tag:items:forge:rods/blaze>, 320);
 
 //item application(name,output, block, held item, keep item? as bool)
 <recipetype:create:item_application>.addRecipe("andesitecasing", [<item:create:andesite_casing> % 100], <tag:items:forge:treated_wood>, <item:create:andesite_alloy>, false);
@@ -397,3 +398,12 @@ for i, item in ingots {
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:netherite_dust>))
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100))
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100)));
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("sulfur")
+                                                      .transitionTo(<item:immersiveengineering:dust_sulfur>)
+                                                      .require(<item:kubejs:netherite_dust>)
+                                                      .loops(9)
+                                                      .addOutput(<item:immersiveengineering:dust_sulfur>, 2)
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:blaze_powder>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200)));                                                      

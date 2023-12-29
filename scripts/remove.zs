@@ -307,6 +307,7 @@ craftingTable.remove(<item:create:rose_quartz>);
 <recipetype:create:mechanical_crafting>.remove(<item:alloyed:steel_fishing_rod>);
 <recipetype:create:mechanical_crafting>.remove(<item:alloyed:steel_shears>);
 
+craftingTable.remove(<item:minecraft:blaze_powder>);
 craftingTable.remove(<item:minecraft:bread>);
 craftingTable.removeByInput(<item:minecraft:netherite_scrap>);
 <recipetype:immersiveengineering:alloy>.remove(<item:create:brass_ingot>);

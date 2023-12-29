@@ -8,6 +8,9 @@ val hammer = <item:immersiveengineering:hammer>.reuse();
 val wrench = <item:create:wrench>.reuse();
 val chisel = <item:rechiseled:chisel>.reuse();
 val wc = <item:immersiveengineering:wirecutter>.reuse();
+val glue = <item:create:super_glue>.reuse();
+val nail = <item:kubejs:nail>;
+val shaft = <item:create:shaft>;
 
 val helmets = [
     <item:minecraft:iron_helmet>,
@@ -537,4 +540,16 @@ craftingTable.addShaped("mechanical_crafter_recipe", <item:create:mechanical_cra
     [<item:create:cogwheel>, <item:create:brass_casing>, <item:create:cogwheel>],
     [<item:create:precision_mechanism>, <item:immersiveengineering:craftingtable>, <item:kubejs:arithmetic_mechanism>],
     [<item:create:cogwheel>, <item:create:brass_casing>, <item:create:cogwheel>],
+]);
+
+craftingTable.addShaped("rolling_mill", <item:createaddition:rolling_mill>, [
+    [nail, shaft, nail],
+    [<item:kubejs:leverage_mechanism>, shaft, <item:kubejs:clockwork_mechanism>],
+    [hammer, <item:alloyed:steel_casing>, wrench],
+]);
+
+craftingTable.addShaped("enchanting_table", <item:minecraft:enchanting_table>, [
+    [<item:create:polished_rose_quartz>, <item:minecraft:book>, <item:create:polished_rose_quartz>],
+    [hammer, <item:create:brass_block>, glue],
+    [<item:create:polished_rose_quartz>, <item:minecraft:crying_obsidian>, <item:create:polished_rose_quartz>],
 ]);
