@@ -170,4 +170,16 @@ onEvent('block.registry', event => {
 	.texture('west', 'kubejs:block/flue_furnace/flue_bottom_bricks')
 	.texture('east', 'kubejs:block/flue_furnace/flue_bottom_bricks')	
 	.noItem()
+
 })
+
+onEvent('fluid.registry', event =>
+{
+	event.create('solder')  
+    .stillTexture('kubejs:block/lava_still')
+    .flowingTexture('kubejs:block/lava_flow')
+    .color(0x8388A6)
+    .displayName(`Solder`)
+    .noBlock()
+})
+

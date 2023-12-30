@@ -269,6 +269,7 @@ var recipesd = [
 <item:immersiveengineering:hammer>,
 <item:minecraft:furnace>,
 <item:create:brass_casing>,
+<item:createaddition:modular_accumulator>,
 ];
 
 for item in recipesd {
