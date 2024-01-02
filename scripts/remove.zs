@@ -89,7 +89,6 @@ var delete = [
 <item:immersiveengineering:nugget_copper>,
 <item:immersiveengineering:nugget_steel>,
 <item:createdeco:zinc_sheet>,
-<item:immersiveengineering:mold_wire>,
 <item:minecraft:blast_furnace>,
 ];
 
@@ -326,4 +325,4 @@ craftingTable.remove(<tag:items:forge:plates>);
 <recipetype:immersiveengineering:metal_press>.remove(<item:createaddition:iron_wire>);
 furnace.remove(<item:minecraft:copper_ingot>);
 blastFurnace.remove(<item:minecraft:copper_ingot>);
-
+<recipetype:create:crushing>.remove(<tag:items:create:crushed_raw_materials>);

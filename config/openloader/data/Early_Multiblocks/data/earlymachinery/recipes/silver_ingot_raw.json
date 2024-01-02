@@ -7,7 +7,7 @@
             "type":"custommachinery:item",
             "mode":"input",
             "item":"immersiveengineering:raw_silver",
-            "amount":1
+            "amount":2
         },
         {
             "type":"custommachinery:item",

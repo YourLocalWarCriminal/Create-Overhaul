@@ -7,7 +7,7 @@
             "type":"custommachinery:item",
             "mode":"input",
             "item":"minecraft:raw_gold",
-            "amount":1
+            "amount":2
         },
         {
             "type":"custommachinery:item",

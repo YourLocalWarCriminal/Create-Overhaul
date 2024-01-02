@@ -7,7 +7,7 @@
             "type":"custommachinery:item",
             "mode":"input",
             "item":"kubejs:zinc_dust",
-            "amount":1
+            "amount":3
         },
         {
             "type":"custommachinery:item",

@@ -30,7 +30,12 @@ onEvent('recipes', event => {
 	event.replaceInput({}, '#forge:plates/steel', 'alloyed:steel_sheet')
 	event.replaceInput({}, '#forge:ingots/steel', 'alloyed:steel_ingot')
 	event.replaceInput({}, '#forge:nuggets/copper', 'create:copper_nugget')
-
+	event.replaceInput({}, '#forge:wires/electrum', 'immersiveengineering:wire_electrum')
+	event.replaceInput({}, '#forge:wires/gold', 'createaddition:gold_wire')
+	event.replaceInput({}, '#forge:wires/lead', 'immersiveengineering:wire_lead')
+	event.replaceInput({}, '#forge:wires/iron', 'createaddition:iron_wire')
+	event.replaceInput({}, '#forge:wires/copper', 'createaddition:copper_wire')
+	
 	// In all recipes, replace Stick with Oak Sapling in output items 
 	//event.replaceOutput({}, 'minecraft:stick', 'minecraft:oak_sapling')
 	

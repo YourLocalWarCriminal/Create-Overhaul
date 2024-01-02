@@ -71,9 +71,9 @@ val plates_press = [
 val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 //press recipe(name, output, input, duration)
 <recipetype:create:pressing>.addRecipe("mithrilplate", [<item:kubejs:mithril_plate> % 100], <item:kubejs:mithril_ingot> * 2, 200);
-for i, item in ingots_press {
-    <recipetype:create:pressing>.addRecipe("ingots_to_plates" + i, [plates_press[i]%100], ingots_press[i]*2, 200);
-}
+/*for i, item in ingots_press {
+    <recipetype:create:pressing>.addRecipe("ingots_to_plates" + i, [plates_press[i]*0], ingots_press[i]*2, 200);
+}*/
 
 // FillingManager.addRecipe(name, output, inputContainer, inputFluid, duration);
 <recipetype:create:filling>.addRecipe("blast_brick", <item:immersiveengineering:blastbrick> * 3, <item:minecraft:bricks> * 3, <fluid:create:potion>.withTag({Potion: "minecraft:long_fire_resistance" as string}) * 250, 200);
@@ -119,9 +119,9 @@ for i, item in ingots_press {
 
 //saw recipes(name,output,input,time)
 <recipetype:create:cutting>.addRecipe("treatedsticks",<item:immersiveengineering:stick_treated> * 2 % 100 , <tag:items:forge:treated_wood>, 220);
-for i, item in ingots {
+/*for i, item in ingots {
     <recipetype:create:cutting>.addRecipe("ingots_to_rods" + i, rods[i]*2, ingots[i], 800);
-}
+}*/
 
 <recipetype:create:cutting>.addRecipe("bolt", <item:kubejs:bolt>*1, <item:createaddition:iron_rod>, 400);
 <recipetype:create:cutting>.addRecipe("nail", <item:kubejs:nail>*2, <item:create:iron_sheet>, 400);
@@ -131,13 +131,11 @@ for i, item in ingots {
 // MechanicalCrafterManager.addRecipe(name, output, ingredients[][]);
 
 <recipetype:create:mechanical_crafting>.addRecipe("crushing_wheel", <item:create:crushing_wheel>, [
-    [nope, nope, <item:kubejs:nail>, nope, <item:kubejs:nail>, nope, nope],
-    [nope, <tag:items:forge:plates/steel>,  <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <tag:items:forge:plates/steel>, nope],
-    [<item:kubejs:nail>, <item:minecraft:smooth_stone>, <item:immersiveengineering:stick_steel>, <item:immersiveengineering:stick_treated>, <item:immersiveengineering:stick_steel>, <item:minecraft:smooth_stone>, <item:kubejs:nail>],
-    [nope, <item:minecraft:smooth_stone>, <item:immersiveengineering:stick_treated>, <item:create:shaft>, <item:immersiveengineering:stick_treated>, <item:minecraft:smooth_stone>, nope],
-    [<item:kubejs:nail>, <item:minecraft:smooth_stone>, <item:immersiveengineering:stick_steel>, <item:immersiveengineering:stick_treated>, <item:immersiveengineering:stick_steel>, <item:minecraft:smooth_stone>, <item:kubejs:nail>],
-    [nope, <tag:items:forge:plates/steel>,  <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <tag:items:forge:plates/steel>, nope],
-    [nope, nope, <item:kubejs:nail>, nope, <item:kubejs:nail>, nope, nope]
+    [<tag:items:forge:plates/steel>,  <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <tag:items:forge:plates/steel>],
+    [<item:minecraft:smooth_stone>, <item:immersiveengineering:stick_steel>, <item:immersiveengineering:stick_treated>, <item:immersiveengineering:stick_steel>, <item:minecraft:smooth_stone>],
+    [<item:minecraft:smooth_stone>, <item:immersiveengineering:stick_treated>, <item:create:shaft>, <item:immersiveengineering:stick_treated>, <item:minecraft:smooth_stone>],
+    [<item:minecraft:smooth_stone>, <item:immersiveengineering:stick_steel>, <item:immersiveengineering:stick_treated>, <item:immersiveengineering:stick_steel>, <item:minecraft:smooth_stone>],
+    [<tag:items:forge:plates/steel>,  <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <item:minecraft:smooth_stone>, <tag:items:forge:plates/steel>]
 ]);
 
 <recipetype:create:mechanical_crafting>.addRecipe("alternator", <item:createaddition:alternator>, [

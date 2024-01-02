@@ -7,7 +7,7 @@
             "type":"custommachinery:item",
             "mode":"input",
             "item":"immersiveengineering:dust_nickel",
-            "amount":1
+            "amount":3
         },
         {
             "type":"custommachinery:item",
