@@ -561,5 +561,39 @@ craftingTable.addShaped("flue_bricks", <item:kubejs:flue_bricks>, [
     [<item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_ingot>],
     [<item:createdeco:cast_iron_ingot>, <item:minecraft:polished_deepslate>, <item:createdeco:cast_iron_ingot>],
     [<item:createdeco:cast_iron_ingot>, hammer, <item:createdeco:cast_iron_ingot>]
+]);
 
+craftingTable.addShaped("lv_wire1", <item:immersiveengineering:wirecoil_copper>, [
+    [nope, <item:immersiveengineering:wire_lead>, nope],
+    [<item:immersiveengineering:wire_lead>, <item:createaddition:spool>, <item:immersiveengineering:wire_lead>],
+    [nope, <item:immersiveengineering:wire_lead>, nope]
+]);
+
+craftingTable.addShaped("lv_wire2", <item:immersiveengineering:wirecoil_copper>, [
+    [nope, <item:immersiveengineering:wire_aluminum>, nope],
+    [<item:immersiveengineering:wire_aluminum>, <item:createaddition:spool>, <item:immersiveengineering:wire_aluminum>],
+    [nope, <item:immersiveengineering:wire_aluminum>, nope]
+]);
+craftingTable.addShaped("lv_wire3", <item:immersiveengineering:wirecoil_copper>, [
+    [nope, <item:createaddition:iron_wire>, nope],
+    [<item:createaddition:iron_wire>, <item:createaddition:spool>, <item:createaddition:iron_wire>],
+    [nope, <item:createaddition:iron_wire>, nope]
+]);
+
+craftingTable.addShaped("mv_wire1", <item:immersiveengineering:wirecoil_electrum>, [
+    [nope, <item:createaddition:gold_wire>, nope],
+    [<item:createaddition:gold_wire>, <item:createaddition:spool>, <item:createaddition:gold_wire>],
+    [nope, <item:createaddition:gold_wire>, nope]
+]);
+
+craftingTable.addShaped("mv_wire2", <item:immersiveengineering:wirecoil_electrum>, [
+    [nope, <item:createaddition:copper_wire>, nope],
+    [<item:createaddition:copper_wire>, <item:createaddition:spool>, <item:createaddition:copper_wire>],
+    [nope, <item:createaddition:copper_wire>, nope]
+]);
+
+craftingTable.addShaped("hv_wire", <item:immersiveengineering:wirecoil_steel>, [
+    [nope, <item:immersiveengineering:wire_electrum>, nope],
+    [<item:immersiveengineering:wire_electrum>, <item:createaddition:spool>, <item:immersiveengineering:wire_electrum>],
+    [nope, <item:immersiveengineering:wire_electrum>, nope]
 ]);

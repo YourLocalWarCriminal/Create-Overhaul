@@ -10,9 +10,10 @@ onEvent('item.registry', event => {
 	//Metal
 	event.create('mithril_ingot').displayName('Mithril Ingot')
 	event.create('mithril_plate').displayName('Mithril Sheet')
-	event.create('hot_mithril_ingot').displayName('Hot Mithril Ingot')
+	event.create('hot_mithril_ingot').displayName('Hot Mithril Ingot').glow(true)
 	event.create('pig_iron').displayName('Pig Iron')
 	event.create('iron_bloom').displayName('Iron Bloom')
+	event.create('weak_netherite_ingot').displayName('Weak Netherite Ingot').tooltip('Used in the process of making Netherite').fireResistant(true)
 
 	//Mechanical components
 		//Engines
@@ -40,8 +41,11 @@ onEvent('item.registry', event => {
 	event.create('bronze_dust').displayName('Bronze Grit').texture('kubejs:item/dusts/bronze_dust')
 	event.create('cast_iron_dust').displayName('Cast Iron Grit').texture('kubejs:item/dusts/cast_iron_dust')
 	event.create('mithril_dust').displayName('Mithril Grit').texture('kubejs:item/dusts/mithril_dust')
-	event.create('netherite_dust').displayName('Netherite Grit').texture('kubejs:item/dusts/netherite_dust')
-	event.create('pendorite_dust').displayName('Pendorite Grit').texture('kubejs:item/dusts/pendorite_dust')
+	event.create('netherite_dust').displayName('Netherite Grit').texture('kubejs:item/dusts/netherite_dust').fireResistant(true)
+	event.create('weak_netherite_dust').displayName('Weak Netherite Grit').texture('kubejs:item/dusts/weak_netherite_dust').fireResistant(true)
+	event.create('crushed_raw_weak_netherite').displayName('Crushed Raw Weak Netherite').texture('kubejs:item/crushed_raw_weak_netherite').fireResistant(true)
+	event.create('weak_netherite_nugget').displayName('Weak Netherite Nugget').texture('kubejs:item/weak_netherite_nugget').fireResistant(true)
+	event.create('pendorite_dust').displayName('Pendorite Grit').texture('kubejs:item/dusts/pendorite_dust').fireResistant(true)
 	event.create('zinc_dust').displayName('Zinc Grit').texture('kubejs:item/dusts/zinc_dust')
 
 	//MISC

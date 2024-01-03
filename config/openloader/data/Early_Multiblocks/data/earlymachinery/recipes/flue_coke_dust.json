@@ -1,0 +1,56 @@
+{
+    "type":"custommachinery:custom_machine",
+    "machine":"earlymachinery:flue_furnace",
+    "time":2200,
+    "requirements":[
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"kubejs:cast_iron_dust",
+            "amount":2
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"immersiveengineering:coal_coke",
+            "amount":1
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"output",
+            "item":"immersiveengineering:dust_iron",
+            "amount":2
+        },
+        {
+            "type":"custommachinery:structure",
+            
+              "keys": {
+                "a": "kubejs:flue_bottom_bricks",
+                "b": "kubejs:flue_bricks"
+              },
+            "pattern": [
+              [
+                "aaa",
+                "aaa",
+                "ama"
+              ],
+              [
+                "bbb",
+                "b b",
+                "bbb"
+              ],
+              [
+                "bbb",
+                "b b",
+                "bbb"
+              ],
+              [
+                "bbb",
+                "b b",
+                "bbb"
+              ]
+            ] 
+        }
+    ]
+}
+
