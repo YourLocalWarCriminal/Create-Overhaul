@@ -6,7 +6,7 @@
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"create:raw_crushed_silver",
+            "item":"create:crushed_raw_silver",
             "amount":2
         },
         {

@@ -1,7 +1,6 @@
 #priority 100
 
 //github test
-
 import mods.jei.JEI;
 import mods.create.MechanicalCrafterManager;
 import mods.create.CompactingManager;
@@ -10,7 +9,6 @@ import mods.create.ItemApplicationManager;
 import mods.create.ItemApplicationManager;
 
 //deleting items entirely
-
 var delete = [
 <item:immersiveengineering:fluid_pipe>,
 <item:immersiveengineering:fluid_placer>,
@@ -327,3 +325,9 @@ craftingTable.remove(<tag:items:forge:plates>);
 furnace.remove(<item:minecraft:copper_ingot>);
 blastFurnace.remove(<item:minecraft:copper_ingot>);
 <recipetype:create:crushing>.remove(<tag:items:create:crushed_raw_materials>);
+furnace.remove(<item:minecraft:netherite_scrap>);
+furnace.remove(<item:immersiveengineering:ingot_electrum>);
+furnace.remove(<item:immersiveengineering:ingot_constantan>);
+furnace.remove(<item:minecraft:charcoal>);
+furnace.remove(<item:minecraft:coal>);
+

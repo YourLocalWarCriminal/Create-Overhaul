@@ -18,7 +18,7 @@ onEvent('item.registry', event => {
 	//Mechanical components
 		//Engines
 	event.create('mechanical_engine').displayName('Kinetic Engine').texture('kubejs:item/mechanical/mechanical_engine')
-	event.create('incomplete_mechanical_engine').displayName('Incomplete Kinetic Engine').texture('kubejs:item/mechanical/incomplete_mechanical_engine')
+	event.create('incomplete_mechanical_engine').displayName('Incomplete Kinetic Engine').texture('kubejs:item/mechanical/incomplete_mechanical_engine').noItem()
 		//Mechanisms
 	event.create('leverage_mechanism').displayName('Leverage Mechanism').texture('kubejs:item/mechanical/leverage_mechanism')
 	event.create('clockwork_mechanism').displayName('Clockwork Mechanism').texture('kubejs:item/mechanical/clockwork_mechanism')
@@ -47,11 +47,19 @@ onEvent('item.registry', event => {
 	event.create('weak_netherite_nugget').displayName('Weak Netherite Nugget').texture('kubejs:item/weak_netherite_nugget').fireResistant(true)
 	event.create('pendorite_dust').displayName('Pendorite Grit').texture('kubejs:item/dusts/pendorite_dust').fireResistant(true)
 	event.create('zinc_dust').displayName('Zinc Grit').texture('kubejs:item/dusts/zinc_dust')
+	event.create('alumina_dust').displayName("Alumina Dust").texture('kubejs:item/dusts/alumina')
+	event.create('silicon_dust').displayName("Silicon Dust").texture('kubejs:item/dusts/silicon_dust')
+	event.create('glass_grit').displayName('Crushed Glass').texture('kubejs:item/dusts/glass_dust')
+	event.create('acidic_glass_mixture').displayName('Acidic Glass Mixture').texture('kubejs:item/dusts/glass_acid_mix')
 
 	//MISC
 	event.create('bolt').displayName('Metal Bolt')
 	event.create('nail').displayName('Metal Nail')
 	event.create('ingot_mold').displayName('Clay Ingot Mold')
+	event.create('transistor').displayName('Transistor').texture('kubejs:item/transistor')
+	event.create('silicon_boule').displayName('Silicon Boule').texture('kubejs:item/silicon_boule')
+	event.create('silicon_wafer').displayName('Silicon Wafer').texture('kubejs:item/silicon_wafer')
+	event.create('basic_backboard').displayName('Basic Circuit Board')
 })
 
 
