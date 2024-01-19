@@ -55,9 +55,17 @@ val dusts = [
 <item:kubejs:pendorite_dust>,
 <item:kubejs:netherite_dust>,
 ];
-
+/*
 for i, item in ingots_crusher {
     <recipetype:immersiveengineering:crusher>.addRecipe("ingot_to_grit" + i, ingots_crusher[i], 3000, dusts[i]);
-}
+}*/
+
+// Mixer.addRecipe(recipePath as string, fluidInput as MCTag, inputItems as IIngredientWithAmount[], energy as int, output as Fluid, amount as int)
+
+// <recipetype:immersiveengineering:squeezer>.addRecipe(recipePath as string, input as IIngredientWithAmount, energy as int, itemOutput as IItemStack)
 
 <recipetype:immersiveengineering:crusher>.addRecipe("crushed_glass", <tag:items:forge:pure_silica_glass>, 3000, <item:kubejs:glass_grit>);
+
+// Sawmill.addRecipe(recipePath as string, input as IIngredient, energy as int, output as IItemStack, outputSecondaries as IItemStack[])
+
+<recipetype:immersiveengineering:sawmill>.addRecipe("silicon_wafer_by_sawmill", <item:kubejs:silicon_boule>, 1000, <item:kubejs:silicon_wafer> * 4, [<item:kubejs:silicon_dust>*2]);

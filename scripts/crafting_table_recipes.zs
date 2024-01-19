@@ -563,37 +563,57 @@ craftingTable.addShaped("flue_bricks", <item:kubejs:flue_bricks>, [
     [<item:createdeco:cast_iron_ingot>, hammer, <item:createdeco:cast_iron_ingot>]
 ]);
 
-craftingTable.addShaped("lv_wire1", <item:immersiveengineering:wirecoil_copper>, [
+craftingTable.addShaped("lv_wire1", <item:immersiveengineering:wirecoil_copper> * 2, [
     [nope, <item:immersiveengineering:wire_lead>, nope],
     [<item:immersiveengineering:wire_lead>, <item:createaddition:spool>, <item:immersiveengineering:wire_lead>],
     [nope, <item:immersiveengineering:wire_lead>, nope]
 ]);
 
-craftingTable.addShaped("lv_wire2", <item:immersiveengineering:wirecoil_copper>, [
+craftingTable.addShaped("lv_wire2", <item:immersiveengineering:wirecoil_copper> * 2, [
     [nope, <item:immersiveengineering:wire_aluminum>, nope],
     [<item:immersiveengineering:wire_aluminum>, <item:createaddition:spool>, <item:immersiveengineering:wire_aluminum>],
     [nope, <item:immersiveengineering:wire_aluminum>, nope]
 ]);
-craftingTable.addShaped("lv_wire3", <item:immersiveengineering:wirecoil_copper>, [
+craftingTable.addShaped("lv_wire3", <item:immersiveengineering:wirecoil_copper> * 2, [
     [nope, <item:createaddition:iron_wire>, nope],
     [<item:createaddition:iron_wire>, <item:createaddition:spool>, <item:createaddition:iron_wire>],
     [nope, <item:createaddition:iron_wire>, nope]
 ]);
 
-craftingTable.addShaped("mv_wire1", <item:immersiveengineering:wirecoil_electrum>, [
+craftingTable.addShaped("mv_wire1", <item:immersiveengineering:wirecoil_electrum> * 2, [
     [nope, <item:createaddition:gold_wire>, nope],
     [<item:createaddition:gold_wire>, <item:createaddition:spool>, <item:createaddition:gold_wire>],
     [nope, <item:createaddition:gold_wire>, nope]
 ]);
 
-craftingTable.addShaped("mv_wire2", <item:immersiveengineering:wirecoil_electrum>, [
+craftingTable.addShaped("mv_wire2", <item:immersiveengineering:wirecoil_electrum> * 2, [
     [nope, <item:createaddition:copper_wire>, nope],
     [<item:createaddition:copper_wire>, <item:createaddition:spool>, <item:createaddition:copper_wire>],
     [nope, <item:createaddition:copper_wire>, nope]
 ]);
 
-craftingTable.addShaped("hv_wire", <item:immersiveengineering:wirecoil_steel>, [
+craftingTable.addShaped("hv_wire", <item:immersiveengineering:wirecoil_steel> * 2, [
     [nope, <item:immersiveengineering:wire_electrum>, nope],
     [<item:immersiveengineering:wire_electrum>, <item:createaddition:spool>, <item:immersiveengineering:wire_electrum>],
     [nope, <item:immersiveengineering:wire_electrum>, nope]
 ]);
+
+craftingTable.addShaped("rope_wire", <item:immersiveengineering:wirecoil_structure_rope> * 2, [
+    [nope, <item:farmersdelight:rope>, nope],
+    [<item:farmersdelight:rope>, <item:createaddition:spool>, <item:farmersdelight:rope>],
+    [nope, <item:farmersdelight:rope>, nope]
+]);
+
+craftingTable.addShaped("steel_wire", <item:immersiveengineering:wirecoil_structure_steel> * 2, [
+    [nope, <item:immersiveengineering:wire_steel>, nope],
+    [<item:immersiveengineering:wire_steel>, <item:createaddition:spool>, <item:immersiveengineering:wire_steel>],
+    [nope, <item:immersiveengineering:wire_steel>, nope]
+]);
+
+craftingTable.addShaped("red_mud_block", <item:kubejs:red_mud_block>, [
+    [<item:kubejs:red_mud_ball>, <item:kubejs:red_mud_ball>, nope],
+    [<item:kubejs:red_mud_ball>, <item:kubejs:red_mud_ball>, nope],
+    [nope, nope, nope]
+]);
+
+craftingTable.addShapeless("red_mud_balls", <item:kubejs:red_mud_ball> * 4, [<item:kubejs:red_mud_block>]);

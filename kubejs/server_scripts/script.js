@@ -75,3 +75,7 @@ onEvent('item.tags', event => {
 	event.add('farmersdelight:heat_sources', 'byg:boric_campfire')
 	event.add('farmersdelight:heat_sources', 'byg:cryptic_campfire')
 })
+
+onEvent('block.loot_tables', event => {
+	event.addSimpleBlock('kubejs:red_mud_block', 'kubejs:red_mud_ball')
+})

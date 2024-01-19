@@ -14,11 +14,12 @@ onEvent('item.registry', event => {
 	event.create('pig_iron').displayName('Pig Iron')
 	event.create('iron_bloom').displayName('Iron Bloom')
 	event.create('weak_netherite_ingot').displayName('Weak Netherite Ingot').tooltip('Used in the process of making Netherite').fireResistant(true)
+	event.create('red_mud_ball').displayName("Red Mud Ball")
 
 	//Mechanical components
 		//Engines
 	event.create('mechanical_engine').displayName('Kinetic Engine').texture('kubejs:item/mechanical/mechanical_engine')
-	event.create('incomplete_mechanical_engine').displayName('Incomplete Kinetic Engine').texture('kubejs:item/mechanical/incomplete_mechanical_engine').noItem()
+	event.create('incomplete_mechanical_engine').displayName('Incomplete Kinetic Engine').texture('kubejs:item/mechanical/incomplete_mechanical_engine')
 		//Mechanisms
 	event.create('leverage_mechanism').displayName('Leverage Mechanism').texture('kubejs:item/mechanical/leverage_mechanism')
 	event.create('clockwork_mechanism').displayName('Clockwork Mechanism').texture('kubejs:item/mechanical/clockwork_mechanism')
@@ -47,7 +48,6 @@ onEvent('item.registry', event => {
 	event.create('weak_netherite_nugget').displayName('Weak Netherite Nugget').texture('kubejs:item/weak_netherite_nugget').fireResistant(true)
 	event.create('pendorite_dust').displayName('Pendorite Grit').texture('kubejs:item/dusts/pendorite_dust').fireResistant(true)
 	event.create('zinc_dust').displayName('Zinc Grit').texture('kubejs:item/dusts/zinc_dust')
-	event.create('alumina_dust').displayName("Alumina Dust").texture('kubejs:item/dusts/alumina')
 	event.create('silicon_dust').displayName("Silicon Dust").texture('kubejs:item/dusts/silicon_dust')
 	event.create('glass_grit').displayName('Crushed Glass').texture('kubejs:item/dusts/glass_dust')
 	event.create('acidic_glass_mixture').displayName('Acidic Glass Mixture').texture('kubejs:item/dusts/glass_acid_mix')
@@ -66,6 +66,12 @@ onEvent('item.registry', event => {
 onEvent('block.registry', event => {
 	// Register new blocks here
 	// event.create('example_block').material('wood').hardness(1.0).displayName('Example Block')
+
+	event.create("red_mud_block")
+	.material("dirt")
+	.hardness(1.2)
+	.displayName("Red Mud Block")
+	.textureAll("kubejs:block/red_mud_block")
 
 	//Pit kiln
 	event.create("pit_kiln_block_off")
@@ -192,6 +198,13 @@ onEvent('fluid.registry', event =>
     .flowingTexture('kubejs:block/lava_flow')
     .color(0x8388A6)
     .displayName(`Solder`)
+    .noBlock()
+
+	event.create('red_mud')  
+    .stillTexture('kubejs:block/lava_still')
+    .flowingTexture('kubejs:block/lava_flow')
+    .color(0x8a1f04)
+    .displayName(`Red Mud`)
     .noBlock()
 })
 

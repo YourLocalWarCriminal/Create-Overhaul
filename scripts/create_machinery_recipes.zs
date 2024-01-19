@@ -69,7 +69,7 @@ val plates_press = [
 ];
 
 val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
-//press recipe(name, output, input, duration)
+//<recipetype:create:pressing>.addRecipe(name, output, input, duration)
 <recipetype:create:pressing>.addRecipe("mithrilplate", [<item:kubejs:mithril_plate> % 100], <item:kubejs:mithril_ingot> * 2, 200);
 /*for i, item in ingots_press {
     <recipetype:create:pressing>.addRecipe("ingots_to_plates" + i, [plates_press[i]*0], ingots_press[i]*2, 200);
@@ -78,6 +78,7 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 // FillingManager.addRecipe(name, output, inputContainer, inputFluid, duration);
 <recipetype:create:filling>.addRecipe("blast_brick", <item:immersiveengineering:blastbrick> * 3, <item:minecraft:bricks> * 3, <fluid:create:potion>.withTag({Potion: "minecraft:long_fire_resistance" as string}) * 250, 200);
 <recipetype:create:filling>.addRecipe("blast_brick2", <item:immersiveengineering:blastbrick> * 3, <item:minecraft:bricks> * 3, <fluid:immersiveengineering:potion>.withTag({Potion: "minecraft:long_fire_resistance" as string}) * 250, 200);
+<recipetype:create:filling>.addRecipe("redstone_wire", <item:immersiveengineering:wirecoil_redstone>, <item:immersiveengineering:wirecoil_structure_steel>, <fluid:immersiveengineering:redstone_acid> * 5, 20);
 
 // BlastFurnaceRecipeManager.addRecipe(name as string, output as IItemStack, input as IIngredient, xp as float, cookTime as int);
 
@@ -129,7 +130,7 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 <recipetype:create:cutting>.addRecipe("nail", <item:kubejs:nail>*2, <item:create:iron_sheet>, 400);
 <recipetype:create:cutting>.addRecipe("nailsteel", <item:kubejs:nail>*4, <item:alloyed:steel_sheet>, 400);  
 <recipetype:create:cutting>.addRecipe("boltsteel", <item:kubejs:bolt>*2, <item:immersiveengineering:stick_steel>, 400);  
-<recipetype:create:cutting>.addRecipe("silicon_wafer", <item:kubejs:silicon_wafer> * 4, <item:kubejs:silicon_boule>, 1200);
+<recipetype:create:cutting>.addRecipe("silicon_wafer_by_mechanical_saw", <item:kubejs:silicon_wafer> * 4, <item:kubejs:silicon_boule>, 1200);
 
 // MechanicalCrafterManager.addRecipe(name, output, ingredients[][]);
 

@@ -17,4 +17,4 @@ onEvent('item.tooltip', tooltip => {
 	tooltip.add(['minecraft:iron_ore', 'minecraft:deepslate_iron_ore'], '§9Fe₃O₄')
 	tooltip.add(['kubejs:deepsleate_pyrite_ore', 'kubejs:pyrite_ore'], '§9FeS₂')
 	tooltip.add(['minecraft:copper_ore', 'minecraft:deepslate_copper_ore'], '§9Cu₂CO₃(OH)₂')
-  })
+})

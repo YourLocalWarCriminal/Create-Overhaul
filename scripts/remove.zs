@@ -268,6 +268,9 @@ var recipesd = [
 <item:create:brass_casing>,
 <item:createaddition:modular_accumulator>,
 <item:immersiveengineering:rs_engineering>,
+<item:immersiveengineering:wirecoil_structure_rope>,
+<item:immersiveengineering:wirecoil_structure_steel>,
+<item:immersiveengineering:wirecoil_redstone>,
 ];
 
 for item in recipesd {
