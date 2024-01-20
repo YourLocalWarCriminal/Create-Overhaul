@@ -1,5 +1,6 @@
 import crafttweaker.api.recipe.MirrorAxis;
 import mods.jei.JEI;
+#nowarn
 
 //variables real quick cuz i aint wanna die
 val nope = <item:minecraft:air>;
@@ -617,3 +618,41 @@ craftingTable.addShaped("red_mud_block", <item:kubejs:red_mud_block>, [
 ]);
 
 craftingTable.addShapeless("red_mud_balls", <item:kubejs:red_mud_ball> * 4, [<item:kubejs:red_mud_block>]);
+
+craftingTable.addShaped("floater", <item:vs_eureka:floater> * 8, [
+    [nope, <tag:items:forge:leather>, nope],
+    [<tag:items:forge:leather>, nope, <tag:items:forge:leather>],
+    [nope, <tag:items:forge:leather>, nope]
+]);
+
+craftingTable.addShaped("ballast", <item:vs_eureka:ballast> * 8, [
+    [nope, <tag:items:forge:plates>, nope],
+    [<tag:items:forge:plates>, nope, <tag:items:forge:plates>],
+    [nope, <tag:items:forge:plates>, nope]
+]);
+
+var i = 0;
+val planks_shiphelms = {
+<item:minecraft:oak_planks> : <item:vs_eureka:oak_ship_helm>,
+<item:minecraft:spruce_planks> : <item:vs_eureka:spruce_ship_helm>,
+<item:minecraft:birch_planks> : <item:vs_eureka:birch_ship_helm>,
+<item:minecraft:jungle_planks> : <item:vs_eureka:jungle_ship_helm>,
+<item:minecraft:acacia_planks> : <item:vs_eureka:acacia_ship_helm>,
+<item:minecraft:dark_oak_planks> : <item:vs_eureka:dark_oak_ship_helm>,
+<item:minecraft:crimson_planks> : <item:vs_eureka:crimson_ship_helm>,
+<item:minecraft:warped_planks> : <item:vs_eureka:warped_ship_helm>};
+
+for plank, shiphelm in planks_shiphelms {
+    craftingTable.addShaped("ship_helm" + i, shiphelm, [
+    [plank, <tag:items:forge:ingots/gold>, plank],
+    [plank, <item:kubejs:leverage_mechanism>, plank],
+    [plank, <item:create:cogwheel>, plank]]);
+    i++;
+}
+i = 0;
+
+craftingTable.addShaped("ballon", <item:vs_eureka:balloon> * 8, [
+    [nope, <item:create:white_sail>, nope],
+    [<item:create:white_sail>, nope, <item:create:white_sail>],
+    [nope, <item:create:white_sail>, nope]
+]);

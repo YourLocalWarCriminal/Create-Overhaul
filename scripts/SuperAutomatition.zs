@@ -316,5 +316,3 @@ for i, _ in bauxite_ores {
 //Alumina grit to Alumina
 <recipetype:immersiveengineering:blast_furnace>.addRecipe("alumina_grit_to_alumina_by_blast_furnace", <item:immersiveengineering:dust_aluminum>, 1000, <item:create:crushed_raw_aluminum>);
 <recipetype:immersiveengineering:arc_furnace>.addRecipe("alumina_grit_to_alumina_by_arc_furnace", <item:immersiveengineering:dust_aluminum>, [], 200, 10000, [<item:create:crushed_raw_aluminum> * 5], nope);
-
-

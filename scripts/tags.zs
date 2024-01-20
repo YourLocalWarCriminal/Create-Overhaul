@@ -29,7 +29,7 @@
 ]);
 
 <tag:items:forge:dusts>.add([
- <item:kubejs:zinc_dust>,
+<item:kubejs:zinc_dust>,
 <item:kubejs:bronze_dust>,
 <item:kubejs:cast_iron_dust>,
 <item:kubejs:mithril_dust>,
@@ -39,5 +39,4 @@
 <item:kubejs:glass_grit>,
 <item:kubejs:silicon_dust>,
 <item:kubejs:lime_dust>,
-<item:kubejs:alumina_dust>,
 ]);

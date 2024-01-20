@@ -61,7 +61,15 @@ for i, item in ingots_crusher {
 }*/
 
 // Mixer.addRecipe(recipePath as string, fluidInput as MCTag, inputItems as IIngredientWithAmount[], energy as int, output as Fluid, amount as int)
+<tag:fluids:forge:water>.add(<fluid:minecraft:water>);
 
+<recipetype:immersiveengineering:mixer>.addRecipe("chocholate_by_mixer", <tag:fluids:forge:milk>, [<item:minecraft:cocoa_beans>, <item:minecraft:sugar>], 500, <fluid:create:chocolate>, 250);
+<recipetype:immersiveengineering:mixer>.addRecipe("chocholate_melting_by_mixer", <tag:fluids:forge:air>, [<item:create:bar_of_chocolate>], 500, <fluid:create:chocolate>, 250);
+<recipetype:immersiveengineering:mixer>.addRecipe("bioethanol_by_mixer", <tag:fluids:forge:air>, [<item:minecraft:sugar>, <item:create:cinder_flour>, <item:createaddition:biomass>], 500, <fluid:createaddition:bioethanol>, 125);
+<recipetype:immersiveengineering:mixer>.addRecipe("tea_by_mixer", <tag:fluids:forge:water>, [<tag:items:minecraft:leaves>], 500, <fluid:create:tea>, 500);
+<recipetype:immersiveengineering:mixer>.addRecipe("lava_by_mixer", <tag:fluids:forge:air>, [<tag:items:forge:cobblestone>], 500, <fluid:minecraft:lava>, 50);
+<recipetype:immersiveengineering:mixer>.addRecipe("slime_fluid_by_mixer", <tag:fluids:forge:air>, [<tag:items:forge:slimeballs>], 500, <fluid:create_things_and_misc:slime>, 100);
+<recipetype:immersiveengineering:mixer>.addRecipe("honey_by_mixer", <tag:fluids:forge:air>, [<item:minecraft:honey_block>], 500, <fluid:create:honey>, 1000);
 // <recipetype:immersiveengineering:squeezer>.addRecipe(recipePath as string, input as IIngredientWithAmount, energy as int, itemOutput as IItemStack)
 
 <recipetype:immersiveengineering:crusher>.addRecipe("crushed_glass", <tag:items:forge:pure_silica_glass>, 3000, <item:kubejs:glass_grit>);
