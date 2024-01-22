@@ -99,6 +99,7 @@ onEvent('block.registry', event => {
 	.noItem()
 
 	//Ores
+	/*
 	event.create("pyrite_ore")
 	.material("stone")
 	.hardness(1.0)
@@ -107,13 +108,13 @@ onEvent('block.registry', event => {
 	.tagItem('forge:sulfuric_ores/iron')
 	.textureAll('kubejs:block/metal/pyrite_ore')
 
-	event.create("deepsleate_pyrite_ore")
+	event.create("deepslate_pyrite_ore")
 	.material("stone")
 	.hardness(1.0)
-	.displayName("Deepsleate Pyrite Ore")
+	.displayName("Deepslate Pyrite Ore")
 	.tagItem('forge:iron_ore')
 	.tagItem('forge:sulfuric_ore')
-	.textureAll('kubejs:block/metal/deepsleate_pyrite_ore')
+	.textureAll('kubejs:block/metal/deepslate_pyrite_ore')
 
 	event.create("galena_ore")
 	.material("stone")
@@ -123,13 +124,13 @@ onEvent('block.registry', event => {
 	.tagItem('forge:sulfuric_ore')
 	.textureAll('kubejs:block/metal/ore_galena')
 
-	event.create("deepsleate_galena_ore")
+	event.create("deepslate_galena_ore")
 	.material("stone")
 	.hardness(1.0)
-	.displayName("Deepsleate Galena Ore")
+	.displayName("Deepslate Galena Ore")
 	.tagItem('forge:lead_ore')
 	.tagItem('forge:sulfuric_ore')
-	.textureAll('kubejs:block/metal/deepsleate_ore_galena')
+	.textureAll('kubejs:block/metal/deepslate_ore_galena')
 
 	event.create("chalcocite_ore")
 	.material("stone")
@@ -139,14 +140,14 @@ onEvent('block.registry', event => {
 	.tagItem('forge:sulfuric_ores/iron')
 	.textureAll('kubejs:block/metal/chalcocite_ore')
 
-	event.create("deepsleate_chalcocite_ore")
+	event.create("deepslate_chalcocite_ore")
 	.material("stone")
 	.hardness(1.0)
-	.displayName("Deepsleate Chalcocite Ore")
+	.displayName("Deepslate Chalcocite Ore")
 	.tagItem('forge:ores/copper')
 	.tagItem('forge:sulfuric_ores/copper')
-	.textureAll('kubejs:block/metal/deepsleate_chalcocite_ore')
-
+	.textureAll('kubejs:block/metal/deepslate_chalcocite_ore')
+	*/
 	//Flue Furnace
 	event.create("flue_bricks")
 	.material("stone")

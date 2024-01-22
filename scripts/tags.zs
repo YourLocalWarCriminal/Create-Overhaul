@@ -40,3 +40,10 @@
 <item:kubejs:silicon_dust>,
 <item:kubejs:lime_dust>,
 ]);
+<tag:fluids:forge:ethanol>.clear();
+<tag:fluids:forge:ethanol>.add([<fluid:createaddition:bioethanol>]);
+<tag:fluids:forge:plantoil>.clear();
+<tag:fluids:forge:plantoil>.add(<fluid:createaddition:seed_oil>);
+<tag:fluids:forge:methanol>.add(<fluid:immersiveengineering:plantoil>);
+
+<tag:items:forge:string>.add(<tag:items:forge:fiber_hemp>);

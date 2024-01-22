@@ -1,3 +1,4 @@
+
 #priority 100
 
 //github test
@@ -10,6 +11,7 @@ import mods.create.ItemApplicationManager;
 
 //deleting items entirely
 var delete = [
+<item:immersiveengineering:plantoil_bucket>,
 <item:immersiveengineering:fluid_pipe>,
 <item:immersiveengineering:fluid_placer>,
 <item:immersiveengineering:fluid_sorter>,
@@ -99,6 +101,16 @@ for item in delete {
 
 //RECIPE REMOVAL
 var recipesd = [
+<item:immersiveengineering:hemp_fabric>,
+<item:create:sail_frame>,
+<item:immersiveengineering:windmill_sail>,
+<item:create:white_sail>,
+<item:immersiveengineering:wirecoil_copper>,
+<item:immersiveengineering:wirecoil_electrum>,
+<item:immersiveengineering:wirecoil_steel>,
+<item:immersiveengineering:wirecoil_structure_rope>,
+<item:immersiveengineering:wirecoil_structure_steel>,
+<item:vs_eureka:ballast>,
 <item:create_sa:steam_engine>,
 <item:immersiveengineering:component_steel>,
 <item:create:brass_hand>,
@@ -120,9 +132,6 @@ var recipesd = [
 <item:create:empty_blaze_burner>,
 <item:create:steam_engine>,
 <item:createaddition:rolling_mill>,
-<item:immersiveengineering:wirecoil_copper>,
-<item:immersiveengineering:wirecoil_electrum>,
-<item:immersiveengineering:wirecoil_steel>,
 <item:create_sa:copper_magnet>,
 <item:alloyed:bronze_ingot>,
 <item:immersiveengineering:alloybrick>,
@@ -150,10 +159,6 @@ var recipesd = [
 <item:create:windmill_bearing>,
 <item:create:whisk>,
 <item:create:propeller>,
-<item:createaddition:copper_rod>,
-<item:createaddition:iron_rod>,
-<item:createaddition:gold_rod>,
-<item:createaddition:brass_rod>,
 <item:immersiveengineering:stick_steel>,
 <item:immersiveengineering:stick_aluminum>,
 <item:vs_eureka:oak_ship_helm>,
@@ -232,10 +237,6 @@ var recipesd = [
 <item:minecraft:golden_helmet>,
 <item:immersiveengineering:fluid_pipe>,
 <item:immersiveengineering:drill>,
-<item:immersiveengineering:wire_electrum>,
-<item:immersiveengineering:wire_aluminum>,
-<item:immersiveengineering:wire_steel>,
-<item:immersiveengineering:wire_lead>,
 <item:immersiveengineering:component_iron>,
 <item:create:mechanical_mixer>,
 <item:minecraft:stone_sword>,
@@ -308,6 +309,8 @@ craftingTable.remove(<item:create:rose_quartz>);
 <recipetype:create:mechanical_crafting>.remove(<item:alloyed:steel_fishing_rod>);
 <recipetype:create:mechanical_crafting>.remove(<item:alloyed:steel_shears>);
 
+JEI.hideIngredient(<fluid:immersiveengineering:plantoil>);
+
 craftingTable.remove(<item:minecraft:blaze_powder>);
 craftingTable.remove(<item:minecraft:bread>);
 craftingTable.removeByInput(<item:minecraft:netherite_scrap>);
@@ -323,8 +326,6 @@ craftingTable.remove(<tag:items:forge:plates>);
 <recipetype:create:pressing>.remove(<item:createdeco:netherite_sheet>);
 <recipetype:create:pressing>.remove(<item:alloyed:bronze_sheet>);
 <recipetype:create:compacting>.remove(<fluid:createaddition:seed_oil>);
-<recipetype:immersiveengineering:metal_press>.remove(<item:createaddition:gold_wire>);
-<recipetype:immersiveengineering:metal_press>.remove(<item:createaddition:iron_wire>);
 furnace.remove(<item:minecraft:copper_ingot>);
 blastFurnace.remove(<item:minecraft:copper_ingot>);
 <recipetype:create:crushing>.remove(<tag:items:create:crushed_raw_materials>);
@@ -333,4 +334,6 @@ furnace.remove(<item:immersiveengineering:ingot_electrum>);
 furnace.remove(<item:immersiveengineering:ingot_constantan>);
 furnace.remove(<item:minecraft:charcoal>);
 furnace.remove(<item:minecraft:coal>);
-
+<recipetype:immersiveengineering:squeezer>.removeAll();
+<recipetype:immersiveengineering:refinery>.removeAll();
+<recipetype:immersiveengineering:fermenter>.removeAll();

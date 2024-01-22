@@ -107,6 +107,8 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 
 <recipetype:create:item_application>.addRecipe("bottom_flue_brick", [<item:kubejs:flue_bottom_bricks>], <item:minecraft:smooth_stone_slab>, <item:kubejs:flue_bricks>, false);
 
+<recipetype:create:item_application>.addRecipe("sail_application", [<item:create:white_sail>], <item:create:sail_frame>, <item:minecraft:white_wool>, false);
+
 //deplyoer application(name,deployed onto item, the held item, output, keep held item as bool)
 
 

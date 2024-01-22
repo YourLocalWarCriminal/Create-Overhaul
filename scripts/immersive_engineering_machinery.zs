@@ -1,6 +1,9 @@
 import mods.immersiveengineering.AlloySmelter;
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.ingredient.IIngredient;
+import mods.immersiveengineering.Fermenter;
+
+val nope = <item:minecraft:air>;
 
 //alloy kiln recipes (name, inputA,inputB,time,output)
 
@@ -34,46 +37,39 @@ import crafttweaker.api.ingredient.IIngredient;
     <item:immersiveengineering:component_iron> * 3, <item:immersiveengineering:screwdriver>], 
     <item:kubejs:clockwork_mechanism>);
 
-//<recipetype:immersiveengineering:crusher>.addRecipe("name", input, energy, output, additionalOutput %, additionalOutput %)
-
-val ingots_crusher = [
-    <item:kubejs:mithril_ingot>,
-    <item:create:brass_ingot>,
-    <item:alloyed:bronze_ingot>,
-    <item:createdeco:cast_iron_ingot>,
-    <item:create:zinc_ingot>,
-    <item:byg:pendorite_scraps>,
-    <item:minecraft:netherite_scrap>,
-];
-
-val dusts = [
-<item:kubejs:mithril_dust>,
-<item:kubejs:brass_dust>,
-<item:kubejs:bronze_dust>,
-<item:kubejs:cast_iron_dust>,
-<item:kubejs:zinc_dust>,
-<item:kubejs:pendorite_dust>,
-<item:kubejs:netherite_dust>,
-];
-/*
-for i, item in ingots_crusher {
-    <recipetype:immersiveengineering:crusher>.addRecipe("ingot_to_grit" + i, ingots_crusher[i], 3000, dusts[i]);
-}*/
 
 // Mixer.addRecipe(recipePath as string, fluidInput as MCTag, inputItems as IIngredientWithAmount[], energy as int, output as Fluid, amount as int)
 <tag:fluids:forge:water>.add(<fluid:minecraft:water>);
+<tag:fluids:forge:nope>.add(<fluid:minecraft:empty>);
 
 <recipetype:immersiveengineering:mixer>.addRecipe("chocholate_by_mixer", <tag:fluids:forge:milk>, [<item:minecraft:cocoa_beans>, <item:minecraft:sugar>], 500, <fluid:create:chocolate>, 250);
-<recipetype:immersiveengineering:mixer>.addRecipe("chocholate_melting_by_mixer", <tag:fluids:forge:air>, [<item:create:bar_of_chocolate>], 500, <fluid:create:chocolate>, 250);
-<recipetype:immersiveengineering:mixer>.addRecipe("bioethanol_by_mixer", <tag:fluids:forge:air>, [<item:minecraft:sugar>, <item:create:cinder_flour>, <item:createaddition:biomass>], 500, <fluid:createaddition:bioethanol>, 125);
+<recipetype:immersiveengineering:mixer>.addRecipe("chocholate_melting_by_mixer", <tag:fluids:forge:nope>, [<item:create:bar_of_chocolate>], 500, <fluid:create:chocolate>, 250);
+<recipetype:immersiveengineering:mixer>.addRecipe("bioethanol_by_mixer", <tag:fluids:forge:nope>, [<item:minecraft:sugar>, <item:create:cinder_flour>, <item:createaddition:biomass>], 500, <fluid:createaddition:bioethanol>, 125);
 <recipetype:immersiveengineering:mixer>.addRecipe("tea_by_mixer", <tag:fluids:forge:water>, [<tag:items:minecraft:leaves>], 500, <fluid:create:tea>, 500);
-<recipetype:immersiveengineering:mixer>.addRecipe("lava_by_mixer", <tag:fluids:forge:air>, [<tag:items:forge:cobblestone>], 500, <fluid:minecraft:lava>, 50);
-<recipetype:immersiveengineering:mixer>.addRecipe("slime_fluid_by_mixer", <tag:fluids:forge:air>, [<tag:items:forge:slimeballs>], 500, <fluid:create_things_and_misc:slime>, 100);
-<recipetype:immersiveengineering:mixer>.addRecipe("honey_by_mixer", <tag:fluids:forge:air>, [<item:minecraft:honey_block>], 500, <fluid:create:honey>, 1000);
-// <recipetype:immersiveengineering:squeezer>.addRecipe(recipePath as string, input as IIngredientWithAmount, energy as int, itemOutput as IItemStack)
+<recipetype:immersiveengineering:mixer>.addRecipe("lava_by_mixer", <tag:fluids:forge:nope>, [<tag:items:forge:cobblestone>], 500, <fluid:minecraft:lava>, 50);
+<recipetype:immersiveengineering:mixer>.addRecipe("slime_fluid_by_mixer", <tag:fluids:forge:nope>, [<tag:items:forge:slimeballs>], 500, <fluid:create_things_and_misc:slime>, 100);
+<recipetype:immersiveengineering:mixer>.addRecipe("honey_by_mixer", <tag:fluids:forge:nope>, [<item:minecraft:honey_block>], 500, <fluid:create:honey>, 1000);
+
+<recipetype:immersiveengineering:mixer>.addRecipe("bio_diesel_by_mixer", <tag:fluids:forge:ethanol>, [<tag:items:forge:dusts/lead>], 10000, <fluid:immersiveengineering:biodiesel>, 250);
+<recipetype:immersiveengineering:mixer>.addRecipe("acetaldehyde", <tag:fluids:forge:ethanol>, [<tag:items:forge:dusts/silver>], 1000, <fluid:immersiveengineering:acetaldehyde>, 50);
+
+// Squeezer.addRecipe(recipePath as string, input as IIngredientWithAmount, energy as int, fluidOutput as IFluidStack, itemOutput as IItemStack)
+
+<recipetype:immersiveengineering:squeezer>.addRecipe("seedoil", <tag:items:forge:seeds>, 5000, <fluid:createaddition:seed_oil> * 100, <item:createaddition:biomass>);
+
+// Crusher.addRecipe(recipePath as string, input as IIngredient, energy as int, mainOutput as IItemStack, additionalOutputs as Percentaged<IItemStack>[])
 
 <recipetype:immersiveengineering:crusher>.addRecipe("crushed_glass", <tag:items:forge:pure_silica_glass>, 3000, <item:kubejs:glass_grit>);
 
 // Sawmill.addRecipe(recipePath as string, input as IIngredient, energy as int, output as IItemStack, outputSecondaries as IItemStack[])
 
 <recipetype:immersiveengineering:sawmill>.addRecipe("silicon_wafer_by_sawmill", <item:kubejs:silicon_boule>, 1000, <item:kubejs:silicon_wafer> * 4, [<item:kubejs:silicon_dust>*2]);
+
+// Fermenter.addRecipe(recipePath as string, input as IIngredientWithAmount, energy as int, itemOutput as IItemStack, fluidOutput as IFluidStack)
+
+<recipetype:immersiveengineering:fermenter>.addRecipe("seedoil_fermentation", <tag:items:forge:seeds>, 500, <item:createaddition:biomass>, <fluid:createaddition:seed_oil> * 150);
+<recipetype:immersiveengineering:fermenter>.addRecipe("methanol_fermentation", <tag:items:minecraft:logs>, 500, <item:createaddition:biomass>, <fluid:immersiveengineering:plantoil> * 150);
+
+//<recipetype:immersiveengineering:refinery>.addRecipe(recipePath as string, fluidInput1 as Many<MCTag>, fluidInput2 as Many<MCTag>, catalyst as IIngredient, energy as int, output as IFluidStack);
+
+<recipetype:immersiveengineering:refinery>.addRecipe("bio_ethanol", <tag:fluids:forge:plantoil> * 15, <tag:fluids:forge:methanol> * 10, <tag:items:forge:dusts/coal_coke>, 1000, <fluid:createaddition:bioethanol> * 20);

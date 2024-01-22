@@ -186,32 +186,20 @@ craftingTable.addShapedMirrored("stonehoe", MirrorAxis.HORIZONTAL, <item:minecra
     [nope, <item:minecraft:stick>, nope]
 ]);
 
-craftingTable.addShapeless("ropestraw", <item:farmersdelight:rope>, [
-    <item:farmersdelight:straw>,
-    <item:farmersdelight:straw>,
-    <item:farmersdelight:straw>,
-    <item:farmersdelight:straw>,
-    <item:farmersdelight:straw>,
-    <item:farmersdelight:straw>,
-    <item:farmersdelight:straw>,
-    <item:farmersdelight:straw>,
-]);
-
 craftingTable.addShapeless("ropehemp", <item:farmersdelight:rope> * 2, [
-    <item:immersiveengineering:hemp_fiber>,
-    <item:immersiveengineering:hemp_fiber>,
-    <item:immersiveengineering:hemp_fiber>,
-    <item:immersiveengineering:hemp_fiber>,
-    <item:immersiveengineering:hemp_fiber>,
-    <item:immersiveengineering:hemp_fiber>,
-    <item:immersiveengineering:hemp_fiber>,
-    <item:immersiveengineering:hemp_fiber>,
+    <tag:items:forge:string>,
+    <tag:items:forge:string>,
+    <tag:items:forge:string>,
+    <tag:items:forge:string>,
+    <tag:items:forge:string>,
+    <tag:items:forge:string>,
+    <tag:items:forge:string>,
+    <tag:items:forge:string>,
 ]);
 
-craftingTable.addShaped("ropecoil", <item:immersiveengineering:wirecoil_structure_rope> * 2, [
-    [nope, <item:farmersdelight:rope>, nope],
-    [<item:farmersdelight:rope>,<item:minecraft:stick>, <item:farmersdelight:rope>],
-    [nope, <item:farmersdelight:rope>, nope],
+craftingTable.addShapeless("string_from_straw", <item:minecraft:string>, [
+    <item:farmersdelight:straw>,
+    <item:farmersdelight:straw>
 ]);
 
 craftingTable.addShaped("mithrilsword", <item:minecraft:diamond_sword>, [
@@ -655,4 +643,28 @@ craftingTable.addShaped("ballon", <item:vs_eureka:balloon> * 8, [
     [nope, <item:create:white_sail>, nope],
     [<item:create:white_sail>, nope, <item:create:white_sail>],
     [nope, <item:create:white_sail>, nope]
+]);
+
+craftingTable.addShaped("sail", <item:create:white_sail>, [
+    [nope, <item:immersiveengineering:windmill_sail>, nope],
+    [<item:immersiveengineering:windmill_sail>, <item:create:sail_frame>, <item:immersiveengineering:windmill_sail>],
+    [nope, <item:immersiveengineering:windmill_sail>, nope]
+]);
+
+craftingTable.addShaped("sail_part", <item:immersiveengineering:windmill_sail> * 2, [
+    [nope, <item:immersiveengineering:hemp_fabric>, nope],
+    [<tag:items:forge:string>, <item:immersiveengineering:hemp_fabric>, <tag:items:forge:string>],
+    [nope, <item:immersiveengineering:hemp_fabric>, nope]
+]);
+
+craftingTable.addShaped("fabricrt", <item:immersiveengineering:hemp_fabric> * 3, [
+    [<tag:items:forge:string>, <tag:items:forge:string>, <tag:items:forge:string>],
+    [<tag:items:forge:string>, <tag:items:forge:rods/wooden>, <tag:items:forge:string>],
+    [<tag:items:forge:string>, <tag:items:forge:string>, <tag:items:forge:string>]
+]);
+
+craftingTable.addShaped("sail_frame", <item:create:sail_frame>, [
+    [<item:farmersdelight:rope>, <item:minecraft:bamboo>, <item:farmersdelight:rope>],
+    [<item:minecraft:bamboo>, nope, <item:minecraft:bamboo>],
+    [<item:farmersdelight:rope>, <item:minecraft:bamboo>, <item:farmersdelight:rope>]
 ]);

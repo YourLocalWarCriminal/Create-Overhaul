@@ -6,156 +6,6 @@ import crafttweaker.api.tag.MCTag;
 
 val nope = <item:minecraft:air>;
 
-    /*
-    "template": {
-        "ingot": [] as IItemStack[],
-        "ore": [] as IItemStack[],
-        "dust": [] as IItemStack[]
-        "plate": [] as IItemStack[]
-        "wire": [] as IItemStack[]
-        "block": [] as IItemStack[]
-        "rod": [] as IItemStack[]
-        "raw": [] as IItemStack[]
-        "raw_block": [] as IItemStack[],
-    },
-    */
-
-public val metalObjects = {
-    "copper": {
-        "ingot": [<item:minecraft:copper_ingot>],
-        "ore": [<item:minecraft:copper_ore>, <item:minecraft:deepslate_copper_ore>],
-        "dust": [<item:immersiveengineering:dust_copper>],
-        "plate": [<item:create:copper_sheet>],
-        "wire": [<item:createaddition:copper_wire>],
-        "block": [<item:minecraft:copper_block>],
-        "rod": [<item:createaddition:copper_rod>],
-        "raw": [<item:minecraft:raw_copper>],
-        "raw_block": [<item:minecraft:raw_copper_block>]
-    },
-    "iron": {
-        "ingot": [<item:minecraft:iron_ingot>],
-        "ore": [] as IItemStack[],
-        "dust": [<item:immersiveengineering:dust_iron>],
-        "plate": [<item:create:iron_sheet>],
-        "wire": [<item:createaddition:iron_wire>],
-        "block": [<item:minecraft:iron_block>],
-        "rod": [<item:immersiveengineering:stick_iron>],
-        "raw": [] as IItemStack[],
-        "raw_block": [<item:minecraft:raw_iron_block>]
-    },
-    "cast_iron": {
-        "ingot": [] as IItemStack[],
-        "ore": [] as IItemStack[],
-        "dust": [] as IItemStack[],
-        "plate": [] as IItemStack[],
-        "wire": [] as IItemStack[],
-        "block": [] as IItemStack[],
-        "rod": [] as IItemStack[],
-        "raw": [] as IItemStack[],
-        "raw_block": [] as IItemStack[]
-    },
-    "gold": {
-        "ingot": [<item:minecraft:gold_ingot>],
-        "ore": [<item:minecraft:gold_ore>, <item:minecraft:deepslate_gold_ore>, <item:minecraft:nether_gold_ore>],
-        "dust": [<item:immersiveengineering:dust_gold>],
-        "plate": [<item:create:golden_sheet>],
-        "wire": [<item:createaddition:gold_wire>],
-        "block": [<item:minecraft:gold_block>], 
-        "rod": [<item:createaddition:gold_rod>],
-        "raw": [<item:minecraft:raw_gold>],
-        "raw_block": [<item:minecraft:raw_gold_block>]
-    },
-    "steel": {
-        "ingot": [<item:alloyed:steel_ingot>],
-        "ore": [] as IItemStack[],
-        "dust": [<item:immersiveengineering:dust_steel>],
-        "plate": [<item:alloyed:steel_sheet>],
-        "wire": [<item:immersiveengineering:wire_steel>],
-        "block": [<item:alloyed:steel_block>],
-        "rod": [<item:immersiveengineering:stick_steel>],
-        "raw": [] as IItemStack[],
-        "raw_block": [] as IItemStack[]
-    },
-    "netherite": {
-        "ingot": [<item:minecraft:netherite_ingot>],
-        "ore": [<item:minecraft:ancient_debris>],
-        "dust": [<item:kubejs:netherite_dust>],
-        "plate": [<item:createdeco:netherite_sheet>],
-        "wire": [] as IItemStack[],
-        "block": [<item:minecraft:netherite_block>],
-        "rod": [] as IItemStack[],
-        "raw": [<item:minecraft:netherite_scrap>],
-        "raw_block": [] as IItemStack[]
-    },
-    "mithril": {
-        "ingot": [<item:kubejs:mithril_ingot>],
-        "ore": [] as IItemStack[],
-        "dust": [<item:kubejs:mithril_dust>],
-        "plate": [<item:kubejs:mithril_plate>],
-        "wire": [] as IItemStack[],
-        "block": [] as IItemStack[],
-        "rod": [] as IItemStack[],
-        "raw": [] as IItemStack[],
-        "raw_block": [] as IItemStack[]
-    },
-    "polished_rose_quartz":{
-        "ingot": [<item:create:polished_rose_quartz>],
-        "ore": [] as IItemStack[],
-        "dust": [] as IItemStack[],
-        "plate": [<item:create_things_and_misc:rose_quartz_sheet>],
-        "wire": [] as IItemStack[],
-        "block": [] as IItemStack[],
-        "rod": [] as IItemStack[],
-        "raw": [] as IItemStack[],
-        "raw_block": [] as IItemStack[]
-    },
-    "electrum": {
-        "ingot": [<item:immersiveengineering:ingot_electrum>],
-        "ore": [] as IItemStack[],
-        "dust": [<item:immersiveengineering:dust_electrum>],
-        "plate": [<item:immersiveengineering:plate_electrum>],
-        "wire": [<item:immersiveengineering:wire_electrum>],
-        "block": [<item:immersiveengineering:storage_electrum>],
-        "rod": [] as IItemStack[],
-        "raw": [] as IItemStack[],
-        "raw_block": [] as IItemStack[]
-    },
-    "aluminium": {
-        "ingot": [<item:immersiveengineering:ingot_aluminum>],
-        "ore": [<item:immersiveengineering:ore_aluminum>, <item:immersiveengineering:deepslate_ore_aluminum>],
-        "dust": [<item:immersiveengineering:dust_aluminum>],
-        "plate": [<item:immersiveengineering:plate_aluminum>],
-        "wire": [<item:immersiveengineering:wire_aluminum>],
-        "block": [<item:immersiveengineering:storage_aluminum>],
-        "rod": [<item:immersiveengineering:stick_aluminum>],
-        "raw": [<item:immersiveengineering:raw_aluminum>],
-        "raw_block": [<item:immersiveengineering:raw_block_aluminum>]
-    },
-    "lead": {
-        "ingot": [<item:immersiveengineering:ingot_lead>],
-        "ore": [<item:immersiveengineering:ore_lead>, <item:immersiveengineering:deepslate_ore_lead>],
-        "dust": [<item:immersiveengineering:dust_lead>],
-        "plate": [<item:immersiveengineering:plate_lead>],
-        "wire": [<item:immersiveengineering:wire_lead>],
-        "block": [<item:immersiveengineering:storage_lead>],
-        "rod": [] as IItemStack[],
-        "raw": [<item:immersiveengineering:raw_lead>],
-        "raw_block": [<item:immersiveengineering:raw_block_lead>]
-    },
-    "experiance": {
-        "ingot": [<item:create:experience_nugget>],
-        "ore": [] as IItemStack[],
-        "dust": [] as IItemStack[],
-        "plate": [<item:create_things_and_misc:experience_sheet>],
-        "wire": [] as IItemStack[],
-        "block": [<item:create:experience_block>],
-        "rod": [] as IItemStack[], 
-        "raw":  [] as IItemStack[],
-        "raw_block": [] as IItemStack[]
-    }
-};
-
-println("The load of metalObjects array was succesful");
 
 public function MetalRecipeMaker(name as string, ingot as IItemStack, plate as IItemStack, rod as IItemStack, wire as IItemStack, dust as IItemStack, block as IItemStack, nugget as IItemStack, raw as IItemStack, crushed as IItemStack, stone_type as IItemStack, ores as IItemStack[]) as void {
     val nope = <item:minecraft:air>;
@@ -164,17 +14,18 @@ public function MetalRecipeMaker(name as string, ingot as IItemStack, plate as I
     <recipetype:create:pressing>.remove(ingot);
 
     if (wire != nope) {
+        recipes.remove(wire);
         <recipetype:immersiveengineering:metal_press>.remove(wire);
-        <recipetype:immersiveengineering:metal_press>.addRecipe(name + "_ingot_to_" + name + "wires", ingot, <item:immersiveengineering:mold_wire>, 2400, wire * 3);
+        <recipetype:immersiveengineering:metal_press>.addRecipe(name + "_ingot_to_" + name + "_wires", ingot, <item:immersiveengineering:mold_wire>, 2400, wire * 3);
     }
     if (plate != nope) {
-        <recipetype:create:pressing>.remove(plate);
+        recipes.remove(plate);
         <recipetype:immersiveengineering:metal_press>.remove(plate);
-        <recipetype:create:pressing>.addRecipe(name + "_ingot_to_" + name + "plates_by_rolling_mill", [plate], ingot * 2, 200);
+        <recipetype:create:pressing>.addRecipe(name + "_ingot_to_" + name + "plates_by_mechanical_press", [plate], ingot * 2, 200);
         <recipetype:immersiveengineering:metal_press>.addRecipe(name + "_ingot_to_" + name + "plates_by_metal_press", ingot, <item:immersiveengineering:mold_plate>, 2400, plate);
     }
     if (rod != nope) {
-        <recipetype:create:cutting>.remove(rod);
+        recipes.remove(rod);
         <recipetype:immersiveengineering:metal_press>.remove(rod);
         <recipetype:create:cutting>.addRecipe(name + "_ingots_to_" + name + "_rods", [rod * 2], ingot, 800);
         <recipetype:immersiveengineering:metal_press>.addRecipe(name + "_ingot_to_" + name + "rods_by_metal_press", ingot, <item:immersiveengineering:mold_rod>, 2400, rod);
@@ -264,6 +115,9 @@ public function MetalRecipeMaker(name as string, ingot as IItemStack, plate as I
             }
         }
     }
+    if ((wire != nope) && (plate != nope)) {
+        <recipetype:immersiveengineering:metal_press>.addRecipe(name + "_plate_to_" + name + "wires_by_metal_press", plate, <item:immersiveengineering:mold_wire>, 2400, wire * 2);
+    }
     println("The MetalRecipeMaker function succesefuly processed the items of " + name);
 }
 
@@ -288,6 +142,8 @@ MetalRecipeMaker("nickel", <item:immersiveengineering:ingot_nickel>, <item:immer
 MetalRecipeMaker("aluminium", <item:immersiveengineering:ingot_aluminum>, <item:immersiveengineering:plate_aluminum>, <item:immersiveengineering:stick_aluminum>, <item:immersiveengineering:wire_aluminum>, nope, <item:immersiveengineering:storage_aluminum>, <item:immersiveengineering:nugget_aluminum>, nope, nope, nope, [nope]);
 
 MetalRecipeMaker("zinc", <item:create:zinc_ingot>, <item:createaddition:zinc_sheet>, nope, nope, <item:kubejs:zinc_dust>, <item:create:zinc_block>, <item:create:zinc_nugget>, <item:create:raw_zinc>, <item:create:crushed_raw_zinc>, nope, [<item:create:zinc_ore>, <item:create:deepslate_zinc_ore>]);
+
+MetalRecipeMaker("lead", <item:immersiveengineering:ingot_lead>, <item:immersiveengineering:plate_lead>, nope, <item:immersiveengineering:wire_lead>, <item:immersiveengineering:dust_lead>, <item:immersiveengineering:storage_lead>, <item:immersiveengineering:nugget_lead>, <item:immersiveengineering:raw_lead>, <item:create:crushed_raw_lead>, nope, [<item:immersiveengineering:ore_lead>, <item:immersiveengineering:deepslate_ore_lead>]);
 
 //Other ore processing methods
 
