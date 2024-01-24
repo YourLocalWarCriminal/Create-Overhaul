@@ -1,0 +1,28 @@
+{
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "tag": "forge:plates/brass",
+      "count": 4
+    },
+    {
+      "item": "immersiveengineering:component_iron",
+      "count": 1
+    },
+    {
+      "item": "immersiveengineering:gunpart_hammer",
+      "count": 1
+    },
+    {
+      "item": "immersiveengineering:gunpart_drum",
+      "count": 1
+    },
+    {
+      "item": "immersiveengineering:gunpart_barrel",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "cgm:pistol"
+  }
+}

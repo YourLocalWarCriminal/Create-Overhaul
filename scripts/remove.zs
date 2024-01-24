@@ -11,6 +11,9 @@ import mods.create.ItemApplicationManager;
 
 //deleting items entirely
 var delete = [
+<item:alloyed:steel_sheet_metal>,
+<item:alloyed:steel_sheet_stairs>,
+<item:alloyed:steel_sheet_slab>,
 <item:immersiveengineering:plantoil_bucket>,
 <item:immersiveengineering:fluid_pipe>,
 <item:immersiveengineering:fluid_placer>,
@@ -37,7 +40,7 @@ var delete = [
 <item:immersiveengineering:armor_steel_head>,
 <item:immersiveengineering:armor_steel_chest>,
 <item:immersiveengineering:armor_steel_legs>,
-<item:immersiveengineering:armor_steel_feet>,
+//<item:immersiveengineering:armor_steel_feet>,
 <item:immersiveengineering:stick_iron>,
 <item:vs_eureka:acacia_ship_helm>,
 <item:vs_eureka:dark_oak_ship_helm>,

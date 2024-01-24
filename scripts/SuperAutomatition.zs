@@ -3,6 +3,7 @@
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.ingredient.IIngredient;
 import crafttweaker.api.tag.MCTag;
+import mods.immersiveengineering.MetalPress;
 
 val nope = <item:minecraft:air>;
 
@@ -15,18 +16,15 @@ public function MetalRecipeMaker(name as string, ingot as IItemStack, plate as I
 
     if (wire != nope) {
         recipes.remove(wire);
-        <recipetype:immersiveengineering:metal_press>.remove(wire);
         <recipetype:immersiveengineering:metal_press>.addRecipe(name + "_ingot_to_" + name + "_wires", ingot, <item:immersiveengineering:mold_wire>, 2400, wire * 3);
     }
     if (plate != nope) {
         recipes.remove(plate);
-        <recipetype:immersiveengineering:metal_press>.remove(plate);
         <recipetype:create:pressing>.addRecipe(name + "_ingot_to_" + name + "plates_by_mechanical_press", [plate], ingot * 2, 200);
         <recipetype:immersiveengineering:metal_press>.addRecipe(name + "_ingot_to_" + name + "plates_by_metal_press", ingot, <item:immersiveengineering:mold_plate>, 2400, plate);
     }
     if (rod != nope) {
         recipes.remove(rod);
-        <recipetype:immersiveengineering:metal_press>.remove(rod);
         <recipetype:create:cutting>.addRecipe(name + "_ingots_to_" + name + "_rods", [rod * 2], ingot, 800);
         <recipetype:immersiveengineering:metal_press>.addRecipe(name + "_ingot_to_" + name + "rods_by_metal_press", ingot, <item:immersiveengineering:mold_rod>, 2400, rod);
 
@@ -125,50 +123,52 @@ public function MetalRecipeMaker(name as string, ingot as IItemStack, plate as I
 
 //MetalRecipeMaker("name", ingot, sheet/plate, rod, wire, dust/grit, block, nugget, raw ore, crushed, stone_type #replace thees with nope if missing, ores[] #[nope]) 
 
-MetalRecipeMaker("copper", <item:minecraft:copper_ingot>, <item:create:copper_sheet>, <item:createaddition:copper_rod>, <item:createaddition:copper_wire>, <item:immersiveengineering:dust_copper>, <item:minecraft:copper_block>, <item:create:copper_nugget>, <item:minecraft:raw_copper>, <item:create:crushed_raw_copper>, <item:create:veridium>,[<item:minecraft:copper_ore>, <item:minecraft:deepslate_copper_ore>]);
+    MetalRecipeMaker("copper", <item:minecraft:copper_ingot>, <item:create:copper_sheet>, <item:createaddition:copper_rod>, <item:createaddition:copper_wire>, <item:immersiveengineering:dust_copper>, <item:minecraft:copper_block>, <item:create:copper_nugget>, <item:minecraft:raw_copper>, <item:create:crushed_raw_copper>, <item:create:veridium>,[<item:minecraft:copper_ore>, <item:minecraft:deepslate_copper_ore>]);
 
-MetalRecipeMaker("gold", <item:minecraft:gold_ingot>, <item:create:golden_sheet>, <item:createaddition:gold_rod>, <item:createaddition:gold_wire>, <item:immersiveengineering:dust_gold>, <item:minecraft:gold_block>, <item:minecraft:gold_nugget>, <item:minecraft:raw_gold>, <item:create:crushed_raw_gold>, <item:create:ochrum>, [<item:minecraft:gold_ore>, <item:minecraft:deepslate_gold_ore>, <item:minecraft:nether_gold_ore>, <item:byg:blue_nether_gold_ore>, <item:byg:brimstone_nether_gold_ore>]);
+    MetalRecipeMaker("gold", <item:minecraft:gold_ingot>, <item:create:golden_sheet>, <item:createaddition:gold_rod>, <item:createaddition:gold_wire>, <item:immersiveengineering:dust_gold>, <item:minecraft:gold_block>, <item:minecraft:gold_nugget>, <item:minecraft:raw_gold>, <item:create:crushed_raw_gold>, <item:create:ochrum>, [<item:minecraft:gold_ore>, <item:minecraft:deepslate_gold_ore>, <item:minecraft:nether_gold_ore>, <item:byg:blue_nether_gold_ore>, <item:byg:brimstone_nether_gold_ore>]);
 
-MetalRecipeMaker("iron", <item:minecraft:iron_ingot>, <item:create:iron_sheet>, <item:immersiveengineering:stick_iron>, <item:createaddition:iron_wire>, <item:immersiveengineering:dust_iron>, <item:minecraft:iron_block>, <item:minecraft:iron_nugget>, nope, nope, nope, [nope]);
+    MetalRecipeMaker("iron", <item:minecraft:iron_ingot>, <item:create:iron_sheet>, <item:immersiveengineering:stick_iron>, <item:createaddition:iron_wire>, <item:immersiveengineering:dust_iron>, <item:minecraft:iron_block>, <item:minecraft:iron_nugget>, nope, nope, nope, [nope]);
 
-MetalRecipeMaker("cast_iron", <item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_sheet>, nope, nope, <item:kubejs:cast_iron_dust>, <item:createdeco:cast_iron_block>, <item:createdeco:cast_iron_nugget>, <item:minecraft:raw_iron>, <item:create:crushed_raw_iron>, <item:create:crimsite>, [<item:minecraft:iron_ore>, <item:minecraft:deepslate_iron_ore>]);
+    MetalRecipeMaker("cast_iron", <item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_sheet>, nope, nope, <item:kubejs:cast_iron_dust>, <item:createdeco:cast_iron_block>, <item:createdeco:cast_iron_nugget>, <item:minecraft:raw_iron>, <item:create:crushed_raw_iron>, <item:create:crimsite>, [<item:minecraft:iron_ore>, <item:minecraft:deepslate_iron_ore>]);
 
-MetalRecipeMaker("netherite", <item:minecraft:netherite_ingot>, <item:createdeco:netherite_sheet>, nope, nope, <item:kubejs:netherite_dust>, <item:minecraft:netherite_block>, <item:createdeco:netherite_nugget>, nope, nope, nope, [nope]);
+    MetalRecipeMaker("netherite", <item:minecraft:netherite_ingot>, <item:createdeco:netherite_sheet>, nope, nope, <item:kubejs:netherite_dust>, <item:minecraft:netherite_block>, <item:createdeco:netherite_nugget>, nope, nope, nope, [nope]);
 
-MetalRecipeMaker("weak_netherite", <item:kubejs:weak_netherite_ingot>, nope, nope, nope, <item:kubejs:weak_netherite_dust>, nope, <item:kubejs:weak_netherite_nugget>, <item:minecraft:netherite_scrap>, <item:kubejs:crushed_raw_weak_netherite>, nope, [<item:minecraft:ancient_debris>]);
+    MetalRecipeMaker("weak_netherite", <item:kubejs:weak_netherite_ingot>, nope, nope, nope, <item:kubejs:weak_netherite_dust>, nope, <item:kubejs:weak_netherite_nugget>, <item:minecraft:netherite_scrap>, <item:kubejs:crushed_raw_weak_netherite>, nope, [<item:minecraft:ancient_debris>]);
 
-MetalRecipeMaker("nickel", <item:immersiveengineering:ingot_nickel>, <item:immersiveengineering:plate_nickel>, nope, nope, <item:immersiveengineering:dust_nickel>, <item:immersiveengineering:storage_nickel>, <item:immersiveengineering:nugget_nickel>, <item:immersiveengineering:raw_nickel>, <item:create:crushed_raw_nickel>, nope, [<item:immersiveengineering:ore_nickel>, <item:immersiveengineering:deepslate_ore_nickel>]);
+    MetalRecipeMaker("nickel", <item:immersiveengineering:ingot_nickel>, <item:immersiveengineering:plate_nickel>, nope, nope, <item:immersiveengineering:dust_nickel>, <item:immersiveengineering:storage_nickel>, <item:immersiveengineering:nugget_nickel>, <item:immersiveengineering:raw_nickel>, <item:create:crushed_raw_nickel>, nope, [<item:immersiveengineering:ore_nickel>, <item:immersiveengineering:deepslate_ore_nickel>]);
 
-MetalRecipeMaker("aluminium", <item:immersiveengineering:ingot_aluminum>, <item:immersiveengineering:plate_aluminum>, <item:immersiveengineering:stick_aluminum>, <item:immersiveengineering:wire_aluminum>, nope, <item:immersiveengineering:storage_aluminum>, <item:immersiveengineering:nugget_aluminum>, nope, nope, nope, [nope]);
+    MetalRecipeMaker("aluminium", <item:immersiveengineering:ingot_aluminum>, <item:immersiveengineering:plate_aluminum>, <item:immersiveengineering:stick_aluminum>, <item:immersiveengineering:wire_aluminum>, nope, <item:immersiveengineering:storage_aluminum>, <item:immersiveengineering:nugget_aluminum>, nope, nope, nope, [nope]);
 
-MetalRecipeMaker("zinc", <item:create:zinc_ingot>, <item:createaddition:zinc_sheet>, nope, nope, <item:kubejs:zinc_dust>, <item:create:zinc_block>, <item:create:zinc_nugget>, <item:create:raw_zinc>, <item:create:crushed_raw_zinc>, nope, [<item:create:zinc_ore>, <item:create:deepslate_zinc_ore>]);
+    MetalRecipeMaker("zinc", <item:create:zinc_ingot>, <item:createaddition:zinc_sheet>, nope, nope, <item:kubejs:zinc_dust>, <item:create:zinc_block>, <item:create:zinc_nugget>, <item:create:raw_zinc>, <item:create:crushed_raw_zinc>, nope, [<item:create:zinc_ore>, <item:create:deepslate_zinc_ore>]);
 
-MetalRecipeMaker("lead", <item:immersiveengineering:ingot_lead>, <item:immersiveengineering:plate_lead>, nope, <item:immersiveengineering:wire_lead>, <item:immersiveengineering:dust_lead>, <item:immersiveengineering:storage_lead>, <item:immersiveengineering:nugget_lead>, <item:immersiveengineering:raw_lead>, <item:create:crushed_raw_lead>, nope, [<item:immersiveengineering:ore_lead>, <item:immersiveengineering:deepslate_ore_lead>]);
+    MetalRecipeMaker("lead", <item:immersiveengineering:ingot_lead>, <item:immersiveengineering:plate_lead>, nope, <item:immersiveengineering:wire_lead>, <item:immersiveengineering:dust_lead>, <item:immersiveengineering:storage_lead>, <item:immersiveengineering:nugget_lead>, <item:immersiveengineering:raw_lead>, <item:create:crushed_raw_lead>, nope, [<item:immersiveengineering:ore_lead>, <item:immersiveengineering:deepslate_ore_lead>]);
+
+    MetalRecipeMaker("steel", <item:alloyed:steel_ingot>, <item:alloyed:steel_sheet>, <item:immersiveengineering:stick_steel>, <item:immersiveengineering:wire_steel>, <item:immersiveengineering:dust_steel>, <item:immersiveengineering:storage_steel>, <item:alloyed:steel_nugget>, nope, nope, nope, [nope]);
 
 //Other ore processing methods
 
 //Aluminium
-//Ore to raw
-val bauxite_ores = [<item:immersiveengineering:ore_aluminum>, <item:immersiveengineering:deepslate_ore_aluminum>];
-<recipetype:immersiveengineering:crusher>.remove(<item:immersiveengineering:dust_aluminum>);
-for i, _ in bauxite_ores {
-    <recipetype:immersiveengineering:crusher>.addRecipe("bauxite_ore_to_raw_bauxit_by_crusher" + i, _, 3000, <item:immersiveengineering:raw_aluminum> * 3, <item:immersiveengineering:dust_aluminum> % 5);
-}
+    //Ore to raw
+    val bauxite_ores = [<item:immersiveengineering:ore_aluminum>, <item:immersiveengineering:deepslate_ore_aluminum>];
+    <recipetype:immersiveengineering:crusher>.remove(<item:immersiveengineering:dust_aluminum>);
+    for i, _ in bauxite_ores {
+        <recipetype:immersiveengineering:crusher>.addRecipe("bauxite_ore_to_raw_bauxit_by_crusher" + i, _, 3000, <item:immersiveengineering:raw_aluminum> * 3, <item:immersiveengineering:dust_aluminum> % 5);
+    }
 
-//Raw to red mud
-<tag:fluids:forge:water>.add(<fluid:minecraft:water>);
-<recipetype:create:mixing>.addRecipe("raw_bauxite_to_red_mud_by_heated_mixing", <constant:create:heat_condition:superheated>, [<fluid:kubejs:red_mud> * 100], [<item:immersiveengineering:raw_aluminum>], [<fluid:minecraft:water> * 500], 300);
-<recipetype:create:mixing>.addRecipe("raw_bauxite_block_to_red_mud_by_heated_mixing", <constant:create:heat_condition:superheated>, [<fluid:kubejs:red_mud> * 1000], [<item:immersiveengineering:raw_block_aluminum>], [<fluid:minecraft:water> * 2000], 300);
-<recipetype:immersiveengineering:mixer>.addRecipe("raw_bauxite_to_red_mud_by_mixer", <tag:fluids:forge:water>, [<item:immersiveengineering:raw_aluminum>], 200, <fluid:kubejs:red_mud>.fluid, 200);
-<recipetype:immersiveengineering:mixer>.addRecipe("raw_bauxite_block_to_red_mud_by_mixer", <tag:fluids:forge:water>, [<item:immersiveengineering:raw_block_aluminum>], 200, <fluid:kubejs:red_mud>.fluid, 2000);
+    //Raw to red mud
+    <tag:fluids:forge:water>.add(<fluid:minecraft:water>);
+    <recipetype:create:mixing>.addRecipe("raw_bauxite_to_red_mud_by_heated_mixing", <constant:create:heat_condition:superheated>, [<fluid:kubejs:red_mud> * 100], [<item:immersiveengineering:raw_aluminum>], [<fluid:minecraft:water> * 500], 300);
+    <recipetype:create:mixing>.addRecipe("raw_bauxite_block_to_red_mud_by_heated_mixing", <constant:create:heat_condition:superheated>, [<fluid:kubejs:red_mud> * 1000], [<item:immersiveengineering:raw_block_aluminum>], [<fluid:minecraft:water> * 2000], 300);
+    <recipetype:immersiveengineering:mixer>.addRecipe("raw_bauxite_to_red_mud_by_mixer", <tag:fluids:forge:water>, [<item:immersiveengineering:raw_aluminum>], 200, <fluid:kubejs:red_mud>.fluid, 200);
+    <recipetype:immersiveengineering:mixer>.addRecipe("raw_bauxite_block_to_red_mud_by_mixer", <tag:fluids:forge:water>, [<item:immersiveengineering:raw_block_aluminum>], 200, <fluid:kubejs:red_mud>.fluid, 2000);
 
-//Red mud to red mud balls
-<recipetype:create:filling>.addRecipe("red_mud_to_red_mud_balls", <item:kubejs:red_mud_ball>, nope, <fluid:kubejs:red_mud> * 250, 200);
+    //Red mud to red mud balls
+    <recipetype:create:filling>.addRecipe("red_mud_to_red_mud_balls", <item:kubejs:red_mud_ball>, nope, <fluid:kubejs:red_mud> * 250, 200);
 
-//Red mud balls to Alumina grit
-<recipetype:immersiveengineering:squeezer>.addRecipe("red_mud_block_to_alumina_grit_by_squeezer", <item:kubejs:red_mud_ball> * 3, 2000, <fluid:kubejs:red_mud> * 50, <item:immersiveengineering:dust_aluminum> * 4);
-<recipetype:create:compacting>.addRecipe("red_mud_block_to_alumina_grit_by_press", <constant:create:heat_condition:heated>, [<item:immersiveengineering:dust_aluminum> % 100, <item:immersiveengineering:dust_aluminum> % 40], [<item:kubejs:red_mud_ball>], [], 600);
+    //Red mud balls to Alumina grit
+    <recipetype:immersiveengineering:squeezer>.addRecipe("red_mud_block_to_alumina_grit_by_squeezer", <item:kubejs:red_mud_ball> * 3, 2000, <fluid:kubejs:red_mud> * 50, <item:immersiveengineering:dust_aluminum> * 4);
+    <recipetype:create:compacting>.addRecipe("red_mud_block_to_alumina_grit_by_press", <constant:create:heat_condition:heated>, [<item:immersiveengineering:dust_aluminum> % 100, <item:immersiveengineering:dust_aluminum> % 40], [<item:kubejs:red_mud_ball>], [], 600);
 
-//Alumina grit to Alumina
-<recipetype:immersiveengineering:blast_furnace>.addRecipe("alumina_grit_to_alumina_by_blast_furnace", <item:immersiveengineering:dust_aluminum>, 1000, <item:create:crushed_raw_aluminum>);
-<recipetype:immersiveengineering:arc_furnace>.addRecipe("alumina_grit_to_alumina_by_arc_furnace", <item:immersiveengineering:dust_aluminum>, [], 200, 10000, [<item:create:crushed_raw_aluminum> * 5], nope);
+    //Alumina grit to Alumina
+    <recipetype:immersiveengineering:blast_furnace>.addRecipe("alumina_grit_to_alumina_by_blast_furnace", <item:immersiveengineering:dust_aluminum>, 1000, <item:create:crushed_raw_aluminum>);
+    <recipetype:immersiveengineering:arc_furnace>.addRecipe("alumina_grit_to_alumina_by_arc_furnace", <item:immersiveengineering:dust_aluminum>, [], 200, 10000, [<item:create:crushed_raw_aluminum> * 5], nope);

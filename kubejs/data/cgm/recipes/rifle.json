@@ -1,0 +1,40 @@
+{
+  "type": "cgm:workbench",
+  "materials": [
+    {
+      "item": "immersiveengineering:wooden_grip",
+      "count": 1
+    },
+    {
+      "item": "alloyed:steel_sheet",
+      "count": 1
+    },
+    {
+      "item": "immersiveengineering:stick_steel",
+      "count": 1
+    },
+    {
+      "item": "immersiveengineering:component_steel",
+      "count": 1
+    },
+    {
+      "item": "alloyed:steel_sheet",
+      "count": 1
+    },
+    {
+      "item": "immersiveengineering:gunpart_hammer",
+      "count": 1
+    },
+    {
+      "item": "alloyed:steel_sheet",
+      "count": 1
+    },
+    {
+      "item": "immersiveengineering:gunpart_barrel",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "cgm:rifle"
+  }
+}
