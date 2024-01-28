@@ -3,6 +3,8 @@ import mods.create.DeployerApplicationManager;
 import mods.create.MixingManager;
 import crafttweaker.api.recipe.BlastFurnaceRecipeManager;
 import mods.create.MechanicalCrafterManager;
+import mods.create.EmptyingManager;
+import mods.create.CompactingManager;
 
 //variables
 
@@ -74,6 +76,10 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 /*for i, item in ingots_press {
     <recipetype:create:pressing>.addRecipe("ingots_to_plates" + i, [plates_press[i]*0], ingots_press[i]*2, 200);
 }*/
+// CompactingManager.addRecipe(name as string, heat as HeatCondition, outputs as IFluidStack[], itemInputs as IIngredientWithAmount[], fluidInputs as FluidIngredient[], duration as int) 
+// CompactingManager.addRecipe(name as string, heat as HeatCondition, outputs as Percentaged<IItemStack>[], itemInputs as IIngredientWithAmount[], fluidInputs as FluidIngredient[], duration as int)
+
+<recipetype:create:compacting>.addRecipe('slurry_to_mix', <constant:create:heat_condition:none>, [(<item:kubejs:acidic_glass_mixture> * 2) % 100], [nope], [<fluid:kubejs:acidic_glass_mixture_slurry> * 250], 300);
 
 // FillingManager.addRecipe(name, output, inputContainer, inputFluid, duration);
 <recipetype:create:filling>.addRecipe("blast_brick", <item:immersiveengineering:blastbrick> * 3, <item:minecraft:bricks> * 3, <fluid:create:potion>.withTag({Potion: "minecraft:long_fire_resistance" as string}) * 250, 200);
@@ -110,8 +116,6 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 <recipetype:create:item_application>.addRecipe("sail_application", [<item:create:white_sail>], <item:create:sail_frame>, <item:minecraft:white_wool>, false);
 
 //deplyoer application(name,deployed onto item, the held item, output, keep held item as bool)
-
-
 //mixer(name,heat,[output], [input], [inputFluid], time)
 <recipetype:create:mixing>.addRecipe("rosequartz", <constant:create:heat_condition:none>, [<item:create:rose_quartz> % 100], [<item:minecraft:quartz>, <item:minecraft:redstone> * 8], [<fluid:immersiveengineering:redstone_acid> * 100], 300);
 <recipetype:create:mixing>.addRecipe("glass_mixer",<constant:create:heat_condition:heated>, [<item:minecraft:glass> * 2 % 100], [<item:minecraft:sand>, <item:minecraft:quartz>, <item:kubejs:lime_dust>], [], 600);
@@ -119,8 +123,7 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 <recipetype:create:mixing>.addRecipe("redstone_acid", <constant:create:heat_condition:none>, [<fluid:immersiveengineering:redstone_acid> * 500], [<item:minecraft:redstone>*4], [<fluid:minecraft:water> * 500]);
 <recipetype:create:mixing>.addRecipe("netherite_ingot", <constant:create:heat_condition:superheated>, [<item:minecraft:netherite_ingot>], [<item:minecraft:netherite_scrap>*4, <tag:items:forge:ingots/gold>*4], [], 1200);
 <recipetype:create:mixing>.addRecipe("solder", <constant:create:heat_condition:superheated>, [<fluid:kubejs:solder> * 100], [<item:create:zinc_ingot>, <item:minecraft:iron_ingot>], [], 300);
-<recipetype:create:mixing>.addRecipe("acidic_glass_mix", <constant:create:heat_condition:none>, [<item:kubejs:acidic_glass_mixture> % 100], [<item:kubejs:glass_grit>], [<fluid:immersiveengineering:redstone_acid> * 250], 300);
-<recipetype:create:mixing>.addRecipe("acidic_glass_mix_to_silicon", <constant:create:heat_condition:heated>, [<item:kubejs:silicon_dust>], [<item:kubejs:lime_dust> * 2, <item:kubejs:acidic_glass_mixture>], [], 600);
+<recipetype:create:mixing>.addRecipe("acidic_glass_mix_to_silicon", <constant:create:heat_condition:heated>, [<item:kubejs:silicon_dust>], [<item:kubejs:lime_dust> * 1, <item:kubejs:acidic_glass_mixture>], [], 600);
 
 //saw recipes(name,output,input,time)
 <recipetype:create:cutting>.addRecipe("treatedsticks",<item:immersiveengineering:stick_treated> * 2 % 100 , <tag:items:forge:treated_wood>, 220);
@@ -166,6 +169,14 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
     [<item:immersiveengineering:plate_nickel>, <item:kubejs:arithmetic_mechanism>, <item:alloyed:steel_casing>, <item:kubejs:induction_mechanism>, <item:immersiveengineering:plate_nickel>],
     [<item:immersiveengineering:plate_nickel>, <item:create:fluid_pipe>, <item:immersiveengineering:coil_hv>, <item:create:fluid_pipe>, <item:immersiveengineering:plate_nickel>],
     [nope, <item:immersiveengineering:plate_nickel>, <item:immersiveengineering:plate_nickel>, <item:immersiveengineering:plate_nickel>, nope],
+]);
+
+<recipetype:create:mechanical_crafting>.addRecipe("heavy_engineering_block", <item:immersiveengineering:heavy_engineering> * 5, [
+    [nope, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, nope],
+    [<item:alloyed:steel_sheet>, <item:immersiveengineering:fluid_pipe>, <item:create:precision_mechanism>, <item:immersiveengineering:fluid_pipe>, <item:alloyed:steel_sheet>],
+    [<item:alloyed:steel_sheet>, <item:immersiveengineering:component_electronic>, <item:alloyed:steel_casing>, <item:immersiveengineering:component_electronic>, <item:alloyed:steel_sheet>],
+    [<item:alloyed:steel_sheet>, <item:kubejs:mechanical_engine>, <item:immersiveengineering:component_electronic_adv>, <item:kubejs:mechanical_engine>, <item:alloyed:steel_sheet>],
+    [nope, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, nope]
 ]);
 
 //sequenced ASSembly(trust me this was ass to figure out)(name,output(transitionTo), input(require), loops, Outher Outputs(addOutput), addStep)
@@ -373,7 +384,7 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .transitionTo(<item:create:polished_rose_quartz>)
                                                       .require(<item:create:polished_rose_quartz>)
                                                       .loops(1)
-                                                      .addOutput(<item:create:electron_tube>, 1)
+                                                      .addOutput(<item:create:electron_tube> * 2, 1)
                                                       .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:immersiveengineering:redstone_acid> * 100))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:golden_sheet>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:zinc_sheet>))
@@ -383,7 +394,7 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .transitionTo(<item:minecraft:glass_pane>)
                                                       .require(<item:minecraft:glass_pane>)
                                                       .loops(1)
-                                                      .addOutput(<item:immersiveengineering:electron_tube>, 1)
+                                                      .addOutput(<item:immersiveengineering:electron_tube> * 3, 1)
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:wirecoil_copper>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:gold_rod>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:copper_rod>))
@@ -404,8 +415,8 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100)));           
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("induction_component")
-                                                      .transitionTo(<item:immersiveengineering:treated_wood_horizontal>)
-                                                      .require(<tag:items:forge:treated_wood>)
+                                                      .transitionTo(<item:kubejs:basic_backboard>)
+                                                      .require(<item:kubejs:basic_backboard>)
                                                       .loops(1)
                                                       .addOutput(<item:kubejs:induction_mechanism>, 1)
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:coil_lv>))
@@ -420,7 +431,7 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .transitionTo(<item:create_sa:copper_magnet>)
                                                       .require(<item:createaddition:brass_rod>)
                                                       .loops(1)
-                                                      .addOutput(<item:create_sa:copper_magnet>, 1)
+                                                      .addOutput(<item:create_sa:copper_magnet> * 3, 1)
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:netherite_dust>))
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:netherite_dust>))
@@ -515,9 +526,60 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .loops(1)
                                                       .addOutput(<item:kubejs:basic_backboard>, 1)
                                                       .addStep<mods.createtweaker.CuttingRecipe>((rb) => rb.duration(50))
+                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:create_things_and_misc:slime> * 100))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:copper_sheet>))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:electron_tube>))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:electron_tube>))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:coil_mv>))
-                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:kubejs:solder> * 200))
+                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:create_things_and_misc:slime> * 100))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(50))
+                                                      );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("transistor")
+                                                      .transitionTo(<item:kubejs:silicon_wafer>)
+                                                      .require(<item:kubejs:silicon_wafer>)
+                                                      .loops(1)
+                                                      .addOutput(<item:kubejs:transistor>*2, 1)
+                                                      .addStep<mods.createtweaker.CuttingRecipe>((rb) => rb.duration(50))
+                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:immersiveengineering:redstone_acid> * 200))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:brass_rod>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:brass_rod>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:brass_rod>))
+                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:kubejs:solder> * 250))
+                                                      );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("advanced_electronic_component")
+                                                      .transitionTo(<item:immersiveengineering:component_electronic>)
+                                                      .require(<item:immersiveengineering:component_electronic>)
+                                                      .loops(3)
+                                                      .addOutput(<item:immersiveengineering:component_electronic_adv>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:transistor>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:electron_tube>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:electron_tube>))
+                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:kubejs:solder> * 250))
+                                                      );                                                      
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("plastic_circuit_board")
+                                                      .transitionTo(<item:immersiveengineering:plate_duroplast>)
+                                                      .require(<item:immersiveengineering:plate_duroplast>)
+                                                      .loops(1)
+                                                      .addOutput(<item:immersiveengineering:circuit_board>, 1)
+                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:create_things_and_misc:slime> * 100))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:copper_sheet>))
+                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:create_things_and_misc:slime> * 100))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:plate_electrum>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:plate_duroplast>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(50))
+                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:immersiveengineering:redstone_acid> * 300))
+                                                      );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("logic_circuit")
+                                                      .transitionTo(<item:immersiveengineering:circuit_board>)
+                                                      .require(<item:immersiveengineering:circuit_board>)
+                                                      .loops(1)
+                                                      .addOutput(<item:immersiveengineering:logic_circuit>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_electronic>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_electronic>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:capacitor>))
+                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:kubejs:solder> * 250))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:capacitor>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_electronic_adv>))
+                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:kubejs:solder> * 250))
                                                       );

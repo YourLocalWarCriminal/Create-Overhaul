@@ -2,6 +2,7 @@ import mods.immersiveengineering.AlloySmelter;
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.ingredient.IIngredient;
 import mods.immersiveengineering.Fermenter;
+import mods.immersiveengineering.Mixer;
 
 val nope = <item:minecraft:air>;
 
@@ -29,7 +30,7 @@ val nope = <item:minecraft:air>;
 <recipetype:immersiveengineering:metal_press>.addRecipe("small_gear_press", <item:minecraft:iron_nugget>, <item:immersiveengineering:mold_gear>, 600, <item:kubejs:small_gear>);
 <recipetype:immersiveengineering:metal_press>.addRecipe("medium_gear_press", <item:minecraft:iron_ingot>, <item:immersiveengineering:mold_gear>, 1200, <item:kubejs:medium_gear>);
 <recipetype:immersiveengineering:metal_press>.addRecipe("large_gear_press", <item:create:iron_sheet>, <item:immersiveengineering:mold_gear>, 2400, <item:kubejs:large_gear>);
-
+<recipetype:immersiveengineering:metal_press>.addRecipe("mithril_plate", <item:kubejs:mithril_ingot>, <item:immersiveengineering:mold_plate>, 2400, <item:kubejs:mithril_plate>);
 // Blueprint.addRecipe(name, blueprintCategory (string), inputs, output)
 
 <recipetype:immersiveengineering:blueprint>.addRecipe("clockwork_mechanism2", "components", [
@@ -49,6 +50,7 @@ val nope = <item:minecraft:air>;
 <recipetype:immersiveengineering:mixer>.addRecipe("lava_by_mixer", <tag:fluids:forge:nope>, [<tag:items:forge:cobblestone>], 500, <fluid:minecraft:lava>, 50);
 <recipetype:immersiveengineering:mixer>.addRecipe("slime_fluid_by_mixer", <tag:fluids:forge:nope>, [<tag:items:forge:slimeballs>], 500, <fluid:create_things_and_misc:slime>, 100);
 <recipetype:immersiveengineering:mixer>.addRecipe("honey_by_mixer", <tag:fluids:forge:nope>, [<item:minecraft:honey_block>], 500, <fluid:create:honey>, 1000);
+<recipetype:immersiveengineering:mixer>.addRecipe("acidic_glass_mix", <tag:fluids:forge:redstone_acids>, [<item:kubejs:glass_grit> * 4], 500, <fluid:kubejs:acidic_glass_mixture_slurry>, 1000);
 
 <recipetype:immersiveengineering:mixer>.addRecipe("bio_diesel_by_mixer", <tag:fluids:forge:ethanol>, [<tag:items:forge:dusts/lead>], 10000, <fluid:immersiveengineering:biodiesel>, 250);
 <recipetype:immersiveengineering:mixer>.addRecipe("acetaldehyde", <tag:fluids:forge:ethanol>, [<tag:items:forge:dusts/silver>], 1000, <fluid:immersiveengineering:acetaldehyde>, 50);
@@ -56,6 +58,7 @@ val nope = <item:minecraft:air>;
 // Squeezer.addRecipe(recipePath as string, input as IIngredientWithAmount, energy as int, fluidOutput as IFluidStack, itemOutput as IItemStack)
 
 <recipetype:immersiveengineering:squeezer>.addRecipe("seedoil", <tag:items:forge:seeds>, 5000, <fluid:createaddition:seed_oil> * 100, <item:createaddition:biomass>);
+
 
 // Crusher.addRecipe(recipePath as string, input as IIngredient, energy as int, mainOutput as IItemStack, additionalOutputs as Percentaged<IItemStack>[])
 

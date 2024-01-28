@@ -206,5 +206,18 @@ onEvent('fluid.registry', event =>
     .color(0x8a1f04)
     .displayName(`Red Mud`)
     .noBlock()
+	//a really fuckin long id huh?
+	event.create('acidic_glass_mixture_slurry')
+	.stillTexture('kubejs:block/lava_still')
+	.flowingTexture('kubejs:block/lava_flow')
+	.color(0xc75d56)
+	.displayName('Acidic Glass Mixture Slurry')
+	.noBlock()
+
+	event.create('phenol')
+	.stillTexture('kubejs:block/water_still')
+	.flowingTexture('kubejs:block/water_flow')
+	.color(0xf5c022)
+	.displayName('Phenol')
 })
 

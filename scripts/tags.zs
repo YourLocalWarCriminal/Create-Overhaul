@@ -45,6 +45,7 @@
 <tag:fluids:forge:plantoil>.clear();
 <tag:fluids:forge:plantoil>.add(<fluid:createaddition:seed_oil>);
 <tag:fluids:forge:methanol>.add(<fluid:immersiveengineering:plantoil>);
+<tag:fluids:forge:redstone_acids>.add(<fluid:immersiveengineering:redstone_acid>);
 
 <tag:items:forge:string>.add(<tag:items:forge:fiber_hemp>);
 

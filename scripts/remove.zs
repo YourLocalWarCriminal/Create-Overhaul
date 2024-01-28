@@ -275,6 +275,7 @@ var recipesd = [
 <item:immersiveengineering:wirecoil_structure_rope>,
 <item:immersiveengineering:wirecoil_structure_steel>,
 <item:immersiveengineering:wirecoil_redstone>,
+<item:immersiveengineering:circuit_board>,
 ];
 
 for item in recipesd {
