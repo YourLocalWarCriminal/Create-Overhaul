@@ -47,3 +47,10 @@
 <tag:fluids:forge:methanol>.add(<fluid:immersiveengineering:plantoil>);
 
 <tag:items:forge:string>.add(<tag:items:forge:fiber_hemp>);
+
+<tag:items:forge:subelectronic_components>.add([
+    <item:immersiveengineering:electron_tube>,
+    <item:create:electron_tube>,
+    <item:kubejs:transistor>,
+    <item:createaddition:capacitor>,
+]);

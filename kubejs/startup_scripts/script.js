@@ -6,11 +6,10 @@ onEvent('item.registry', event => {
 	// Register new items here
 	// event.create('example_item').displayName('Example Item')
 
-
 	//Metal
 	event.create('mithril_ingot').displayName('Mithril Ingot')
 	event.create('mithril_plate').displayName('Mithril Sheet')
-	event.create('hot_mithril_ingot').displayName('Hot Mithril Ingot').glow(true)
+	event.create('hot_mithril_ingot').displayName('Hot Mithril Ingot')
 	event.create('pig_iron').displayName('Pig Iron')
 	event.create('iron_bloom').displayName('Iron Bloom')
 	event.create('weak_netherite_ingot').displayName('Weak Netherite Ingot').tooltip('Used in the process of making Netherite').fireResistant(true)
@@ -59,7 +58,7 @@ onEvent('item.registry', event => {
 	event.create('transistor').displayName('Transistor').texture('kubejs:item/transistor')
 	event.create('silicon_boule').displayName('Silicon Boule').texture('kubejs:item/silicon_boule')
 	event.create('silicon_wafer').displayName('Silicon Wafer').texture('kubejs:item/silicon_wafer')
-	event.create('basic_backboard').displayName('Basic Circuit Board')
+	event.create('basic_backboard').displayName('Basic Circuit Board').texture('kubejs:item/basic_backboard')
 })
 
 

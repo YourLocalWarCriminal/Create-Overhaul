@@ -521,17 +521,3 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:coil_mv>))
                                                       .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:kubejs:solder> * 200))
                                                       );
-
-
-<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("rs_engineering_block")
-                                                      .transitionTo(<item:immersiveengineering:rs_engineering>)
-                                                      .require(<item:immersiveengineering:sheetmetal_steel>)
-                                                      .loops(5)
-                                                      .addOutput(<item:immersiveengineering:rs_engineering>, 1)
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:gold_wire>))
-                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:immersiveengineering:redstone_acid> * 50))
-                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(75))
-                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(50))
-                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:immersiveengineering:redstone_acid> * 700))
-                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:immersiveengineering:creosote> * 200))
-                                                      );
