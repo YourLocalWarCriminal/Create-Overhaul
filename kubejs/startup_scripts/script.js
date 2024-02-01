@@ -51,6 +51,10 @@ onEvent('item.registry', event => {
 	event.create('glass_grit').displayName('Crushed Glass').texture('kubejs:item/dusts/glass_dust')
 	event.create('acidic_glass_mixture').displayName('Acidic Glass Mixture').texture('kubejs:item/dusts/glass_acid_mix')
 
+	//Aspects
+	event.create('aspect_of_time').displayName('Aspect Of Time').texture('kubejs:item/aspects/aspect_of_time').maxStackSize(4).fireResistant(true).rarity('epic').glow(true)
+	event.create('aspect_of_labour').displayName('Aspect Of Labour').texture('kubejs:item/aspects/aspect_of_labour').maxStackSize(4).fireResistant(true).rarity('epic').glow(true)
+
 	//MISC
 	event.create('bolt').displayName('Metal Bolt')
 	event.create('nail').displayName('Metal Nail')
@@ -59,7 +63,6 @@ onEvent('item.registry', event => {
 	event.create('silicon_boule').displayName('Silicon Boule').texture('kubejs:item/silicon_boule')
 	event.create('silicon_wafer').displayName('Silicon Wafer').texture('kubejs:item/silicon_wafer')
 	event.create('basic_backboard').displayName('Basic Circuit Board').texture('kubejs:item/basic_backboard')
-	event.create('essence_of_labour').displayName('Essence Of Labour').texture('kubejs:item/essence_of_labour').glow(true)
 })
 
 
@@ -189,6 +192,14 @@ onEvent('block.registry', event => {
 	.texture('west', 'kubejs:block/flue_furnace/flue_bottom_bricks')
 	.texture('east', 'kubejs:block/flue_furnace/flue_bottom_bricks')	
 	.noItem()
+
+	event.create("eee")
+	.material("metal")
+	.displayName("Electric Eneregy Extractor")
+	.lightLevel(0.1)
+	.requiresTool(true)
+	.setModelJson('kubejs:block/eee')
+	.box(0.0, 0.0, 0.0, 1.0, 2.0, 1.0, false)
 
 })
 
