@@ -59,6 +59,7 @@ onEvent('item.registry', event => {
 	event.create('silicon_boule').displayName('Silicon Boule').texture('kubejs:item/silicon_boule')
 	event.create('silicon_wafer').displayName('Silicon Wafer').texture('kubejs:item/silicon_wafer')
 	event.create('basic_backboard').displayName('Basic Circuit Board').texture('kubejs:item/basic_backboard')
+	event.create('essence_of_labour').displayName('Essence Of Labour').texture('kubejs:item/essence_of_labour').glow(true)
 })
 
 
