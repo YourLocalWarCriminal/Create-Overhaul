@@ -148,11 +148,11 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 ]);
 
 <recipetype:create:mechanical_crafting>.addRecipe("alternator", <item:createaddition:alternator>, [
-    [nope, nope, nope, <item:alloyed:steel_sheet>, nope, nope, nope],
-    [nope, <item:kubejs:bolt>, <item:alloyed:steel_sheet>, <item:createaddition:capacitor>, <item:alloyed:steel_sheet>, <item:kubejs:bolt>, nope],
-    [nope, <item:alloyed:steel_sheet>, <item:immersiveengineering:wirecoil_steel>, <item:kubejs:induction_mechanism>, <item:immersiveengineering:wirecoil_steel>, <item:alloyed:steel_sheet>, nope],
-    [<item:alloyed:steel_sheet>, <item:immersiveengineering:wirecoil_steel>, <item:kubejs:induction_mechanism>, <item:create:shaft>, <item:kubejs:induction_mechanism>, <item:immersiveengineering:wirecoil_steel>, <item:alloyed:steel_sheet>],
-    [<item:kubejs:bolt>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, <item:kubejs:bolt>]
+    [<item:kubejs:bolt>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, <item:kubejs:bolt>],
+    [<item:alloyed:steel_sheet>, <item:createaddition:capacitor>, <item:kubejs:induction_mechanism>, <item:createaddition:capacitor>, <item:alloyed:steel_sheet>],
+    [<item:alloyed:steel_sheet>, <item:kubejs:induction_mechanism>, <item:create:shaft>, <item:kubejs:induction_mechanism>, <item:alloyed:steel_sheet>],
+    [<item:alloyed:steel_sheet>, <item:immersiveengineering:coil_hv>, <item:kubejs:induction_mechanism>, <item:immersiveengineering:coil_hv>, <item:alloyed:steel_sheet>],
+    [<item:kubejs:bolt>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, <item:kubejs:bolt>],
 ]);
 
 <recipetype:create:mechanical_crafting>.addRecipe("motor", <item:createaddition:electric_motor>, [
@@ -419,11 +419,10 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .require(<item:kubejs:basic_backboard>)
                                                       .loops(1)
                                                       .addOutput(<item:kubejs:induction_mechanism>, 1)
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:coil_lv>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:coil_mv>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create_sa:copper_magnet>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:large_gear>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_steel>))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:belt_connector>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:copper_wire>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:copper_wire>)));
 

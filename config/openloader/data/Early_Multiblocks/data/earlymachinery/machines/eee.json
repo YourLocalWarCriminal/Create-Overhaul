@@ -1,17 +1,17 @@
 {
     "name": {
-        "text": "Flue Furnace",
+        "text": "Electric Energy Extractor",
         "color": "white"
     },
     "tooltips":[{
-        "text":"For Early Iron Production",
+        "text":"Igen",
         "color":"gray"
     }
     ],
     "appearance":{
-        "block": "kubejs:flue_furnace_dummy_off",
+        "block": "kubejs:eee_dummy_off",
         "running":{
-            "block":"kubejs:flue_furnace_dummy_on",
+            "block":"kubejs:eee_dummy_off",
             "light":7
         }
     },
@@ -32,8 +32,11 @@
             "type":"custommachinery:item",
             "id":"output",
             "mode":"output"
+        },
+        {
+            "type": "custommachinery:energy",
+            "capacity": 100000
         }
-        
     ],
     "gui":[
         {

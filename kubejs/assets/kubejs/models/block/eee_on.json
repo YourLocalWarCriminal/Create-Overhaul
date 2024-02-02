@@ -1,0 +1,39 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [128, 128],
+	"textures": {
+		"0": "kubejs:block/eee/eee_on_connector",
+		"1": "kubejs:block/eee/eee_on_side",
+		"2": "kubejs:block/eee/eee_on_top",
+		"3": "kubejs:block/eee/eee_on_bottom",
+		"4": "kubejs:block/eee/eee_on_effect",
+		"particle": "kubejs:block/eee/eee_on_connector"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#3"}
+			}
+		},
+		{
+			"from": [-16, 0.01, -16],
+			"to": [32, 0.01, 32],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 6, 0], "texture": "#missing"},
+				"east": {"uv": [0, 0, 6, 0], "texture": "#missing"},
+				"south": {"uv": [0, 0, 6, 0], "texture": "#missing"},
+				"west": {"uv": [0, 0, 6, 0], "texture": "#missing"},
+				"up": {"uv": [16, 16, 0, 0], "texture": "#4"},
+				"down": {"uv": [6, 6, 0, 12], "texture": "#missing"}
+			}
+		}
+	]
+}

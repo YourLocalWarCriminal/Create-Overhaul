@@ -193,14 +193,23 @@ onEvent('block.registry', event => {
 	.texture('east', 'kubejs:block/flue_furnace/flue_bottom_bricks')	
 	.noItem()
 
-	event.create("eee")
+	event.create("eee_dummy_off")
 	.material("metal")
-	.displayName("Electric Eneregy Extractor")
-	.lightLevel(0.1)
+	.displayName("Electric Eneregy Extractor Dummy")
 	.requiresTool(true)
-	.setModelJson('kubejs:block/eee')
-	.box(0.0, 0.0, 0.0, 1.0, 2.0, 1.0, false)
+	.texture('up', 'kubejs:block/eee/eee_off_top')
+	.texture('down', 'immersiveengineering:block/metal/storage_steel')
+	.texture('south', 'kubejs:block/eee/eee_off_connector')
+	.texture('north', 'kubejs:block/eee/eee_off_side')
+	.texture('west', 'kubejs:block/eee/eee_off_side')
+	.texture('east', 'kubejs:block/eee/eee_off_side')
 
+	event.create("eee_dummy_on")
+	.material("metal")
+	.displayName("Electric Eneregy Extractor On Dummy")
+	.requiresTool(true)
+	.model('kubejs:block/eee_on')
+	.transparent(true)
 })
 
 onEvent('fluid.registry', event =>

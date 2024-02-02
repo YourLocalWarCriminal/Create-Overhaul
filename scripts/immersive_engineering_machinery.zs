@@ -45,7 +45,6 @@ val nope = <item:minecraft:air>;
 
 <recipetype:immersiveengineering:mixer>.addRecipe("chocholate_by_mixer", <tag:fluids:forge:milk>, [<item:minecraft:cocoa_beans>, <item:minecraft:sugar>], 500, <fluid:create:chocolate>, 250);
 <recipetype:immersiveengineering:mixer>.addRecipe("chocholate_melting_by_mixer", <tag:fluids:forge:nope>, [<item:create:bar_of_chocolate>], 500, <fluid:create:chocolate>, 250);
-<recipetype:immersiveengineering:mixer>.addRecipe("bioethanol_by_mixer", <tag:fluids:forge:nope>, [<item:minecraft:sugar>, <item:create:cinder_flour>, <item:createaddition:biomass>], 500, <fluid:createaddition:bioethanol>, 125);
 <recipetype:immersiveengineering:mixer>.addRecipe("tea_by_mixer", <tag:fluids:forge:water>, [<tag:items:minecraft:leaves>], 500, <fluid:create:tea>, 500);
 <recipetype:immersiveengineering:mixer>.addRecipe("lava_by_mixer", <tag:fluids:forge:nope>, [<tag:items:forge:cobblestone>], 500, <fluid:minecraft:lava>, 50);
 <recipetype:immersiveengineering:mixer>.addRecipe("slime_fluid_by_mixer", <tag:fluids:forge:nope>, [<tag:items:forge:slimeballs>], 500, <fluid:create_things_and_misc:slime>, 100);
@@ -76,3 +75,9 @@ val nope = <item:minecraft:air>;
 //<recipetype:immersiveengineering:refinery>.addRecipe(recipePath as string, fluidInput1 as Many<MCTag>, fluidInput2 as Many<MCTag>, catalyst as IIngredient, energy as int, output as IFluidStack);
 
 <recipetype:immersiveengineering:refinery>.addRecipe("bio_ethanol", <tag:fluids:forge:plantoil> * 15, <tag:fluids:forge:methanol> * 10, <tag:items:forge:dusts/coal_coke>, 1000, <fluid:createaddition:bioethanol> * 20);
+
+// ArcFurnace.addRecipe(recipePath as string, mainIngredient as IIngredientWithAmount, additives as IIngredientWithAmount[], time as int, energy as int, outputs as IItemStack[], slag as IItemStack)
+
+<recipetype:immersiveengineering:arc_furnace>.addRecipe("mithril_alloy_kiln_silver_by_arc_furnace", nope, [<item:minecraft:diamond> * 1, <item:immersiveengineering:ingot_silver> * 1], 2000, 100000, [<item:kubejs:hot_mithril_ingot>]);
+
+<recipetype:immersiveengineering:arc_furnace>.addRecipe("mithril_alloy_kiln_nickel_by_arc_furnace", nope, [<item:minecraft:diamond> * 1, <item:immersiveengineering:ingot_nickel> * 1], 2000, 100000, [<item:kubejs:hot_mithril_ingot>]);

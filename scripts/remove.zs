@@ -104,6 +104,9 @@ for item in delete {
 
 //RECIPE REMOVAL
 var recipesd = [
+<item:immersiveengineering:coil_lv>,
+<item:immersiveengineering:coil_mv>,
+<item:immersiveengineering:coil_hv>,
 <item:immersiveengineering:hemp_fabric>,
 <item:create:sail_frame>,
 <item:immersiveengineering:windmill_sail>,
@@ -323,7 +326,6 @@ craftingTable.remove(<item:immersiveengineering:plate_lead>);
 JEI.hideIngredient(<item:kubejs:incomplete_mechanical_engine>);
 craftingTable.remove(<item:immersiveengineering:dust_aluminum>);
 craftingTable.remove(<item:immersiveengineering:dust_electrum>);
-craftingTable.remove(<item:immersiveengineering:dust_constantan>);
 <recipetype:create:pressing>.remove(<tag:items:forge:plates>);
 craftingTable.remove(<tag:items:forge:plates>);
 <recipetype:create:pressing>.remove(<item:createdeco:cast_iron_sheet>);
@@ -335,7 +337,6 @@ blastFurnace.remove(<item:minecraft:copper_ingot>);
 <recipetype:create:crushing>.remove(<tag:items:create:crushed_raw_materials>);
 furnace.remove(<item:minecraft:netherite_scrap>);
 furnace.remove(<item:immersiveengineering:ingot_electrum>);
-furnace.remove(<item:immersiveengineering:ingot_constantan>);
 furnace.remove(<item:minecraft:charcoal>);
 furnace.remove(<item:minecraft:coal>);
 <recipetype:immersiveengineering:squeezer>.removeAll();

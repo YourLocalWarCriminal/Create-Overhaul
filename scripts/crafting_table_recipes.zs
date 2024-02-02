@@ -668,3 +668,38 @@ craftingTable.addShaped("sail_frame", <item:create:sail_frame>, [
     [<item:minecraft:bamboo>, nope, <item:minecraft:bamboo>],
     [<item:farmersdelight:rope>, <item:minecraft:bamboo>, <item:farmersdelight:rope>]
 ]);
+
+craftingTable.addShaped("lv_coil_block1", <item:immersiveengineering:coil_lv>, [
+    [<item:immersiveengineering:wire_lead>, <item:immersiveengineering:wire_lead>, <item:immersiveengineering:wire_lead>],
+    [<item:immersiveengineering:wire_lead>, <tag:items:forge:rods/all_metal>, <item:immersiveengineering:wire_lead>],
+    [<item:immersiveengineering:wire_lead>, <item:immersiveengineering:wire_lead>, <item:immersiveengineering:wire_lead>]
+]);
+
+craftingTable.addShaped("lv_coil_block2", <item:immersiveengineering:coil_lv>, [
+    [<item:immersiveengineering:wire_aluminum>, <item:immersiveengineering:wire_aluminum>, <item:immersiveengineering:wire_aluminum>],
+    [<item:immersiveengineering:wire_aluminum>, <tag:items:forge:rods/all_metal>, <item:immersiveengineering:wire_aluminum>],
+    [<item:immersiveengineering:wire_aluminum>, <item:immersiveengineering:wire_aluminum>, <item:immersiveengineering:wire_aluminum>]
+]);
+craftingTable.addShaped("lv_coil_block3", <item:immersiveengineering:coil_lv>, [
+    [<item:createaddition:iron_wire>, <item:createaddition:iron_wire>, <item:createaddition:iron_wire>],
+    [<item:createaddition:iron_wire>, <tag:items:forge:rods/all_metal>, <item:createaddition:iron_wire>],
+    [<item:createaddition:iron_wire>, <item:createaddition:iron_wire>, <item:createaddition:iron_wire>]
+]);
+
+craftingTable.addShaped("mv_coil_block1", <item:immersiveengineering:coil_mv>, [
+    [<item:createaddition:gold_wire>, <item:createaddition:gold_wire>, <item:createaddition:gold_wire>],
+    [<item:createaddition:gold_wire>, <tag:items:forge:rods/all_metal>, <item:createaddition:gold_wire>],
+    [<item:createaddition:gold_wire>, <item:createaddition:gold_wire>, <item:createaddition:gold_wire>]
+]);
+
+craftingTable.addShaped("mv_coil_block", <item:immersiveengineering:coil_mv>, [
+    [<item:createaddition:copper_wire>, <item:createaddition:copper_wire>, <item:createaddition:copper_wire>],
+    [<item:createaddition:copper_wire>, <tag:items:forge:rods/all_metal>, <item:createaddition:copper_wire>],
+    [<item:createaddition:copper_wire>, <item:createaddition:copper_wire>, <item:createaddition:copper_wire>]
+]);
+
+craftingTable.addShaped("hv_coil_block", <item:immersiveengineering:coil_hv>, [
+    [<item:immersiveengineering:wire_electrum>, <item:immersiveengineering:wire_electrum>, <item:immersiveengineering:wire_electrum>],
+    [<item:immersiveengineering:wire_electrum>, <tag:items:forge:rods/all_metal>, <item:immersiveengineering:wire_electrum>],
+    [<item:immersiveengineering:wire_electrum>, <item:immersiveengineering:wire_electrum>, <item:immersiveengineering:wire_electrum>]
+]);

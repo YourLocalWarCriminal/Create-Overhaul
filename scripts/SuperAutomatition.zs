@@ -10,9 +10,7 @@ val nope = <item:minecraft:air>;
 
 public function MetalRecipeMaker(name as string, ingot as IItemStack, plate as IItemStack, rod as IItemStack, wire as IItemStack, dust as IItemStack, block as IItemStack, nugget as IItemStack, raw as IItemStack, crushed as IItemStack, stone_type as IItemStack, ores as IItemStack[]) as void {
     val nope = <item:minecraft:air>;
-    blastFurnace.remove(ingot);
-    <recipetype:immersiveengineering:arc_furnace>.remove(ingot);
-    <recipetype:create:pressing>.remove(ingot);
+    recipes.remove(ingot);
 
     if (wire != nope) {
         recipes.remove(wire);
@@ -57,7 +55,7 @@ public function MetalRecipeMaker(name as string, ingot as IItemStack, plate as I
         <recipetype:create:crushing>.remove(nugget);
         //Nugget to ingot
         craftingTable.remove(nugget);
-        <recipetype:create:compacting>.addRecipe(name + "_nugget_to_" + name + "_ingot", <constant:create:heat_condition:heated>, [ingot], [nugget * 8], [], 100);
+        <recipetype:create:compacting>.addRecipe(name + "_nugget_to_" + name + "_ingot", <constant:create:heat_condition:heated>, [ingot], [nugget * 10], [], 100);
         //Ingot to nuggets
         <recipetype:create:cutting>.addRecipe(name + "_ingot_to_" + name + "_nuggets", [nugget * 10], ingot, 8000);
     }
@@ -144,6 +142,8 @@ public function MetalRecipeMaker(name as string, ingot as IItemStack, plate as I
     MetalRecipeMaker("lead", <item:immersiveengineering:ingot_lead>, <item:immersiveengineering:plate_lead>, nope, <item:immersiveengineering:wire_lead>, <item:immersiveengineering:dust_lead>, <item:immersiveengineering:storage_lead>, <item:immersiveengineering:nugget_lead>, <item:immersiveengineering:raw_lead>, <item:create:crushed_raw_lead>, nope, [<item:immersiveengineering:ore_lead>, <item:immersiveengineering:deepslate_ore_lead>]);
 
     MetalRecipeMaker("steel", <item:alloyed:steel_ingot>, <item:alloyed:steel_sheet>, <item:immersiveengineering:stick_steel>, <item:immersiveengineering:wire_steel>, <item:immersiveengineering:dust_steel>, <item:immersiveengineering:storage_steel>, <item:alloyed:steel_nugget>, nope, nope, nope, [nope]);
+
+    MetalRecipeMaker("constantan", <item:immersiveengineering:ingot_constantan>, <item:immersiveengineering:plate_constantan>, nope, nope, <item:immersiveengineering:dust_constantan>, <item:immersiveengineering:storage_constantan>, <item:immersiveengineering:nugget_constantan>, nope, nope, nope, [nope]);
 
 //Other ore processing methods
 
