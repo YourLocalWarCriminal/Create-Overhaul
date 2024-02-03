@@ -195,7 +195,7 @@ onEvent('block.registry', event => {
 
 	event.create("eee_dummy_off")
 	.material("metal")
-	.displayName("Electric Eneregy Extractor Dummy")
+	.displayName("Electric Energy Extractor Dummy")
 	.requiresTool(true)
 	.texture('up', 'kubejs:block/eee/eee_off_top')
 	.texture('down', 'immersiveengineering:block/metal/storage_steel')
@@ -203,13 +203,15 @@ onEvent('block.registry', event => {
 	.texture('north', 'kubejs:block/eee/eee_off_side')
 	.texture('west', 'kubejs:block/eee/eee_off_side')
 	.texture('east', 'kubejs:block/eee/eee_off_side')
+	.noItem()
 
 	event.create("eee_dummy_on")
 	.material("metal")
-	.displayName("Electric Eneregy Extractor On Dummy")
+	.displayName("Electric Energy Extractor On Dummy")
 	.requiresTool(true)
 	.model('kubejs:block/eee_on')
 	.transparent(true)
+	.noItem()
 })
 
 onEvent('fluid.registry', event =>
