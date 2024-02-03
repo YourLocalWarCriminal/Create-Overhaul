@@ -122,15 +122,15 @@ craftingTable.addShaped("metalbracket", <item:create:metal_bracket>, [
 ]);
 
 craftingTable.addShaped("blazeburner", <item:create:empty_blaze_burner>, [
-    [nope, <item:immersiveengineering:plate_steel>, nope],
-    [<item:immersiveengineering:plate_steel>, <item:minecraft:netherrack>, <item:immersiveengineering:plate_steel>],
-    [nope, <item:immersiveengineering:plate_steel>, nope]
+    [nope, <tag:items:forge:plates/steel>, nope],
+    [<tag:items:forge:plates/steel>, <item:minecraft:netherrack>, <tag:items:forge:plates/steel>],
+    [nope, <tag:items:forge:plates/steel>, nope]
 ]);
 
 craftingTable.addShaped("mechanicaldrill", <item:create:mechanical_drill>, [
-    [nope, <item:immersiveengineering:plate_steel>, nope],
-    [<item:alloyed:steel_casing>, <item:createdeco:cast_iron_ingot>, <item:immersiveengineering:plate_steel>],
-    [nope, <item:immersiveengineering:plate_steel>, nope]
+    [<item:kubejs:clockwork_mechanism>, <tag:items:forge:plates/steel>, hammer],
+    [<item:alloyed:steel_casing>, <item:createdeco:cast_iron_ingot>, <tag:items:forge:plates/steel>],
+    [nope, <tag:items:forge:plates/steel>, screwdriver]
 ]);
 
 craftingTable.addShaped("whisk", <item:create:whisk>, [
@@ -701,5 +701,10 @@ craftingTable.addShaped("mv_coil_block", <item:immersiveengineering:coil_mv>, [
 craftingTable.addShaped("hv_coil_block", <item:immersiveengineering:coil_hv>, [
     [<item:immersiveengineering:wire_electrum>, <item:immersiveengineering:wire_electrum>, <item:immersiveengineering:wire_electrum>],
     [<item:immersiveengineering:wire_electrum>, <tag:items:forge:rods/all_metal>, <item:immersiveengineering:wire_electrum>],
-    [<item:immersiveengineering:wire_electrum>, <item:immersiveengineering:wire_electrum>, <item:immersiveengineering:wire_electrum>]
+    [<item:immersiveengineering:wire_electrum>, <item:immersiveengineering:wire_electrum>, <item:immersiveengineering:wire_electrum>]]);
+    
+craftingTable.addShaped("mechanicalmixermegaultragamerrecipe", <item:create:mechanical_mixer>, [
+    [hammer, <item:create:whisk>, screwdriver],
+    [<item:immersiveengineering:component_iron>, <item:create:cogwheel>, <item:immersiveengineering:component_iron>],
+    [<item:kubejs:clockwork_mechanism>, <item:alloyed:steel_casing>, <item:kubejs:clockwork_mechanism>]
 ]);

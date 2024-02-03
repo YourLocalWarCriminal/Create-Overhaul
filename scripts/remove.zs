@@ -93,6 +93,8 @@ var delete = [
 <item:immersiveengineering:nugget_steel>,
 <item:createdeco:zinc_sheet>,
 <item:minecraft:blast_furnace>,
+<item:immersiveengineering:lantern>,
+<item:minecraft:redstone_lamp>,
 ];
 
 for item in delete {
@@ -279,6 +281,7 @@ var recipesd = [
 <item:immersiveengineering:wirecoil_structure_steel>,
 <item:immersiveengineering:wirecoil_redstone>,
 <item:immersiveengineering:circuit_board>,
+<item:create_sa:heat_engine>,
 ];
 
 for item in recipesd {

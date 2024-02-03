@@ -172,11 +172,11 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 ]);
 
 <recipetype:create:mechanical_crafting>.addRecipe("heavy_engineering_block", <item:immersiveengineering:heavy_engineering> * 5, [
-    [nope, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, nope],
+    [nope, <item:alloyed:steel_sheet>, <tag:items:forge:plates/aluminum>, <item:alloyed:steel_sheet>, nope],
     [<item:alloyed:steel_sheet>, <item:immersiveengineering:fluid_pipe>, <item:create:precision_mechanism>, <item:immersiveengineering:fluid_pipe>, <item:alloyed:steel_sheet>],
-    [<item:alloyed:steel_sheet>, <item:immersiveengineering:component_electronic>, <item:alloyed:steel_casing>, <item:immersiveengineering:component_electronic>, <item:alloyed:steel_sheet>],
+    [<tag:items:forge:plates/aluminum>, <item:immersiveengineering:component_electronic>, <item:alloyed:steel_casing>, <item:immersiveengineering:component_electronic>, <tag:items:forge:plates/aluminum>],
     [<item:alloyed:steel_sheet>, <item:kubejs:mechanical_engine>, <item:immersiveengineering:component_electronic_adv>, <item:kubejs:mechanical_engine>, <item:alloyed:steel_sheet>],
-    [nope, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>, nope]
+    [nope, <item:alloyed:steel_sheet>, <tag:items:forge:plates/aluminum>, <item:alloyed:steel_sheet>, nope]
 ]);
 
 //sequenced ASSembly(trust me this was ass to figure out)(name,output(transitionTo), input(require), loops, Outher Outputs(addOutput), addStep)
@@ -539,7 +539,7 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .addStep<mods.createtweaker.CuttingRecipe>((rb) => rb.duration(50))
                                                       .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:immersiveengineering:redstone_acid> * 200))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:brass_rod>))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:brass_rod>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:rods/aluminum>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:brass_rod>))
                                                       .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:kubejs:solder> * 250))
                                                       );
@@ -581,4 +581,18 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:capacitor>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_electronic_adv>))
                                                       .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:kubejs:solder> * 250))
+                                                      );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("heatengine")
+                                                      .transitionTo(<item:kubejs:mechanical_engine>)
+                                                      .require(<item:kubejs:mechanical_engine>)
+                                                      .loops(1)
+                                                      .addOutput(<item:create_sa:heat_engine>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:blaze_burner>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:sturdy_sheet>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:alloyed:steel_sheet>))
+                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:kubejs:solder> * 500))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:sturdy_sheet>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:tnt>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:tnt>))
                                                       );
