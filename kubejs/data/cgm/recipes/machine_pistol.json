@@ -2,8 +2,24 @@
   "type": "cgm:workbench",
   "materials": [
     {
-      "tag": "forge:ingots/iron",
-      "count": 20
+      "item": "immersiveengineering:gunpart_barrel",
+      "count": 1
+    },
+    {
+      "item":"immersiveengineering:component_steel",
+      "count":6
+    },
+    {
+      "item":"cgm:pistol",
+      "count":1
+    },
+    {
+      "item":"immersiveengineering:toolupgrade_revolver_magazine",
+      "count":1
+    },
+    {
+      "item":"create_sa:heat_engine",
+      "count":1
     }
   ],
   "result": {

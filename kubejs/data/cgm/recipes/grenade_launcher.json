@@ -2,8 +2,24 @@
   "type": "cgm:workbench",
   "materials": [
     {
-      "tag": "forge:ingots/iron",
-      "count": 32
+      "item": "createdeco:netherite_sheet",
+      "count": 3
+    },
+    {
+      "item":"immersiveengineering:component_electronic",
+      "count":2
+    },
+    {
+      "item":"immersiveengineering:gunpart_drum",
+      "count":1
+    },
+    {
+      "item":"create_sa:heat_engine",
+      "count":1
+    },
+    {
+      "item":"immersiveengineering:wooden_grip",
+      "count":1
     }
   ],
   "result": {

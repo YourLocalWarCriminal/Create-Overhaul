@@ -2,8 +2,24 @@
   "type": "cgm:workbench",
   "materials": [
     {
-      "tag": "forge:ingots/iron",
-      "count": 38
+      "item": "immersiveengineering:wooden_grip",
+      "count": 1
+    },
+    {
+      "item":"create_sa:heat_engine",
+      "count":4
+    },
+    {
+      "item":"cgm:machine_pistol",
+      "count":4
+    },
+    {
+      "item":"immersiveengineering:gunpart_barrel",
+      "count":4
+    },
+    {
+      "item":"alloyed:steel_sheet",
+      "count":3
     }
   ],
   "result": {

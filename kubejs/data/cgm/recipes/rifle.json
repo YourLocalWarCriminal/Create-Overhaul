@@ -7,31 +7,27 @@
     },
     {
       "item": "alloyed:steel_sheet",
-      "count": 1
-    },
-    {
-      "item": "immersiveengineering:stick_steel",
-      "count": 1
+      "count": 2
     },
     {
       "item": "immersiveengineering:component_steel",
-      "count": 1
-    },
-    {
-      "item": "alloyed:steel_sheet",
-      "count": 1
+      "count": 3
     },
     {
       "item": "immersiveengineering:gunpart_hammer",
       "count": 1
     },
     {
-      "item": "alloyed:steel_sheet",
+      "item": "immersiveengineering:gunpart_barrel",
       "count": 1
     },
     {
-      "item": "immersiveengineering:gunpart_barrel",
-      "count": 1
+      "item":"immersiveengineering:gunpart_drum",
+      "count":1
+    },
+    {
+      "item":"create_sa:heat_engine",
+      "count":1
     }
   ],
   "result": {

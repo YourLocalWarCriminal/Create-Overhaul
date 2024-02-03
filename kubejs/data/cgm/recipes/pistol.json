@@ -2,8 +2,8 @@
   "type": "cgm:workbench",
   "materials": [
     {
-      "tag": "forge:plates/brass",
-      "count": 4
+      "item": "immersiveengineering:wooden_grip",
+      "count": 1
     },
     {
       "item": "immersiveengineering:component_iron",
@@ -14,12 +14,16 @@
       "count": 1
     },
     {
-      "item": "immersiveengineering:gunpart_drum",
+      "item": "immersiveengineering:toolupgrade_revolver_magazine",
       "count": 1
     },
     {
       "item": "immersiveengineering:gunpart_barrel",
       "count": 1
+    },
+    {
+      "item":"create_sa:heat_engine",
+      "count":1
     }
   ],
   "result": {
