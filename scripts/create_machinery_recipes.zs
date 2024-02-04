@@ -80,6 +80,8 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 // CompactingManager.addRecipe(name as string, heat as HeatCondition, outputs as Percentaged<IItemStack>[], itemInputs as IIngredientWithAmount[], fluidInputs as FluidIngredient[], duration as int)
 
 <recipetype:create:compacting>.addRecipe('slurry_to_mix', <constant:create:heat_condition:none>, [(<item:kubejs:acidic_glass_mixture> * 2) % 100], [nope], [<fluid:kubejs:acidic_glass_mixture_slurry> * 250], 300);
+<recipetype:create:compacting>.addRecipe('sturdy_block', <constant:create:heat_condition:superheated>, [<item:create_things_and_misc:sturdy_sheet_block> % 100], [<item:create:sturdy_sheet> * 10], [], 1200);
+
 
 // FillingManager.addRecipe(name, output, inputContainer, inputFluid, duration);
 <recipetype:create:filling>.addRecipe("blast_brick", <item:immersiveengineering:blastbrick> * 3, <item:minecraft:bricks> * 3, <fluid:create:potion>.withTag({Potion: "minecraft:long_fire_resistance" as string}) * 250, 200);
@@ -174,7 +176,7 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 <recipetype:create:mechanical_crafting>.addRecipe("heavy_engineering_block", <item:immersiveengineering:heavy_engineering> * 5, [
     [nope, <item:alloyed:steel_sheet>, <tag:items:forge:plates/aluminum>, <item:alloyed:steel_sheet>, nope],
     [<item:alloyed:steel_sheet>, <item:immersiveengineering:fluid_pipe>, <item:create:precision_mechanism>, <item:immersiveengineering:fluid_pipe>, <item:alloyed:steel_sheet>],
-    [<tag:items:forge:plates/aluminum>, <item:immersiveengineering:component_electronic>, <item:alloyed:steel_casing>, <item:immersiveengineering:component_electronic>, <tag:items:forge:plates/aluminum>],
+    [<tag:items:forge:plates/aluminum>, <item:immersiveengineering:component_electronic>, <item:immersiveengineering:light_engineering>, <item:immersiveengineering:component_electronic>, <tag:items:forge:plates/aluminum>],
     [<item:alloyed:steel_sheet>, <item:kubejs:mechanical_engine>, <item:immersiveengineering:component_electronic_adv>, <item:kubejs:mechanical_engine>, <item:alloyed:steel_sheet>],
     [nope, <item:alloyed:steel_sheet>, <tag:items:forge:plates/aluminum>, <item:alloyed:steel_sheet>, nope]
 ]);

@@ -60,7 +60,7 @@ onEvent('item.registry', event => {
 	event.create('nail').displayName('Metal Nail')
 	event.create('ingot_mold').displayName('Clay Ingot Mold')
 	event.create('transistor').displayName('Transistor').texture('kubejs:item/transistor')
-	event.create('silicon_boule').displayName('Silicon Boule').texture('kubejs:item/silicon_boule')
+	event.create('silicon_boule').displayName('Silicon Boule').texture('kubejs:item/silicon_boule').maxStackSize(16)
 	event.create('silicon_wafer').displayName('Silicon Wafer').texture('kubejs:item/silicon_wafer')
 	event.create('basic_backboard').displayName('Basic Circuit Board').texture('kubejs:item/basic_backboard')
 })

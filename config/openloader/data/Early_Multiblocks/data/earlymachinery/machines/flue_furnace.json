@@ -93,6 +93,11 @@
             "x":99,
             "y":29,
             "color":"gray"
+        },
+        {
+            "type": "custommachinery:status",
+            "x": 51,
+            "y": 30
         }
     ]
 }

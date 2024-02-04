@@ -125,9 +125,14 @@
         {
             "type":"custommachinery:text",
             "text":"Pit Kiln",
-            "x":110,
+            "x":114,
             "y":18,
             "color":"gray"
+        },
+        {
+            "type": "custommachinery:status",
+            "x": 51,
+            "y": 20
         }
     ]
 }

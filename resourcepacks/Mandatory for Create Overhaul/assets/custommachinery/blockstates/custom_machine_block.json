@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "custommachinery:block/custom_machine_block"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+    "type":"custommachinery:custom_machine",
+    "machine":"earlymachinery:eee",
+    "time":6000,
+    "requirements":[
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"kubejs:induction_mechanism",
+            "amount":64
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"immersiveengineering:component_electronic_adv",
+            "amount":64
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"immersiveengineering:coil_hv",
+            "amount":16
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"kubejs:silicon_boule",
+            "amount":16
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"output",
+            "item":"kubejs:aspect_of_labour",
+            "amount":1
+        },
+        {
+          "type":"custommachinery:structure",
+            "keys": {
+              "b": "immersiveengineering:light_engineering",
+              "c": "immersiveengineering:radiator",
+              "d": "immersiveengineering:heavy_engineering",
+              "e": "immersiveengineering:sheetmetal_aluminum",
+              "f": "byg:therium_glass",
+              "g": "create_things_and_misc:sturdy_sheet_block",
+              "h": "immersiveengineering:rs_engineering"
+            },
+            "pattern": [
+              [
+                " eee ",
+                "ebbbe",
+                "ebhbe",
+                "ebbbe",
+                " ddd "
+              ],
+              [
+                " efe ",
+                "ecdce",
+                "fdgdf",
+                "ecdce",
+                " eme "
+              ]
+            ]
+        }
+    ]
+}

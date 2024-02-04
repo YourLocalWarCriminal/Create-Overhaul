@@ -1,32 +1,64 @@
 {
-    "name": {
+    "name" : {
         "text": "Electric Energy Extractor",
         "color": "white"
     },
     "tooltips":[{
-        "text":"Igen",
+        "text":"This is the core of the final experiment",
         "color":"gray"
+    },
+    {
+        "text": "It can not contain neither a large amount of fluid nor electricity!",
+        "color": "red"
     }
     ],
     "appearance":{
         "block": "kubejs:eee_dummy_off",
         "running":{
-            "block":"kubejs:eee_dummy_off",
+            "block":"kubejs:eee_dummy_on",
             "light":7
         }
     },
     "components":[
         {
             "type": "custommachinery:item",
-            "id": "input",
+            "id": "input1",
             "mode":"input"
         },
         {
             "type":"custommachinery:item",
-            "id":"fuel",
-            "mode":"input",
-            "filter":["minecraft:coal", "minecraft:charcoal", "immersiveengineering:coal_coke"],
-            "whitelist":true
+            "id":"input2",
+            "mode":"input"
+        },
+        {
+            "type":"custommachinery:item",
+            "id":"input3",
+            "mode":"input"
+        },
+        {
+            "type":"custommachinery:item",
+            "id":"input4",
+            "mode":"input"
+        },
+        {
+            "type":"custommachinery:item",
+            "id":"input5",
+            "mode":"input"
+        },
+        {
+            "type":"custommachinery:item",
+            "id":"input6",
+            "mode":"input"
+        },
+        {
+            "type":"custommachinery:item",
+            "id":"input7",
+            "mode":"input"
+        },
+        {
+            "type":"custommachinery:item",
+            "id":"input8",
+            "mode":"input"
         },
         {
             "type":"custommachinery:item",
@@ -34,52 +66,103 @@
             "mode":"output"
         },
         {
+            "type":"custommachinery:item",
+            "id":"fluid",
+            "mode":"input",
+            "variant": "custommachinery:fluid"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "energyInput",
+            "mode": "input",
+            "variant": "custommachinery:energy"
+        },
+        {
             "type": "custommachinery:energy",
-            "capacity": 100000
+            "capacity": 10
+        },
+        {
+            "type": "custommachinery:fluid",
+            "capacity": 1,
+            "id": "fluid"
         }
     ],
     "gui":[
         {
             "type":"custommachinery:player_inventory",
             "x":50,
-            "y":85
-            
+            "y":145
         },
         {
             "type":"custommachinery:slot",
-            "id":"input",
-            "x":90,
-            "y":40,
-            "ghost":{
-                "item":"createdeco:cast_iron_ingot",
-                "color":[0.0, 0.0, 0.0, 0.6],
-                "always_render":true
-            }
+            "id":"input1",
+            "x":122,
+            "y":47
         },
         {
             "type":"custommachinery:slot",
-            "id":"fuel",
-            "x":90,
-            "y":58,
-            "ghost":{
-                "item":"immersiveengineering:coal_coke",
-                "color":[0.0, 0.0, 0.0, 0.6],
-                "always_render":true
-            }
+            "id":"input2",
+            "x":158,
+            "y":83
+        },
+        {
+            "type":"custommachinery:slot",
+            "id":"input3",
+            "x":122,
+            "y":119
+        },
+        {
+            "type":"custommachinery:slot",
+            "id":"input4",
+            "x":86,
+            "y":83
+        },
+        {
+            "type":"custommachinery:slot",
+            "id":"input5",
+            "x":158,
+            "y":47
+        },
+        {
+            "type":"custommachinery:slot",
+            "id":"input6",
+            "x":158,
+            "y":119
+        },
+        {
+            "type":"custommachinery:slot",
+            "id":"input7",
+            "x":86,
+            "y":119
+        },
+        {
+            "type":"custommachinery:slot",
+            "id":"input8",
+            "x":86,
+            "y":47
         },
         {
             "type":"custommachinery:slot",
             "id":"output",
-            "x":160,
-            "y":49
-            
+            "x":113,
+            "y":74,
+            "width": 36,
+            "height": 36
         },
         {
-            "type":"custommachinery:progress",
-            "x":122,
-            "y":50,
-            "direction":"right"
-            
+            "type": "custommachinery:energy",
+            "x": 55,
+            "y": 47,
+            "height": 90,
+            "width": 20
+        },
+        {
+            "type": "custommachinery:fluid",
+            "x": 187,
+            "y": 47,
+            "id": "fluid",
+            "height": 90,
+            "width": 20
         },
         {
             "type":"custommachinery:texture",
@@ -88,14 +171,19 @@
             "texture":"custommachinery:textures/gui/base_background.png",
             "priority":1,
             "width":170,
-            "height":140
+            "height":200
         },
         {
             "type":"custommachinery:text",
-            "text":"Flue Furnace",
-            "x":99,
-            "y":29,
-            "color":"gray"
+            "text":"Electric Energy Extractor",
+            "color":"gray",
+            "x":70,
+            "y":33
+        },
+        {
+            "type": "custommachinery:status",
+            "x": 51,
+            "y": 30
         }
     ]
 }
