@@ -197,9 +197,15 @@ craftingTable.addShapeless("ropehemp", <item:farmersdelight:rope> * 2, [
     <tag:items:forge:string>,
 ]);
 
-craftingTable.addShapeless("string_from_straw", <item:minecraft:string>, [
+craftingTable.addShapeless("ropestraw", <item:farmersdelight:rope> * 1, [
     <item:farmersdelight:straw>,
-    <item:farmersdelight:straw>
+    <item:farmersdelight:straw>,
+    <item:farmersdelight:straw>,
+    <item:farmersdelight:straw>,
+    <item:farmersdelight:straw>,
+    <item:farmersdelight:straw>,
+    <item:farmersdelight:straw>,
+    <item:farmersdelight:straw>,
 ]);
 
 craftingTable.addShaped("mithrilsword", <item:minecraft:diamond_sword>, [

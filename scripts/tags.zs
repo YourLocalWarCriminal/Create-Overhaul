@@ -55,3 +55,23 @@
     <item:kubejs:transistor>,
     <item:createaddition:capacitor>,
 ]);
+
+<tag:items:forge:metal_grit>.add([
+    <item:immersiveengineering:dust_iron>,
+    <item:immersiveengineering:dust_steel>,
+    <item:immersiveengineering:dust_electrum>,
+    <item:immersiveengineering:dust_constantan>,
+    <item:immersiveengineering:dust_nickel>,
+    <item:immersiveengineering:dust_silver>,
+    <item:immersiveengineering:dust_lead>,
+    <item:immersiveengineering:dust_aluminum>,
+    <item:immersiveengineering:dust_copper>,
+    <item:kubejs:pendorite_dust>,
+    <item:kubejs:netherite_dust>,
+    <item:kubejs:zinc_dust>,
+    <item:kubejs:mithril_dust>,
+    <item:kubejs:cast_iron_dust>,
+    <item:kubejs:bronze_dust>,
+    <item:kubejs:brass_dust>,
+    <item:immersiveengineering:dust_gold>,
+]);

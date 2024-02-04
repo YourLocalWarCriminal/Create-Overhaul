@@ -598,3 +598,71 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:tnt>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:tnt>))
                                                       );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("basic_bullet")
+                                                      .transitionTo(<item:immersiveengineering:empty_casing>)
+                                                      .require(<item:immersiveengineering:empty_casing>)
+                                                      .loops(1)
+                                                      .addOutput(<item:cgm:basic_bullet>,1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:gunpowder>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:nugget_lead>))
+                                                      );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("advanced_bullet")
+                                                      .transitionTo(<item:immersiveengineering:empty_casing>)
+                                                      .require(<item:immersiveengineering:empty_casing>)
+                                                      .loops(1)
+                                                      .addOutput(<item:cgm:advanced_bullet>,1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:gunpowder>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:gunpowder>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:alloyed:steel_nugget>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:alloyed:steel_nugget>))
+                                                      );
+                                                    
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("shell")
+                                                      .transitionTo(<item:immersiveengineering:empty_shell>)
+                                                      .require(<item:immersiveengineering:empty_shell>)
+                                                      .loops(1)
+                                                      .addOutput(<item:cgm:shell>,1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:gunpowder>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:gunpowder>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:metal_grit>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:metal_grit>))
+                                                      );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("missile")
+                                                      .transitionTo(<item:immersiveengineering:plate_aluminum>)
+                                                      .require(<item:immersiveengineering:plate_aluminum>)
+                                                      .loops(1)
+                                                      .addOutput(<item:cgm:missile>,1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:plate_aluminum>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(50))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:tnt>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:gunpowder>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create_sa:heat_engine>))
+                                                      );                                                      
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("grenade")
+                                                      .transitionTo(<item:minecraft:glass_bottle>)
+                                                      .require(<item:minecraft:glass_bottle>)
+                                                      .loops(1)
+                                                      .addOutput(<item:cgm:grenade>,1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:metal_grit>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:metal_grit>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:metal_grit>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:gunpowder>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:gunpowder>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:string>))
+                                                      );                                                      
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("stun_grenade")
+                                                      .transitionTo(<item:minecraft:glass_bottle>)
+                                                      .require(<item:minecraft:glass_bottle>)
+                                                      .loops(1)
+                                                      .addOutput(<item:cgm:grenade>,1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:glowstone_dust>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:glowstone_dust>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:gunpowder>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:gunpowder>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:string>))
+                                                      );                                                       

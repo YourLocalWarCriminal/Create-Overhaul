@@ -95,6 +95,18 @@ var delete = [
 <item:minecraft:blast_furnace>,
 <item:immersiveengineering:lantern>,
 <item:minecraft:redstone_lamp>,
+<item:immersiveengineering:wolfpack>,
+<item:immersiveengineering:firework>,
+<item:immersiveengineering:flare>,
+<item:immersiveengineering:potion>,
+<item:immersiveengineering:dragons_breath>,
+<item:immersiveengineering:silver>,
+<item:immersiveengineering:he>,
+<item:immersiveengineering:buckshot>,
+<item:immersiveengineering:armor_piercing>,
+<item:immersiveengineering:casull>,
+<item:immersiveengineering:wolfpack>,
+<item:immersiveengineering:homing>,
 ];
 
 for item in delete {
