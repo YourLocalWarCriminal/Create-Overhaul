@@ -55,6 +55,7 @@ onEvent('item.registry', event => {
 	event.create('aspect_of_time').displayName('Aspect Of Time').texture('kubejs:item/aspects/aspect_of_time').maxStackSize(4).fireResistant(true).rarity('epic').glow(true)
 	event.create('aspect_of_labour').displayName('Aspect Of Labour').texture('kubejs:item/aspects/aspect_of_labour').maxStackSize(4).fireResistant(true).rarity('epic').glow(true)
 	event.create('aspect_of_metallurgy').displayName('Aspect Of Metallurgy').texture('kubejs:item/aspects/aspect_of_metallurgy').maxStackSize(4).fireResistant(true).rarity('epic').glow(true)
+	event.create('aspect_of_nature').displayName('Aspect Of Nature').texture('kubejs:item/aspects/aspect_of_nature').maxStackSize(4).fireResistant(true).rarity('epic').glow(false)
 
 
 	//MISC

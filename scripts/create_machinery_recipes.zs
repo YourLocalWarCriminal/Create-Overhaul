@@ -393,8 +393,8 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100)));
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("vacuum_tube")
-                                                      .transitionTo(<item:minecraft:glass_pane>)
-                                                      .require(<item:minecraft:glass_pane>)
+                                                      .transitionTo(<item:create:electron_tube>)
+                                                      .require(<item:create:electron_tube>)
                                                       .loops(1)
                                                       .addOutput(<item:immersiveengineering:electron_tube> * 3, 1)
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:wirecoil_copper>))
@@ -408,7 +408,6 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .require(<item:kubejs:clockwork_mechanism>)
                                                       .loops(1)
                                                       .addOutput(<item:kubejs:arithmetic_mechanism>, 1)
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:electron_tube>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:electron_tube>))
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(100))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:copper_wire>))
@@ -490,7 +489,6 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:immersiveengineering:redstone_acid> * 750))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:iron_rod>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:createaddition:copper_rod>))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:alloyed:bronze_sheet>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:alloyed:bronze_sheet>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:alloyed:bronze_sheet>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:alloyed:bronze_sheet>)));
@@ -596,7 +594,6 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:kubejs:solder> * 500))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:sturdy_sheet>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:tnt>))
-                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:tnt>))
                                                       );
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("basic_bullet")
@@ -659,10 +656,19 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .transitionTo(<item:minecraft:glass_bottle>)
                                                       .require(<item:minecraft:glass_bottle>)
                                                       .loops(1)
-                                                      .addOutput(<item:cgm:grenade>,1)
+                                                      .addOutput(<item:cgm:stun_grenade>,1)
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:glowstone_dust>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:glowstone_dust>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:gunpowder>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:gunpowder>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:string>))
-                                                      );                                                       
+                                                      );                 
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("light_bulb")
+                                                      .transitionTo(<item:immersiveengineering:electron_tube>)
+                                                      .require(<item:immersiveengineering:electron_tube>)
+                                                      .loops(3)
+                                                      .addOutput(<item:immersiveengineering:light_bulb>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:wirecoil_steel>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
+                                                      );                                                                                                   
