@@ -2,7 +2,7 @@
   "type": "cgm:workbench",
   "materials": [
     {
-      "item": "immersiveengineering:wooden_grip",
+      "item": "create:item_vault",
       "count": 1
     },
     {
@@ -10,16 +10,20 @@
       "count":4
     },
     {
-      "item":"cgm:machine_pistol",
-      "count":4
+      "item":"create:sturdy_sheet",
+      "count":2
     },
     {
-      "item":"immersiveengineering:gunpart_barrel",
-      "count":4
+      "item":"minecraft:chain",
+      "count":2
     },
     {
       "item":"alloyed:steel_sheet",
-      "count":3
+      "count":5
+    },
+    {
+      "item":"cgm:machine_pistol",
+      "count":4
     }
   ],
   "result": {

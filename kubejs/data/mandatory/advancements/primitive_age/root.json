@@ -1,0 +1,47 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "minecraft:copper_ingot"
+        },
+        "title" : 
+        {
+            "text" : "Primitive Age",
+            "color": "#BF4504"
+        },
+        "description": 
+        {
+           "text": "Make a pit kiln and smelt a copper in it",
+           "color": "gree"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": 
+    {
+        "get_copper": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:copper_ingot"
+                        ]
+                    }
+                ]
+            }
+        }
+        
+    },
+    "requirements": [
+        ["get_copper"]
+    ],
+    "rewards":
+    {
+        "experience": 10000
+    }
+}

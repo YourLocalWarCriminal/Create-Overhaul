@@ -4,6 +4,7 @@
     "#forge:glass_panes",
     "#forge:glass",
     "#minecraft:candles",
+    "#minecraft:planks",
     "minecraft:lily_pad",
     "minecraft:cocoa",
     "minecraft:end_rod",
@@ -23,6 +24,10 @@
     "minecraft:amethyst_cluster",
     "minecraft:lantern",
     "minecraft:soul_lantern",
-    "minecraft:pointed_dripstone"
+    "minecraft:pointed_dripstone",
+    "immersiveengineering:treated_post",
+    "create:cogwheel",
+    "create:large_cogwheel",
+    "create:belt_connector"
   ]
 }

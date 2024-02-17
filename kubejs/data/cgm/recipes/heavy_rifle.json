@@ -10,19 +10,19 @@
       "count":4
     },
     {
-      "item":"immersiveengineering:gunpart_drum",
+      "item":"cgm:rifle",
       "count":1
     },
     {
       "item":"immersiveengineering:toolupgrade_revolver_magazine",
-      "count":1
+      "count":2
     },
     {
       "item":"create_sa:heat_engine",
       "count":2
     },
     {
-      "item":"immersiveengineering:wooden_grip",
+      "item":"cgm:tactical_stock",
       "count":1
     }
   ],
