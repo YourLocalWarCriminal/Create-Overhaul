@@ -42,6 +42,11 @@ val nope = <item:minecraft:air>;
 // Mixer.addRecipe(recipePath as string, fluidInput as MCTag, inputItems as IIngredientWithAmount[], energy as int, output as Fluid, amount as int)
 <tag:fluids:forge:water>.add(<fluid:minecraft:water>);
 <tag:fluids:forge:nope>.add(<fluid:minecraft:empty>);
+<tag:fluids:forge:bio_diesel>.add(<fluid:immersiveengineering:biodiesel>);
+<tag:fluids:forge:phenol>.add(<fluid:kubejs:phenol>);
+<tag:fluids:forge:phenolic_resin>.add(<fluid:immersiveengineering:phenolic_resin>);
+<tag:fluids:forge:acetaldehyde>.add(<fluid:immersiveengineering:acetaldehyde>);
+
 
 <recipetype:immersiveengineering:mixer>.addRecipe("chocholate_by_mixer", <tag:fluids:forge:milk>, [<item:minecraft:cocoa_beans>, <item:minecraft:sugar>], 500, <fluid:create:chocolate>, 250);
 <recipetype:immersiveengineering:mixer>.addRecipe("chocholate_melting_by_mixer", <tag:fluids:forge:nope>, [<item:create:bar_of_chocolate>], 500, <fluid:create:chocolate>, 250);
@@ -75,6 +80,8 @@ val nope = <item:minecraft:air>;
 //<recipetype:immersiveengineering:refinery>.addRecipe(recipePath as string, fluidInput1 as Many<MCTag>, fluidInput2 as Many<MCTag>, catalyst as IIngredient, energy as int, output as IFluidStack);
 
 <recipetype:immersiveengineering:refinery>.addRecipe("bio_ethanol", <tag:fluids:forge:plantoil> * 15, <tag:fluids:forge:methanol> * 10, <tag:items:forge:dusts/coal_coke>, 1000, <fluid:createaddition:bioethanol> * 20);
+
+<recipetype:immersiveengineering:refinery>.addRecipe("phenolyc_resin", <tag:fluids:forge:phenol> * 15, <tag:fluids:forge:acetaldehyde> * 10, <tag:items:forge:gems/quartz>, 1000, <fluid:immersiveengineering:phenolic_resin> * 20);
 
 // ArcFurnace.addRecipe(recipePath as string, mainIngredient as IIngredientWithAmount, additives as IIngredientWithAmount[], time as int, energy as int, outputs as IItemStack[], slag as IItemStack)
 

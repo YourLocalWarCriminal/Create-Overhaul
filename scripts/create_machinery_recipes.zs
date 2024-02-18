@@ -81,6 +81,7 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 
 <recipetype:create:compacting>.addRecipe('slurry_to_mix', <constant:create:heat_condition:none>, [(<item:kubejs:acidic_glass_mixture> * 2) % 100], [nope], [<fluid:kubejs:acidic_glass_mixture_slurry> * 250], 300);
 <recipetype:create:compacting>.addRecipe('sturdy_block', <constant:create:heat_condition:superheated>, [<item:create_things_and_misc:sturdy_sheet_block> % 100], [<item:create:sturdy_sheet> * 10], [], 1200);
+<recipetype:create:compacting>.addRecipe('phenol', <constant:create:heat_condition:superheated>, [<fluid:kubejs:phenol> * 10], [], [<fluid:immersiveengineering:creosote> * 20], 60);
 
 
 // FillingManager.addRecipe(name, output, inputContainer, inputFluid, duration);
@@ -672,3 +673,14 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:wirecoil_steel>))
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200))
                                                       );                                                                                                   
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("radiator_block")
+                                                      .transitionTo(<item:immersiveengineering:sheetmetal_steel>)
+                                                      .require(<item:immersiveengineering:sheetmetal_steel>)
+                                                      .loops(6)
+                                                      .addOutput(<item:immersiveengineering:radiator>, 1)
+                                                      .addStep<mods.createtweaker.CuttingRecipe>((rb) => rb.duration(60))
+                                                      .addStep<mods.createtweaker.FillingRecipe>((rb) => rb.require(<fluid:kubejs:solder> * 75))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:plates/lead>))
+                                                      .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(70))
+                                                      );
