@@ -1,0 +1,77 @@
+{
+    "type":"custommachinery:custom_machine",
+    "machine":"earlymachinery:eee",
+    "time":6000,
+    "requirements":[
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"minecraft:amethyst_block",
+            "amount":6
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"create_things_and_misc:sturdy_sheet_block",
+            "amount":3
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"minecraft:copper_block",
+            "amount":50
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"immersiveengineering:storage_nickel",
+            "amount":6
+        },
+        {
+          "type":"custommachinery:fluid",
+          "mode":"input",
+          "fluid":"kubejs:divine_alloy",
+          "amount":4000
+        },
+        {
+          "type":"custommachinery:energy_per_tick",
+          "mode":"input",
+          "amount":500,
+          "chance":1.0
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"output",
+            "item":"kubejs:aspect_of_metallurgy",
+            "amount":1
+        },
+        {
+          "type":"custommachinery:structure",
+            "keys": {
+              "a": "immersiveengineering:sheetmetal_aluminum",
+              "b": "immersiveengineering:light_engineering",
+              "c": "immersiveengineering:rs_engineering",
+              "d": "immersiveengineering:heavy_engineering",
+              "e": "byg:therium_glass",
+              "f": "immersiveengineering:generator",
+              "g": "minecraft:netherite_block"
+            },
+            "pattern": [
+              [
+                " aaa ",
+                "abbba",
+                "abcba",
+                "abbba",
+                " ddd "
+              ],
+              [
+                " aea ",
+                "afdfa",
+                "edgde",
+                "afdfa",
+                " ama "
+              ]
+            ]
+        }
+    ]
+}

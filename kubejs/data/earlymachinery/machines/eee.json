@@ -6,10 +6,6 @@
     "tooltips":[{
         "text":"This is the core of the final experiment",
         "color":"gray"
-    },
-    {
-        "text": "It can not contain neither a large amount of fluid nor electricity!",
-        "color": "red"
     }
     ],
     "appearance":{
@@ -79,11 +75,11 @@
         },
         {
             "type": "custommachinery:energy",
-            "capacity": 10
+            "capacity": 1500
         },
         {
             "type": "custommachinery:fluid",
-            "capacity": 1,
+            "capacity": 8000,
             "id": "fluid"
         }
     ],

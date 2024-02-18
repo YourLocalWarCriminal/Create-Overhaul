@@ -245,5 +245,12 @@ onEvent('fluid.registry', event =>
 	.flowingTexture('kubejs:block/water_flow')
 	.color(0xf5c022)
 	.displayName('Phenol')
+
+	event.create('divine_alloy')
+	.stillTexture('kubejs:block/molten_still')
+	.flowingTexture('kubejs:block/molten_flow')
+	.color(0xc220f7)
+	.displayName('Divine Alloy')
+	.noBlock()
 })
 

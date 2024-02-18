@@ -126,7 +126,7 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 <recipetype:create:mixing>.addRecipe("netherite_ingot", <constant:create:heat_condition:superheated>, [<item:minecraft:netherite_ingot>], [<item:minecraft:netherite_scrap>*4, <tag:items:forge:ingots/gold>*4], [], 1200);
 <recipetype:create:mixing>.addRecipe("solder", <constant:create:heat_condition:superheated>, [<fluid:kubejs:solder> * 100], [<item:create:zinc_ingot>, <item:minecraft:iron_ingot>], [], 300);
 <recipetype:create:mixing>.addRecipe("acidic_glass_mix_to_silicon", <constant:create:heat_condition:heated>, [<item:kubejs:silicon_dust>], [<item:kubejs:lime_dust> * 1, <item:kubejs:acidic_glass_mixture>], [], 600);
-
+<recipetype:create:mixing>.addRecipe("divine_alloy", <constant:create:heat_condition:superheated>, [<fluid:kubejs:divine_alloy> * 1000], [<item:minecraft:gold_ingot> * 4, <item:create:brass_ingot> * 4,<item:byg:pendorite_ingot> * 4,<item:minecraft:netherite_ingot> * 4,<item:alloyed:steel_ingot> * 4,<item:immersiveengineering:ingot_uranium> * 4,<item:kubejs:mithril_ingot> * 4,<item:immersiveengineering:ingot_silver> * 4]);
 //saw recipes(name,output,input,time)
 <recipetype:create:cutting>.addRecipe("treatedsticks",<item:immersiveengineering:stick_treated> * 2 % 100 , <tag:items:forge:treated_wood>, 220);
 /*for i, item in ingots {
