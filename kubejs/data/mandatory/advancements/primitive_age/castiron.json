@@ -3,16 +3,16 @@
     {
         "icon":
         {
-            "item": "minecraft:coarse_dirt"
+            "item": "createdeco:cast_iron_ingot"
         },
         "title" : 
         {
-            "text" : "Primitive Age",
+            "text" : "Hey this isn't Iron!",
             "color": "white"
         },
         "description": 
         {
-           "text": "This is where the fun begins....",
+           "text": "It IS Iron, but dumb, you must refine it further to use as tool material",
            "color": "green"
         },
         "frame": "task",
@@ -24,12 +24,21 @@
     "criteria": {
         "0": {
           "trigger": "minecraft:inventory_changed",
-          "conditions": {}
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                       "createdeco:cast_iron_ingot" 
+                    ]
+                }
+            ]
+          }
         }
       },
       "requirements": [
         [
           "0"
         ]
-      ]
-}
+      ],
+      "parent":"mandatory:primitive_age/pit_kiln"
+    }

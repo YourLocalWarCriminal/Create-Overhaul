@@ -3,20 +3,21 @@
     {
         "icon":
         {
-            "item": "minecraft:coarse_dirt"
+            "item": "custommachinery:custom_machine_item",
+            "nbt":"{machine:\"earlymachinery:flue_furnace\"}"
         },
         "title" : 
         {
-            "text" : "Primitive Age",
+            "text" : "Ironworks",
             "color": "white"
         },
         "description": 
         {
-           "text": "This is where the fun begins....",
+           "text": "Smelt your first Wrought Iron Ingot",
            "color": "green"
         },
         "frame": "task",
-        "show_toast": false,
+        "show_toast": true,
         "announce_to_chat": false,
         "hidden": false,
         "background": "minecraft:textures/block/gravel.png"
@@ -24,12 +25,21 @@
     "criteria": {
         "0": {
           "trigger": "minecraft:inventory_changed",
-          "conditions": {}
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "minecraft:iron_ingot"
+                    ]
+                }
+            ]
+          }
         }
       },
       "requirements": [
         [
           "0"
         ]
-      ]
+      ],
+      "parent":"mandatory:primitive_age/castiron"
 }

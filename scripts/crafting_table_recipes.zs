@@ -483,7 +483,11 @@ craftingTable.addShaped("component_steel", <item:immersiveengineering:component_
     [<tag:items:forge:plates/steel>, <tag:items:forge:plates/steel>, <tag:items:forge:plates/steel>]
 ]);
 
-craftingTable.addShapeless("clay_ingot_mold", <item:kubejs:ingot_mold>, [<item:rechiseled:chisel>, <tag:items:forge:clay>, <tag:items:forge:clay>]);
+craftingTable.addShaped("clay_ingot_mold", <item:kubejs:ingot_mold>, [
+    [<tag:items:forge:clay>, <tag:items:forge:clay>, <tag:items:forge:clay>],
+    [<tag:items:forge:clay>, nope, <tag:items:forge:clay>],
+    [<tag:items:forge:clay>, <tag:items:forge:clay>, <tag:items:forge:clay>]
+]);
 
 craftingTable.remove(<item:rechiseled:chisel>);
 
@@ -523,9 +527,9 @@ craftingTable.addShaped("flue_furnace", <item:custommachinery:custom_machine_ite
 ]);
 
 craftingTable.addShaped("oven", <item:minecraft:furnace>, [
-    [<item:minecraft:cobblestone>, <item:createdeco:cast_iron_block>, <item:minecraft:cobblestone>],
+    [<item:minecraft:cobblestone>, <tag:items:forge:storage_blocks/copper>, <item:minecraft:cobblestone>],
     [<item:minecraft:cobblestone>, <item:custommachinery:custom_machine_item>.withTag({machine: "earlymachinery:pitkiln" as string}), <item:minecraft:cobblestone>],
-    [<item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_block>, <item:createdeco:cast_iron_ingot>]
+    [<item:minecraft:copper_ingot>, <tag:items:forge:storage_blocks/copper>, <item:minecraft:copper_ingot>]
 ]);
 
 craftingTable.addShaped("mechanical_crafter_recipe", <item:create:mechanical_crafter>*3, [

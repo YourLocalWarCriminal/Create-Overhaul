@@ -1,0 +1,59 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "custommachinery:custom_machine_item",
+            "nbt":"{machine:\"earlymachinery:pitkiln\"}"
+        },
+        "title" : 
+        {
+            "text" : "Primitive Refinery",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Make a Pitkiln for Early Metal Smelting, don't forget the Clay Mold for it though!",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "kubejs:ingot_mold"
+                    ]
+                }
+            ]
+          }
+        },
+        "1":{
+            "trigger":"minecraft:inventory_changed",
+            "conditions":{
+                "items":[
+                    {
+                        "items":[
+                            "custommachinery:custom_machine_item"
+                        ]
+                    }
+                    
+                ],
+                "nbt":"{machine:\"earlymachinery:pitkiln\"}"
+            }
+        }
+      },
+      "requirements": [
+        ["0"],
+        ["1"]
+        
+      ],
+      "parent":"mandatory:primitive_age/first_steps"
+}

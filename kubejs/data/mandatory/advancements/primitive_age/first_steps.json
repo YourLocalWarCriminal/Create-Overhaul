@@ -1,0 +1,44 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "minecraft:flint"
+        },
+        "title" : 
+        {
+            "text" : "Digging in the uhhh... Gravel?",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Get some flint the good 'ol way, and don't tell me that this feels like RLCraft",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "flint_acquire": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "minecraft:flint"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "flint_acquire"
+        ]
+      ],
+      "parent":"mandatory:primitive_age/root"
+}

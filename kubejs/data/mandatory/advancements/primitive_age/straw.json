@@ -1,0 +1,44 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "farmersdelight:straw"
+        },
+        "title" : 
+        {
+            "text" : "Strawing at Grasps",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Get straw by cutting regular grass with your flint knife, which you totally made by this point, am I right?",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "straw_acquire": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "farmersdelight:straw"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "straw_acquire"
+        ]
+      ],
+      "parent":"mandatory:primitive_age/first_steps"
+}

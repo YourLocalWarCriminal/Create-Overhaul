@@ -3,20 +3,20 @@
     {
         "icon":
         {
-            "item": "minecraft:coarse_dirt"
+            "item": "farmersdelight:safety_net"
         },
         "title" : 
         {
-            "text" : "Primitive Age",
+            "text" : "Gold Rush",
             "color": "white"
         },
         "description": 
         {
-           "text": "This is where the fun begins....",
+           "text": "Make a net, just a plain simple Safety Net, it will be useful, trust me",
            "color": "green"
         },
         "frame": "task",
-        "show_toast": false,
+        "show_toast": true,
         "announce_to_chat": false,
         "hidden": false,
         "background": "minecraft:textures/block/gravel.png"
@@ -24,12 +24,21 @@
     "criteria": {
         "0": {
           "trigger": "minecraft:inventory_changed",
-          "conditions": {}
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "farmersdelight:safety_net"
+                    ]
+                }
+            ]
+          }
         }
       },
       "requirements": [
         [
           "0"
         ]
-      ]
+      ],
+      "parent":"mandatory:primitive_age/straw"
 }
