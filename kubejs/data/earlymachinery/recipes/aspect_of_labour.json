@@ -28,6 +28,19 @@
             "amount":16
         },
         {
+          "type": "custommachinery:fluid_per_tick",
+          "mode": "input",
+          "fluid": "kubejs:solder",
+          "amount": 5,
+          "chance": 1.0
+        },
+        {
+          "type":"custommachinery:energy_per_tick",
+          "mode":"input",
+          "amount":1000,
+          "chance":1.0
+        },
+        {
             "type":"custommachinery:item",
             "mode":"output",
             "item":"kubejs:aspect_of_labour",

@@ -6,7 +6,6 @@
 		"1": "kubejs:block/eee/eee_on_side",
 		"2": "kubejs:block/eee/eee_on_top",
 		"3": "kubejs:block/eee/eee_on_bottom",
-		"5": "kubejs:block/eee/eee_on_effect",
 		"particle": "kubejs:block/eee/eee_on_connector"
 	},
 	"elements": [
@@ -20,19 +19,6 @@
 				"west": {"uv": [0, 0, 16, 16], "texture": "#1"},
 				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
 				"down": {"uv": [0, 0, 16, 16], "texture": "#3"}
-			}
-		},
-		{
-			"from": [-15, -15, -0.01],
-			"to": [31, 16, -0.01],
-			"rotation": {"angle": 0, "axis": "z", "origin": [8, 0, 8]},
-			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#5"},
-				"east": {"uv": [0, 0, 6, 0], "rotation": 90, "texture": "#missing"},
-				"south": {"uv": [6, 0, 0, 0], "rotation": 180, "texture": "#missing"},
-				"west": {"uv": [0, 0, 6, 0], "rotation": 270, "texture": "#missing"},
-				"up": {"uv": [0, 0, 6, 0], "texture": "#missing"},
-				"down": {"uv": [0, 0, 6, 0], "rotation": 180, "texture": "#missing"}
 			}
 		}
 	]

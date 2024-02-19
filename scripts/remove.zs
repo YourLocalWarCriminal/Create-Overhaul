@@ -118,6 +118,7 @@ for item in delete {
 
 //RECIPE REMOVAL
 var recipesd = [
+<item:immersiveengineering:radiator>,
 <item:create_things_and_misc:sturdy_sheet_block>,
 <item:immersiveengineering:coil_lv>,
 <item:immersiveengineering:coil_mv>,

@@ -28,10 +28,11 @@
             "amount":6
         },
         {
-          "type":"custommachinery:fluid",
-          "mode":"input",
-          "fluid":"kubejs:divine_alloy",
-          "amount":4000
+          "type": "custommachinery:fluid_per_tick",
+          "mode": "input",
+          "fluid": "kubejs:divine_alloy",
+          "amount": 10,
+          "chance": 1.0
         },
         {
           "type":"custommachinery:energy_per_tick",
