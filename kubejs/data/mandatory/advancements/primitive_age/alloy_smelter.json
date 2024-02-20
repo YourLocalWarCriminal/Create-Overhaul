@@ -3,16 +3,16 @@
     {
         "icon":
         {
-            "item": "createdeco:cast_iron_ingot"
+            "item": "immersiveengineering:alloy_smelter"
         },
         "title" : 
         {
-            "text" : "Hey this isn't Iron!",
+            "text" : "Alloy Smelter",
             "color": "white"
         },
         "description": 
         {
-           "text": "It IS Iron, but dumb, you must refine it further to use as tool material",
+           "text": "A multiblock to make alloys",
            "color": "green"
         },
         "frame": "task",
@@ -28,8 +28,11 @@
             "items":[
                 {
                     "items":[
-                       "createdeco:cast_iron_ingot" 
-                    ]
+                        "immersiveengineering:alloybrick"
+                    ],
+                    "count": {
+                      "min" : 8
+                    }
                 }
             ]
           }
@@ -40,5 +43,5 @@
           "0"
         ]
       ],
-      "parent":"mandatory:primitive_age/pit_kiln"
-    }
+      "parent":"mandatory:primitive_age/copper"
+}

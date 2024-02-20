@@ -3,16 +3,16 @@
     {
         "icon":
         {
-            "item": "createdeco:cast_iron_ingot"
+            "item": "create:fluid_pipe"
         },
         "title" : 
         {
-            "text" : "Hey this isn't Iron!",
+            "text" : "Transport fluids",
             "color": "white"
         },
         "description": 
         {
-           "text": "It IS Iron, but dumb, you must refine it further to use as tool material",
+           "text": "Liquids will flow everywhere!",
            "color": "green"
         },
         "frame": "task",
@@ -28,7 +28,7 @@
             "items":[
                 {
                     "items":[
-                       "createdeco:cast_iron_ingot" 
+                       "create:fluid_pipe" 
                     ]
                 }
             ]
@@ -40,5 +40,5 @@
           "0"
         ]
       ],
-      "parent":"mandatory:primitive_age/pit_kiln"
+      "parent":"mandatory:primitive_age/copper"
     }

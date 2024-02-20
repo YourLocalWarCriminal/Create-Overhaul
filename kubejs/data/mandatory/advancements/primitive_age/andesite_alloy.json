@@ -3,16 +3,16 @@
     {
         "icon":
         {
-            "item": "createdeco:cast_iron_ingot"
+            "item": "create:andesite_alloy"
         },
         "title" : 
         {
-            "text" : "Hey this isn't Iron!",
+            "text" : "The seed of the Tech Tree",
             "color": "white"
         },
         "description": 
         {
-           "text": "It IS Iron, but dumb, you must refine it further to use as tool material",
+           "text": "Obtain your first Andesite Alloy by combineing a Zinc Nugget with an Andesite",
            "color": "green"
         },
         "frame": "task",
@@ -28,7 +28,7 @@
             "items":[
                 {
                     "items":[
-                       "createdeco:cast_iron_ingot" 
+                        "create:andesite_alloy"
                     ]
                 }
             ]
@@ -40,5 +40,5 @@
           "0"
         ]
       ],
-      "parent":"mandatory:primitive_age/pit_kiln"
-    }
+      "parent":"mandatory:primitive_age/alloy_smelter"
+}

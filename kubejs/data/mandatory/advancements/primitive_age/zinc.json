@@ -3,16 +3,16 @@
     {
         "icon":
         {
-            "item": "createdeco:cast_iron_ingot"
+            "item": "create:zinc_ingot"
         },
         "title" : 
         {
-            "text" : "Hey this isn't Iron!",
+            "text" : "Ingredient of...",
             "color": "white"
         },
         "description": 
         {
-           "text": "It IS Iron, but dumb, you must refine it further to use as tool material",
+           "text": "Smelt your first Zinc Ingot",
            "color": "green"
         },
         "frame": "task",
@@ -28,7 +28,7 @@
             "items":[
                 {
                     "items":[
-                       "createdeco:cast_iron_ingot" 
+                        "create:zinc_ingot"
                     ]
                 }
             ]
@@ -41,4 +41,4 @@
         ]
       ],
       "parent":"mandatory:primitive_age/pit_kiln"
-    }
+}

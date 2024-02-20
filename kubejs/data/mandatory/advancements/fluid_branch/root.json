@@ -3,23 +3,23 @@
     {
         "icon":
         {
-            "item": "createdeco:cast_iron_ingot"
+            "item": "create:fluid_pipe"
         },
         "title" : 
         {
-            "text" : "Hey this isn't Iron!",
+            "text" : "Fluid Handling",
             "color": "white"
         },
         "description": 
         {
-           "text": "It IS Iron, but dumb, you must refine it further to use as tool material",
+           "text": "This is where the liquids come from",
            "color": "green"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": false,
-        "background": "minecraft:textures/block/gravel.png"
+        "background": "kubejs:textures/gui/advancements/fluid.png"
     },
     "criteria": {
         "0": {
@@ -28,7 +28,7 @@
             "items":[
                 {
                     "items":[
-                       "createdeco:cast_iron_ingot" 
+                        "create:fluid_pipe"
                     ]
                 }
             ]
@@ -39,6 +39,5 @@
         [
           "0"
         ]
-      ],
-      "parent":"mandatory:primitive_age/pit_kiln"
-    }
+      ]
+}
