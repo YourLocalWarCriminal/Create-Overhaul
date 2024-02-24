@@ -1,0 +1,44 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "kubejs:mechanical_engine"
+        },
+        "title" : 
+        {
+            "text" : "Mechanical Core",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Obtain the soul of the machines, a Kinetic Engine",
+           "color": "green"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "kubejs:mechanical_engine"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:primitive_age/gears"
+}

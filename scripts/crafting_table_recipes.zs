@@ -332,9 +332,9 @@ craftingTable.addShaped("press", <item:create:mechanical_press>, [
 ]);
 
 craftingTable.addShapedMirrored("mechanical_elbow", MirrorAxis.HORIZONTAL, <item:kubejs:mechanical_elbow>,[
-    [<item:createaddition:iron_rod>, <item:createaddition:iron_rod>, <item:kubejs:large_gear>],
-    [nope, <item:kubejs:bolt>, <item:createaddition:iron_rod>],
-    [nope, nope, <item:createaddition:iron_rod>]
+    [<tag:items:forge:rods/iron>, <tag:items:forge:rods/iron>, <item:kubejs:large_gear>],
+    [nope, <item:kubejs:bolt>, <tag:items:forge:rods/iron>],
+    [nope, nope, <tag:items:forge:rods/iron>]
 ]);
 
 craftingTable.addShaped("copper_casing", <item:create:copper_casing>, [

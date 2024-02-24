@@ -7,12 +7,12 @@
         },
         "title" : 
         {
-            "text" : "Alloy Smelter",
+            "text" : "Mixin' metals",
             "color": "white"
         },
         "description": 
         {
-           "text": "A multiblock to make alloys",
+           "text": "Build an Alloy Kiln a multiblock which is crucial for creation of well... alloys",
            "color": "green"
         },
         "frame": "task",
@@ -21,27 +21,6 @@
         "hidden": false,
         "background": "minecraft:textures/block/gravel.png"
     },
-    "criteria": {
-        "0": {
-          "trigger": "minecraft:inventory_changed",
-          "conditions": {
-            "items":[
-                {
-                    "items":[
-                        "immersiveengineering:alloybrick"
-                    ],
-                    "count": {
-                      "min" : 8
-                    }
-                }
-            ]
-          }
-        }
-      },
-      "requirements": [
-        [
-          "0"
-        ]
-      ],
+    "criteria":{"form_multiblock":{"trigger":"immersiveengineering:multiblock_formed","conditions":{"multiblock":"immersiveengineering:multiblocks/alloy_smelter","item":{"items":["immersiveengineering:hammer"]}}}},"requirements":[["form_multiblock"]],
       "parent":"mandatory:primitive_age/copper"
 }

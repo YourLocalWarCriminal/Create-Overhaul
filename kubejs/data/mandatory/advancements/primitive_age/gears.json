@@ -1,0 +1,68 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "kubejs:medium_gear"
+        },
+        "title" : 
+        {
+            "text" : "Metallically Mechanical",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Obtain your first set of gears",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "kubejs:large_gear"
+                    ]
+                }
+            ]
+          }
+        },
+        "1": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items":[
+                  {
+                      "items":[
+                          "kubejs:medium_gear"
+                      ]
+                  }
+              ]
+            }
+          },
+          "2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items":[
+                  {
+                      "items":[
+                          "kubejs:small_gear"
+                      ]
+                  }
+              ]
+            }
+          }
+      },
+      "requirements": [
+        ["0"],
+        ["1"],
+        ["2"]
+      ],
+      "parent":"mandatory:primitive_age/flue_furnace"
+}

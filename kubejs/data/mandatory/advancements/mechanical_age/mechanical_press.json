@@ -1,0 +1,43 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "create:mechanical_press"
+        },
+        "title" : 
+        {
+            "text" : "Bonk! Mechanical Punch",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Craft your first real machine, the mechanical press. Contains 3033% of the daily dose of SU!",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "create:mechanical_press"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:mechanical_age/leverage_mechanism"
+}

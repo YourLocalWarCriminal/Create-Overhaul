@@ -24,7 +24,7 @@ public function MetalRecipeMaker(name as string, ingot as IItemStack, plate as I
     if (rod != nope) {
         recipes.remove(rod);
         <recipetype:create:cutting>.addRecipe(name + "_ingots_to_" + name + "_rods", [rod * 2], ingot, 800);
-        <recipetype:immersiveengineering:metal_press>.addRecipe(name + "_ingot_to_" + name + "rods_by_metal_press", ingot, <item:immersiveengineering:mold_rod>, 2400, rod);
+        <recipetype:immersiveengineering:metal_press>.addRecipe(name + "_ingot_to_" + name + "rods_by_metal_press", ingot, <item:immersiveengineering:mold_rod>, 2400, rod*3);
 
     }
     if (crushed != nope) {

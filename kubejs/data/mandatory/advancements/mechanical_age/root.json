@@ -1,0 +1,43 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "kubejs:mechanical_engine"
+        },
+        "title" : 
+        {
+            "text" : "Mechanical Age",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "The meat and potatoes of the modpack",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "immersiveengineering:textures/block/metal/sheetmetal_orange.png"
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "kubejs:mechanical_engine"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ]
+}

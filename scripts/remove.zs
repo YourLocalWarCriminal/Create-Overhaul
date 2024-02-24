@@ -41,7 +41,6 @@ var delete = [
 <item:immersiveengineering:armor_steel_chest>,
 <item:immersiveengineering:armor_steel_legs>,
 //<item:immersiveengineering:armor_steel_feet>,
-<item:immersiveengineering:stick_iron>,
 <item:vs_eureka:acacia_ship_helm>,
 <item:vs_eureka:dark_oak_ship_helm>,
 <item:vs_eureka:crimson_ship_helm>,
@@ -107,6 +106,7 @@ var delete = [
 <item:immersiveengineering:casull>,
 <item:immersiveengineering:wolfpack>,
 <item:immersiveengineering:homing>,
+<item:createaddition:iron_rod>,
 ];
 
 for item in delete {
@@ -297,6 +297,7 @@ var recipesd = [
 <item:immersiveengineering:circuit_board>,
 <item:create_sa:heat_engine>,
 <item:immersiveengineering:light_bulb>,
+<item:immersiveengineering:wire_electrum>
 ];
 
 for item in recipesd {

@@ -1,0 +1,43 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "create:water_wheel"
+        },
+        "title" : 
+        {
+            "text" : "Rivershore Watermill",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Craft a Water Wheel, a generator which outputs rotational power when in flowing water",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "create:water_wheel"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:mechanical_age/root"
+}

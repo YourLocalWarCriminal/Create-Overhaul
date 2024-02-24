@@ -3,23 +3,22 @@
     {
         "icon":
         {
-            "item": "create:fluid_pipe"
+            "item": "create:large_water_wheel"
         },
         "title" : 
         {
-            "text" : "Transport fluids",
+            "text" : "Industrial Watermill",
             "color": "white"
         },
         "description": 
         {
-           "text": "Liquids will flow everywhere!",
+           "text": "Wasn't the Water Wheel enough? Anyways here's the big boy water wheel, which is slower but more powerful",
            "color": "green"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
-        "hidden": false,
-        "background": "minecraft:textures/block/gravel.png"
+        "hidden": false
     },
     "criteria": {
         "0": {
@@ -28,7 +27,7 @@
             "items":[
                 {
                     "items":[
-                       "create:fluid_pipe" 
+                        "create:large_water_wheel"
                     ]
                 }
             ]
@@ -40,5 +39,5 @@
           "0"
         ]
       ],
-      "parent":"mandatory:primitive_age/copper"
-    }
+      "parent":"mandatory:mechanical_age/water_wheel"
+}

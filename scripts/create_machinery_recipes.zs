@@ -134,10 +134,10 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
     <recipetype:create:cutting>.addRecipe("ingots_to_rods" + i, rods[i]*2, ingots[i], 800);
 }*/
 
-<recipetype:create:cutting>.addRecipe("bolt", <item:kubejs:bolt>*1, <item:createaddition:iron_rod>, 400);
+<recipetype:create:cutting>.addRecipe("bolt", <item:kubejs:bolt>*2, <item:immersiveengineering:stick_iron>, 400);
 <recipetype:create:cutting>.addRecipe("nail", <item:kubejs:nail>*2, <item:create:iron_sheet>, 400);
 <recipetype:create:cutting>.addRecipe("nailsteel", <item:kubejs:nail>*4, <item:alloyed:steel_sheet>, 400);  
-<recipetype:create:cutting>.addRecipe("boltsteel", <item:kubejs:bolt>*2, <item:immersiveengineering:stick_steel>, 400);  
+<recipetype:create:cutting>.addRecipe("boltsteel", <item:kubejs:bolt>*4, <item:immersiveengineering:stick_steel>, 400);  
 <recipetype:create:cutting>.addRecipe("silicon_wafer_by_mechanical_saw", <item:kubejs:silicon_wafer> * 4, <item:kubejs:silicon_boule>, 1200);
 
 // MechanicalCrafterManager.addRecipe(name, output, ingredients[][]);

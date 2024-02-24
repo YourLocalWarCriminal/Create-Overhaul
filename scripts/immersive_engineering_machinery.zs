@@ -31,6 +31,8 @@ val nope = <item:minecraft:air>;
 <recipetype:immersiveengineering:metal_press>.addRecipe("medium_gear_press", <item:minecraft:iron_ingot>, <item:immersiveengineering:mold_gear>, 1200, <item:kubejs:medium_gear>);
 <recipetype:immersiveengineering:metal_press>.addRecipe("large_gear_press", <item:create:iron_sheet>, <item:immersiveengineering:mold_gear>, 2400, <item:kubejs:large_gear>);
 <recipetype:immersiveengineering:metal_press>.addRecipe("mithril_plate", <item:kubejs:mithril_ingot>, <item:immersiveengineering:mold_plate>, 2400, <item:kubejs:mithril_plate>);
+<recipetype:immersiveengineering:metal_press>.addRecipe("electrum_plate_to_wire", <item:immersiveengineering:plate_electrum>, <item:immersiveengineering:mold_wire>, 2400, <item:immersiveengineering:wire_electrum>*2);
+<recipetype:immersiveengineering:metal_press>.addRecipe("electrum_ingot_to_wire", <item:immersiveengineering:ingot_electrum>, <item:immersiveengineering:mold_wire>, 2400, <item:immersiveengineering:wire_electrum>*3);
 // Blueprint.addRecipe(name, blueprintCategory (string), inputs, output)
 
 <recipetype:immersiveengineering:blueprint>.addRecipe("clockwork_mechanism2", "components", [
