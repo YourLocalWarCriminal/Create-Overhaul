@@ -1,0 +1,36 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "create:copper_casing"
+        },
+        "title" : 
+        {
+            "text" : "Waterproof Machinery",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Obtain a Copper Casing a basis for your fluid-handling machines",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "0": {
+          "trigger": "create:copper_casing_builtin",
+          "conditions": {}
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:mechanical_age/mechanical_press"
+}

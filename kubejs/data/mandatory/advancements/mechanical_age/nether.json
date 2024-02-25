@@ -1,0 +1,37 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "minecraft:flint_and_steel"
+        },
+        "title" : 
+        {
+            "text" : "Egg in a Frying Pan",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Go to the nether, but prepare you'll feel like an Egg in a Frying Pan",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "0": {
+            "trigger": "minecraft:changed_dimension",
+            "conditions": {
+              "to": "minecraft:the_nether"
+            }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:mechanical_age/spout"
+}

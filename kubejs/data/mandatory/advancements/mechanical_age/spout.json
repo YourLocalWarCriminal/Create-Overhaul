@@ -3,16 +3,16 @@
     {
         "icon":
         {
-            "item": "kubejs:leverage_mechanism"
+            "item": "create:spout"
         },
         "title" : 
         {
-            "text" : "Rotation to Elevation",
+            "text" : "Yoinky Sploinky",
             "color": "white"
         },
         "description": 
         {
-           "text": "Obtain your first Leverage Mechanism, which is a mechanism used to convert rotational power to linear motion",
+           "text": "Craft a Spout, your first and well last fluid handling machine",
            "color": "green"
         },
         "frame": "task",
@@ -27,7 +27,7 @@
             "items":[
                 {
                     "items":[
-                        "kubejs:leverage_mechanism"
+                      "create:spout"
                     ]
                 }
             ]
@@ -39,5 +39,5 @@
           "0"
         ]
       ],
-      "parent":"mandatory:mechanical_age/mechanical_saw"
+      "parent":"mandatory:mechanical_age/copper_casing"
 }

@@ -3,23 +3,23 @@
     {
         "icon":
         {
-            "item": "create:fluid_pipe"
+            "item": "create:mechanical_saw"
         },
         "title" : 
         {
-            "text" : "Fluid Handling",
+            "text" : "Sawmill TF2????",
             "color": "white"
         },
         "description": 
         {
-           "text": "This is where the liquids come from",
+           "text": "Craft a Mechanical Saw, a machine used for well... sawing",
            "color": "green"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": false,
-        "background": "kubejs:textures/gui/advancements/fluid.png"
+        "background": "minecraft:textures/block/gravel.png"
     },
     "criteria": {
         "0": {
@@ -28,7 +28,7 @@
             "items":[
                 {
                     "items":[
-                        "create:fluid_pipe"
+                        "create:mechanical_saw"
                     ]
                 }
             ]
@@ -39,5 +39,6 @@
         [
           "0"
         ]
-      ]
+      ],
+      "parent":"mandatory:mechanical_age/root"
 }

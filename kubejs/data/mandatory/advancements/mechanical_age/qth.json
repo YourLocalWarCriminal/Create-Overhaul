@@ -3,22 +3,23 @@
     {
         "icon":
         {
-            "item": "kubejs:leverage_mechanism"
+            "item": "create_sa:zinc_handle"
         },
         "title" : 
         {
-            "text" : "Rotation to Elevation",
+            "text" : "Better Than Sticks",
             "color": "white"
         },
         "description": 
         {
-           "text": "Obtain your first Leverage Mechanism, which is a mechanism used to convert rotational power to linear motion",
+           "text": "Smith a quality tool handle, you know what? You should craft more than one, you'll need mithril tools after all",
            "color": "green"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
-        "hidden": false
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
     },
     "criteria": {
         "0": {
@@ -27,7 +28,7 @@
             "items":[
                 {
                     "items":[
-                        "kubejs:leverage_mechanism"
+                        "create_sa:zinc_handle"
                     ]
                 }
             ]
