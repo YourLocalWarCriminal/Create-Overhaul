@@ -25,7 +25,6 @@ public function MetalRecipeMaker(name as string, ingot as IItemStack, plate as I
         recipes.remove(rod);
         <recipetype:create:cutting>.addRecipe(name + "_ingots_to_" + name + "_rods", [rod * 2], ingot, 800);
         <recipetype:immersiveengineering:metal_press>.addRecipe(name + "_ingot_to_" + name + "rods_by_metal_press", ingot, <item:immersiveengineering:mold_rod>, 2400, rod*3);
-
     }
     if (crushed != nope) {
         blastFurnace.removeByInput(crushed);
@@ -137,13 +136,21 @@ public function MetalRecipeMaker(name as string, ingot as IItemStack, plate as I
 
     MetalRecipeMaker("aluminium", <item:immersiveengineering:ingot_aluminum>, <item:immersiveengineering:plate_aluminum>, <item:immersiveengineering:stick_aluminum>, <item:immersiveengineering:wire_aluminum>, nope, <item:immersiveengineering:storage_aluminum>, <item:immersiveengineering:nugget_aluminum>, nope, nope, nope, [nope]);
 
-    MetalRecipeMaker("zinc", <item:create:zinc_ingot>, <item:createaddition:zinc_sheet>, nope, nope, <item:kubejs:zinc_dust>, <item:create:zinc_block>, <item:create:zinc_nugget>, <item:create:raw_zinc>, <item:create:crushed_raw_zinc>, nope, [<item:create:zinc_ore>, <item:create:deepslate_zinc_ore>]);
+    MetalRecipeMaker("zinc", <item:create:zinc_ingot>, <item:createaddition:zinc_sheet>, nope, nope, <item:kubejs:zinc_dust>, <item:create:zinc_block>, <item:create:zinc_nugget>, <item:create:raw_zinc>, <item:create:crushed_raw_zinc>, <item:create:asurine>, [<item:create:zinc_ore>, <item:create:deepslate_zinc_ore>]);
 
     MetalRecipeMaker("lead", <item:immersiveengineering:ingot_lead>, <item:immersiveengineering:plate_lead>, nope, <item:immersiveengineering:wire_lead>, <item:immersiveengineering:dust_lead>, <item:immersiveengineering:storage_lead>, <item:immersiveengineering:nugget_lead>, <item:immersiveengineering:raw_lead>, <item:create:crushed_raw_lead>, nope, [<item:immersiveengineering:ore_lead>, <item:immersiveengineering:deepslate_ore_lead>]);
 
     MetalRecipeMaker("steel", <item:alloyed:steel_ingot>, <item:alloyed:steel_sheet>, <item:immersiveengineering:stick_steel>, <item:immersiveengineering:wire_steel>, <item:immersiveengineering:dust_steel>, <item:immersiveengineering:storage_steel>, <item:alloyed:steel_nugget>, nope, nope, nope, [nope]);
 
     MetalRecipeMaker("constantan", <item:immersiveengineering:ingot_constantan>, <item:immersiveengineering:plate_constantan>, nope, nope, <item:immersiveengineering:dust_constantan>, <item:immersiveengineering:storage_constantan>, <item:immersiveengineering:nugget_constantan>, nope, nope, nope, [nope]);
+
+    MetalRecipeMaker("brass", <item:create:brass_ingot>, <item:create:brass_sheet>, <item:createaddition:brass_rod>, nope, <item:kubejs:brass_dust>, <item:create:brass_block>, <item:create:brass_nugget>, nope, nope, nope, [nope]);
+
+    MetalRecipeMaker("silver", <item:immersiveengineering:ingot_silver>, <item:immersiveengineering:plate_silver>, nope, nope, <item:immersiveengineering:dust_silver>,<item:immersiveengineering:storage_silver>, <item:immersiveengineering:nugget_silver>, <item:immersiveengineering:raw_silver>, <item:create:crushed_raw_silver>, nope, [<item:immersiveengineering:ore_silver>, <item:immersiveengineering:deepslate_ore_silver>]);
+
+    MetalRecipeMaker("uranium", <item:immersiveengineering:ingot_uranium>, <item:immersiveengineering:plate_uranium>, nope, nope, <item:immersiveengineering:dust_uranium>, <item:immersiveengineering:storage_uranium>, <item:immersiveengineering:nugget_uranium>, <item:immersiveengineering:raw_uranium>, <item:create:crushed_raw_uranium>, nope,[<item:immersiveengineering:ore_uranium>, <item:immersiveengineering:deepslate_ore_uranium>]);
+
+    MetalRecipeMaker("electrum", <item:createaddition:electrum_ingot>, <item:createaddition:electrum_sheet>, <item:createaddition:electrum_rod>, <item:immersiveengineering:wire_electrum>, <item:immersiveengineering:dust_electrum>, <item:immersiveengineering:storage_electrum>, <item:immersiveengineering:nugget_electrum>, nope, nope, nope, [nope]);
 
 //Other ore processing methods
 

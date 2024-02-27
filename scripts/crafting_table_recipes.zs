@@ -186,7 +186,7 @@ craftingTable.addShapedMirrored("stonehoe", MirrorAxis.HORIZONTAL, <item:minecra
     [nope, <item:minecraft:stick>, nope]
 ]);
 
-craftingTable.addShapeless("ropehemp", <item:farmersdelight:rope> * 2, [
+craftingTable.addShapeless("ropehemp", <item:farmersdelight:rope> * 1, [
     <tag:items:forge:string>,
     <tag:items:forge:string>,
     <tag:items:forge:string>,
@@ -642,9 +642,9 @@ val planks_shiphelms = {
 
 for plank, shiphelm in planks_shiphelms {
     craftingTable.addShaped("ship_helm" + i, shiphelm, [
-    [plank, <tag:items:forge:ingots/gold>, plank],
-    [plank, <item:kubejs:leverage_mechanism>, plank],
-    [plank, <item:create:cogwheel>, plank]]);
+    [<item:create:brass_sheet>, plank, <item:create:golden_sheet>],
+    [<item:kubejs:clockwork_mechanism>, <item:create:large_cogwheel>, <item:kubejs:clockwork_mechanism>],
+    [<item:create:golden_sheet>, plank, <item:create:brass_sheet>]]);
     i++;
 }
 i = 0;
@@ -718,3 +718,5 @@ craftingTable.addShaped("mechanicalmixermegaultragamerrecipe", <item:create:mech
     [<item:immersiveengineering:component_iron>, <item:create:cogwheel>, <item:immersiveengineering:component_iron>],
     [<item:kubejs:clockwork_mechanism>, <item:alloyed:steel_casing>, <item:kubejs:clockwork_mechanism>]
 ]);
+
+craftingTable.addShapeless("antique_atlas", <item:antiqueatlas:empty_antique_atlas>, [<item:minecraft:book>]);

@@ -1,0 +1,102 @@
+{
+    "type":"custommachinery:custom_machine",
+    "machine":"earlymachinery:eee",
+    "time":3000,
+    "requirements":[
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"byg:red_maple_sapling",
+            "amount":16
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"byg:ebony_sapling",
+            "amount":16
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"byg:mangrove_sapling",
+            "amount":16
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"byg:white_cherry_sapling",
+            "amount":16
+        },
+        {
+          "type":"custommachinery:item",
+          "mode":"input",
+          "item":"byg:indigo_jacaranda_sapling",
+          "amount":16
+        },
+        {
+          "type":"custommachinery:item",
+          "mode":"input",
+          "item":"byg:soul_shroom",
+          "amount":16
+        },
+        {
+          "type":"custommachinery:item",
+          "mode":"input",
+          "item":"byg:witch_hazel_sapling",
+          "amount":16
+        },
+        {
+          "type":"custommachinery:item",
+          "mode":"input",
+          "item":"byg:imparius_mushroom",
+          "amount":16
+        },
+        {
+          "type": "custommachinery:fluid_per_tick",
+          "mode": "input",
+          "fluid": "createaddition:seed_oil",
+          "amount": 5,
+          "chance": 1.0
+        },
+        {
+          "type":"custommachinery:energy_per_tick",
+          "mode":"input",
+          "amount":1000,
+          "chance":1.0
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"output",
+            "item":"kubejs:aspect_of_nature",
+            "amount":1
+        },
+        {
+          "type":"custommachinery:structure",
+            "keys": {
+              "b": "immersiveengineering:light_engineering",
+              "c": "immersiveengineering:radiator",
+              "d": "immersiveengineering:heavy_engineering",
+              "e": "immersiveengineering:sheetmetal_aluminum",
+              "f": "byg:therium_glass",
+              "g": "create_things_and_misc:sturdy_sheet_block",
+              "h": "immersiveengineering:rs_engineering"
+            },
+            "pattern": [
+              [
+                " eee ",
+                "ebbbe",
+                "ebhbe",
+                "ebbbe",
+                " ddd "
+              ],
+              [
+                " efe ",
+                "ecdce",
+                "fdgdf",
+                "ecdce",
+                " eme "
+              ]
+            ]
+        }
+    ]
+}

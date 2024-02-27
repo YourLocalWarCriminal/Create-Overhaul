@@ -684,3 +684,15 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:plates/lead>))
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(70))
                                                       );
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("garden_cloche")
+                                                      .transitionTo(<item:alloyed:steel_casing>)
+                                                      .require(<item:alloyed:steel_casing>)
+                                                      .loops(1)
+                                                      .addOutput(<item:immersiveengineering:cloche>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:fluid_tank>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:component_steel>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:glass>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:glass>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:light_bulb>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:wirecoil_steel>)));

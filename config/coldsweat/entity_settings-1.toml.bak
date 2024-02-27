@@ -1,12 +1,12 @@
 
 ["Entity Settings"]
+	#List of entities that will insulate the player when riding them
+	#Format: ["entity_id", insulation]
+	#(1 is complete insulation, 0 is no insulation)
+	"Insulated Entities" = []
 	#Defines how often a goat will try to grow its fur, the growth cooldown after shearing, and the chance of it succeeding
 	#Format: [ticks, cooldown, chance]
 	"Goat Fur Growth Timings" = [1200, 2400, 0.2]
-	#List of entities that will insulate the player when riding them
-	#The rate at which the player's temperature changes is divided by the resistance value
-	#Format: [["entity_id", coldResistance, hotResistance], ["entity_id", coldResistance, hotResistance], etc...]
-	"Insulated Mounts" = []
 
 ["Mob Spawning"]
 	#Defines the biomes that Chameleons can spawn in
