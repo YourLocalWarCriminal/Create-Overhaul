@@ -1,0 +1,43 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "kubejs:induction_mechanism"
+        },
+        "title" : 
+        {
+            "text" : "Rubbing Magnets Together",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Engineer you first Induction Mechanism, it holds a LOT of (electrical)POWAH",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "kubejs:induction_mechanism"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:mechanical_age/rolling_mill"
+}

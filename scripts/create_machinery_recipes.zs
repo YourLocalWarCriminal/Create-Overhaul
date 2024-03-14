@@ -328,7 +328,7 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       );
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("steam_engine")
-                                                      .transitionTo(<item:create_sa:steam_engine>)
+                                                      .transitionTo(<item:create:fluid_valve>)
                                                       .require(<item:create:fluid_valve>)
                                                       .loops(4)
                                                       .addOutput(<item:create_sa:steam_engine>, 1)
@@ -339,8 +339,8 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       );
                                                       
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("steam_engine2")
-                                                      .transitionTo(<item:create:copper_casing>)
-                                                      .require(<item:create:copper_casing>)
+                                                      .transitionTo(<item:alloyed:steel_casing>)
+                                                      .require(<item:alloyed:steel_casing>)
                                                       .loops(1)
                                                       .addOutput(<item:create:steam_engine>, 1)
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:fluid_pipe>))

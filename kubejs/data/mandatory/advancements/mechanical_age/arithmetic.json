@@ -1,0 +1,43 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "kubejs:arithmetic_mechanism"
+        },
+        "title" : 
+        {
+            "text" : "Counting To a Million",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Engineer you first Arithmetic Mechanism, which is used for Mechanical Crafters",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "kubejs:arithmetic_mechanism"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:mechanical_age/rolling_mill"
+}

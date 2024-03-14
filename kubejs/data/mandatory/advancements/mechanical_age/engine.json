@@ -1,0 +1,43 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "create:steam_engine"
+        },
+        "title" : 
+        {
+            "text" : "Just Like in 1760",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Progressing further requires a boatload more SU than waterwheel-spam can supply you with, so it is advised to make a Steam Engine.",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "create:steam_engine"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:mechanical_age/steel"
+}

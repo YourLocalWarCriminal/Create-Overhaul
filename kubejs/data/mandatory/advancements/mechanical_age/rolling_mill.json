@@ -1,0 +1,44 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "createaddition:rolling_mill"
+        },
+        "title" : 
+        {
+            "text" : "Wire Monopoly",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Craft a Rolling Mill, a machine used to create Wires",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "createaddition:rolling_mill"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:mechanical_age/steel"
+}

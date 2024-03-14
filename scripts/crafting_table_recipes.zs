@@ -629,25 +629,13 @@ craftingTable.addShaped("ballast", <item:vs_eureka:ballast> * 8, [
     [nope, <tag:items:forge:plates>, nope]
 ]);
 
-var i = 0;
-val planks_shiphelms = {
-<item:minecraft:oak_planks> : <item:vs_eureka:oak_ship_helm>,
-<item:minecraft:spruce_planks> : <item:vs_eureka:spruce_ship_helm>,
-<item:minecraft:birch_planks> : <item:vs_eureka:birch_ship_helm>,
-<item:minecraft:jungle_planks> : <item:vs_eureka:jungle_ship_helm>,
-<item:minecraft:acacia_planks> : <item:vs_eureka:acacia_ship_helm>,
-<item:minecraft:dark_oak_planks> : <item:vs_eureka:dark_oak_ship_helm>,
-<item:minecraft:crimson_planks> : <item:vs_eureka:crimson_ship_helm>,
-<item:minecraft:warped_planks> : <item:vs_eureka:warped_ship_helm>};
 
-for plank, shiphelm in planks_shiphelms {
-    craftingTable.addShaped("ship_helm" + i, shiphelm, [
-    [<item:create:brass_sheet>, plank, <item:create:golden_sheet>],
+craftingTable.addShaped("ship_helm", <item:vs_eureka:oak_ship_helm>, [
+    [<item:create:brass_sheet>, <tag:items:minecraft:planks>, <item:create:golden_sheet>],
     [<item:kubejs:clockwork_mechanism>, <item:create:large_cogwheel>, <item:kubejs:clockwork_mechanism>],
-    [<item:create:golden_sheet>, plank, <item:create:brass_sheet>]]);
-    i++;
-}
-i = 0;
+    [<item:create:golden_sheet>, <tag:items:minecraft:planks>, <item:create:brass_sheet>]]
+);
+
 
 craftingTable.addShaped("ballon", <item:vs_eureka:balloon> * 8, [
     [nope, <item:create:white_sail>, nope],

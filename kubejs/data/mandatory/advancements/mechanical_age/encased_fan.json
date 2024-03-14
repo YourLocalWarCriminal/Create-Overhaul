@@ -1,0 +1,43 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "create:encased_fan"
+        },
+        "title" : 
+        {
+            "text" : "Blow me Away",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Craft an Encased Fan, a machine used for Smelting, Cooking, Haunting, and Moistur-..izing?",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "create:encased_fan"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:mechanical_age/lead"
+}

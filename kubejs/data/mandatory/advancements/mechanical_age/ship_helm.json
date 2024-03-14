@@ -1,0 +1,44 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "vs_eureka:oak_ship_helm"
+        },
+        "title" : 
+        {
+            "text" : "I Believe I Can Fly!",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Make a ship helm, a block you can use to assemble a ship out of anything!",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "vs_eureka:oak_ship_helm"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:mechanical_age/mechanical_saw"
+}

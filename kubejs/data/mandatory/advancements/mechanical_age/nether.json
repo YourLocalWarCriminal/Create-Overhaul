@@ -15,7 +15,7 @@
            "text": "Go to the nether, but prepare you'll feel like an Egg in a Frying Pan",
            "color": "green"
         },
-        "frame": "task",
+        "frame": "goal",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": false
