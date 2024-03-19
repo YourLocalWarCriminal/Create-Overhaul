@@ -3,24 +3,23 @@
     {
         "icon":
         {
-            "item": "custommachinery:custom_machine_item",
-            "nbt":"{machine:\"earlymachinery:flue_furnace\"}"
+            "item": "createaddition:alternator"
         },
         "title" : 
         {
-            "text" : "Ironworks",
+            "text" : "Electrical Age",
             "color": "white"
         },
         "description": 
         {
-           "text": "Smelt your first Wrought Iron Ingot",
+           "text": "Obtain an Alternator, a machine used to convert mechanical power to electrical",
            "color": "green"
         },
-        "frame": "goal",
-        "show_toast": true,
-        "announce_to_chat": true,
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
         "hidden": false,
-        "background": "minecraft:textures/block/gravel.png"
+        "background": "create_things_and_misc:textures/blocks/sturdy_sheet_block.png"
     },
     "criteria": {
         "0": {
@@ -29,7 +28,7 @@
             "items":[
                 {
                     "items":[
-                        "minecraft:iron_ingot"
+                        "createaddition:alternator"
                     ]
                 }
             ]
@@ -40,6 +39,5 @@
         [
           "0"
         ]
-      ],
-      "parent":"mandatory:primitive_age/castiron"
+      ]
 }

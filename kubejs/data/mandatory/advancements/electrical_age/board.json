@@ -3,20 +3,19 @@
     {
         "icon":
         {
-            "item": "custommachinery:custom_machine_item",
-            "nbt":"{machine:\"earlymachinery:flue_furnace\"}"
+            "item": "kubejs:basic_backboard"
         },
         "title" : 
         {
-            "text" : "Ironworks",
+            "text" : "Totally not GT!!111!",
             "color": "white"
         },
         "description": 
         {
-           "text": "Smelt your first Wrought Iron Ingot",
+           "text": "Get a Basic Backboard, a base for your first circuits",
            "color": "green"
         },
-        "frame": "goal",
+        "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false,
@@ -29,7 +28,7 @@
             "items":[
                 {
                     "items":[
-                        "minecraft:iron_ingot"
+                        "kubejs:basic_backboard"
                     ]
                 }
             ]
@@ -41,5 +40,5 @@
           "0"
         ]
       ],
-      "parent":"mandatory:primitive_age/castiron"
+      "parent":"mandatory:electrical_age/root"
 }

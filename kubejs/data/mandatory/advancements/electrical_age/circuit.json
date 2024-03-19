@@ -3,20 +3,19 @@
     {
         "icon":
         {
-            "item": "custommachinery:custom_machine_item",
-            "nbt":"{machine:\"earlymachinery:flue_furnace\"}"
+            "item": "immersiveengineering:component_electronic"
         },
         "title" : 
         {
-            "text" : "Ironworks",
+            "text" : "Your first LV.. nevermind",
             "color": "white"
         },
         "description": 
         {
-           "text": "Smelt your first Wrought Iron Ingot",
+           "text": "Craft your first Electric Component a base for Light Engineering blocks",
            "color": "green"
         },
-        "frame": "goal",
+        "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false,
@@ -29,7 +28,7 @@
             "items":[
                 {
                     "items":[
-                        "minecraft:iron_ingot"
+                        "immersiveengineering:component_electronic"
                     ]
                 }
             ]
@@ -41,5 +40,5 @@
           "0"
         ]
       ],
-      "parent":"mandatory:primitive_age/castiron"
+      "parent":"mandatory:electrical_age/board"
 }

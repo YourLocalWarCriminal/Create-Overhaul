@@ -3,20 +3,19 @@
     {
         "icon":
         {
-            "item": "custommachinery:custom_machine_item",
-            "nbt":"{machine:\"earlymachinery:flue_furnace\"}"
+            "item": "create:crushing_wheel"
         },
         "title" : 
         {
-            "text" : "Ironworks",
+            "text" : "Crusher(21)",
             "color": "white"
         },
         "description": 
         {
-           "text": "Smelt your first Wrought Iron Ingot",
+           "text": "Get a pair of Crushing Wheels, they can be used for more efficient ore refinement. One seems to like the Hog Rider a bit too much...",
            "color": "green"
         },
-        "frame": "goal",
+        "frame": "task",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false,
@@ -29,7 +28,7 @@
             "items":[
                 {
                     "items":[
-                        "minecraft:iron_ingot"
+                        "create:crushing_wheel"
                     ]
                 }
             ]
@@ -41,5 +40,5 @@
           "0"
         ]
       ],
-      "parent":"mandatory:primitive_age/castiron"
+      "parent":"mandatory:mechanical_age/mechanical_crafter"
 }

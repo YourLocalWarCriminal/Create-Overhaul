@@ -3,44 +3,43 @@
     {
         "icon":
         {
-            "item": "minecraft:bread"
+            "item": "createaddition:capacitor"
         },
         "title" : 
         {
-            "text" : "bred",
+            "text" : "You're gonna hate this!",
             "color": "white"
         },
         "description": 
         {
-           "text": "bred... buy me bred... walmar",
+           "text": "The achievement name seems familiar huh? So... get 3 basic components for your circuits to get ready for the Electric Age; A Capacitor, A Vacuum Tube, and an Electron Tube",
            "color": "green"
         },
-        "frame": "challenge",
+        "frame": "task",
         "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": true,
-        "background": "minecraft:textures/block/gravel.png"
+        "announce_to_chat": false,
+        "hidden": false
     },
     "criteria": {
         "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "createaddition:capacitor"
+                    ]
+                }
+            ]
+          }
+        },
+        "1": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items":[
                   {
                       "items":[
-                         "minecraft:bread" 
-                      ]
-                  }
-              ]
-            }
-          },
-          "1": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-              "items":[
-                  {
-                      "items":[
-                         "create:dough" 
+                          "create:electron_tube"
                       ]
                   }
               ]
@@ -52,7 +51,7 @@
               "items":[
                   {
                       "items":[
-                         "create:wheat_flour" 
+                          "immersiveengineering:electron_tube"
                       ]
                   }
               ]
@@ -64,5 +63,5 @@
         ["1"],
         ["2"]
       ],
-      "parent":"mandatory:primitive_age/andesite_alloy"
-    }
+      "parent":"mandatory:electrical_age/root"
+}
