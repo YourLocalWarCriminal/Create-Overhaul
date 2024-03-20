@@ -1,0 +1,44 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "immersiveengineering:logic_circuit"
+        },
+        "title" : 
+        {
+            "text" : "Quad-Core Processor!",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Craft a Logic Circuit, its single use is in the recipe of your final machine.... The Electric Energy Extractor(and Bazookas)",
+           "color": "green"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "immersiveengineering:logic_circuit"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:electrical_age/pcb"
+}

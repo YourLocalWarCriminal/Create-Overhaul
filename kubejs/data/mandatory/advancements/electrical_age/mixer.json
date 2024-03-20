@@ -1,0 +1,24 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "immersiveengineering:mixer"
+        },
+        "title" : 
+        {
+            "text" : "Brewing Something Malicious",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Build an Electric Mixer multiblock, a machine used to well... mix stuff BUT with electricity!",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat":false,
+        "hidden": false
+    },
+    "criteria":{"form_multiblock":{"trigger":"immersiveengineering:multiblock_formed","conditions":{"multiblock":"immersiveengineering:multiblocks/mixer","item":{"items":["immersiveengineering:hammer"]}}}},"requirements":[["form_multiblock"]],
+"parent":"mandatory:electrical_age/circuit"}

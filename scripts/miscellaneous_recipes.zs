@@ -1,4 +1,5 @@
 import mods.farmersdelight.CuttingBoard;
+import mods.farmersdelight.CookingPot;
 
 <item:alloyed:bronze_ingot>.addTooltip("Now made with Amethyst!");
 <item:farmersdelight:safety_net>.addTooltip("Can be used for Sifting Purposes");
@@ -61,4 +62,7 @@ for i,item in steel_armour {
 // campfire.addRecipe(name, output, input, xp, cookTime)
 
 campfire.addRecipe("stone_slab_smelting", <item:minecraft:stone_slab>, <item:minecraft:cobblestone_slab>, 0.8, 90);
+
+//
+<recipetype:farmersdelight:cooking>.addRecipe("toltottkaposztamagyarosan", <item:farmersdelight:cabbage_rolls>, [<item:farmersdelight:rice>, <item:farmersdelight:minced_beef>, <item:farmersdelight:cabbage_leaf>], <constant:farmersdelight:cooking_pot_recipe_book_tab:misc>, <item:minecraft:air>, 0.5, 200);
 

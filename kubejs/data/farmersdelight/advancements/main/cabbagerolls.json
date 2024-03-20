@@ -1,0 +1,44 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "farmersdelight:cabbage_rolls"
+        },
+        "title" : 
+        {
+            "text" : "TŐTÖTT KÁPOSZTA!!!!111!!!!",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Vajon Szabolcsi, Székely, vagy Borsodi?",
+           "color": "green"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "farmersdelight:cabbage_rolls"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"farmersdelight:main/place_cooking_pot"
+}

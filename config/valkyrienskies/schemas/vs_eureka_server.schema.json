@@ -21,6 +21,16 @@
       "format" : "double",
       "description" : "Weight of ballast when lowest redstone power"
     },
+    "balloonElevationMaxSpeed" : {
+      "type" : "number",
+      "format" : "double",
+      "description" : "The max elevation speed boost gained by having extra extra balloons"
+    },
+    "baseImpulseElevationRate" : {
+      "type" : "number",
+      "format" : "double",
+      "description" : "Vertical sensitivity up ascend/descend"
+    },
     "baseSpeed" : {
       "type" : "number",
       "format" : "double",
@@ -42,6 +52,25 @@
       "type" : "boolean",
       "description" : "Allow Eureka controlled ships to be affected by fluid drag"
     },
+    "elevationSnappiness" : {
+      "type" : "number",
+      "format" : "double",
+      "description" : "Ascend and descend acceleration"
+    },
+    "engineFuelMultiplier" : {
+      "type" : "number",
+      "format" : "float",
+      "description" : "Fuel burn time multiplier"
+    },
+    "engineFuelSaving" : {
+      "type" : "boolean",
+      "description" : "Avoids consuming fuel when heat is 100%"
+    },
+    "engineHeatChangeExponent" : {
+      "type" : "number",
+      "format" : "float",
+      "description" : "Increases heat gained at low heat level, and increased heat decreases when at high heat and not consuming fuel"
+    },
     "engineHeatGain" : {
       "type" : "number",
       "format" : "float",
@@ -52,20 +81,39 @@
       "format" : "float",
       "description" : "The amount of heat a engine loses per tick"
     },
-    "enginePower" : {
+    "engineMinCapacity" : {
+      "type" : "integer",
+      "format" : "int32",
+      "description" : "Increasing this value will result in more items being able to converted to fuel"
+    },
+    "enginePowerAngular" : {
       "type" : "number",
       "format" : "float",
-      "description" : "Movement power per engine heated fully"
+      "description" : "Turning power per engine when heated fully"
+    },
+    "enginePowerAngularMin" : {
+      "type" : "number",
+      "format" : "float",
+      "description" : "Turning power per engine when minimal heat"
+    },
+    "enginePowerLinear" : {
+      "type" : "number",
+      "format" : "float",
+      "description" : "Movement power per engine when heated fully"
+    },
+    "enginePowerLinearMin" : {
+      "type" : "number",
+      "format" : "float",
+      "description" : "Movement power per engine with minimal heat"
+    },
+    "engineRedstoneBehaviorPause" : {
+      "type" : "boolean",
+      "description" : "Pause fuel consumption and power when block is powered"
     },
     "floaterBuoyantFactorPerKg" : {
       "type" : "number",
       "format" : "double",
       "description" : "The amount extra that each floater will make the ship float, per kg mass"
-    },
-    "impulseElevationRate" : {
-      "type" : "integer",
-      "format" : "int32",
-      "description" : "Vertical sensitivity up ascend/descend"
     },
     "linearStabilizeMaxAntiVelocity" : {
       "type" : "number",
@@ -79,7 +127,7 @@
     },
     "maxCasualSpeed" : {
       "type" : "number",
-      "format" : "float",
+      "format" : "double",
       "description" : "Max speed of a ship without boosting"
     },
     "maxFloaterBuoyantFactor" : {
@@ -87,15 +135,15 @@
       "format" : "double",
       "description" : "The maximum amount extra each floater will multiply the buoyant force by, irrespective of mass"
     },
+    "maxShipBlocks" : {
+      "type" : "integer",
+      "format" : "int32",
+      "description" : "Maximum number of blocks allowed in a ship. Set to 0 for no limit"
+    },
     "maxSizeForTurnSpeedPenalty" : {
       "type" : "number",
       "format" : "double",
       "description" : "The maximum distance from center of mass to one end of the ship considered by the turn speed. At it's default of 16, it ensures that really large ships will turn at the same speed as a ship with a center of mass only 16 blocks away from the farthest point in the ship. That way, large ships do not turn painfully slowly"
-    },
-    "minEnginePower" : {
-      "type" : "number",
-      "format" : "float",
-      "description" : "Movement power per engine with minimal heat"
     },
     "popSideBalloonChance" : {
       "type" : "number",

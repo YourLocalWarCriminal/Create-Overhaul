@@ -307,6 +307,10 @@ var recipesd = [
 <item:immersiveengineering:circuit_board>,
 <item:create_sa:heat_engine>,
 <item:immersiveengineering:light_bulb>,
+<item:farmersdelight:stove>,
+<item:farmersdelight:cooking_pot>,
+<item:farmersdelight:skillet>,
+<item:farmersdelight:cabbage_rolls>,
 ];
 
 for item in recipesd {

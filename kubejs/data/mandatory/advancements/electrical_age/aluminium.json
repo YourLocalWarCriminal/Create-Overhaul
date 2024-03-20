@@ -1,0 +1,44 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "immersiveengineering:ingot_aluminum"
+        },
+        "title" : 
+        {
+            "text" : "Alumliniliumnili.... I give Up",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Refine an Alumin.... you know what ingot, this will be handy for later machinery",
+           "color": "green"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "immersiveengineering:ingot_aluminum"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:electrical_age/crusher"
+}

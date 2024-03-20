@@ -1,0 +1,43 @@
+{
+  "display":
+  {
+      "icon":
+      {
+          "item": "farmersdelight:cooking_pot"
+      },
+      "title" : 
+      {
+          "text" : "Farmer's Delight",
+          "color": "white"
+      },
+      "description": 
+      {
+         "text": "Explore the world of Farmer's Delight and learn the ancient art of how not to starve to death.",
+         "color": "green"
+      },
+      "frame": "task",
+      "show_toast": false,
+      "announce_to_chat": false,
+      "hidden": false,
+      "background": "minecraft:textures/block/bricks.png"
+  },
+  "criteria": {
+      "straw_acquire": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items":[
+              {
+                  "items":[
+                      "farmersdelight:cooking_pot"
+                  ]
+              }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "straw_acquire"
+      ]
+    ]
+}

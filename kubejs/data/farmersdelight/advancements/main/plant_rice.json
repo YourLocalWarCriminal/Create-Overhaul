@@ -1,0 +1,31 @@
+{
+  "parent": "farmersdelight:main/get_fd_seed",
+  "display": {
+    "icon": {
+      "item": "farmersdelight:rice"
+    },
+    "title": {
+      "translate": "farmersdelight.advancement.plant_rice"
+    },
+    "description": {
+      "translate": "farmersdelight.advancement.plant_rice.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "plant_rice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "farmersdelight:rice"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "plant_rice"
+    ]
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "parent": "farmersdelight:main/plant_rice",
+  "display": {
+    "icon": {
+      "item": "farmersdelight:cabbage"
+    },
+    "title": {
+      "translate": "farmersdelight.advancement.plant_all_crops"
+    },
+    "description": {
+      "translate": "farmersdelight.advancement.plant_all_crops.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "criteria": {
+    "wheat": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:wheat"
+      }
+    },
+    "beetroot": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:beetroots"
+      }
+    },
+    "carrot": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:carrots"
+      }
+    },
+    "potato": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:potatoes"
+      }
+    },
+    "cabbage": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "farmersdelight:cabbages"
+      }
+    },
+    "tomato": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "farmersdelight:budding_tomatoes"
+      }
+    },
+    "onion": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "farmersdelight:onions"
+      }
+    },
+    "rice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "farmersdelight:rice"
+      }
+    },
+    "melon": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:melon_stem"
+      }
+    },
+    "pumpkin": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:pumpkin_stem"
+      }
+    },
+    "sweet_berries": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:sweet_berry_bush"
+      }
+    },
+    "sugar_cane": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:sugar_cane"
+      }
+    },
+    "kelp": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:kelp"
+      }
+    },
+    "cocoa": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:cocoa"
+      }
+    },
+    "nether_wart": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:nether_wart"
+      }
+    },
+    "chorus_flower": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:chorus_flower"
+      }
+    },
+    "brown_mushroom": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:brown_mushroom"
+      }
+    },
+    "red_mushroom": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:red_mushroom"
+      }
+    },
+    "glow_berries": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:cave_vines"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "wheat"
+    ],
+    [
+      "beetroot"
+    ],
+    [
+      "carrot"
+    ],
+    [
+      "potato"
+    ],
+    [
+      "cabbage"
+    ],
+    [
+      "tomato"
+    ],
+    [
+      "onion"
+    ],
+    [
+      "rice"
+    ],
+    [
+      "melon"
+    ],
+    [
+      "pumpkin"
+    ],
+    [
+      "sweet_berries"
+    ],
+    [
+      "sugar_cane"
+    ],
+    [
+      "kelp"
+    ],
+    [
+      "cocoa"
+    ],
+    [
+      "nether_wart"
+    ],
+    [
+      "chorus_flower"
+    ],
+    [
+      "brown_mushroom"
+    ],
+    [
+      "red_mushroom"
+    ],
+    [
+      "glow_berries"
+    ]
+  ]
+}

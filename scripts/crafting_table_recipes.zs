@@ -708,3 +708,21 @@ craftingTable.addShaped("mechanicalmixermegaultragamerrecipe", <item:create:mech
 ]);
 
 craftingTable.addShapeless("antique_atlas", <item:antiqueatlas:empty_antique_atlas>, [<item:minecraft:book>]);
+
+craftingTable.addShaped("stove", <item:farmersdelight:stove>, [
+    [<item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_ingot>],
+    [<item:minecraft:bricks>, nope, <item:minecraft:bricks>],
+    [<item:minecraft:bricks>, <item:minecraft:campfire>, <item:minecraft:bricks>]
+]);
+
+
+craftingTable.addShapedMirrored("skillet", MirrorAxis.HORIZONTAL, <item:farmersdelight:skillet>, [
+    [nope, <item:create:iron_sheet>, <item:create:iron_sheet>],
+    [nope, <item:create:iron_sheet>, <item:create:iron_sheet>],
+    [<item:immersiveengineering:stick_treated>, nope, nope]
+]);
+
+craftingTable.addShaped("pot", <item:farmersdelight:cooking_pot>, [
+    [<item:createdeco:cast_iron_sheet>, nope, <item:createdeco:cast_iron_sheet>],
+    [<item:createdeco:cast_iron_sheet>, <item:createdeco:cast_iron_sheet>, <item:createdeco:cast_iron_sheet>]
+]);

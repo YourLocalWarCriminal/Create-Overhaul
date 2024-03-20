@@ -1,0 +1,24 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "immersiveengineering:crusher"
+        },
+        "title" : 
+        {
+            "text" : "Fine Dust",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Build your first Electro Crusher, a huge machine used to crush ores into fine dust.",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria":{"form_multiblock":{"trigger":"immersiveengineering:multiblock_formed","conditions":{"multiblock":"immersiveengineering:multiblocks/crusher","item":{"items":["immersiveengineering:hammer"]}}}},"requirements":[["form_multiblock"]],
+"parent":"mandatory:electrical_age/circuit"}

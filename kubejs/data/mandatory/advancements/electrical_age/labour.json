@@ -1,0 +1,44 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "kubejs:aspect_of_labour"
+        },
+        "title" : 
+        {
+            "text" : "Hard Work Pays Off",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Obtain the Aspect Of Labour",
+           "color": "green"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "kubejs:aspect_of_labour"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:electrical_age/eee"
+}

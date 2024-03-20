@@ -1,0 +1,44 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "kubejs:aspect_of_time"
+        },
+        "title" : 
+        {
+            "text" : "Patience....",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Obtain the Aspect Of Time",
+           "color": "green"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "kubejs:aspect_of_time"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:electrical_age/eee"
+}

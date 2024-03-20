@@ -1,0 +1,47 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "custommachinery:custom_machine_item",
+            "nbt":"{machine:\"earlymachinery:eee\"}"
+        },
+        "title" : 
+        {
+            "text" : "Near The End",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Craft your last machine, the Electric Energy Extractor, it will be used to gather the essence of common items and refine them into pure essence",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "0": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "custommachinery:custom_machine_item"
+                    ]
+                }
+                
+            ],
+            "nbt":"{machine:\"earlymachinery:eee\"}"
+          }
+        }
+      },
+      "requirements": [
+        [
+          "0"
+        ]
+      ],
+      "parent":"mandatory:electrical_age/logic"
+}

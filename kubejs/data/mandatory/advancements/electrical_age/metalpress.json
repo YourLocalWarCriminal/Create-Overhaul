@@ -1,0 +1,24 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "immersiveengineering:metal_press"
+        },
+        "title" : 
+        {
+            "text" : "After 9 years of development...",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Build a Metal Press, which FINALLY lets you craft sheets with a 1:1 ratio",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat":false,
+        "hidden": false
+    },
+    "criteria":{"form_multiblock":{"trigger":"immersiveengineering:multiblock_formed","conditions":{"multiblock":"immersiveengineering:multiblocks/metal_press","item":{"items":["immersiveengineering:hammer"]}}}},"requirements":[["form_multiblock"]],
+"parent":"mandatory:electrical_age/advancedcircuit"}

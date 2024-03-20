@@ -130,6 +130,7 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 <recipetype:create:mixing>.addRecipe("divine_alloy", <constant:create:heat_condition:superheated>, [<fluid:kubejs:divine_alloy> * 1000], [<item:minecraft:gold_ingot> * 4, <item:create:brass_ingot> * 4,<item:byg:pendorite_ingot> * 4,<item:minecraft:netherite_ingot> * 4,<item:alloyed:steel_ingot> * 4,<item:immersiveengineering:ingot_uranium> * 4,<item:kubejs:mithril_ingot> * 4,<item:immersiveengineering:ingot_silver> * 4]);
 //saw recipes(name,output,input,time)
 <recipetype:create:cutting>.addRecipe("treatedsticks",<item:immersiveengineering:stick_treated> * 2 % 100 , <tag:items:forge:treated_wood>, 220);
+<recipetype:create:cutting>.addRecipe("silicon_wafer_by_mechanical_saw", <item:kubejs:silicon_wafer> * 4, <item:kubejs:silicon_boule>, 1200);
 /*for i, item in ingots {
     <recipetype:create:cutting>.addRecipe("ingots_to_rods" + i, rods[i]*2, ingots[i], 800);
 }*/
@@ -138,7 +139,6 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 <recipetype:create:cutting>.addRecipe("nail", <item:kubejs:nail>*2, <item:create:iron_sheet>, 400);
 <recipetype:create:cutting>.addRecipe("nailsteel", <item:kubejs:nail>*4, <item:alloyed:steel_sheet>, 400);  
 <recipetype:create:cutting>.addRecipe("boltsteel", <item:kubejs:bolt>*4, <item:immersiveengineering:stick_steel>, 400);  
-<recipetype:create:cutting>.addRecipe("silicon_wafer_by_mechanical_saw", <item:kubejs:silicon_wafer> * 4, <item:kubejs:silicon_boule>, 1200);
 
 // MechanicalCrafterManager.addRecipe(name, output, ingredients[][]);
 

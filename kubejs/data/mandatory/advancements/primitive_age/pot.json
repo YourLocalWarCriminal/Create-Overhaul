@@ -1,0 +1,44 @@
+{
+    "display":
+    {
+        "icon":
+        {
+            "item": "farmersdelight:cooking_pot"
+        },
+        "title" : 
+        {
+            "text" : "Don't Starve",
+            "color": "white"
+        },
+        "description": 
+        {
+           "text": "Craft a Cooking Pot, a very handy little thing, used for preparing meals",
+           "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/gravel.png"
+    },
+    "criteria": {
+        "straw_acquire": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items":[
+                {
+                    "items":[
+                        "farmersdelight:cooking_pot"
+                    ]
+                }
+            ]
+          }
+        }
+      },
+      "requirements": [
+        [
+          "straw_acquire"
+        ]
+      ],
+      "parent":"mandatory:primitive_age/castiron"
+}

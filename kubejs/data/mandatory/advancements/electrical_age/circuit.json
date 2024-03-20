@@ -15,7 +15,7 @@
            "text": "Craft your first Electric Component a base for Light Engineering blocks",
            "color": "green"
         },
-        "frame": "task",
+        "frame": "goal",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false,
