@@ -13,7 +13,7 @@
         "description": 
         {
            "text": "Obtain the soul of the machines, a Kinetic Engine",
-           "color": "green"
+           "color": "purple"
         },
         "frame": "challenge",
         "show_toast": true,

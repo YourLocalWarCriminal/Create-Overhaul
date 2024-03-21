@@ -726,3 +726,9 @@ craftingTable.addShaped("pot", <item:farmersdelight:cooking_pot>, [
     [<item:createdeco:cast_iron_sheet>, nope, <item:createdeco:cast_iron_sheet>],
     [<item:createdeco:cast_iron_sheet>, <item:createdeco:cast_iron_sheet>, <item:createdeco:cast_iron_sheet>]
 ]);
+
+craftingTable.addShaped("windmill_bearing", <item:create:windmill_bearing>, [
+    [nail, <tag:items:forge:plates/cast_iron>, nail],
+    [<tag:items:forge:plates/cast_iron>, <item:create:mechanical_bearing>, <tag:items:forge:plates/cast_iron>],
+    [nail, <tag:items:forge:plates/cast_iron>, nail]
+]);

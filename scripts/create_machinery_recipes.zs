@@ -79,10 +79,14 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 // CompactingManager.addRecipe(name as string, heat as HeatCondition, outputs as IFluidStack[], itemInputs as IIngredientWithAmount[], fluidInputs as FluidIngredient[], duration as int) 
 // CompactingManager.addRecipe(name as string, heat as HeatCondition, outputs as Percentaged<IItemStack>[], itemInputs as IIngredientWithAmount[], fluidInputs as FluidIngredient[], duration as int)
 
-<recipetype:create:compacting>.addRecipe('slurry_to_mix', <constant:create:heat_condition:none>, [(<item:kubejs:acidic_glass_mixture> * 2) % 100], [nope], [<fluid:kubejs:acidic_glass_mixture_slurry> * 250], 300);
-<recipetype:create:compacting>.addRecipe('sturdy_block', <constant:create:heat_condition:superheated>, [<item:create_things_and_misc:sturdy_sheet_block> % 100], [<item:create:sturdy_sheet> * 10], [], 1200);
-<recipetype:create:compacting>.addRecipe('phenol', <constant:create:heat_condition:superheated>, [<fluid:kubejs:phenol> * 10], [], [<fluid:immersiveengineering:creosote> * 20], 60);
+<recipetype:create:compacting>.addRecipe("slurry_to_mix", <constant:create:heat_condition:none>, [(<item:kubejs:acidic_glass_mixture> * 2) % 100], [nope], [<fluid:kubejs:acidic_glass_mixture_slurry> * 250], 300);
+<recipetype:create:compacting>.addRecipe("sturdy_block", <constant:create:heat_condition:superheated>, [<item:create_things_and_misc:sturdy_sheet_block> % 100], [<item:create:sturdy_sheet> * 10], [], 1200);
+<recipetype:create:compacting>.addRecipe("matter_of_overhaul", <constant:create:heat_condition:superheated>, [<item:kubejs:matter_of_overhaul> % 100], [<item:kubejs:aspect_of_time>, <item:kubejs:aspect_of_labour>, <item:kubejs:aspect_of_metallurgy>, <item:kubejs:aspect_of_nature>, <item:kubejs:aspect_of_poacher>], [], 3600);
+<recipetype:create:compacting>.addRecipe("phenol", <constant:create:heat_condition:superheated>, [<fluid:kubejs:phenol> * 10], [], [<fluid:immersiveengineering:creosote> * 20], 60);
 
+// SandPaperPolishingManager.addRecipe(name as string, output as Percentaged<IItemStack>, input as IIngredient, duration as int) as void
+
+<recipetype:create:sandpaper_polishing>.addRecipe("gear_of_overhaul", <item:kubejs:gear_of_overhaul> % 100, <item:kubejs:matter_of_overhaul> * 1, 1000);
 
 // FillingManager.addRecipe(name, output, inputContainer, inputFluid, duration);
 <recipetype:create:filling>.addRecipe("blast_brick", <item:immersiveengineering:blastbrick> * 3, <item:minecraft:bricks> * 3, <fluid:create:potion>.withTag({Potion: "minecraft:long_fire_resistance" as string}) * 250, 200);

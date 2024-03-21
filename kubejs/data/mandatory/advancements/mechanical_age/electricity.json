@@ -13,7 +13,7 @@
         "description": 
         {
            "text": "Obtain an Alternator, a machine used to convert mechanical power to electrical",
-           "color": "green"
+           "color": "purple"
         },
         "frame": "challenge",
         "show_toast": true,

@@ -58,6 +58,11 @@ onEvent('item.registry', event => {
 	event.create('aspect_of_nature').displayName('Aspect Of Nature').texture('kubejs:item/aspects/aspect_of_nature').maxStackSize(4).fireResistant(true).rarity('epic').glow(false)
 	event.create('aspect_of_poacher').displayName('Aspect Of Poacher').texture('kubejs:item/aspects/aspect_of_poacher').maxStackSize(4).fireResistant(true).rarity('epic').glow(false)
 
+	//Endgame
+	event.create('gear_of_overhaul').displayName('Gear Of Overhaul').texture('kubejs:item/endgame/gear_of_overhaul').maxStackSize(16).fireResistant(true).rarity('epic').glow(false)
+	event.create('matter_of_overhaul').displayName('Matter Of Overhaul').texture('kubejs:item/endgame/matter_of_overhaul').maxStackSize(4).fireResistant(true).rarity('epic').glow(false)
+
+
 	//MISC
 	event.create('bolt').displayName('Metal Bolt')
 	event.create('nail').displayName('Metal Nail')
