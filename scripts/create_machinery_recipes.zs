@@ -5,6 +5,8 @@ import crafttweaker.api.recipe.BlastFurnaceRecipeManager;
 import mods.create.MechanicalCrafterManager;
 import mods.create.EmptyingManager;
 import mods.create.CompactingManager;
+import mods.jei.JEI;
+import mods.jei.category.JeiCategory;
 
 //variables
 
@@ -72,6 +74,7 @@ val plates_press = [
 
 val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 //<recipetype:create:pressing>.addRecipe(name, output, input, duration)
+<recipetype:create:pressing>.addRecipe("bronzeplate", [<item:alloyed:bronze_sheet> % 100], <item:alloyed:bronze_ingot> * 2, 200);
 <recipetype:create:pressing>.addRecipe("mithrilplate", [<item:kubejs:mithril_plate> % 100], <item:kubejs:mithril_ingot> * 2, 200);
 /*for i, item in ingots_press {
     <recipetype:create:pressing>.addRecipe("ingots_to_plates" + i, [plates_press[i]*0], ingots_press[i]*2, 200);
@@ -87,6 +90,11 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 // SandPaperPolishingManager.addRecipe(name as string, output as Percentaged<IItemStack>, input as IIngredient, duration as int) as void
 
 <recipetype:create:sandpaper_polishing>.addRecipe("gear_of_overhaul", <item:kubejs:gear_of_overhaul> % 100, <item:kubejs:matter_of_overhaul> * 1, 1000);
+
+JEI.hideRecipe("create:sandpaper_polishing", "crafttweaker:gear_of_overhaul");
+JEI.hideIngredient(<item:kubejs:gear_of_overhaul>);
+
+
 
 // FillingManager.addRecipe(name, output, inputContainer, inputFluid, duration);
 <recipetype:create:filling>.addRecipe("blast_brick", <item:immersiveengineering:blastbrick> * 3, <item:minecraft:bricks> * 3, <fluid:create:potion>.withTag({Potion: "minecraft:long_fire_resistance" as string}) * 250, 200);
@@ -132,6 +140,7 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 <recipetype:create:mixing>.addRecipe("solder", <constant:create:heat_condition:superheated>, [<fluid:kubejs:solder> * 100], [<item:create:zinc_ingot>, <item:minecraft:iron_ingot>], [], 300);
 <recipetype:create:mixing>.addRecipe("acidic_glass_mix_to_silicon", <constant:create:heat_condition:heated>, [<item:kubejs:silicon_dust>], [<item:kubejs:lime_dust> * 1, <item:kubejs:acidic_glass_mixture>], [], 600);
 <recipetype:create:mixing>.addRecipe("divine_alloy", <constant:create:heat_condition:superheated>, [<fluid:kubejs:divine_alloy> * 1000], [<item:minecraft:gold_ingot> * 4, <item:create:brass_ingot> * 4,<item:byg:pendorite_ingot> * 4,<item:minecraft:netherite_ingot> * 4,<item:alloyed:steel_ingot> * 4,<item:immersiveengineering:ingot_uranium> * 4,<item:kubejs:mithril_ingot> * 4,<item:immersiveengineering:ingot_silver> * 4]);
+<recipetype:create:mixing>.addRecipe("bronze", <constant:create:heat_condition:heated>, [<item:alloyed:bronze_ingot> * 2], [<item:minecraft:copper_ingot> * 2, <item:create:cinder_flour> * 3, <item:minecraft:amethyst_shard> * 2]);
 //saw recipes(name,output,input,time)
 <recipetype:create:cutting>.addRecipe("treatedsticks",<item:immersiveengineering:stick_treated> * 2 % 100 , <tag:items:forge:treated_wood>, 220);
 <recipetype:create:cutting>.addRecipe("silicon_wafer_by_mechanical_saw", <item:kubejs:silicon_wafer> * 4, <item:kubejs:silicon_boule>, 1200);
@@ -185,6 +194,40 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
     [<item:alloyed:steel_sheet>, <item:kubejs:mechanical_engine>, <item:immersiveengineering:component_electronic_adv>, <item:kubejs:mechanical_engine>, <item:alloyed:steel_sheet>],
     [nope, <item:alloyed:steel_sheet>, <tag:items:forge:plates/aluminum>, <item:alloyed:steel_sheet>, nope]
 ]);
+
+<recipetype:create:mechanical_crafting>.addRecipe("grapplinwhisk", <item:create_sa:grapplin_whisk>, [
+    [nope, <item:immersiveengineering:wooden_grip>, nope],
+    [<item:kubejs:clockwork_mechanism>, <item:create:steam_engine>, <item:create_sa:heat_engine>],
+    [<item:kubejs:clockwork_mechanism>, <item:alloyed:steel_casing>, 
+    <item:create_sa:heat_engine>],
+    [<item:minecraft:chain>, <item:minecraft:chain>, <item:minecraft:chain>],
+    [<item:minecraft:chain>, <item:minecraft:chain>, <item:minecraft:chain>],
+    [nope, <item:create:whisk>, nope]
+]);
+
+<recipetype:create:mechanical_crafting>.addRecipe("mechadrill", <item:create_sa:portable_drill>, [
+    [nope, <item:immersiveengineering:wooden_grip>, nope, nope],
+    [<item:create_sa:steam_engine>, <item:create:brass_casing>, <item:create:precision_mechanism>, <item:immersiveengineering:wooden_grip>],
+    [<item:create_sa:steam_engine>, <item:create:large_cogwheel>, <item:kubejs:clockwork_mechanism>, nope],
+    [nope, <item:create_sa:brass_drill_head>, nope, nope]
+]);
+
+<recipetype:create:mechanical_crafting>.addRecipe("dieseldrill", <item:immersiveengineering:drill>, [
+    [nope, <item:immersiveengineering:wooden_grip>, nope],
+    [<item:create_sa:heat_engine>, <item:immersiveengineering:component_electronic>, <item:immersiveengineering:wooden_grip>],
+    [<item:alloyed:steel_casing>, <item:create:fluid_tank>, <item:alloyed:steel_casing>],
+    [nope, <item:create:large_cogwheel>, nope]
+]);
+
+<recipetype:create:mechanical_crafting>.addRecipe("potato_cannon", <item:create:potato_cannon>, [
+    [<item:kubejs:clockwork_mechanism>, <item:create:fluid_pipe>, <item:create:fluid_pipe>, <item:create:fluid_pipe>, <item:create:fluid_pipe>],
+    [<item:immersiveengineering:wooden_grip>, <item:create:precision_mechanism>, <item:immersiveengineering:toolupgrade_drill_waterproof>, <item:immersiveengineering:wooden_grip>, nope]
+]);
+
+<recipetype:create:mechanical_crafting>.addRecipe("chemthrower", <item:immersiveengineering:chemthrower>, [
+    [nope, <item:immersiveengineering:component_electronic>, <item:immersiveengineering:fluid_pipe>, <item:immersiveengineering:fluid_pipe>, <item:immersiveengineering:fluid_pipe>],
+    [<item:immersiveengineering:wooden_grip>, <item:create:fluid_tank>, <item:immersiveengineering:toolupgrade_drill_waterproof>, <item:immersiveengineering:wooden_grip>, nope]
+]); 
 
 //sequenced ASSembly(trust me this was ass to figure out)(name,output(transitionTo), input(require), loops, Outher Outputs(addOutput), addStep)
 /*A blank crafting recipe
@@ -700,3 +743,38 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<tag:items:forge:glass>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:light_bulb>))
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:wirecoil_steel>)));
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("copperjetpack")
+                                                      .transitionTo(<item:create:copper_casing>)
+                                                      .require(<item:create:copper_casing>)
+                                                      .loops(1)
+                                                      .addOutput(<item:create_sa:copper_jetpack_chestplate>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create_sa:hydraulic_engine>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:spout>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:spout>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:fluid_tank>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:fluid_pipe>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:fluid_pipe>)));
+
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("copperexoskeleton")
+                                                      .transitionTo(<item:create:copper_casing>)
+                                                      .require(<item:create:copper_casing>)
+                                                      .loops(1)
+                                                      .addOutput(<item:create_sa:copper_exoskeleton_chestplate>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:clockwork_mechanism>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create_sa:hydraulic_engine>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create_sa:hydraulic_engine>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:copper_sheet>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>)));
+                                               
+<recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("extendogrip")
+                                                      .transitionTo(<item:create:brass_casing>)
+                                                      .require(<item:create:brass_casing>)
+                                                      .loops(1)
+                                                      .addOutput(<item:create:extendo_grip>, 1)
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:immersiveengineering:wooden_grip>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:leverage_mechanism>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:kubejs:mechanical_elbow>))
+                                                      .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:create:brass_hand>)));                                               

@@ -117,6 +117,7 @@ var delete = [
 <item:vs_eureka:dark_oak_ship_helm>,
 <item:vs_eureka:crimson_ship_helm>,
 <item:vs_eureka:warped_ship_helm>,
+<item:immersiveengineering:circuit_table>,
 ];
 
 for item in delete {
@@ -311,6 +312,22 @@ var recipesd = [
 <item:farmersdelight:cooking_pot>,
 <item:farmersdelight:skillet>,
 <item:farmersdelight:cabbage_rolls>,
+<item:create_sa:grapplin_whisk>,
+<item:create_sa:copper_jetpack_chestplate>,
+<item:immersiveengineering:glider>,
+<item:create_sa:copper_exoskeleton_chestplate>,
+<item:create:extendo_grip>, 
+<item:create:copper_backtank>,
+<item:create:copper_diving_boots>,
+<item:create:copper_diving_helmet>,
+<item:create_things_and_misc:sticky_boots_boots>,
+<item:create_sa:brass_drone_item>,
+<item:create:linked_controller>,
+<item:create:display_link>,
+<item:create:potato_cannon>, 
+<item:immersiveengineering:chemthrower>,
+<item:immersiveengineering:toolupgrade_drill_waterproof>,
+<item:cold_sweat:goat_fur>,
 ];
 
 for item in recipesd {
@@ -349,6 +366,7 @@ craftingTable.remove(<item:create:rose_quartz>);
 <recipetype:create:mechanical_crafting>.remove(<item:alloyed:steel_shears>);
 
 JEI.hideIngredient(<fluid:immersiveengineering:plantoil>);
+JEI.hideIngredient(<item:kubejs:gear_of_overhaul>);
 
 craftingTable.remove(<item:minecraft:blaze_powder>);
 craftingTable.remove(<item:minecraft:bread>);

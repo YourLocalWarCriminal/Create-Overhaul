@@ -732,3 +732,68 @@ craftingTable.addShaped("windmill_bearing", <item:create:windmill_bearing>, [
     [<tag:items:forge:plates/cast_iron>, <item:create:mechanical_bearing>, <tag:items:forge:plates/cast_iron>],
     [nail, <tag:items:forge:plates/cast_iron>, nail]
 ]);
+
+craftingTable.addShaped("drillhead", <item:create_sa:brass_drill_head>, [
+    [<item:create:brass_ingot>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>],
+    [<item:create:shaft>, <item:alloyed:bronze_ingot>, <item:kubejs:mithril_ingot>],
+    [<item:create:brass_ingot>, <item:alloyed:steel_sheet>, <item:alloyed:steel_sheet>],
+]);
+
+craftingTable.addShaped("collapsible_glider", <item:immersiveengineering:glider>, [
+    [nope, <item:immersiveengineering:hemp_fabric>, nope],
+    [<item:immersiveengineering:stick_steel>, <item:minecraft:leather_chestplate>, <item:immersiveengineering:stick_steel>],
+    [<item:immersiveengineering:hemp_fabric>, <item:immersiveengineering:stick_steel>, <item:immersiveengineering:hemp_fabric>]
+]);
+
+craftingTable.addShaped("backtank", <item:create:copper_backtank>,  [
+    [nope, <item:create:mechanical_pump>, nope],
+    [<item:minecraft:piston>, <item:create:copper_casing>, <item:minecraft:piston>],
+    [<item:create:fluid_tank>, <item:create:fluid_tank>, <item:create:fluid_tank>]
+]);
+
+craftingTable.addShaped("diving_boots", <item:create:copper_diving_boots>, [
+    [<item:create:copper_sheet>, nope, <item:create:copper_sheet>],
+    [<item:create:copper_sheet>, <item:create_sa:copper_boots>, <item:create:copper_sheet>],
+    [<item:createdeco:cast_iron_block>, nope, <item:createdeco:cast_iron_block>]
+]);
+
+craftingTable.addShaped("diving_helmet", <item:create:copper_diving_helmet>, [
+    [<item:create:fluid_pipe>, <item:create_sa:copper_helmet>, <item:create:fluid_pipe>],
+    [<item:create:fluid_pipe>, <item:minecraft:glass_pane>, <item:create:fluid_pipe>],
+    [<item:create:fluid_pipe>, <item:create:copper_casing>, <item:create:fluid_pipe>]
+]);
+
+craftingTable.addShaped("slimeboots", <item:create_things_and_misc:sticky_boots_boots>, [
+    [<item:minecraft:sticky_piston>, <item:create:redstone_link>, <item:minecraft:sticky_piston>],
+    [<item:minecraft:slime_block>, <item:minecraft:leather_boots>, <item:minecraft:slime_block>]
+]);
+
+craftingTable.addShaped("drone", <item:create_sa:brass_drone_item>, [
+    [<item:create_sa:fan_component>, <item:create:redstone_link>, <item:create_sa:fan_component>],
+    [<item:create:brass_sheet>, <item:immersiveengineering:component_electronic>, <item:create:brass_sheet>],
+    [<item:create_sa:fan_component>, <item:create:brass_sheet>, <item:create_sa:fan_component>]
+]);
+
+craftingTable.addShaped("linkedcontroller", <item:create:linked_controller>, [
+    [<tag:items:minecraft:buttons>, <item:create:redstone_link>, <tag:items:minecraft:buttons>],
+    [<tag:items:minecraft:buttons>, <item:immersiveengineering:component_electronic>, <tag:items:minecraft:buttons>],
+    [<item:create:brass_sheet>, <item:create:brass_sheet>, <item:create:brass_sheet>]
+]); 
+
+craftingTable.addShaped("displaylink", <item:create:display_link> * 2, [
+    [nope, <item:create:nixie_tube>, nope],
+    [<item:immersiveengineering:coil_mv>, <item:create:linked_controller>, <item:immersiveengineering:coil_mv>],
+    [<item:create:brass_sheet>, <item:create:brass_casing>, <item:create:brass_sheet>]
+]);
+
+craftingTable.addShaped("pressurized_air_tank", <item:immersiveengineering:toolupgrade_drill_waterproof>, [
+    [nope, <item:minecraft:blue_dye>, nope],
+    [<item:minecraft:blue_dye>, <item:create:copper_backtank>, <item:minecraft:blue_dye>],
+    [nope, <item:minecraft:blue_dye>, nope]
+]);
+
+craftingTable.addShaped("goat_fur", <item:cold_sweat:goat_fur> * 2, [
+    [<item:minecraft:white_wool>, <item:immersiveengineering:hemp_fabric>, <item:minecraft:string>],
+    [<item:immersiveengineering:hemp_fabric>, <item:minecraft:white_wool>, <item:immersiveengineering:hemp_fabric>],
+    [<item:minecraft:string>, <item:immersiveengineering:hemp_fabric>, <item:minecraft:white_wool>]
+]);
