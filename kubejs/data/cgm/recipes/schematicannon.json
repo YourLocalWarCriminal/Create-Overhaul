@@ -1,0 +1,36 @@
+{
+    "type": "cgm:workbench",
+    "materials": [
+      {
+        "item": "create:turntable",
+        "count": 1
+      },
+      {
+        "item":"kubejs:clockwork_mechanism",
+        "count": 3
+      },
+      {
+        "item":"create:precision_mechanism",
+        "count":4
+      },
+      {
+        "item":"alloyed:steel_casing",
+        "count":2
+      },
+      {
+        "item":"create_sa:heat_engine",
+        "count":2
+      },
+      {
+        "item":"immersiveengineering:sheetmetal_steel",
+        "count":2
+      },
+      {
+        "item":"createdeco:cast_iron_block", 
+        "count":2
+      }
+    ],
+    "result": {
+      "item": "create:schematicannon"
+    }
+  }

@@ -3,6 +3,12 @@ import mods.farmersdelight.CookingPot;
 
 <item:alloyed:bronze_ingot>.addTooltip("Now made with Amethyst!");
 <item:farmersdelight:safety_net>.addTooltip("Can be used for Sifting Purposes");
+<item:kubejs:matter_of_overhaul>.addTooltip("Deploy sand to refine");
+<item:createaddition:electric_motor>.addTooltip("Deploy a Gear of Overhaul to creativify");
+<item:storagedrawers:controller>.addTooltip("Deploy a Gear of Overhaul to creativify");
+<item:create:fluid_tank>.addTooltip("Deploy a Gear of Overhaul to creativify");
+<item:immersiveengineering:crate>.addTooltip("Deploy a Gear of Overhaul to creativify");
+<item:createaddition:modular_accumulator>.addTooltip("Deploy a Gear of Overhaul to creativify");
 
 //smithing recipes(name,output,inputA,inputB)
 

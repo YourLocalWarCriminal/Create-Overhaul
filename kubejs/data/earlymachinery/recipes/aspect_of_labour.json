@@ -1,37 +1,69 @@
 {
     "type":"custommachinery:custom_machine",
     "machine":"earlymachinery:eee",
-    "time":6000,
+    "time":400,
     "requirements":[
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"kubejs:induction_mechanism",
-            "amount":64
+            "item":"item:immersiveengineering:component_electronic",
+            "amount":16
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"kubejs:transistor",
+            "amount":24
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"immersiveengineering:component_electronic",
+            "amount":16
         },
         {
             "type":"custommachinery:item",
             "mode":"input",
             "item":"immersiveengineering:component_electronic_adv",
-            "amount":64
+            "amount":8
         },
         {
-            "type":"custommachinery:item",
-            "mode":"input",
-            "item":"immersiveengineering:coil_hv",
-            "amount":16
+          "type":"custommachinery:item",
+          "mode":"input",
+          "item":"createaddition:capacitor",
+          "amount":16
         },
         {
-            "type":"custommachinery:item",
-            "mode":"input",
-            "item":"kubejs:silicon_boule",
-            "amount":16
+          "type":"custommachinery:item",
+          "mode":"input",
+          "item":"kubejs:basic_backboard",
+          "amount":5
+        },
+        
+        {
+          "type":"custommachinery:item",
+          "mode":"input",
+          "item":"immersiveengineering:circuit_board",
+          "amount":2
+        },
+        
+        {
+          "type":"custommachinery:item",
+          "mode":"input",
+          "item":"kubejs:basic_backboard",
+          "amount":5
+        },
+        {
+          "type":"custommachinery:item",
+          "mode":"input",
+          "item":"immersiveengineering:circuit_board",
+          "amount":2
         },
         {
           "type": "custommachinery:fluid_per_tick",
           "mode": "input",
           "fluid": "kubejs:solder",
-          "amount": 5,
+          "amount": 15,
           "chance": 1.0
         },
         {

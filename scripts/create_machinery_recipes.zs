@@ -7,6 +7,8 @@ import mods.create.EmptyingManager;
 import mods.create.CompactingManager;
 import mods.jei.JEI;
 import mods.jei.category.JeiCategory;
+import mods.create.FillingManager;
+import mods.create.DeployerApplicationManager;
 
 //variables
 
@@ -84,22 +86,30 @@ val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
 
 <recipetype:create:compacting>.addRecipe("slurry_to_mix", <constant:create:heat_condition:none>, [(<item:kubejs:acidic_glass_mixture> * 2) % 100], [nope], [<fluid:kubejs:acidic_glass_mixture_slurry> * 250], 300);
 <recipetype:create:compacting>.addRecipe("sturdy_block", <constant:create:heat_condition:superheated>, [<item:create_things_and_misc:sturdy_sheet_block> % 100], [<item:create:sturdy_sheet> * 10], [], 1200);
-<recipetype:create:compacting>.addRecipe("matter_of_overhaul", <constant:create:heat_condition:superheated>, [<item:kubejs:matter_of_overhaul> % 100], [<item:kubejs:aspect_of_time>, <item:kubejs:aspect_of_labour>, <item:kubejs:aspect_of_metallurgy>, <item:kubejs:aspect_of_nature>, <item:kubejs:aspect_of_poacher>], [], 3600);
 <recipetype:create:compacting>.addRecipe("phenol", <constant:create:heat_condition:superheated>, [<fluid:kubejs:phenol> * 10], [], [<fluid:immersiveengineering:creosote> * 20], 60);
 
-// SandPaperPolishingManager.addRecipe(name as string, output as Percentaged<IItemStack>, input as IIngredient, duration as int) as void
+// DeployerApplicationManager.addRecipe(name as string, processedItem as IIngredient, heldItem as IIngredient, outputs as Percentaged<IItemStack>[], keepHeldItem as boolean) as void
 
-<recipetype:create:sandpaper_polishing>.addRecipe("gear_of_overhaul", <item:kubejs:gear_of_overhaul> % 100, <item:kubejs:matter_of_overhaul> * 1, 1000);
+<recipetype:create:deploying>.addRecipe("goo", <item:kubejs:matter_of_overhaul>, <tag:items:forge:sand>, [<item:kubejs:gear_of_overhaul> % 100], true);
+<recipetype:create:deploying>.addRecipe("creative_drawer",<item:storagedrawers:controller>,<item:kubejs:gear_of_overhaul>, [<item:storagedrawers:creative_vending_upgrade>], false);
+<recipetype:create:deploying>.addRecipe("creative_motor",<item:createaddition:electric_motor>, <item:kubejs:gear_of_overhaul>, [<item:create:creative_motor>], false);
+<recipetype:create:deploying>.addRecipe("creative_crate", <item:immersiveengineering:crate>,<item:kubejs:gear_of_overhaul>, [<item:create:creative_crate>], false);
+<recipetype:create:deploying>.addRecipe("creative_generator",<item:createaddition:modular_accumulator>,<item:kubejs:gear_of_overhaul>, [<item:createaddition:creative_energy>], false);
+<recipetype:create:deploying>.addRecipe("creative_tank",<item:create:fluid_tank>,<item:kubejs:gear_of_overhaul>, [<item:create:creative_fluid_tank>], false);
 
-JEI.hideRecipe("create:sandpaper_polishing", "crafttweaker:gear_of_overhaul");
+JEI.hideRecipe("create:deploying", "crafttweaker:goo");
+JEI.hideRecipe("create:deploying", "crafttweaker:creative_tank");
+JEI.hideRecipe("create:deploying", "crafttweaker:creative_drawer");
+JEI.hideRecipe("create:deploying", "crafttweaker:creative_crate");
+JEI.hideRecipe("create:deploying", "crafttweaker:creative_motor");
+JEI.hideRecipe("create:deploying", "crafttweaker:creative_generator");
 JEI.hideIngredient(<item:kubejs:gear_of_overhaul>);
-
-
 
 // FillingManager.addRecipe(name, output, inputContainer, inputFluid, duration);
 <recipetype:create:filling>.addRecipe("blast_brick", <item:immersiveengineering:blastbrick> * 3, <item:minecraft:bricks> * 3, <fluid:create:potion>.withTag({Potion: "minecraft:long_fire_resistance" as string}) * 250, 200);
 <recipetype:create:filling>.addRecipe("blast_brick2", <item:immersiveengineering:blastbrick> * 3, <item:minecraft:bricks> * 3, <fluid:immersiveengineering:potion>.withTag({Potion: "minecraft:long_fire_resistance" as string}) * 250, 200);
 <recipetype:create:filling>.addRecipe("redstone_wire", <item:immersiveengineering:wirecoil_redstone>, <item:immersiveengineering:wirecoil_structure_steel>, <fluid:immersiveengineering:redstone_acid> * 5, 20);
+<recipetype:create:filling>.addRecipe("divine_ingot", <item:kubejs:divine_ingot>, <item:minecraft:nether_brick>, <fluid:kubejs:divine_alloy> * 500);
 
 // BlastFurnaceRecipeManager.addRecipe(name as string, output as IItemStack, input as IIngredient, xp as float, cookTime as int);
 
@@ -118,17 +128,17 @@ JEI.hideIngredient(<item:kubejs:gear_of_overhaul>);
 <recipetype:create:item_application>.addRecipe("mechanical_pump", [<item:create:mechanical_pump>], <item:create:fluid_pipe>, <item:create_sa:hydraulic_engine>, false);
 <recipetype:create:item_application>.addRecipe("spout", [<item:create:spout>], <item:create:fluid_tank>, <item:create_sa:hydraulic_engine>, false);
 <recipetype:create:item_application>.addRecipe("clockwork_bearing2", [<item:create:clockwork_bearing>], <item:create:mechanical_bearing>, <item:kubejs:clockwork_mechanism>, false);
-
 <recipetype:create:item_application>.addRecipe("hose_pulley", [<item:create:elevator_pulley>], <item:create:hose_pulley>, <item:create:brass_casing>, true);
 <recipetype:create:item_application>.addRecipe("hose_pulley2", [<item:create:rope_pulley>], <item:create:hose_pulley>, <item:create:andesite_casing>, true);
 <recipetype:create:item_application>.addRecipe("rope_pulley", [<item:create:elevator_pulley>], <item:create:rope_pulley>, <item:create:brass_casing>, true);
 <recipetype:create:item_application>.addRecipe("rope_pulley2", [<item:create:hose_pulley>], <item:create:rope_pulley>, <item:create:copper_casing>, true);
 <recipetype:create:item_application>.addRecipe("elevator_pulley", [<item:create:hose_pulley>], <item:create:elevator_pulley>, <item:create:copper_casing>, true);
 <recipetype:create:item_application>.addRecipe("elevator_pulley2", [<item:create:rope_pulley>], <item:create:elevator_pulley>, <item:create:andesite_casing>, true);
-
 <recipetype:create:item_application>.addRecipe("bottom_flue_brick", [<item:kubejs:flue_bottom_bricks>], <item:minecraft:smooth_stone_slab>, <item:kubejs:flue_bricks>, false);
-
 <recipetype:create:item_application>.addRecipe("sail_application", [<item:create:white_sail>], <item:create:sail_frame>, <item:minecraft:white_wool>, false);
+
+
+
 
 //deplyoer application(name,deployed onto item, the held item, output, keep held item as bool)
 //mixer(name,heat,[output], [input], [inputFluid], time)
@@ -139,7 +149,7 @@ JEI.hideIngredient(<item:kubejs:gear_of_overhaul>);
 <recipetype:create:mixing>.addRecipe("netherite_ingot", <constant:create:heat_condition:superheated>, [<item:minecraft:netherite_ingot>], [<item:minecraft:netherite_scrap>*4, <tag:items:forge:ingots/gold>*4], [], 1200);
 <recipetype:create:mixing>.addRecipe("solder", <constant:create:heat_condition:superheated>, [<fluid:kubejs:solder> * 100], [<item:create:zinc_ingot>, <item:minecraft:iron_ingot>], [], 300);
 <recipetype:create:mixing>.addRecipe("acidic_glass_mix_to_silicon", <constant:create:heat_condition:heated>, [<item:kubejs:silicon_dust>], [<item:kubejs:lime_dust> * 1, <item:kubejs:acidic_glass_mixture>], [], 600);
-<recipetype:create:mixing>.addRecipe("divine_alloy", <constant:create:heat_condition:superheated>, [<fluid:kubejs:divine_alloy> * 1000], [<item:minecraft:gold_ingot> * 4, <item:create:brass_ingot> * 4,<item:byg:pendorite_ingot> * 4,<item:minecraft:netherite_ingot> * 4,<item:alloyed:steel_ingot> * 4,<item:immersiveengineering:ingot_uranium> * 4,<item:kubejs:mithril_ingot> * 4,<item:immersiveengineering:ingot_silver> * 4]);
+<recipetype:create:mixing>.addRecipe("divine_alloy", <constant:create:heat_condition:superheated>, [<fluid:kubejs:divine_alloy> * 1000], [<item:minecraft:gold_ingot> * 1, <item:create:brass_ingot> * 1,<item:byg:pendorite_ingot> * 1,<item:minecraft:netherite_ingot> * 1,<item:alloyed:steel_ingot> * 1,<item:immersiveengineering:ingot_uranium> * 1,<item:kubejs:mithril_ingot> * 1,<item:immersiveengineering:ingot_silver> * 1]);
 <recipetype:create:mixing>.addRecipe("bronze", <constant:create:heat_condition:heated>, [<item:alloyed:bronze_ingot> * 2], [<item:minecraft:copper_ingot> * 2, <item:create:cinder_flour> * 3, <item:minecraft:amethyst_shard> * 2]);
 //saw recipes(name,output,input,time)
 <recipetype:create:cutting>.addRecipe("treatedsticks",<item:immersiveengineering:stick_treated> * 2 % 100 , <tag:items:forge:treated_wood>, 220);
@@ -229,6 +239,13 @@ JEI.hideIngredient(<item:kubejs:gear_of_overhaul>);
     [<item:immersiveengineering:wooden_grip>, <item:create:fluid_tank>, <item:immersiveengineering:toolupgrade_drill_waterproof>, <item:immersiveengineering:wooden_grip>, nope]
 ]); 
 
+<recipetype:create:mechanical_crafting>.addRecipe("moo", <item:kubejs:matter_of_overhaul>, [
+    [nope, nope, <item:kubejs:aspect_of_poacher>, nope, nope],
+    [nope, <item:kubejs:divine_ingot>, <item:kubejs:divine_ingot>, <item:kubejs:divine_ingot>, nope],
+    [<item:kubejs:aspect_of_metallurgy>, <item:kubejs:divine_ingot>, <item:kubejs:aspect_of_time>, <item:kubejs:divine_ingot>, <item:kubejs:aspect_of_nature>],
+    [nope, <item:kubejs:divine_ingot>, <item:kubejs:divine_ingot>, <item:kubejs:divine_ingot>, nope],
+    [nope, nope, <item:kubejs:aspect_of_labour>, nope, nope],
+]);
 //sequenced ASSembly(trust me this was ass to figure out)(name,output(transitionTo), input(require), loops, Outher Outputs(addOutput), addStep)
 /*A blank crafting recipe
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("precisionmechanism")

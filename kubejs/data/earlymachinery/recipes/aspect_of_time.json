@@ -1,37 +1,37 @@
 {
     "type":"custommachinery:custom_machine",
     "machine":"earlymachinery:eee",
-    "time":300,
+    "time":6000,
     "requirements":[
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"kubejs:divine_ingot",
+            "item":"minecraft:daylight_detector",
+            "amount":12
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"sereneseasons:calendar",
             "amount":1
         },
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"kubejs:divine_ingot",
-            "amount":1
+            "item":"create:cuckoo_clock",
+            "amount":16
         },
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"kubejs:divine_ingot",
-            "amount":1
-        },
-        {
-            "type":"custommachinery:item",
-            "mode":"input",
-            "item":"kubejs:divine_ingot",
-            "amount":1
+            "item":"minecraft:clock",
+            "amount":24
         },
         {
           "type": "custommachinery:fluid_per_tick",
           "mode": "input",
-          "fluid": "createaddition:seed_oil",
-          "amount": 10,
+          "fluid": "kubejs:divine_alloy",
+          "amount": 3,
           "chance": 1.0
         },
         {
@@ -43,19 +43,19 @@
         {
             "type":"custommachinery:item",
             "mode":"output",
-            "item":"kubejs:aspect_of_metallurgy",
+            "item":"kubejs:aspect_of_time",
             "amount":1
-        },
-        {
-          "type":"custommachinery:structure",
+          },
+          {
+            "type":"custommachinery:structure",
             "keys": {
               "a": "immersiveengineering:sheetmetal_aluminum",
               "b": "immersiveengineering:light_engineering",
               "c": "immersiveengineering:rs_engineering",
               "d": "immersiveengineering:heavy_engineering",
               "e": "byg:therium_glass",
-              "f": "immersiveengineering:generator",
-              "g": "minecraft:netherite_block"
+              "f": "alloyed:bronze_block",
+              "g": "vs_eureka:balloon"
             },
             "pattern": [
               [
@@ -67,12 +67,12 @@
               ],
               [
                 " aea ",
-                "afdfa",
-                "edgde",
-                "afdfa",
+                "afgfa",
+                "eggge",
+                "afgfa",
                 " ama "
               ]
             ]
-        }
+          }
     ]
 }

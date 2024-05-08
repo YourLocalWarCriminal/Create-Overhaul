@@ -6,55 +6,57 @@
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"byg:red_maple_sapling",
-            "amount":16
+            "item":"minecraft:zombie_head",
+            "amount":1
         },
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"byg:ebony_sapling",
-            "amount":16
+            "item":"minecraft:creeper_head",
+            "amount":1
         },
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"byg:mangrove_sapling",
-            "amount":16
+            "item":"minecraft:skeleton_skull",
+            "amount":1
         },
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"byg:white_cherry_sapling",
-            "amount":16
+            "item":"minecraft:wither_skeleton_skull",
+            "amount":4
         },
         {
           "type":"custommachinery:item",
           "mode":"input",
-          "item":"byg:indigo_jacaranda_sapling",
-          "amount":16
+          "item":"minecraft:dragon_head",
+          "amount":1
+        },
+        
+        {
+          "type":"custommachinery:item",
+          "mode":"input",
+          "item":"minecraft:dragon_head",
+          "amount":1
+        },
+        
+        {
+          "type":"custommachinery:item",
+          "mode":"input",
+          "item":"minecraft:dragon_head",
+          "amount":1
         },
         {
           "type":"custommachinery:item",
           "mode":"input",
-          "item":"byg:soul_shroom",
-          "amount":16
-        },
-        {
-          "type":"custommachinery:item",
-          "mode":"input",
-          "item":"byg:witch_hazel_sapling",
-          "amount":16
-        },
-        {
-          "type":"custommachinery:item",
-          "mode":"input",
-          "item":"byg:imparius_mushroom",
-          "amount":16
+          "item":"minecraft:dragon_head",
+          "amount":1
         },
         {
           "type": "custommachinery:fluid_per_tick",
           "mode": "input",
-          "fluid": "createaddition:seed_oil",
+          "fluid": "create:honey",
           "amount": 5,
           "chance": 1.0
         },
@@ -67,7 +69,7 @@
         {
             "type":"custommachinery:item",
             "mode":"output",
-            "item":"kubejs:aspect_of_nature",
+            "item":"kubejs:aspect_of_poacher",
             "amount":1
         },
         {
@@ -78,9 +80,8 @@
             "c": "immersiveengineering:rs_engineering",
             "d": "immersiveengineering:heavy_engineering",
             "e": "byg:therium_glass",
-            "f": "byg:willow_log[axis\u003dy]",
-            "g": "minecraft:warped_wart_block",
-            "h": "minecraft:chiseled_red_sandstone"
+            "f": "minecraft:honey_block",
+            "g": "minecraft:slime_block"
           },
           "pattern": [
             [
@@ -93,7 +94,7 @@
             [
               " aea ",
               "afgfa",
-              "eghge",
+              "egfge",
               "afgfa",
               " ama "
             ]

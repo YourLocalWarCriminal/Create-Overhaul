@@ -14,6 +14,7 @@ onEvent('item.registry', event => {
 	event.create('iron_bloom').displayName('Iron Bloom')
 	event.create('weak_netherite_ingot').displayName('Weak Netherite Ingot').tooltip('Used in the process of making Netherite').fireResistant(true)
 	event.create('red_mud_ball').displayName("Red Mud Ball")
+	event.create('divine_ingot').displayName("Divine Ingot").rarity('uncommon')
 
 	//Mechanical components
 		//Engines

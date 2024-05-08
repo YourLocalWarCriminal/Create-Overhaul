@@ -707,8 +707,6 @@ craftingTable.addShaped("mechanicalmixermegaultragamerrecipe", <item:create:mech
     [<item:kubejs:clockwork_mechanism>, <item:alloyed:steel_casing>, <item:kubejs:clockwork_mechanism>]
 ]);
 
-craftingTable.addShapeless("antique_atlas", <item:antiqueatlas:empty_antique_atlas>, [<item:minecraft:book>]);
-
 craftingTable.addShaped("stove", <item:farmersdelight:stove>, [
     [<item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_ingot>],
     [<item:minecraft:bricks>, nope, <item:minecraft:bricks>],
