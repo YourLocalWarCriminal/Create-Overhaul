@@ -556,7 +556,7 @@ craftingTable.addShaped("eureka_engine", <item:vs_eureka:engine>, [
     [<tag:items:forge:plates/lead>, <tag:items:forge:plates/lead>, <tag:items:forge:plates/lead>],
 ]);
 
-craftingTable.addShaped("flue_bricks", <item:kubejs:flue_bricks>, [
+craftingTable.addShaped("flue_bricks", <item:kubejs:flue_bricks> * 6, [
     [<item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_ingot>],
     [<item:createdeco:cast_iron_ingot>, <item:minecraft:polished_deepslate>, <item:createdeco:cast_iron_ingot>],
     [<item:createdeco:cast_iron_ingot>, hammer, <item:createdeco:cast_iron_ingot>]
