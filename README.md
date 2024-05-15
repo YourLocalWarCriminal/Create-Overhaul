@@ -1,4 +1,4 @@
-# Creator's Manual: How do Create: The Overhaul works
+# Creator's Manual: All the shenanigans with Create: The Overhaul
 ### Modlist
 >All of them should be at the newest version
 - Create Stuff & Additions (by Furti_Two)
