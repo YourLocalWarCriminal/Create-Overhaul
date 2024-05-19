@@ -790,7 +790,7 @@ craftingTable.addShaped("pressurized_air_tank", <item:immersiveengineering:toolu
     [nope, <item:minecraft:blue_dye>, nope]
 ]);
 
-craftingTable.addShaped("goat_fur", <item:cold_sweat:goat_fur> * 2, [
+craftingTable.addShaped("goat_fur", <item:cold_sweat:fur> * 2, [
     [<item:minecraft:white_wool>, <item:immersiveengineering:hemp_fabric>, <item:minecraft:string>],
     [<item:immersiveengineering:hemp_fabric>, <item:minecraft:white_wool>, <item:immersiveengineering:hemp_fabric>],
     [<item:minecraft:string>, <item:immersiveengineering:hemp_fabric>, <item:minecraft:white_wool>]

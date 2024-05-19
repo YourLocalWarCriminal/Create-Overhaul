@@ -327,7 +327,6 @@ var recipesd = [
 <item:create:potato_cannon>, 
 <item:immersiveengineering:chemthrower>,
 <item:immersiveengineering:toolupgrade_drill_waterproof>,
-<item:cold_sweat:goat_fur>,
 ];
 
 for item in recipesd {

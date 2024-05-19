@@ -6,7 +6,7 @@
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"immersiveengineering:dust_iron",
+            "item":"kubejs:cast_iron_dust",
             "amount":3
         },
         {
