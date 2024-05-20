@@ -9,9 +9,9 @@
     }
     ],
     "appearance":{
-        "block": "kubejs:pit_kiln_block_off",
+        "block": "kubejs:pit_kiln_dummy_off",
         "running":{
-            "block":"kubejs:pit_kiln_block_on",
+            "block":"kubejs:pit_kiln_dummy_on",
             "light": 7,
             "ambient_sound": "d75da0e9ae674c403866979d9957988fd8b09b06"
         }
@@ -40,7 +40,7 @@
             "type":"custommachinery:item",
             "id":"straw",
             "mode":"input",
-            "filter":["farmersdelight:straw"],
+            "filter":["#earlymachinery:fuel/pit_kiln"],
             "whitelist":true
         },
         {

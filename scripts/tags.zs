@@ -75,3 +75,20 @@
     <item:kubejs:brass_dust>,
     <item:immersiveengineering:dust_gold>,
 ]);
+
+<tag:blocks:create:wrench_pickup>.add([
+    <block:kubejs:flue_bottom_bricks>,
+    <block:kubejs:flue_bricks>,
+    <block:custommachinery:custom_machine_block>
+]);
+
+<tag:blocks:minecraft:mineable/pickaxe>.add([
+    <block:kubejs:flue_bottom_bricks>,
+    <block:kubejs:flue_bricks>,
+    <block:custommachinery:custom_machine_block>
+]);
+
+<tag:items:earlymachinery:fuel/pit_kiln>.add([
+    <item:minecraft:charcoal>,
+    (<item:farmersdelight:straw> * 3)
+]);
