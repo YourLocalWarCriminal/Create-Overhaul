@@ -34,7 +34,7 @@
                 }
                 
             ],
-            "nbt":"{machine:\"earlymachinery:eee\"}"
+            "nbt":"{machineID:earlymachinery:eee}"
           }
         }
       },

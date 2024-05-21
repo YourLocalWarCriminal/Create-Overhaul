@@ -21,18 +21,18 @@ val nope = <item:minecraft:air>;
 <recipetype:immersiveengineering:alloy>.addRecipe("silicon_boule", <item:kubejs:silicon_dust> * 32, <item:minecraft:glowstone_dust> * 16, 6000, <item:kubejs:silicon_boule>);
 
 //blast furnace recipe(name, input, time, output, slag)
-<recipetype:immersiveengineering:blast_furnace>.addRecipe("pig_iron_blasting", <item:minecraft:raw_iron>, 1200, <item:kubejs:pig_iron>, <item:immersiveengineering:slag>);
-<recipetype:immersiveengineering:blast_furnace>.addRecipe("pig_iron_blasting_crushed", <item:create:crushed_raw_iron>, 1200, <item:kubejs:pig_iron>, <item:immersiveengineering:slag>);
-<recipetype:immersiveengineering:blast_furnace>.addRecipe("pig_iron_blasting_dust", <item:immersiveengineering:dust_iron>, 1200, <item:kubejs:pig_iron>, <item:immersiveengineering:slag>);
+<recipetype:immersiveengineering:blast_furnace>.addRecipe("cast_iron_blasting", <item:createdeco:cast_iron_ingot>, 1200, <item:minecraft:iron_ingot>, <item:immersiveengineering:slag>);
+
+<recipetype:immersiveengineering:blast_furnace>.addRecipe("pig_iron_blasting", <item:minecraft:iron_ingot>, 1200, <item:kubejs:pig_iron>, <item:immersiveengineering:slag>);
 
 //press recipes(name, input, mold, energy, output)
-
 <recipetype:immersiveengineering:metal_press>.addRecipe("small_gear_press", <item:minecraft:iron_nugget>, <item:immersiveengineering:mold_gear>, 600, <item:kubejs:small_gear>);
 <recipetype:immersiveengineering:metal_press>.addRecipe("medium_gear_press", <item:minecraft:iron_ingot>, <item:immersiveengineering:mold_gear>, 1200, <item:kubejs:medium_gear>);
 <recipetype:immersiveengineering:metal_press>.addRecipe("large_gear_press", <item:create:iron_sheet>, <item:immersiveengineering:mold_gear>, 2400, <item:kubejs:large_gear>);
 <recipetype:immersiveengineering:metal_press>.addRecipe("mithril_plate", <item:kubejs:mithril_ingot>, <item:immersiveengineering:mold_plate>, 2400, <item:kubejs:mithril_plate>);
 <recipetype:immersiveengineering:metal_press>.addRecipe("electrum_plate_to_wire", <item:immersiveengineering:plate_electrum>, <item:immersiveengineering:mold_wire>, 2400, <item:immersiveengineering:wire_electrum>*2);
 <recipetype:immersiveengineering:metal_press>.addRecipe("electrum_ingot_to_wire", <item:immersiveengineering:ingot_electrum>, <item:immersiveengineering:mold_wire>, 2400, <item:immersiveengineering:wire_electrum>*3);
+
 // Blueprint.addRecipe(name, blueprintCategory (string), inputs, output)
 
 <recipetype:immersiveengineering:blueprint>.addRecipe("clockwork_mechanism2", "components", [

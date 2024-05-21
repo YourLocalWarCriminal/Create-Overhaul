@@ -1,19 +1,19 @@
 {
     "type":"custommachinery:custom_machine",
     "machine":"earlymachinery:pitkiln",
-    "time":600,
+    "time":1200,
     "requirements":[
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"create:crushed_raw_copper",
+            "item":"minecraft:raw_iron",
             "amount":2
         },
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"farmersdelight:straw",
-            "amount":3
+            "item":"#earlymachinery:fuel/pit_kiln",
+            "amount":1
         },
         {
             "type":"custommachinery:item",
@@ -30,7 +30,7 @@
         {
             "type":"custommachinery:item",
             "mode":"output",
-            "item":"minecraft:copper_ingot",
+            "item":"createdeco:cast_iron_ingot",
             "amount":1
         },
         {
