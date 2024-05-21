@@ -1,5 +1,8 @@
 {
     "values": [
-        
+        "minecraft:charcoal",
+        "minecraft:coal",
+        "immersiveengineering:coal_coke",
+        "#minecraft:logs_that_burn"
     ]
 }

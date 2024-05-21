@@ -30,17 +30,18 @@
             "whitelist":true
         },
         {
-            "type":"custommachinery:item",
-            "id":"wood",
-            "mode":"input",
-            "filter":["#minecraft:logs"],
-            "whitelist":true
+            "type": "custommachinery:item",
+            "id": "fuel",
+            "filter": ["#earlymachinery:fuel/pit_kiln"],
+            "whitelist": true,
+            "mode": "input",
+            "variant": "custommachinery:fuel"
         },
         {
             "type":"custommachinery:item",
-            "id":"straw",
+            "id":"kindling",
             "mode":"input",
-            "filter":["#earlymachinery:fuel/pit_kiln"],
+            "filter":["#earlymachinery:fuel/kindlings"],
             "whitelist":true
         },
         {
@@ -53,6 +54,7 @@
     "gui":[
         {
             "type":"custommachinery:player_inventory",
+            "priority": 100,
             "x":50,
             "y":85
             
@@ -68,7 +70,7 @@
             "type":"custommachinery:slot",
             "id":"mold",
             "x":123,
-            "y":65,
+            "y":64,
             "ghost":{
                 "item":"kubejs:ingot_mold",
                 "color":[0.0, 0.0, 0.0, 0.6],
@@ -78,7 +80,7 @@
         },
         {
             "type":"custommachinery:slot",
-            "id":"straw",
+            "id":"kindling",
             "x":88,
             "y":47,
             "ghost":{
@@ -90,7 +92,7 @@
         },
         {
             "type":"custommachinery:slot",
-            "id":"wood",
+            "id":"fuel",
             "x":88,
             "y":29,
             "ghost":{
@@ -107,16 +109,24 @@
             "y":47
             
         },
+                {
+            "type": "custommachinery:fuel",
+            "x": 124,
+            "y": 37
+        },
         {
             "type":"custommachinery:progress",
-            "x":123,
-            "y":47,
+            "x":115,
+            "y":48,
+            "width" : 43,
+            "priority": 10,
             "direction":"right"
         },
         {
             "type":"custommachinery:texture",
             "x":46,
             "y":15,
+            "priority": 1000,
             "texture":"custommachinery:textures/gui/base_background.png",
             "priority":1,
             "width":170,

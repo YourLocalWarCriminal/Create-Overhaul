@@ -68,13 +68,13 @@ public function MetalRecipeMaker(name as string, ingot as IItemStack, plate as I
     }
     if ((dust != nope) && (crushed != nope)) {
         //Crushed to grit
-        craftingTable.addShapeless("crushed_" + name + "_to_" + name + "_grit_by_hammer", dust * 2, [<item:immersiveengineering:hammer>.reuse(), crushed]);
+        craftingTable.addShapeless("crushed_" + name + "_to_" + name + "_grit_by_hammer", dust * 3, [<item:immersiveengineering:hammer>.reuse(), crushed, crushed]);
         <recipetype:create:crushing>.addRecipe("crushed_" + name + "_to_" + name + "_grit_by_crushing_wheel", [dust * 2, dust % 50, dust % 15], crushed, 400);
         <recipetype:immersiveengineering:crusher>.addRecipe("crushed_" + name + "_to_by_crusher" + name + "_grit", crushed, 3000, dust * 2, (dust * 2) % 50, dust % 15);
     }
     if ((dust != nope) && (raw != nope)) {
         //Raw to grit
-        craftingTable.addShapeless("raw_" + name + "_to_" + name + "_grit_by_hammer", dust * 2, [<item:immersiveengineering:hammer>.reuse(), raw]);
+        craftingTable.addShapeless("raw_" + name + "_to_" + name + "_grit_by_hammer", dust * 3, [<item:immersiveengineering:hammer>.reuse(), raw, raw]);
         <recipetype:create:crushing>.addRecipe("raw_" + name + "_to_" + name + "_grit_by_crushing_wheel", [dust * 2, dust % 50, dust % 15], raw, 400);
         <recipetype:immersiveengineering:crusher>.addRecipe("raw_" + name + "_to_by_crusher" + name + "_grit", raw, 3000, dust * 2, (dust * 2) % 50, dust % 15);
         if (stone_type != nope) {
