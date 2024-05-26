@@ -1,0 +1,32 @@
+
+#Format: [["dimension_1", temperature1], ["dimension_2", temperature2]... etc]
+#Common dimension IDs: minecraft:overworld, minecraft:the_nether, minecraft:the_end
+#Note: all temperatures are in Minecraft units
+#°F to MC = (x - 32) / 42
+#°C to MC = x / 23.3
+[Dimensions]
+	#Applies an offset to the world's temperature across an entire dimension
+	"Dimension Temperature Offsets" = [["minecraft:the_nether", 0.7], ["minecraft:the_end", -0.1]]
+	#Overrides existing dimension temperatures & offsets
+	#Also overrides temperatures of all biomes in the dimension
+	"Dimension Temperatures" = []
+
+#Format: [["biome_1", tempLow, tempHigh, *units], ["biome_2", tempLow, tempHigh, *units]... etc]
+#temp-low: The temperature of the biome at midnight
+#temp-high: The temperature of the biome at noon
+#units: Optional. The units of the temperature ("C" or "F". Defaults to MC units)
+#Note: all temperatures are in Minecraft units
+[Biomes]
+	#Applies an offset to the temperature of a biome (in Minecraft units).
+	"Biome Temperature Offsets" = []
+	#Defines the temperature of a biome, overriding existing biome temperatures & offsets (in Minecraft units).
+	"Biome Temperatures" = [["minecraft:soul_sand_valley", 33, 33, "F"], ["minecraft:old_growth_birch_forest", 58, 72, "F"], ["minecraft:river", 60, 70, "F"], ["minecraft:swamp", 72, 84, "F"], ["minecraft:savanna", 70, 95, "F"], ["minecraft:savanna_plateau", 76, 98, "F"], ["minecraft:windswept_savanna", 67, 90, "F"], ["minecraft:taiga", 44, 62, "F"], ["minecraft:snowy_taiga", 19, 48, "F"], ["minecraft:old_growth_pine_taiga", 48, 62, "F"], ["minecraft:old_growth_spruce_taiga", 48, 62, "F"], ["minecraft:desert", 48, 115, "F"], ["minecraft:stony_shore", 50, 64, "F"], ["minecraft:snowy_beach", 38, 52, "F"], ["minecraft:snowy_slopes", 24, 38, "F"], ["minecraft:windswept_forest", 48, 66, "F"], ["minecraft:frozen_peaks", 15, 33, "F"], ["minecraft:warm_ocean", 67, 76, "F"], ["minecraft:deep_frozen_ocean", 56, 65, "F"], ["minecraft:jungle", 76, 87, "F"], ["minecraft:bamboo_jungle", 76, 87, "F"], ["minecraft:badlands", 84, 120, "F"], ["minecraft:wooded_badlands", 80, 108, "F"], ["minecraft:eroded_badlands", 88, 120, "F"], ["byg:coniferous_forest", 52, 70, "F"], ["byg:autumnal_valley", 58, 67, "F"], ["byg:autumnal_forest", 60, 75, "F"], ["byg:autumnal_taiga", 56, 68, "F"], ["byg:baobab_savanna", 70, 95, "F"], ["byg:dacite_ridges", 40, 65, "F"], ["byg:firecracker_shrubland", 72, 105, "F"], ["byg:frosted_taiga", 22, 48, "F"], ["byg:cypress_swamplands", 68, 82, "F"], ["byg:dead_sea", 72, 82, "F"], ["byg:lush_stacks", 66, 75, "F"], ["byg:fragment_forest", 43, 64, "F"], ["byg:frosted_coniferous_forest", 8, 31, "F"], ["byg:maple_taiga", 53, 71, "F"], ["byg:skyris_vale", 42, 68, "F"], ["byg:twilight_meadow", 49, 66, "F"], ["byg:weeping_witch_forest", 56, 73, "F"], ["byg:subzero_hypogeal", -10, -10, "F"], ["byg:zelkova_forest", 44, 61, "F"]]
+
+#Format: [season-start, season-mid, season-end]
+#Applied as an offset to the world's temperature
+["Season Temperatures"]
+	Summer = [0.4, 0.6, 0.4]
+	Autumn = [0.2, 0, -0.2]
+	Winter = [-0.4, -0.6, -0.4]
+	Spring = [-0.2, 0, 0.2]
+
