@@ -512,14 +512,14 @@ JEI.hideIngredient(<item:kubejs:gear_of_overhaul>);
                                                       .addStep<mods.createtweaker.DeployerApplicationRecipe>((rb) => rb.require(<item:minecraft:blaze_powder>))
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(200)));                                                      
 
-
+/*
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("anchor")
                                                       .transitionTo(<item:vs_eureka:anchor>)
                                                       .require(<tag:items:forge:storage_blocks/cast_iron>)
                                                       .loops(25)
                                                       .addOutput(<item:vs_eureka:anchor>, 1)
                                                       .addStep<mods.createtweaker.PressingRecipe>((rb) => rb.duration(400))
-                                                      );
+                                                      );*/
 
 <recipetype:create:sequenced_assembly>.addRecipe(<recipetype:create:sequenced_assembly>.builder("brass_casing")
                                                       .transitionTo(<item:immersiveengineering:treated_wood_horizontal>)

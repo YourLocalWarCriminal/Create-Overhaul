@@ -12,7 +12,7 @@
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"minecraft:charcoal",
+            "item":"#earlymachinery:fuel/flue_furnace",
             "amount":1
         },
         {

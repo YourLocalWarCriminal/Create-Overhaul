@@ -6,6 +6,8 @@
 <tag:fluids:minecraft:fire_resistance>.add(<fluid:create:potion>.withTag({Potion: "minecraft:fire_resistance" as string}));
 <tag:fluids:minecraft:fire_resistance>.add(<fluid:immersiveengineering:potion>.withTag({Potion: "minecraft:fire_resistance" as string}));*/
 
+import crafttweaker.api.tag.type.KnownTag;
+
 <tag:items:forge:wirecoils_uninsulated>.add([
 <item:createaddition:gold_spool>,
 <item:immersiveengineering:wirecoil_redstone>,
@@ -88,7 +90,39 @@
     <block:custommachinery:custom_machine_block>
 ]);
 
-<tag:items:earlymachinery:fuel/pit_kiln>.add([
-    <item:minecraft:charcoal>,
-    (<item:farmersdelight:straw> * 3)
+<tag:items:minecraft:raw_metal/cast_iron>.add([
+    (<item:kubejs:cast_iron_dust>),
+    (<item:minecraft:raw_iron>),
+    (<item:create:crushed_raw_iron>)
+]);
+
+<tag:items:minecraft:raw_metal/copper>.add([
+    <item:immersiveengineering:dust_copper> * 3,
+    <item:minecraft:raw_copper> * 2,
+    <item:create:crushed_raw_copper> * 2,
+    <item:create:copper_nugget> * 10,
+]);
+
+<tag:items:minecraft:raw_metal/gold>.add([
+    <item:immersiveengineering:dust_gold> * 3,
+    <item:minecraft:raw_gold> * 2,
+    <item:create:crushed_raw_gold> * 2,
+]);
+
+<tag:items:minecraft:raw_metal/nickel>.add([
+    <item:immersiveengineering:raw_nickel> * 2,
+    <item:create:crushed_raw_nickel> * 2,
+    <item:immersiveengineering:dust_nickel> * 3,
+]);
+
+<tag:items:minecraft:raw_metal/silver>.add([
+    <item:create:crushed_raw_silver> * 2,
+    <item:immersiveengineering:raw_silver> * 2,
+    <item:immersiveengineering:dust_silver> * 3
+]); 
+
+<tag:items:minecraft:raw_metal/zinc>.add([
+    <item:create:raw_zinc> * 2,
+    <item:create:crushed_raw_zinc> * 2,
+    <item:kubejs:zinc_dust> * 3
 ]);

@@ -1,25 +1,25 @@
 {
     "type":"custommachinery:custom_machine",
     "machine":"earlymachinery:flue_furnace",
-    "time":2200,
+    "time":3000,
     "requirements":[
         {
             "type":"custommachinery:item",
             "mode":"input",
-            "item":"kubejs:cast_iron_dust",
-            "amount":2
-        },
-        {
-            "type":"custommachinery:item",
-            "mode":"input",
-            "item":"immersiveengineering:coal_coke",
+            "item":"createdeco:cast_iron_ingot",
             "amount":1
         },
         {
             "type":"custommachinery:item",
-            "mode":"output",
-            "item":"immersiveengineering:dust_iron",
+            "mode":"input",
+            "item":"#earlymachinery:fuel/flue_furnace",
             "amount":2
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"output",
+            "item":"minecraft:iron_ingot",
+            "amount":1
         },
         {
             "type":"custommachinery:structure",
