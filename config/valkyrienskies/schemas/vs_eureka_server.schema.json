@@ -26,15 +26,10 @@
       "format" : "double",
       "description" : "The max elevation speed boost gained by having extra extra balloons"
     },
-    "baseImpulseDescendRate" : {
-      "type" : "number",
-      "format" : "double",
-      "description" : "Vertical sensitivity when descending"
-    },
     "baseImpulseElevationRate" : {
       "type" : "number",
       "format" : "double",
-      "description" : "Vertical sensitivity when ascending"
+      "description" : "Vertical sensitivity up ascend/descend"
     },
     "baseSpeed" : {
       "type" : "number",
@@ -61,21 +56,6 @@
       "type" : "number",
       "format" : "double",
       "description" : "Ascend and descend acceleration"
-    },
-    "engineBoost" : {
-      "type" : "number",
-      "format" : "double",
-      "description" : "Extra engine power for when having multiple engines per engine"
-    },
-    "engineBoostExponentialPower" : {
-      "type" : "number",
-      "format" : "double",
-      "description" : "The final linear boost will be raised to the power of 2, and the result of the delta is multiple by this value"
-    },
-    "engineBoostOffset" : {
-      "type" : "number",
-      "format" : "double",
-      "description" : "At what amount of engines the boost will start taking effect"
     },
     "engineFuelMultiplier" : {
       "type" : "number",
@@ -135,26 +115,6 @@
       "format" : "double",
       "description" : "The amount extra that each floater will make the ship float, per kg mass"
     },
-    "linearBaseMass" : {
-      "type" : "number",
-      "format" : "double",
-      "description" : "Base mass for linear acceleration in Kg."
-    },
-    "linearMassScaling" : {
-      "type" : "number",
-      "format" : "double",
-      "description" : "How fast a ship will stop and accelerate."
-    },
-    "linearMaxMass" : {
-      "type" : "number",
-      "format" : "double",
-      "description" : "Max smoothing value, will smooth out before reaching max value."
-    },
-    "linearMaxSpeed" : {
-      "type" : "number",
-      "format" : "double",
-      "description" : "Max unscaled speed in m/s."
-    },
     "linearStabilizeMaxAntiVelocity" : {
       "type" : "number",
       "format" : "double",
@@ -189,11 +149,6 @@
       "type" : "number",
       "format" : "double",
       "description" : "Chance for popped balloons to pop adjacent balloons, per side"
-    },
-    "speedMassScale" : {
-      "type" : "number",
-      "format" : "double",
-      "description" : "how much the mass decreases the speed."
     },
     "stabilizationSpeed" : {
       "type" : "number",
