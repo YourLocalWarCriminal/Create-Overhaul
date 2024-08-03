@@ -1,0 +1,51 @@
+{
+    "type":"custommachinery:custom_machine",
+    "machine":"earlymachinery:pitkiln",
+    "time":1200,
+    "requirements":[
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"minecraft:clay",
+            "amount":10
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"input",
+            "item":"#earlymachinery:fuel/kindlings",
+            "amount":3
+        },
+        {
+          "type": "custommachinery:fuel",
+          "amount": 1
+        },
+        {
+            "type":"custommachinery:item",
+            "mode":"output",
+            "item":"minecraft:tarracotta",
+            "amount":1
+        },
+        {
+            "type":"custommachinery:structure",
+            
+                "keys": {
+                  "b": "farmersdelight:straw_bale[axis\u003dy]",
+                  "c": "minecraft:coarse_dirt",
+                  "d": "minecraft:clay"
+                },
+                "pattern": [
+                  [
+                    " c ",
+                    "cbc",
+                    "cmc"
+                  ],
+                  [
+                    " c ",
+                    "cdc",
+                    " c "
+                  ]
+                ]
+              
+        }
+    ]
+}
