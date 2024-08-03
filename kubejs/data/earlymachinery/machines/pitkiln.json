@@ -54,7 +54,6 @@
     "gui":[
         {
             "type":"custommachinery:player_inventory",
-            "priority": 100,
             "x":50,
             "y":85
             
@@ -119,14 +118,12 @@
             "x":115,
             "y":48,
             "width" : 43,
-            "priority": 10,
             "direction":"right"
         },
         {
             "type":"custommachinery:texture",
             "x":46,
             "y":15,
-            "priority": 1000,
             "texture":"custommachinery:textures/gui/base_background.png",
             "priority":1,
             "width":170,
