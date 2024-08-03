@@ -795,3 +795,5 @@ craftingTable.addShaped("goat_fur", <item:cold_sweat:goat_fur> * 2, [
     [<item:immersiveengineering:hemp_fabric>, <item:minecraft:white_wool>, <item:immersiveengineering:hemp_fabric>],
     [<item:minecraft:string>, <item:immersiveengineering:hemp_fabric>, <item:minecraft:white_wool>]
 ]);
+
+craftingTable.addShapeless("zinc_nugget", <item:create:zinc_nugget> * 3, [hammer, <item:create:zinc_ingot>]);
