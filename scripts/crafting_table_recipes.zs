@@ -5,7 +5,7 @@ import mods.jei.JEI;
 //variables real quick cuz i aint wanna die
 val nope = <item:minecraft:air>;
 val screwdriver = <item:immersiveengineering:screwdriver>.reuse();
-val hammer = <item:immersiveengineering:hammer>.reuse();
+val hammer = <item:immersiveengineering:hammer>;
 val wrench = <item:create:wrench>.reuse();
 val chisel = <item:rechiseled:chisel>.reuse();
 val wc = <item:immersiveengineering:wirecutter>.reuse();
@@ -128,7 +128,7 @@ craftingTable.addShaped("blazeburner", <item:create:empty_blaze_burner>, [
 ]);
 
 craftingTable.addShaped("mechanicaldrill", <item:create:mechanical_drill>, [
-    [<item:kubejs:clockwork_mechanism>, <tag:items:forge:plates/steel>, hammer],
+    [<item:kubejs:clockwork_mechanism>, <tag:items:forge:plates/steel>, hammer.anyDamage().transformDamage(1)],
     [<item:alloyed:steel_casing>, <item:createdeco:cast_iron_ingot>, <tag:items:forge:plates/steel>],
     [nope, <tag:items:forge:plates/steel>, screwdriver]
 ]);
@@ -245,13 +245,13 @@ craftingTable.addShaped("mithrilknife", <item:farmersdelight:diamond_knife>, [
 
 craftingTable.addShaped("sawblade", <item:immersiveengineering:sawblade>, [
     [<item:minecraft:iron_nugget>, <item:minecraft:iron_ingot>, <item:minecraft:iron_nugget>],
-    [<item:minecraft:iron_ingot>, hammer, <item:minecraft:iron_ingot>],
+    [<item:minecraft:iron_ingot>, hammer.anyDamage().transformDamage(1), <item:minecraft:iron_ingot>],
     [<item:minecraft:iron_nugget>, <item:minecraft:iron_ingot>, <item:minecraft:iron_nugget>],
 ]);
 
 craftingTable.addShapedMirrored("mechanicalsaw", MirrorAxis.HORIZONTAL, <item:create:mechanical_saw>, [
     [<item:kubejs:mechanical_engine>, <item:create:shaft>, <item:kubejs:mechanical_engine>],
-    [hammer, <item:create:andesite_casing>],
+    [hammer.anyDamage().transformDamage(1), <item:create:andesite_casing>],
     [nope, <item:immersiveengineering:sawblade>],
 ]);
 
@@ -320,7 +320,7 @@ craftingTable.addShaped("mechanism_casing", <item:kubejs:mechanism_casing>, [
 craftingTable.addShaped("kinetic_engine", <item:kubejs:mechanical_engine>, [
     [<item:kubejs:large_gear>, <item:kubejs:medium_gear>, <item:kubejs:large_gear>],
     [<item:kubejs:small_gear>, <item:kubejs:medium_gear>, <item:kubejs:small_gear>],
-    [hammer, <item:kubejs:mechanism_casing>, screwdriver]
+    [hammer.anyDamage().transformDamage(1), <item:kubejs:mechanism_casing>, screwdriver]
 ]);
 
 craftingTable.addShapeless("leverage_components", <item:kubejs:leverage_components>, [<item:kubejs:large_gear>, <item:kubejs:medium_gear>, <item:kubejs:large_gear>,<item:kubejs:small_gear>, <item:kubejs:mechanical_elbow>]);
@@ -328,7 +328,7 @@ craftingTable.addShapeless("leverage_components", <item:kubejs:leverage_componen
 craftingTable.addShaped("press", <item:create:mechanical_press>, [
     [<item:kubejs:mechanical_engine>, <item:create:shaft>, <item:kubejs:mechanical_engine>],
     [<item:kubejs:leverage_mechanism>, <item:create:andesite_casing>, <item:kubejs:leverage_mechanism>],
-    [screwdriver, <item:minecraft:iron_block>, hammer]
+    [screwdriver, <item:minecraft:iron_block>, hammer.anyDamage().transformDamage(1)]
 ]);
 
 craftingTable.addShapedMirrored("mechanical_elbow", MirrorAxis.HORIZONTAL, <item:kubejs:mechanical_elbow>,[
@@ -523,7 +523,7 @@ craftingTable.addShaped("largegear_cheap", <item:kubejs:large_gear>*2, [
 craftingTable.addShaped("flue_furnace", <item:custommachinery:custom_machine_item>.withTag({machine: "earlymachinery:flue_furnace" as string}), [
     [<item:minecraft:copper_ingot>, <item:minecraft:copper_block>, <item:minecraft:copper_ingot>],
     [<item:minecraft:copper_ingot>, <item:kubejs:flue_bottom_bricks>, <item:minecraft:copper_ingot>],
-    [chisel, <item:minecraft:copper_ingot>, hammer]
+    [chisel, <item:minecraft:copper_ingot>, hammer.anyDamage().transformDamage(1)]
 ]);
 
 craftingTable.addShaped("oven", <item:minecraft:furnace>, [
@@ -541,12 +541,12 @@ craftingTable.addShaped("mechanical_crafter_recipe", <item:create:mechanical_cra
 craftingTable.addShaped("rolling_mill", <item:createaddition:rolling_mill>, [
     [nail, shaft, nail],
     [<item:kubejs:leverage_mechanism>, shaft, <item:kubejs:clockwork_mechanism>],
-    [hammer, <item:alloyed:steel_casing>, wrench],
+    [hammer.anyDamage().transformDamage(1), <item:alloyed:steel_casing>, wrench],
 ]);
 
 craftingTable.addShaped("enchanting_table", <item:minecraft:enchanting_table>, [
     [<item:create:polished_rose_quartz>, <item:minecraft:book>, <item:create:polished_rose_quartz>],
-    [hammer, <item:create:brass_block>, glue],
+    [hammer.anyDamage().transformDamage(1), <item:create:brass_block>, glue],
     [<item:create:polished_rose_quartz>, <item:minecraft:crying_obsidian>, <item:create:polished_rose_quartz>],
 ]);
 /*
@@ -559,7 +559,7 @@ craftingTable.addShaped("eureka_engine", <item:vs_eureka:engine>, [
 craftingTable.addShaped("flue_bricks", <item:kubejs:flue_bricks> * 6, [
     [<item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_ingot>, <item:createdeco:cast_iron_ingot>],
     [<item:createdeco:cast_iron_ingot>, <item:minecraft:polished_deepslate>, <item:createdeco:cast_iron_ingot>],
-    [<item:createdeco:cast_iron_ingot>, hammer, <item:createdeco:cast_iron_ingot>]
+    [<item:createdeco:cast_iron_ingot>, hammer.anyDamage().transformDamage(1), <item:createdeco:cast_iron_ingot>]
 ]);
 
 craftingTable.addShaped("lv_wire1", <item:immersiveengineering:wirecoil_copper> * 2, [
@@ -702,7 +702,7 @@ craftingTable.addShaped("hv_coil_block", <item:immersiveengineering:coil_hv>, [
     [<item:immersiveengineering:wire_electrum>, <item:immersiveengineering:wire_electrum>, <item:immersiveengineering:wire_electrum>]]);
     
 craftingTable.addShaped("mechanicalmixermegaultragamerrecipe", <item:create:mechanical_mixer>, [
-    [hammer, <item:create:whisk>, screwdriver],
+    [hammer.anyDamage().transformDamage(1), <item:create:whisk>, screwdriver],
     [<item:immersiveengineering:component_iron>, <item:create:cogwheel>, <item:immersiveengineering:component_iron>],
     [<item:kubejs:clockwork_mechanism>, <item:alloyed:steel_casing>, <item:kubejs:clockwork_mechanism>]
 ]);
@@ -790,10 +790,10 @@ craftingTable.addShaped("pressurized_air_tank", <item:immersiveengineering:toolu
     [nope, <item:minecraft:blue_dye>, nope]
 ]);
 
-craftingTable.addShaped("goat_fur", <item:cold_sweat:goat_fur> * 2, [
+craftingTable.addShaped("goat_fur", <item:cold_sweat:fur> * 2, [
     [<item:minecraft:white_wool>, <item:immersiveengineering:hemp_fabric>, <item:minecraft:string>],
     [<item:immersiveengineering:hemp_fabric>, <item:minecraft:white_wool>, <item:immersiveengineering:hemp_fabric>],
     [<item:minecraft:string>, <item:immersiveengineering:hemp_fabric>, <item:minecraft:white_wool>]
 ]);
 
-craftingTable.addShapeless("zinc_nugget", <item:create:zinc_nugget> * 3, [hammer, <item:create:zinc_ingot>]);
+craftingTable.addShapeless("zinc_nugget", <item:create:zinc_nugget> * 3, [hammer.anyDamage().transformDamage(1).anyDamage().transformDamage(1), <item:create:zinc_ingot>]);
